@@ -1,0 +1,158 @@
+{
+  "description": "Map de la Clairière qui se répète (lieu existant sans carte) : structure, terrains, POI, secret, placement, navigation, spawn.",
+  "domain": "maps",
+  "entities": [
+    {
+      "buildings": [],
+      "collisions": [
+        {
+          "h": 4,
+          "terrain": "terre",
+          "w": 4,
+          "x": 10,
+          "y": 10
+        }
+      ],
+      "derivation": {
+        "animations": "transitions de lisière.",
+        "assets": "tilesets feuillage/terre/herbe (famille_terrains).",
+        "consequences": "Déclenche evenement_retour_du_bois ; secret_clairiere_repetition.",
+        "consumers": "Événements répétitifs ; secret de la clairière.",
+        "obtention": "Depuis le Bois des Retours (carte liée).",
+        "system": "system_exploration, system_secrets, system_navigation",
+        "tests": "test_e2e_maps, test_placement",
+        "why": "Chaque lieu d'exploration majeur exige sa carte."
+      },
+      "description": "Clairière du Bois des Retours où certains événements se répètent (canon).",
+      "display_name": "La Clairière Qui Se Répète",
+      "entrances": [],
+      "exits": [],
+      "height_levels": [
+        0
+      ],
+      "id": "map_clairiere_qui_se_repete",
+      "justification": "Le lieu canonique 'clairière qui se répète' existe déjà dans le graphe ; cette carte l'ancre géographiquement (1 carte par lieu majeur).",
+      "linked_maps": [
+        "map_bois_des_retours"
+      ],
+      "location_id": "lieu_clairiere_qui_se_repete",
+      "navigation_rules": [
+        {
+          "rule_id": "navigation_regles_globales"
+        }
+      ],
+      "paths": [
+        {
+          "from": "region_lisiere",
+          "id": "chemin_boucle",
+          "name": "Sentier qui boucle",
+          "to": "zone_clairiere"
+        }
+      ],
+      "placement_rules": [
+        {
+          "rule_id": "placement_cultures"
+        }
+      ],
+      "points_of_interest": [
+        {
+          "id": "poi_vieux_chene",
+          "kind": "interet",
+          "name": "Vieux chêne"
+        }
+      ],
+      "regions": [
+        {
+          "id": "region_lisiere",
+          "name": "Lisière"
+        }
+      ],
+      "resources": [],
+      "seasonal_conditions": [
+        {
+          "effect": "brume épaisse",
+          "season": "saison_des_brumes"
+        }
+      ],
+      "secret_zones": [
+        {
+          "discovery": "Assister deux fois au même événement dans la clairière.",
+          "secret_id": "secret_clairiere_repetition",
+          "zone": "zone_clairiere"
+        }
+      ],
+      "seed": 1854236241,
+      "size": {
+        "h": 50,
+        "w": 50
+      },
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "spawn_rules": [
+        {
+          "conditions": "nuit",
+          "creature": "creature_echo_du_bois",
+          "entity_type": "creature"
+        }
+      ],
+      "status": "PROPOSEE",
+      "terrains": [
+        "feuillage",
+        "terre",
+        "herbe"
+      ],
+      "tile_size": {
+        "h": 16,
+        "w": 16
+      },
+      "transitions": [],
+      "zones": [
+        {
+          "id": "zone_clairiere",
+          "kind": "interet",
+          "name": "Clairière"
+        }
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "Map invalide",
+    "id": "map_invalide",
+    "justification": "rejet (lieu inexistant)",
+    "location_id": "lieu_inexistant",
+    "size": {
+      "h": 10,
+      "w": 10
+    },
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "terrains": [
+      "herbe"
+    ],
+    "tile_size": {
+      "h": 16,
+      "w": 16
+    }
+  },
+  "orphan_variant": {
+    "display_name": "Map orpheline",
+    "id": "map_orpheline",
+    "justification": "orpheline (lien vers une carte inexistante : détectée)",
+    "linked_maps": [
+      "map_inexistante"
+    ],
+    "location_id": "lieu_clairiere_qui_se_repete",
+    "size": {
+      "h": 10,
+      "w": 10
+    },
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "terrains": [
+      "herbe"
+    ],
+    "tile_size": {
+      "h": 16,
+      "w": 16
+    }
+  }
+}

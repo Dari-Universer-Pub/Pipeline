@@ -1,0 +1,72 @@
+{
+  "$id": "https://pipeline.local/schemas/system.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'system' dérivé de l'ontologie V5.",
+  "properties": {
+    "consumes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "depends_on": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "description": {
+      "type": "string"
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'system_').",
+      "pattern": "^system_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "produces": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "verbs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "description"
+  ],
+  "title": "Système de gameplay",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

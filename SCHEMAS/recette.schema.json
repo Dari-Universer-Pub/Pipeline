@@ -1,0 +1,79 @@
+{
+  "$id": "https://pipeline.local/schemas/recette.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'recette' dérivé de l'ontologie V5.",
+  "properties": {
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "duration": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'recette_').",
+      "pattern": "^recette_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "inputs": {
+      "description": "Ingrédients {item_id, qty}.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "outputs": {
+      "description": "Résultats {item_id, qty}.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "station_id": {
+      "description": "Machine requise.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "unlocked_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "inputs",
+    "outputs"
+  ],
+  "title": "Recette / transformation",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

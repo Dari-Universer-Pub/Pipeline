@@ -1,0 +1,110 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_resources",
+  "payload": [
+    {
+      "base_value": 8,
+      "category": "matériau",
+      "consumers": [
+        "system_artisanat"
+      ],
+      "derivation": {
+        "animations": "geste 'extraire' + effet de récolte.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "obtention": "Forage/exploration (exploration).",
+        "system": "system_artisanat, system_exploration",
+        "tests": "test_chaine_production, test_ressource, test_economique.",
+        "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+      },
+      "description": "Bûches ramassées dans le Bois des Retours.",
+      "display_name": "Bois",
+      "id": "ressource_bois",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "producers": [
+        "system_exploration"
+      ],
+      "required_animations": [],
+      "required_assets": [],
+      "seasonal": false,
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "status": "PROPOSEE",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    },
+    {
+      "base_value": 8,
+      "category": "matériau",
+      "consumers": [
+        "system_artisanat"
+      ],
+      "derivation": {
+        "animations": "geste 'extraire' + effet de récolte.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "obtention": "Forage/exploration (exploration).",
+        "system": "system_artisanat, system_exploration",
+        "tests": "test_chaine_production, test_ressource, test_economique.",
+        "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+      },
+      "description": "Pierres ramassées près du Puits de Mémoire.",
+      "display_name": "Pierre",
+      "id": "ressource_pierre",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "producers": [
+        "system_exploration"
+      ],
+      "required_animations": [],
+      "required_assets": [],
+      "seasonal": false,
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "status": "PROPOSEE",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    },
+    {
+      "base_value": 8,
+      "category": "matériau",
+      "consumers": [
+        "system_artisanat"
+      ],
+      "derivation": {
+        "animations": "geste 'extraire' + effet de récolte.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "obtention": "Forage/exploration (exploration).",
+        "system": "system_artisanat, system_exploration",
+        "tests": "test_chaine_production, test_ressource, test_economique.",
+        "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+      },
+      "description": "Argile au bord du Lac Muet.",
+      "display_name": "Argile",
+      "id": "ressource_argile",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "producers": [
+        "system_exploration"
+      ],
+      "required_animations": [],
+      "required_assets": [],
+      "seasonal": false,
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "status": "PROPOSEE",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

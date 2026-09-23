@@ -1,0 +1,49 @@
+{
+  "generated_deterministic": true,
+  "kind": "validation_report",
+  "payload": {
+    "by_validator": {
+      "animations": 0,
+      "assets": 0,
+      "canonique": 0,
+      "collisions": 0,
+      "connectivite": 0,
+      "economique": 0,
+      "encodage": 0,
+      "logique": 0,
+      "maps": 0,
+      "narrative": 0,
+      "placement": 0,
+      "progression": 0,
+      "references": 0,
+      "schemas": 0,
+      "structurelle": 0,
+      "temporelle": 0
+    },
+    "error_count": 0,
+    "info_count": 0,
+    "issues": [],
+    "passed": true,
+    "results": {
+      "animations": [],
+      "assets": [],
+      "canonique": [],
+      "collisions": [],
+      "connectivite": [],
+      "economique": [],
+      "encodage": [],
+      "logique": [],
+      "maps": [],
+      "narrative": [],
+      "placement": [],
+      "progression": [],
+      "references": [],
+      "schemas": [],
+      "structurelle": [],
+      "temporelle": []
+    },
+    "warning_count": 0
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

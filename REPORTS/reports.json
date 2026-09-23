@@ -1,0 +1,1291 @@
+{
+  "generated_deterministic": true,
+  "kind": "reports",
+  "payload": {
+    "isolated": {
+      "objects_no_usage": [],
+      "orphans": [],
+      "resources_no_consumer": [],
+      "secrets_no_discovery": [],
+      "systems_isolated": [],
+      "unreachable": [],
+      "weak_usage": []
+    },
+    "maturity": {
+      "average_maturity": 71.4,
+      "by_status": {
+        "CANONIQUE": 12,
+        "DEDUITE": 26,
+        "PROPOSEE": 42
+      },
+      "count": 80,
+      "entries": [
+        {
+          "causal_depth": 5,
+          "display_name": "Saison du Repos",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "saison_du_repos",
+          "maturity": 43,
+          "relations": 1,
+          "status": "PROPOSEE",
+          "systems_affected": 0,
+          "type": "seasons",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Saison des Premières Pousses",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "saison_des_premieres_pousses",
+          "maturity": 51,
+          "relations": 2,
+          "status": "PROPOSEE",
+          "systems_affected": 0,
+          "type": "seasons",
+          "usage_relations": 2
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Saison des Épis",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "saison_des_epis",
+          "maturity": 51,
+          "relations": 2,
+          "status": "PROPOSEE",
+          "systems_affected": 0,
+          "type": "seasons",
+          "usage_relations": 2
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Toile",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_toile",
+          "maturity": 54,
+          "relations": 2,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 2
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Cuisine de la Maison-Racine",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_cuisine_de_la_maison_racine",
+          "maturity": 57,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Sentier des Retours",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_sentier_des_retours",
+          "maturity": 57,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Saison des Brumes",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "saison_des_brumes",
+          "maturity": 59,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 0,
+          "type": "seasons",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Clairière qui se répète",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_clairiere_qui_se_repete",
+          "maturity": 60,
+          "relations": 4,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Navet",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_navet",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Grain de blé",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_grain_de_ble",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Courge",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_courge",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Fleur de souci",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_fleur_de_souci",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Planche",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_planche",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Écho du Bois",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "creature_echo_du_bois",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "creatures",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Le Puits chante",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "evenement_le_puits_chante",
+          "maturity": 62,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "events",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Fibre de lin",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_fibre_de_lin",
+          "maturity": 65,
+          "relations": 4,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Soupe de navet",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_soupe_de_navet",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Pain de ble",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_pain_de_ble",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Courge rotie",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_courge_rotie",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Tisane de souci",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_tisane_de_souci",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Fil de lin",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_fil_de_lin",
+          "maturity": 65,
+          "relations": 4,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Argile",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "ressource_argile",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "resources",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Poisson du Lac",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "creature_poisson_du_lac",
+          "maturity": 65,
+          "relations": 4,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "creatures",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Puits de Mémoire",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_puits_de_memoire",
+          "maturity": 65,
+          "relations": 4,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 2
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Pluie sur la Vallée",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "evenement_pluie_sur_la_vallee",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "events",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Marché de la Vallée",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "evenement_marche_de_la_vallee",
+          "maturity": 65,
+          "relations": 3,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "events",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Houe de départ",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_houe_de_depart",
+          "maturity": 66,
+          "relations": 1,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Arrosoir de cuivre",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_arrosoir_de_cuivre",
+          "maturity": 66,
+          "relations": 1,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Carnet du Jardinier",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_carnet_du_jardinier",
+          "maturity": 66,
+          "relations": 1,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 1
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Soupe de navet",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_soupe_de_navet",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Pain de blé",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_pain_de_ble",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Courge rôtie",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_courge_rotie",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Tisane de souci",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_tisane_de_souci",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Planche",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_planche",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Fil de lin",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_fil_de_lin",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Toile",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_toile",
+          "maturity": 68,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Graine de Navet de la Vallée",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_de_navet_de_la_vallee",
+          "maturity": 69,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 0,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Graine de Blé des Épis",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_de_ble_des_epis",
+          "maturity": 69,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 0,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Graine de Courge des Brumes",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_de_courge_des_brumes",
+          "maturity": 69,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 0,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 5,
+          "display_name": "Graine de Lin du Repos",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_de_lin_du_repos",
+          "maturity": 69,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 0,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Graine de Souci de la Vallée",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_de_souci_de_la_vallee",
+          "maturity": 69,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 0,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Bois",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "ressource_bois",
+          "maturity": 71,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "resources",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Pierre",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "ressource_pierre",
+          "maturity": 71,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "resources",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Navet de la Vallée",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_navet_de_la_vallee",
+          "maturity": 71,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Blé des Épis",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_ble_des_epis",
+          "maturity": 71,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Courge des Brumes",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_courge_des_brumes",
+          "maturity": 71,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Lin du Repos",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_lin_du_repos",
+          "maturity": 71,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Fragment ravivé",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "recette_fragment_ravive",
+          "maturity": 71,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "recipes",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "L'outil de Marin",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "quete_l_outil_de_marin",
+          "maturity": 71,
+          "relations": 5,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "quests",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Ligne de pêche",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_ligne_de_peche",
+          "maturity": 72,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Souci de la Vallée",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_souci_de_la_vallee",
+          "maturity": 73,
+          "relations": 8,
+          "status": "PROPOSEE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 8
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Le premier écho",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "quete_le_premier_echo",
+          "maturity": 74,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "quests",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Retour du Bois",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "evenement_retour_du_bois",
+          "maturity": 74,
+          "relations": 6,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "events",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Poisson du lac",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_poisson_du_lac",
+          "maturity": 75,
+          "relations": 3,
+          "status": "DEDUITE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Floraison d'Écho",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "culture_floraison_d_echo",
+          "maturity": 75,
+          "relations": 4,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "crops",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Le silence de Nox",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "quete_le_silence_de_nox",
+          "maturity": 76,
+          "relations": 7,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "quests",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Ce qui se répète",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "quete_ce_qui_se_repete",
+          "maturity": 76,
+          "relations": 7,
+          "status": "PROPOSEE",
+          "systems_affected": 2,
+          "type": "quests",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Atelier de la Maison-Racine",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_atelier_de_la_maison_racine",
+          "maturity": 76,
+          "relations": 6,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Écho Cristallin",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_echo_cristallin",
+          "maturity": 78,
+          "relations": 5,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "objects",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Puits de Mémoire",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "machine_puits_de_memoire",
+          "maturity": 78,
+          "relations": 5,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "machines",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "La Vallée Claire",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_vallee_claire",
+          "maturity": 78,
+          "relations": 5,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 2
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Champ de la Vallée Claire",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_champ_de_la_vallee_claire",
+          "maturity": 78,
+          "relations": 7,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Poste de pêche du Lac Muet",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_poste_de_peche_du_lac_muet",
+          "maturity": 78,
+          "relations": 7,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Le passé tu de Nox",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "secret_passe_nox",
+          "maturity": 78,
+          "relations": 4,
+          "status": "DEDUITE",
+          "systems_affected": 2,
+          "type": "secrets",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Établi de Marin",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "machine_etabli_de_marin",
+          "maturity": 83,
+          "relations": 9,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "machines",
+          "usage_relations": 8
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Foyer de la Maison-Racine",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "machine_foyer_de_la_maison_racine",
+          "maturity": 83,
+          "relations": 11,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "machines",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Métier à tisser",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "machine_metier_a_tisser",
+          "maturity": 83,
+          "relations": 9,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "machines",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Maison-Racine",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "map_maison_racine",
+          "maturity": 83,
+          "relations": 7,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "maps",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Vallée Claire",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "map_vallee_claire",
+          "maturity": 83,
+          "relations": 11,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "maps",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Bois des Retours",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "map_bois_des_retours",
+          "maturity": 83,
+          "relations": 9,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "maps",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Lac Muet",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "map_lac_muet",
+          "maturity": 83,
+          "relations": 8,
+          "status": "DEDUITE",
+          "systems_affected": 1,
+          "type": "maps",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Le Lac Muet",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_lac_muet",
+          "maturity": 86,
+          "relations": 6,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Ce qui se répète dans le Bois",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "secret_clairiere_repetition",
+          "maturity": 86,
+          "relations": 7,
+          "status": "DEDUITE",
+          "systems_affected": 2,
+          "type": "secrets",
+          "usage_relations": 6
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Graine d’Écho",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_graine_d_echo",
+          "maturity": 88,
+          "relations": 4,
+          "status": "CANONIQUE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 3
+        },
+        {
+          "causal_depth": 1,
+          "display_name": "La Maison-Racine",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_maison_racine",
+          "maturity": 88,
+          "relations": 9,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 5
+        },
+        {
+          "causal_depth": 4,
+          "display_name": "Le Bois des Retours",
+          "has_animation": false,
+          "has_asset": false,
+          "id": "lieu_bois_des_retours",
+          "maturity": 88,
+          "relations": 7,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "locations",
+          "usage_relations": 4
+        },
+        {
+          "causal_depth": 2,
+          "display_name": "Alba",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "pnj_alba",
+          "maturity": 93,
+          "relations": 12,
+          "status": "CANONIQUE",
+          "systems_affected": 1,
+          "type": "npcs",
+          "usage_relations": 12
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Fragment de souvenir",
+          "has_animation": false,
+          "has_asset": true,
+          "id": "objet_fragment_de_souvenir",
+          "maturity": 96,
+          "relations": 8,
+          "status": "CANONIQUE",
+          "systems_affected": 2,
+          "type": "objects",
+          "usage_relations": 7
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Marin",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "pnj_marin",
+          "maturity": 99,
+          "relations": 13,
+          "status": "CANONIQUE",
+          "systems_affected": 3,
+          "type": "npcs",
+          "usage_relations": 13
+        },
+        {
+          "causal_depth": 3,
+          "display_name": "Nox",
+          "has_animation": true,
+          "has_asset": true,
+          "id": "pnj_nox",
+          "maturity": 99,
+          "relations": 12,
+          "status": "CANONIQUE",
+          "systems_affected": 3,
+          "type": "npcs",
+          "usage_relations": 12
+        }
+      ],
+      "immature": 1,
+      "mature": 16,
+      "partial": 63
+    },
+    "missing": {
+      "dangling_references": [],
+      "open_quantity_decisions": [
+        {
+          "justification": "Nombre exact de cultures = décision ouverte ; proposé = 1 plante mémorielle (canon) + couverture des 4 saisons + besoins cuisine/artisanat/relations.",
+          "kind": "culture",
+          "proposed": 6
+        },
+        {
+          "justification": "1 carte par lieu canonique (4). Nombre de biomes = décision ouverte.",
+          "kind": "map",
+          "proposed": 4
+        },
+        {
+          "justification": "3 PNJ canoniques ; nombre exact = décision ouverte. Rôles merchant couverts par Marin/Nox (DEDUIT), donc pas de PNJ inventé requis.",
+          "kind": "pnj",
+          "proposed": 3
+        },
+        {
+          "justification": "Nombre exact de quêtes = décision ouverte ; proposé = 1 quête par PNJ canonique + 1 quête de secret (Bois des Retours).",
+          "kind": "quete",
+          "proposed": 4
+        },
+        {
+          "justification": "Recettes exactes = élément ouvert du canon ; proposé = couverture des chaînes cuisine/artisanat/mémoire (1 recette par station minimum).",
+          "kind": "recette",
+          "proposed": 8
+        },
+        {
+          "justification": "Nombre de saisons = décision ouverte ; défaut technique 4 (1 par cycle).",
+          "kind": "saison",
+          "proposed": 4
+        },
+        {
+          "justification": "Secrets du Bois des Retours = élément ouvert du canon ; existence DEDUITE (Bois qui se répète, passé de Nox), contenu exact À_VALIDER. Chaque secret a un chemin de découverte.",
+          "kind": "secret",
+          "proposed": 2
+        }
+      ],
+      "to_produce": [
+        {
+          "gap": 2,
+          "have": 0,
+          "kind": "creature",
+          "target": 2
+        },
+        {
+          "gap": 5,
+          "have": 1,
+          "kind": "culture",
+          "target": 6
+        },
+        {
+          "gap": 4,
+          "have": 0,
+          "kind": "evenement",
+          "target": 4
+        },
+        {
+          "gap": 12,
+          "have": 13,
+          "kind": "objet",
+          "target": 25
+        },
+        {
+          "gap": 4,
+          "have": 0,
+          "kind": "quete",
+          "target": 4
+        },
+        {
+          "gap": 8,
+          "have": 0,
+          "kind": "recette",
+          "target": 8
+        },
+        {
+          "gap": 3,
+          "have": 2,
+          "kind": "ressource",
+          "target": 5
+        },
+        {
+          "gap": 4,
+          "have": 0,
+          "kind": "saison",
+          "target": 4
+        }
+      ],
+      "unmet_system_requirements": []
+    },
+    "open_decisions": {
+      "canon_open_elements": [
+        {
+          "id": "ouvert_les_noms_des_saisons_supplementaires",
+          "justification": "Élément explicitement marqué ouvert dans le canon.",
+          "source": "INPUT/canon_initial.md#Éléments ouverts",
+          "status": "A_VALIDER",
+          "topic": "Les noms des saisons supplémentaires"
+        },
+        {
+          "id": "ouvert_les_recettes_exactes",
+          "justification": "Élément explicitement marqué ouvert dans le canon.",
+          "source": "INPUT/canon_initial.md#Éléments ouverts",
+          "status": "A_VALIDER",
+          "topic": "Les recettes exactes"
+        },
+        {
+          "id": "ouvert_les_secrets_du_bois_des_retours",
+          "justification": "Élément explicitement marqué ouvert dans le canon.",
+          "source": "INPUT/canon_initial.md#Éléments ouverts",
+          "status": "A_VALIDER",
+          "topic": "Les secrets du Bois des Retours"
+        },
+        {
+          "id": "ouvert_le_nombre_final_de_cultures_et_de_quetes",
+          "justification": "Élément explicitement marqué ouvert dans le canon.",
+          "source": "INPUT/canon_initial.md#Éléments ouverts",
+          "status": "A_VALIDER",
+          "topic": "Le nombre final de cultures et de quêtes"
+        }
+      ],
+      "owner_decisions": [
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre exact de biomes"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre exact de cultures"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre exact de PNJ"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre exact de recettes"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre exact de quêtes"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "niveau de génération procédurale"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "durée d’une journée"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "nombre de saisons"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "importance de la pêche"
+        },
+        {
+          "source": "INPUT/open_decisions.md",
+          "status": "A_VALIDER",
+          "topic": "présence ou non d’un système de combat"
+        }
+      ],
+      "quantity_decisions": [
+        {
+          "justification": "Nombre exact de cultures = décision ouverte ; proposé = 1 plante mémorielle (canon) + couverture des 4 saisons + besoins cuisine/artisanat/relations.",
+          "proposed": 6,
+          "status": "A_VALIDER",
+          "topic": "Quantité de culture"
+        },
+        {
+          "justification": "1 carte par lieu canonique (4). Nombre de biomes = décision ouverte.",
+          "proposed": 4,
+          "status": "A_VALIDER",
+          "topic": "Quantité de map"
+        },
+        {
+          "justification": "3 PNJ canoniques ; nombre exact = décision ouverte. Rôles merchant couverts par Marin/Nox (DEDUIT), donc pas de PNJ inventé requis.",
+          "proposed": 3,
+          "status": "A_VALIDER",
+          "topic": "Quantité de pnj"
+        },
+        {
+          "justification": "Nombre exact de quêtes = décision ouverte ; proposé = 1 quête par PNJ canonique + 1 quête de secret (Bois des Retours).",
+          "proposed": 4,
+          "status": "A_VALIDER",
+          "topic": "Quantité de quete"
+        },
+        {
+          "justification": "Recettes exactes = élément ouvert du canon ; proposé = couverture des chaînes cuisine/artisanat/mémoire (1 recette par station minimum).",
+          "proposed": 8,
+          "status": "A_VALIDER",
+          "topic": "Quantité de recette"
+        },
+        {
+          "justification": "Nombre de saisons = décision ouverte ; défaut technique 4 (1 par cycle).",
+          "proposed": 4,
+          "status": "A_VALIDER",
+          "topic": "Quantité de saison"
+        },
+        {
+          "justification": "Secrets du Bois des Retours = élément ouvert du canon ; existence DEDUITE (Bois qui se répète, passé de Nox), contenu exact À_VALIDER. Chaque secret a un chemin de découverte.",
+          "proposed": 2,
+          "status": "A_VALIDER",
+          "topic": "Quantité de secret"
+        }
+      ],
+      "total": 21
+    }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

@@ -1,0 +1,182 @@
+{
+  "generated_deterministic": true,
+  "kind": "events",
+  "payload": [
+    {
+      "derivation": {
+        "animations": "animation contextuelle de l'événement.",
+        "assets": "effet visuel/particules de l'événement.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "consumers": "system_evenements, system_progression.",
+        "obtention": "Déclencheur on_season_change à lieu_bois_des_retours.",
+        "system": "system_secrets, system_evenements",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+      },
+      "description": "Un événement se répète dans le Bois des Retours (canon).",
+      "display_name": "Retour du Bois",
+      "effects": [
+        {
+          "params": {
+            "secret_id": "secret_clairiere_repetition"
+          },
+          "type": "discover_secret"
+        }
+      ],
+      "id": "evenement_retour_du_bois",
+      "justification": "Un événement se répète dans le Bois des Retours (canon).",
+      "location_id": "lieu_bois_des_retours",
+      "missable": true,
+      "participants": [],
+      "preconditions": [],
+      "repeatable": true,
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_secrets, system_evenements)",
+      "status": "PROPOSEE",
+      "systems": [
+        "system_secrets",
+        "system_evenements"
+      ],
+      "timing": {
+        "seasonal": true
+      },
+      "trigger": {
+        "params": {
+          "season_id": "saison_des_brumes"
+        },
+        "type": "on_season_change"
+      }
+    },
+    {
+      "derivation": {
+        "animations": "animation contextuelle de l'événement.",
+        "assets": "effet visuel/particules de l'événement.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "consumers": "system_evenements, system_progression.",
+        "obtention": "Déclencheur on_weather à lieu_champ_de_la_vallee_claire.",
+        "system": "system_meteo, system_agriculture",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+      },
+      "description": "La pluie arrose naturellement les cultures.",
+      "display_name": "Pluie sur la Vallée",
+      "effects": [
+        {
+          "params": {
+            "flag_id": "sol_arrose",
+            "value": true
+          },
+          "type": "set_flag"
+        }
+      ],
+      "id": "evenement_pluie_sur_la_vallee",
+      "justification": "La pluie arrose naturellement les cultures.",
+      "location_id": "lieu_champ_de_la_vallee_claire",
+      "missable": false,
+      "participants": [],
+      "preconditions": [],
+      "repeatable": false,
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_meteo, system_agriculture)",
+      "status": "PROPOSEE",
+      "systems": [
+        "system_meteo",
+        "system_agriculture"
+      ],
+      "timing": {
+        "seasonal": false
+      },
+      "trigger": {
+        "params": {
+          "weather_id": "pluie"
+        },
+        "type": "on_weather"
+      }
+    },
+    {
+      "derivation": {
+        "animations": "animation contextuelle de l'événement.",
+        "assets": "effet visuel/particules de l'événement.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "consumers": "system_evenements, system_progression.",
+        "obtention": "Déclencheur on_item_acquired à lieu_puits_de_memoire.",
+        "system": "system_memoire",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+      },
+      "description": "Le Puits de Mémoire réagit à un Écho Cristallin.",
+      "display_name": "Le Puits chante",
+      "effects": [
+        {
+          "params": {
+            "fait_id": "fait_valdore",
+            "to": "joueur"
+          },
+          "type": "reveal_fact"
+        }
+      ],
+      "id": "evenement_le_puits_chante",
+      "justification": "Le Puits de Mémoire réagit à un Écho Cristallin.",
+      "location_id": "lieu_puits_de_memoire",
+      "missable": true,
+      "participants": [],
+      "preconditions": [],
+      "repeatable": true,
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_memoire)",
+      "status": "PROPOSEE",
+      "systems": [
+        "system_memoire"
+      ],
+      "timing": {
+        "seasonal": false
+      },
+      "trigger": {
+        "params": {
+          "item_id": "objet_echo_cristallin"
+        },
+        "type": "on_item_acquired"
+      }
+    },
+    {
+      "derivation": {
+        "animations": "animation contextuelle de l'événement.",
+        "assets": "effet visuel/particules de l'événement.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "consumers": "system_evenements, system_progression.",
+        "obtention": "Déclencheur on_day_start à lieu_champ_de_la_vallee_claire.",
+        "system": "system_economie, system_relations",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+      },
+      "description": "Les habitants échangent leurs productions.",
+      "display_name": "Marché de la Vallée",
+      "effects": [
+        {
+          "params": {
+            "amount": 10
+          },
+          "type": "modify_economy"
+        }
+      ],
+      "id": "evenement_marche_de_la_vallee",
+      "justification": "Les habitants échangent leurs productions.",
+      "location_id": "lieu_champ_de_la_vallee_claire",
+      "missable": false,
+      "participants": [],
+      "preconditions": [],
+      "repeatable": false,
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_economie, system_relations)",
+      "status": "PROPOSEE",
+      "systems": [
+        "system_economie",
+        "system_relations"
+      ],
+      "timing": {
+        "seasonal": false
+      },
+      "trigger": {
+        "type": "on_day_start"
+      }
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

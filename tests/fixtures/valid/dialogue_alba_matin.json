@@ -1,0 +1,22 @@
+{
+  "id": "dialogue_alba_accueil_matin",
+  "display_name": "Alba — accueil du matin",
+  "status": "PROPOSEE",
+  "speaker_id": "pnj_alba",
+  "conditions": [
+    {"type": "time_of_day", "params": {"op": "<", "hour": 12}},
+    {"type": "location", "params": {"lieu_id": "lieu_maison_racine"}}
+  ],
+  "lines": [
+    {"text": "Bonjour, Jardinier. Les pousses ont bu la rosée cette nuit.",
+     "reveals": [], "choices": [
+       {"text": "Que dois-je faire aujourd'hui ?",
+        "effect": {"type": "advance_quest", "params": {"quete_id": "quete_le_premier_echo", "step": "step_1"}}}
+     ]}
+  ],
+  "priority": 10,
+  "voice_consistency": "douce, pédagogue, phrases courtes, métaphores végétales",
+  "source": "prompt dialogue pnj_alba",
+  "justification": "Dialogue d'accueil contextuel d'Alba, guide du joueur.",
+  "status_note": "ne révèle aucun fait interdit"
+}

@@ -1,0 +1,4035 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_assets",
+  "payload": [
+    {
+      "display_name": "Icône Graine d’Écho",
+      "entity_id": "objet_graine_d_echo",
+      "family": "famille_objets",
+      "fingerprint": "54c1bbcde6a1c2ac",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_d_echo",
+      "justification": "Icône d'inventaire pour Graine d’Écho.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Houe de départ",
+      "entity_id": "objet_houe_de_depart",
+      "family": "famille_objets",
+      "fingerprint": "ca05643e7e4f4e24",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_houe_de_depart",
+      "justification": "Icône d'inventaire pour Houe de départ.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Arrosoir de cuivre",
+      "entity_id": "objet_arrosoir_de_cuivre",
+      "family": "famille_objets",
+      "fingerprint": "ca39bad5829694bb",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_arrosoir_de_cuivre",
+      "justification": "Icône d'inventaire pour Arrosoir de cuivre.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Fragment de souvenir",
+      "entity_id": "objet_fragment_de_souvenir",
+      "family": "famille_objets",
+      "fingerprint": "a376d0a9b1dfaca9",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_fragment_de_souvenir",
+      "justification": "Icône d'inventaire pour Fragment de souvenir.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Carnet du Jardinier",
+      "entity_id": "objet_carnet_du_jardinier",
+      "family": "famille_objets",
+      "fingerprint": "19da1baa6d656cc5",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_carnet_du_jardinier",
+      "justification": "Icône d'inventaire pour Carnet du Jardinier.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Ligne de pêche",
+      "entity_id": "objet_ligne_de_peche",
+      "family": "famille_objets",
+      "fingerprint": "dbd7aa5785dd4f17",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_ligne_de_peche",
+      "justification": "Icône d'inventaire pour Ligne de pêche.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Écho Cristallin",
+      "entity_id": "objet_echo_cristallin",
+      "family": "famille_objets",
+      "fingerprint": "4e06dad13bed0d78",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_echo_cristallin",
+      "justification": "Icône d'inventaire pour Écho Cristallin.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Graine de Navet de la Vallée",
+      "entity_id": "objet_graine_de_navet_de_la_vallee",
+      "family": "famille_objets",
+      "fingerprint": "c8e8c5193e3c896b",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_de_navet_de_la_vallee",
+      "justification": "Icône d'inventaire pour Graine de Navet de la Vallée.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Navet",
+      "entity_id": "objet_navet",
+      "family": "famille_objets",
+      "fingerprint": "bf1ded9f891b6415",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_navet",
+      "justification": "Icône d'inventaire pour Navet.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Graine de Blé des Épis",
+      "entity_id": "objet_graine_de_ble_des_epis",
+      "family": "famille_objets",
+      "fingerprint": "6a2198248aada864",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_de_ble_des_epis",
+      "justification": "Icône d'inventaire pour Graine de Blé des Épis.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Grain de blé",
+      "entity_id": "objet_grain_de_ble",
+      "family": "famille_objets",
+      "fingerprint": "e0d31eb352b59187",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_grain_de_ble",
+      "justification": "Icône d'inventaire pour Grain de blé.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Graine de Courge des Brumes",
+      "entity_id": "objet_graine_de_courge_des_brumes",
+      "family": "famille_objets",
+      "fingerprint": "3d83a42191a3e6f3",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_de_courge_des_brumes",
+      "justification": "Icône d'inventaire pour Graine de Courge des Brumes.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Courge",
+      "entity_id": "objet_courge",
+      "family": "famille_objets",
+      "fingerprint": "59f821e93ffec7b2",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_courge",
+      "justification": "Icône d'inventaire pour Courge.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Graine de Lin du Repos",
+      "entity_id": "objet_graine_de_lin_du_repos",
+      "family": "famille_objets",
+      "fingerprint": "118fb565f2f5c36e",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_de_lin_du_repos",
+      "justification": "Icône d'inventaire pour Graine de Lin du Repos.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Fibre de lin",
+      "entity_id": "objet_fibre_de_lin",
+      "family": "famille_objets",
+      "fingerprint": "76a40008ed8b9ec8",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_fibre_de_lin",
+      "justification": "Icône d'inventaire pour Fibre de lin.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Graine de Souci de la Vallée",
+      "entity_id": "objet_graine_de_souci_de_la_vallee",
+      "family": "famille_objets",
+      "fingerprint": "2ebdea1ad735ee0b",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_graine_de_souci_de_la_vallee",
+      "justification": "Icône d'inventaire pour Graine de Souci de la Vallée.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Fleur de souci",
+      "entity_id": "objet_fleur_de_souci",
+      "family": "famille_objets",
+      "fingerprint": "6e9381e69ab9c57c",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_fleur_de_souci",
+      "justification": "Icône d'inventaire pour Fleur de souci.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Soupe de navet",
+      "entity_id": "objet_soupe_de_navet",
+      "family": "famille_objets",
+      "fingerprint": "3d2904666145ce39",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_soupe_de_navet",
+      "justification": "Icône d'inventaire pour Soupe de navet.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Pain de ble",
+      "entity_id": "objet_pain_de_ble",
+      "family": "famille_objets",
+      "fingerprint": "231d5c06301ac862",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_pain_de_ble",
+      "justification": "Icône d'inventaire pour Pain de ble.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Courge rotie",
+      "entity_id": "objet_courge_rotie",
+      "family": "famille_objets",
+      "fingerprint": "71619fd42a2afa46",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_courge_rotie",
+      "justification": "Icône d'inventaire pour Courge rotie.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Tisane de souci",
+      "entity_id": "objet_tisane_de_souci",
+      "family": "famille_objets",
+      "fingerprint": "cacabd151a8614d9",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_tisane_de_souci",
+      "justification": "Icône d'inventaire pour Tisane de souci.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Planche",
+      "entity_id": "objet_planche",
+      "family": "famille_objets",
+      "fingerprint": "cf16808e96c688d3",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_planche",
+      "justification": "Icône d'inventaire pour Planche.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Fil de lin",
+      "entity_id": "objet_fil_de_lin",
+      "family": "famille_objets",
+      "fingerprint": "24e434dac7b037f8",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_fil_de_lin",
+      "justification": "Icône d'inventaire pour Fil de lin.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Toile",
+      "entity_id": "objet_toile",
+      "family": "famille_objets",
+      "fingerprint": "71497fb4042c3961",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_toile",
+      "justification": "Icône d'inventaire pour Toile.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Icône Poisson du lac",
+      "entity_id": "objet_poisson_du_lac",
+      "family": "famille_objets",
+      "fingerprint": "3c488b7fb8377b5d",
+      "function": "famille_objets",
+      "height": 16,
+      "id": "asset_icone_objet_poisson_du_lac",
+      "justification": "Icône d'inventaire pour Poisson du lac.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'objet (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "inventaire",
+        "sol si droppable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Sprite outil Houe de départ",
+      "entity_id": "objet_houe_de_depart",
+      "family": "famille_outils",
+      "fingerprint": "57217c51e2fa2a89",
+      "function": "famille_outils",
+      "height": 16,
+      "id": "asset_sprite_outil_objet_houe_de_depart",
+      "justification": "Sprite de l'outil Houe de départ tenu par le joueur.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'outil (système agriculture/pêche)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "porté par le joueur",
+        "visible en action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "main_nue",
+        "en_main"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Sprite outil Arrosoir de cuivre",
+      "entity_id": "objet_arrosoir_de_cuivre",
+      "family": "famille_outils",
+      "fingerprint": "3daf67c198316362",
+      "function": "famille_outils",
+      "height": 16,
+      "id": "asset_sprite_outil_objet_arrosoir_de_cuivre",
+      "justification": "Sprite de l'outil Arrosoir de cuivre tenu par le joueur.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'outil (système agriculture/pêche)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "porté par le joueur",
+        "visible en action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "main_nue",
+        "en_main"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Sprite outil Ligne de pêche",
+      "entity_id": "objet_ligne_de_peche",
+      "family": "famille_outils",
+      "fingerprint": "d2b43a1acb8ef4aa",
+      "function": "famille_outils",
+      "height": 16,
+      "id": "asset_sprite_outil_objet_ligne_de_peche",
+      "justification": "Sprite de l'outil Ligne de pêche tenu par le joueur.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'outil (système agriculture/pêche)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "porté par le joueur",
+        "visible en action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "main_nue",
+        "en_main"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Floraison d'Écho — semis",
+      "entity_id": "culture_floraison_d_echo",
+      "family": "famille_cultures",
+      "fingerprint": "76601919e05f3c2c",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_floraison_d_echo_semis",
+      "justification": "Sprite du stade 'semis' de Floraison d'Écho.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Floraison d'Écho — pousse",
+      "entity_id": "culture_floraison_d_echo",
+      "family": "famille_cultures",
+      "fingerprint": "fc3583b23fb99cc6",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_floraison_d_echo_pousse",
+      "justification": "Sprite du stade 'pousse' de Floraison d'Écho.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Floraison d'Écho — mature",
+      "entity_id": "culture_floraison_d_echo",
+      "family": "famille_cultures",
+      "fingerprint": "54b8e44135b67551",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_floraison_d_echo_mature",
+      "justification": "Sprite du stade 'mature' de Floraison d'Écho.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Floraison d'Écho — recoltable",
+      "entity_id": "culture_floraison_d_echo",
+      "family": "famille_cultures",
+      "fingerprint": "98b23f2b75bb3771",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_floraison_d_echo_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Floraison d'Écho.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Navet de la Vallée — semis",
+      "entity_id": "culture_navet_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "83874be18afe1ce3",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_navet_de_la_vallee_semis",
+      "justification": "Sprite du stade 'semis' de Navet de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Navet de la Vallée — pousse",
+      "entity_id": "culture_navet_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "6147bce5391194f7",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_navet_de_la_vallee_pousse",
+      "justification": "Sprite du stade 'pousse' de Navet de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Navet de la Vallée — mature",
+      "entity_id": "culture_navet_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "a6c1d44dca780bba",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_navet_de_la_vallee_mature",
+      "justification": "Sprite du stade 'mature' de Navet de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Navet de la Vallée — recoltable",
+      "entity_id": "culture_navet_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "bfc7258c233d610c",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_navet_de_la_vallee_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Navet de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Blé des Épis — semis",
+      "entity_id": "culture_ble_des_epis",
+      "family": "famille_cultures",
+      "fingerprint": "2fb440b36d39353c",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_ble_des_epis_semis",
+      "justification": "Sprite du stade 'semis' de Blé des Épis.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Blé des Épis — pousse",
+      "entity_id": "culture_ble_des_epis",
+      "family": "famille_cultures",
+      "fingerprint": "7aaa2431a007cc50",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_ble_des_epis_pousse",
+      "justification": "Sprite du stade 'pousse' de Blé des Épis.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Blé des Épis — mature",
+      "entity_id": "culture_ble_des_epis",
+      "family": "famille_cultures",
+      "fingerprint": "0b1a2cac5d25f098",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_ble_des_epis_mature",
+      "justification": "Sprite du stade 'mature' de Blé des Épis.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Blé des Épis — recoltable",
+      "entity_id": "culture_ble_des_epis",
+      "family": "famille_cultures",
+      "fingerprint": "6ffd5438539b909d",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_ble_des_epis_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Blé des Épis.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Courge des Brumes — semis",
+      "entity_id": "culture_courge_des_brumes",
+      "family": "famille_cultures",
+      "fingerprint": "d4690c1e94a6ff81",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_courge_des_brumes_semis",
+      "justification": "Sprite du stade 'semis' de Courge des Brumes.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Courge des Brumes — pousse",
+      "entity_id": "culture_courge_des_brumes",
+      "family": "famille_cultures",
+      "fingerprint": "4ca188033fb334d8",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_courge_des_brumes_pousse",
+      "justification": "Sprite du stade 'pousse' de Courge des Brumes.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Courge des Brumes — mature",
+      "entity_id": "culture_courge_des_brumes",
+      "family": "famille_cultures",
+      "fingerprint": "a15c2dff095992cf",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_courge_des_brumes_mature",
+      "justification": "Sprite du stade 'mature' de Courge des Brumes.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Courge des Brumes — recoltable",
+      "entity_id": "culture_courge_des_brumes",
+      "family": "famille_cultures",
+      "fingerprint": "8be3eb7cce6fff1d",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_courge_des_brumes_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Courge des Brumes.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Lin du Repos — semis",
+      "entity_id": "culture_lin_du_repos",
+      "family": "famille_cultures",
+      "fingerprint": "a26710027c064051",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_lin_du_repos_semis",
+      "justification": "Sprite du stade 'semis' de Lin du Repos.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Lin du Repos — pousse",
+      "entity_id": "culture_lin_du_repos",
+      "family": "famille_cultures",
+      "fingerprint": "9cd8a2dd43a01a70",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_lin_du_repos_pousse",
+      "justification": "Sprite du stade 'pousse' de Lin du Repos.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Lin du Repos — mature",
+      "entity_id": "culture_lin_du_repos",
+      "family": "famille_cultures",
+      "fingerprint": "3881ee1b8929a730",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_lin_du_repos_mature",
+      "justification": "Sprite du stade 'mature' de Lin du Repos.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Lin du Repos — recoltable",
+      "entity_id": "culture_lin_du_repos",
+      "family": "famille_cultures",
+      "fingerprint": "05569cb9b87e7b51",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_lin_du_repos_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Lin du Repos.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Souci de la Vallée — semis",
+      "entity_id": "culture_souci_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "545514008ee80d47",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_souci_de_la_vallee_semis",
+      "justification": "Sprite du stade 'semis' de Souci de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade semis"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "semis"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Souci de la Vallée — pousse",
+      "entity_id": "culture_souci_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "f300f53ab3f9b4b2",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_souci_de_la_vallee_pousse",
+      "justification": "Sprite du stade 'pousse' de Souci de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade pousse"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pousse"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Souci de la Vallée — mature",
+      "entity_id": "culture_souci_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "bc41e7a55bf64834",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_souci_de_la_vallee_mature",
+      "justification": "Sprite du stade 'mature' de Souci de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade mature"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "mature"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Souci de la Vallée — recoltable",
+      "entity_id": "culture_souci_de_la_vallee",
+      "family": "famille_cultures",
+      "fingerprint": "301735bd60935c98",
+      "function": "famille_cultures",
+      "height": 24,
+      "id": "asset_culture_souci_de_la_vallee_recoltable",
+      "justification": "Sprite du stade 'recoltable' de Souci de la Vallée.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des stades de croissance (agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "planté sur sol_meuble",
+        "stade recoltable"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "recoltable"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Établi de Marin — inactif",
+      "entity_id": "machine_etabli_de_marin",
+      "family": "famille_machines",
+      "fingerprint": "c52fae84fa9c9cf3",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_etabli_de_marin_inactif",
+      "justification": "Sprite de la machine Établi de Marin à l'état 'inactif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état inactif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "inactif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Établi de Marin — actif",
+      "entity_id": "machine_etabli_de_marin",
+      "family": "famille_machines",
+      "fingerprint": "e02c775884e9f325",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_etabli_de_marin_actif",
+      "justification": "Sprite de la machine Établi de Marin à l'état 'actif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état actif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "actif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Foyer de la Maison-Racine — inactif",
+      "entity_id": "machine_foyer_de_la_maison_racine",
+      "family": "famille_machines",
+      "fingerprint": "060e2f8d8be6e1e5",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_foyer_de_la_maison_racine_inactif",
+      "justification": "Sprite de la machine Foyer de la Maison-Racine à l'état 'inactif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état inactif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "inactif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Foyer de la Maison-Racine — actif",
+      "entity_id": "machine_foyer_de_la_maison_racine",
+      "family": "famille_machines",
+      "fingerprint": "8b0f93551e801e9d",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_foyer_de_la_maison_racine_actif",
+      "justification": "Sprite de la machine Foyer de la Maison-Racine à l'état 'actif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état actif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "actif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Métier à tisser — inactif",
+      "entity_id": "machine_metier_a_tisser",
+      "family": "famille_machines",
+      "fingerprint": "16649fef71cfe4af",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_metier_a_tisser_inactif",
+      "justification": "Sprite de la machine Métier à tisser à l'état 'inactif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état inactif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "inactif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Métier à tisser — actif",
+      "entity_id": "machine_metier_a_tisser",
+      "family": "famille_machines",
+      "fingerprint": "832bde1cfe767f76",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_metier_a_tisser_actif",
+      "justification": "Sprite de la machine Métier à tisser à l'état 'actif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état actif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "actif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Puits de Mémoire — inactif",
+      "entity_id": "machine_puits_de_memoire",
+      "family": "famille_machines",
+      "fingerprint": "2aa7135aa6ca4683",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_puits_de_memoire_inactif",
+      "justification": "Sprite de la machine Puits de Mémoire à l'état 'inactif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état inactif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "inactif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Puits de Mémoire — actif",
+      "entity_id": "machine_puits_de_memoire",
+      "family": "famille_machines",
+      "fingerprint": "a1c5a98256b17235",
+      "function": "famille_machines",
+      "height": 32,
+      "id": "asset_machine_puits_de_memoire_actif",
+      "justification": "Sprite de la machine Puits de Mémoire à l'état 'actif'.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des états de la machine (artisanat/cuisine/mémoire)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "placée dans atelier/lieu dédié",
+        "état actif"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "actif"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Spritesheet du Jardinier",
+      "entity_id": "joueur_jardinier",
+      "family": "famille_personnages",
+      "fingerprint": "df53fb7adcb769c9",
+      "function": "famille_personnages",
+      "height": 128,
+      "id": "asset_spritesheet_jardinier",
+      "justification": "Feuille de sprites du personnage joueur (toutes actions/directions).",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "joueur canonique (le Jardinier)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "4 directions",
+        "actions outillées"
+      ],
+      "validation": {
+        "dimensions": "64×128 (4×4 frames 16×32)",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "idle_down",
+        "idle_up",
+        "idle_left",
+        "idle_right",
+        "marche_down",
+        "marche_up",
+        "marche_left",
+        "marche_right",
+        "labourer_down",
+        "labourer_up",
+        "labourer_left",
+        "labourer_right",
+        "arroser_down",
+        "arroser_up",
+        "arroser_left",
+        "arroser_right",
+        "planter_down",
+        "planter_up",
+        "planter_left",
+        "planter_right",
+        "recolter_down",
+        "recolter_up",
+        "recolter_left",
+        "recolter_right",
+        "pecher_down",
+        "pecher_up",
+        "pecher_left",
+        "pecher_right",
+        "fabriquer_None",
+        "cuisiner_None",
+        "parler_None",
+        "offrir_None"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Spritesheet Alba",
+      "entity_id": "pnj_alba",
+      "family": "famille_personnages",
+      "fingerprint": "3e49a64359dc42f8",
+      "function": "famille_personnages",
+      "height": 96,
+      "id": "asset_spritesheet_pnj_alba",
+      "justification": "Feuille de sprites de Alba.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (relations)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "4 directions",
+        "idle/marche/interaction"
+      ],
+      "validation": {
+        "dimensions": "64×96",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "idle_down",
+        "idle_up",
+        "idle_left",
+        "idle_right",
+        "marche_down",
+        "marche_up",
+        "marche_left",
+        "marche_right",
+        "interaction_None"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Portrait Alba",
+      "entity_id": "pnj_alba",
+      "family": "famille_personnages",
+      "fingerprint": "59002aee380627e6",
+      "function": "famille_personnages",
+      "height": 64,
+      "id": "asset_portrait_pnj_alba",
+      "justification": "Portrait de dialogue pour Alba.",
+      "kind": "portrait",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (dialogues)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "dialogue",
+        "carnet"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "neutre",
+        "content",
+        "inquiet"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Spritesheet Marin",
+      "entity_id": "pnj_marin",
+      "family": "famille_personnages",
+      "fingerprint": "fbe6896d83bd740b",
+      "function": "famille_personnages",
+      "height": 96,
+      "id": "asset_spritesheet_pnj_marin",
+      "justification": "Feuille de sprites de Marin.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (relations)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "4 directions",
+        "idle/marche/interaction"
+      ],
+      "validation": {
+        "dimensions": "64×96",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "idle_down",
+        "idle_up",
+        "idle_left",
+        "idle_right",
+        "marche_down",
+        "marche_up",
+        "marche_left",
+        "marche_right",
+        "interaction_None"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Portrait Marin",
+      "entity_id": "pnj_marin",
+      "family": "famille_personnages",
+      "fingerprint": "5db3f8aa3b1d9140",
+      "function": "famille_personnages",
+      "height": 64,
+      "id": "asset_portrait_pnj_marin",
+      "justification": "Portrait de dialogue pour Marin.",
+      "kind": "portrait",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (dialogues)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "dialogue",
+        "carnet"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "neutre",
+        "content",
+        "inquiet"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Spritesheet Nox",
+      "entity_id": "pnj_nox",
+      "family": "famille_personnages",
+      "fingerprint": "d52613c40667009a",
+      "function": "famille_personnages",
+      "height": 96,
+      "id": "asset_spritesheet_pnj_nox",
+      "justification": "Feuille de sprites de Nox.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (relations)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "4 directions",
+        "idle/marche/interaction"
+      ],
+      "validation": {
+        "dimensions": "64×96",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "idle_down",
+        "idle_up",
+        "idle_left",
+        "idle_right",
+        "marche_down",
+        "marche_up",
+        "marche_left",
+        "marche_right",
+        "interaction_None"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Portrait Nox",
+      "entity_id": "pnj_nox",
+      "family": "famille_personnages",
+      "fingerprint": "008b24b88592e435",
+      "function": "famille_personnages",
+      "height": 64,
+      "id": "asset_portrait_pnj_nox",
+      "justification": "Portrait de dialogue pour Nox.",
+      "kind": "portrait",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé du PNJ (dialogues)",
+      "status": "CANONIQUE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "dialogue",
+        "carnet"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "neutre",
+        "content",
+        "inquiet"
+      ],
+      "width": 64
+    },
+    {
+      "display_name": "Spritesheet Poisson du Lac",
+      "entity_id": "creature_poisson_du_lac",
+      "family": "famille_creatures",
+      "fingerprint": "14f98ad8a9f00f40",
+      "function": "famille_creatures",
+      "height": 32,
+      "id": "asset_spritesheet_creature_poisson_du_lac",
+      "justification": "Feuille de sprites de Poisson du Lac.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de la créature (pêche/secrets)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "dans son habitat"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut",
+        "variation_1"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Spritesheet Écho du Bois",
+      "entity_id": "creature_echo_du_bois",
+      "family": "famille_creatures",
+      "fingerprint": "16a8b9d33324aeaf",
+      "function": "famille_creatures",
+      "height": 32,
+      "id": "asset_spritesheet_creature_echo_du_bois",
+      "justification": "Feuille de sprites de Écho du Bois.",
+      "kind": "sprite",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de la créature (pêche/secrets)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "dans son habitat"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "palette": "PALETTE",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut",
+        "variation_1"
+      ],
+      "width": 32
+    },
+    {
+      "display_name": "Tileset bois",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "90e66f9e66a93e5d",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_bois",
+      "justification": "Tileset du terrain 'bois' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset eau",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "44fb1da69ba560c3",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_eau",
+      "justification": "Tileset du terrain 'eau' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset feuillage",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "3755c40b78a242e6",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_feuillage",
+      "justification": "Tileset du terrain 'feuillage' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset herbe",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "791b2e860740088c",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_herbe",
+      "justification": "Tileset du terrain 'herbe' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset pierre",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "b170a794dc63e182",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_pierre",
+      "justification": "Tileset du terrain 'pierre' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset plancher",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "79a5176685e7764c",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_plancher",
+      "justification": "Tileset du terrain 'plancher' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset pont",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "e0fcfb910adce3bf",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_pont",
+      "justification": "Tileset du terrain 'pont' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset sol_meuble",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "654b39200a9bb0c0",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_sol_meuble",
+      "justification": "Tileset du terrain 'sol_meuble' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Tileset terre",
+      "entity_id": "map_terrains",
+      "family": "famille_terrains",
+      "fingerprint": "dc774e51968ebbbc",
+      "function": "famille_terrains",
+      "height": 48,
+      "id": "asset_tileset_terre",
+      "justification": "Tileset du terrain 'terre' (variante 3×3 + humide/saison).",
+      "kind": "tileset",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des terrains des maps (constraints#Architecture)",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "sol de carte",
+        "9 tuiles (3×3)"
+      ],
+      "validation": {
+        "dimensions": "48×48 (3×3 tuiles 16×16)",
+        "transparency": false,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sec",
+        "humide",
+        "par_saison"
+      ],
+      "width": 48
+    },
+    {
+      "display_name": "Particule Sol laboure",
+      "entity_id": "effet_sol_laboure",
+      "family": "famille_effets",
+      "fingerprint": "7795ba089a9f21a6",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_sol_laboure",
+      "justification": "Effet visuel synchronisé avec l'action 'labourer'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Sol arrose",
+      "entity_id": "effet_sol_arrose",
+      "family": "famille_effets",
+      "fingerprint": "9335e4f153494b13",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_sol_arrose",
+      "justification": "Effet visuel synchronisé avec l'action 'arroser'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Graine plantee",
+      "entity_id": "effet_graine_plantee",
+      "family": "famille_effets",
+      "fingerprint": "27803614ae49efe1",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_graine_plantee",
+      "justification": "Effet visuel synchronisé avec l'action 'planter'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Recolte",
+      "entity_id": "effet_recolte",
+      "family": "famille_effets",
+      "fingerprint": "33a8ebb1af5ea77e",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_recolte",
+      "justification": "Effet visuel synchronisé avec l'action 'recolter'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Prise poisson",
+      "entity_id": "effet_prise_poisson",
+      "family": "famille_effets",
+      "fingerprint": "8c8d9b16697b88c8",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_prise_poisson",
+      "justification": "Effet visuel synchronisé avec l'action 'pecher'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_peche)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Artisanat",
+      "entity_id": "effet_artisanat",
+      "family": "famille_effets",
+      "fingerprint": "03d8853581fe5725",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_artisanat",
+      "justification": "Effet visuel synchronisé avec l'action 'fabriquer'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_artisanat)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Cuisine",
+      "entity_id": "effet_cuisine",
+      "family": "famille_effets",
+      "fingerprint": "185ffd1b05fe83d8",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_cuisine",
+      "justification": "Effet visuel synchronisé avec l'action 'cuisiner'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_cuisine)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Don relation",
+      "entity_id": "effet_don_relation",
+      "family": "famille_effets",
+      "fingerprint": "56436aab3d04a102",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_don_relation",
+      "justification": "Effet visuel synchronisé avec l'action 'offrir'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_relations)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Apparition echo",
+      "entity_id": "effet_apparition_echo",
+      "family": "famille_effets",
+      "fingerprint": "7c7689cf5db7811c",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_apparition_echo",
+      "justification": "Effet visuel synchronisé avec l'action 'evenement'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_secrets)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Particule Revele fragment",
+      "entity_id": "effet_revele_fragment",
+      "family": "famille_effets",
+      "fingerprint": "4b8c558e4acb4e8e",
+      "function": "famille_effets",
+      "height": 16,
+      "id": "asset_particule_revele_fragment",
+      "justification": "Effet visuel synchronisé avec l'action 'memoire'.",
+      "kind": "particule",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé des animations/événements (system_memoire)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "overlay lors de l'action"
+      ],
+      "validation": {
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "defaut"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition herbe→sol_meuble",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "d9249bf11cde9cf0",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_herbe_sol_meuble",
+      "justification": "Les terrains herbe et sol_meuble coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "herbe_vers_sol_meuble",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition herbe→terre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "7897f5e38bdf2a29",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_herbe_terre",
+      "justification": "Les terrains herbe et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "herbe_vers_terre",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition eau→herbe",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "cc3209045f1fca3d",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_eau_herbe",
+      "justification": "Les terrains eau et herbe coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "eau_vers_herbe",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition feuillage→herbe",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "620271d9a93dc103",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_feuillage_herbe",
+      "justification": "Les terrains feuillage et herbe coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "feuillage_vers_herbe",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition sol_meuble→terre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "7b5ebb9d5bda6b8d",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_sol_meuble_terre",
+      "justification": "Les terrains sol_meuble et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "sol_meuble_vers_terre",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition feuillage→terre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "a30daf0500aabbe3",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_feuillage_terre",
+      "justification": "Les terrains feuillage et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "feuillage_vers_terre",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition pierre→terre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "cce1835c2adcdf2d",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_pierre_terre",
+      "justification": "Les terrains pierre et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pierre_vers_terre",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition eau→pont",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "dfc71527627a8b7c",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_eau_pont",
+      "justification": "Les terrains eau et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "eau_vers_pont",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition eau→pierre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "d6c0e14ef074832e",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_eau_pierre",
+      "justification": "Les terrains eau et pierre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "eau_vers_pierre",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition herbe→pont",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "2282cce0d11251ca",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_herbe_pont",
+      "justification": "Les terrains herbe et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "herbe_vers_pont",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition plancher→pont",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "76c030ef7ba754e6",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_plancher_pont",
+      "justification": "Les terrains plancher et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "plancher_vers_pont",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition bois→plancher",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "52aa5e40e5bb43cb",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_bois_plancher",
+      "justification": "Les terrains bois et plancher coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "bois_vers_plancher",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition pierre→plancher",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "c3c200f056f39c0a",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_pierre_plancher",
+      "justification": "Les terrains pierre et plancher coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "pierre_vers_plancher",
+        "miroir"
+      ],
+      "width": 16
+    },
+    {
+      "display_name": "Transition bois→pierre",
+      "entity_id": "map_terrains",
+      "family": "famille_transitions",
+      "fingerprint": "c32306b2250c6189",
+      "function": "famille_transitions",
+      "height": 16,
+      "id": "asset_transition_bois_pierre",
+      "justification": "Les terrains bois et pierre coexistent sur les maps ; une transition visuelle est requise.",
+      "kind": "transition",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+      "usage_rules": [
+        "auto-tile entre deux terrains adjacents"
+      ],
+      "validation": {
+        "auto_tile": true,
+        "dimensions": "16×16",
+        "transparency": true,
+        "unique_fingerprint": true
+      },
+      "variants": [
+        "bois_vers_pierre",
+        "miroir"
+      ],
+      "width": 16
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

@@ -1,0 +1,108 @@
+{
+  "$id": "https://pipeline.local/schemas/pnj.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'pnj' dérivé de l'ontologie V5.",
+  "properties": {
+    "beliefs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "emotions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "forbidden_knowledge": {
+      "description": "Faits que le PNJ ignore/taise.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "frequented_places": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "function": {
+      "type": "string"
+    },
+    "goals": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "home": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'pnj_').",
+      "pattern": "^pnj_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "knowledge": {
+      "description": "Faits connus (limite ce que le dialogue peut révéler).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "needs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "routines": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "voice": {
+      "description": "Signature de voix (validation narrative).",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "function"
+  ],
+  "title": "PNJ / agent",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

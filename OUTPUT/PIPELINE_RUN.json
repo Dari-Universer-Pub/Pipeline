@@ -1,0 +1,116 @@
+{
+  "generated_deterministic": true,
+  "kind": "pipeline_run",
+  "payload": {
+    "finished": "2026-09-23T09:35:12+00:00",
+    "pipeline_version": "5.0.0",
+    "stages": {
+      "canon": {
+        "contradictions": 5,
+        "locations": 4,
+        "npcs": 3,
+        "objects": 5,
+        "open_decisions": 10
+      },
+      "catalog": {
+        "creatures": 2,
+        "crops": 6,
+        "events": 4,
+        "functional_entries": 80,
+        "locations": 11,
+        "machines": 4,
+        "maps": 4,
+        "npcs": 3,
+        "objects": 25,
+        "quests": 4,
+        "recipes": 8,
+        "resources": 3,
+        "seasons": 4,
+        "secrets": 2
+      },
+      "compile": {
+        "animations": 107,
+        "assets": 102,
+        "dialogs": 3,
+        "fingerprint": "9ede4f8a65b7a70b",
+        "llm_required_at_runtime": false,
+        "relations": 280,
+        "runtime_entities": 80
+      },
+      "graph": {
+        "dangling": 0,
+        "edges": 280,
+        "nodes": 103,
+        "orphans": 0,
+        "reachable": 103
+      },
+      "manifest": {
+        "animations": 107,
+        "assets": 102,
+        "creatures": 2,
+        "crops": 6,
+        "effects": 10,
+        "machines": 4,
+        "maps": 4,
+        "navigation": 1,
+        "npcs": 3,
+        "objects": 25,
+        "placement": 5,
+        "quests": 4,
+        "recipes": 8,
+        "resources": 3,
+        "transitions": 14
+      },
+      "ontology": {
+        "entity_types": 17,
+        "relation_types": 18,
+        "schemas": 22
+      },
+      "prompt": {
+        "blocked": 1,
+        "names": [
+          "blocked_demo",
+          "by_family_famille_personnages",
+          "by_family_famille_terrains",
+          "by_id_asset_icone_objet_fragment_de_souvenir",
+          "by_id_map_vallee_claire",
+          "by_id_objet_graine_d_echo",
+          "by_id_pnj_alba",
+          "by_id_recette_soupe_de_navet",
+          "by_seq_joueur_marche",
+          "by_seq_machine_actif"
+        ],
+        "ok": 9,
+        "total": 10
+      },
+      "report": {
+        "average_maturity": 71.4,
+        "isolated_total": 0,
+        "open_decisions": 21
+      },
+      "simulate": {
+        "production_chains_ok": "8/8",
+        "profiles": 8
+      },
+      "systems": {
+        "count": 15
+      },
+      "traceability": {
+        "all_green": true,
+        "domains_total": 16,
+        "incomplete": [],
+        "production_ready": 16,
+        "tests": "96/96"
+      },
+      "validate": {
+        "errors": 0,
+        "passed": true,
+        "warnings": 0
+      }
+    },
+    "started": "2026-09-23T09:35:06+00:00",
+    "validation_passed": true
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

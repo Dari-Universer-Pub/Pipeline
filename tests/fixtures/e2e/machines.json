@@ -1,0 +1,134 @@
+{
+  "description": "Machine + recette qui l'utilise + objet produit + règle de placement.",
+  "domain": "machines",
+  "entities": [
+    {
+      "animation_ids": [],
+      "built_by": "pnj_marin",
+      "derivation": {
+        "animations": "animation 'actif'.",
+        "assets": "1 sprite machine (2 états).",
+        "consequences": "objet_toile_sechee (vente/refuge).",
+        "consumers": "recette_toile_sechee.",
+        "obtention": "Fabriquée par pnj_marin.",
+        "system": "system_artisanat, system_economie",
+        "tests": "test_e2e_machines, test_production",
+        "why": "La chaîne lin -> toile exige une finition (valeur ajoutée)."
+      },
+      "display_name": "Séchoir de Marin",
+      "function": "Station de séchage (artisanat du lin).",
+      "id": "machine_sechoir_de_marin",
+      "inputs": [
+        "objet_toile"
+      ],
+      "justification": "Étape de finition de la chaîne du lin ; fabriquée par Marin (canon).",
+      "outputs": [
+        "objet_toile_sechee"
+      ],
+      "placement_id": "placement_sechoir_de_marin",
+      "recipe_ids": [
+        "recette_toile_sechee"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "system": "system_artisanat"
+    },
+    {
+      "display_name": "Toile séchée",
+      "duration": 2.0,
+      "id": "recette_toile_sechee",
+      "inputs": [
+        {
+          "item_id": "objet_toile",
+          "qty": 1
+        }
+      ],
+      "justification": "Utilise réellement la machine (station_id).",
+      "kind": "artisanat",
+      "outputs": [
+        {
+          "item_id": "objet_toile_sechee",
+          "qty": 1
+        }
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "station_id": "machine_sechoir_de_marin",
+      "status": "PROPOSEE"
+    },
+    {
+      "base_value": 210,
+      "category": "artisanat",
+      "decorative_only": false,
+      "display_name": "Toile séchée",
+      "function": "Textile fini, base des améliorations du refuge.",
+      "gameplay_verb": "utiliser",
+      "id": "objet_toile_sechee",
+      "justification": "Valeur >= 1.4 x toile (143).",
+      "loop_stage": 3,
+      "obtention": [
+        "recette:recette_toile_sechee"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "transforms_into": [],
+      "users": [
+        "system_refuge",
+        "system_economie"
+      ]
+    },
+    {
+      "accessibility": "extérieur, près de l'atelier",
+      "allowed_terrain": [
+        "herbe",
+        "sol_meuble"
+      ],
+      "clustering": "isole",
+      "density": "faible",
+      "discovery_conditions": "aucune",
+      "display_name": "Placement séchoir",
+      "forbidden_terrain": [
+        "eau",
+        "pierre"
+      ],
+      "id": "placement_sechoir_de_marin",
+      "justification": "Le séchoir exige de l'herbe ou du sol meuble, loin de l'eau.",
+      "min_distance": 2,
+      "places": "machine",
+      "poi_relation": "lisière de la Vallée Claire",
+      "season": "toutes",
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "validation": {
+        "accessible": true,
+        "densite_max": true,
+        "distance_min": true,
+        "terrain_respecte": true
+      },
+      "weather": "sec de préférence"
+    }
+  ],
+  "invalid_variant": {
+    "built_by": "pnj_inconnu",
+    "display_name": "Machine invalide",
+    "function": "x",
+    "id": "machine_invalide",
+    "inputs": [],
+    "justification": "rejet (fabriquant inexistant : ref.unresolved)",
+    "outputs": [],
+    "recipe_ids": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "system": "system_artisanat"
+  },
+  "orphan_variant": {
+    "display_name": "Machine orpheline",
+    "function": "aucune",
+    "id": "machine_orpheline",
+    "inputs": [],
+    "justification": "orpheline (rien ne l'utilise)",
+    "outputs": [],
+    "recipe_ids": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "$id": "https://pipeline.local/schemas/animation.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'animation' dérivé de l'ontologie V5.",
+  "properties": {
+    "direction": {
+      "enum": [
+        "down",
+        "up",
+        "left",
+        "right",
+        null
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "fps": {
+      "minimum": 1,
+      "type": "number"
+    },
+    "frames": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'anim_').",
+      "pattern": "^anim_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "impact_event": {
+      "description": "Frame d'impact (synchronisation gameplay) : entier (indice de frame) ou chaîne 'effet:<flag>'.",
+      "type": [
+        "integer",
+        "string",
+        "null"
+      ]
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "logic_effect": {
+      "description": "Effet logique déclenché ( ID effet).",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "required_assets": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "state_or_action": {
+      "description": "État/action déclencheur.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "transitions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "entity_id",
+    "state_or_action",
+    "frames",
+    "fps",
+    "loop"
+  ],
+  "title": "Animation",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

@@ -1,0 +1,131 @@
+{
+  "generated_deterministic": true,
+  "kind": "seasons",
+  "payload": [
+    {
+      "derivation": {
+        "animations": "Transitions de saison (fondu) + météo animée.",
+        "assets": "1 tileset de sol par saison (famille terrains).",
+        "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+        "consumers": "agriculture, météo, événements, exploration.",
+        "obtention": "N/A (cadre temporel).",
+        "system": "system_temps, system_meteo",
+        "tests": "test_saisons, test_temporel, test_reproductibilite.",
+        "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+      },
+      "description": "Renouveau ; terres cultivables ouvertes.",
+      "display_name": "Saison des Premières Pousses",
+      "growable": [
+        "culture_navet_de_la_vallee",
+        "culture_souci_de_la_vallee"
+      ],
+      "id": "saison_des_premieres_pousses",
+      "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
+      "length_days": 28,
+      "order": 1,
+      "quantity_status": "A_VALIDER",
+      "source": "INPUT/open_decisions.md (nombre) + brief (système saisons)",
+      "status": "PROPOSEE",
+      "weather_pool": [
+        "ensoleille",
+        "nuageux",
+        "pluie",
+        "vent"
+      ]
+    },
+    {
+      "derivation": {
+        "animations": "Transitions de saison (fondu) + météo animée.",
+        "assets": "1 tileset de sol par saison (famille terrains).",
+        "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+        "consumers": "agriculture, météo, événements, exploration.",
+        "obtention": "N/A (cadre temporel).",
+        "system": "system_temps, system_meteo",
+        "tests": "test_saisons, test_temporel, test_reproductibilite.",
+        "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+      },
+      "description": "Croissance et récoltes abondantes.",
+      "display_name": "Saison des Épis",
+      "growable": [
+        "culture_ble_des_epis",
+        "culture_souci_de_la_vallee"
+      ],
+      "id": "saison_des_epis",
+      "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
+      "length_days": 28,
+      "order": 2,
+      "quantity_status": "A_VALIDER",
+      "source": "INPUT/open_decisions.md (nombre) + brief (système saisons)",
+      "status": "PROPOSEE",
+      "weather_pool": [
+        "ensoleille",
+        "orage",
+        "vent",
+        "nuageux"
+      ]
+    },
+    {
+      "derivation": {
+        "animations": "Transitions de saison (fondu) + météo animée.",
+        "assets": "1 tileset de sol par saison (famille terrains).",
+        "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+        "consumers": "agriculture, météo, événements, exploration.",
+        "obtention": "N/A (cadre temporel).",
+        "system": "system_temps, system_meteo",
+        "tests": "test_saisons, test_temporel, test_reproductibilite.",
+        "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+      },
+      "description": "Brouillard et souvenirs ; événements du Bois.",
+      "display_name": "Saison des Brumes",
+      "growable": [
+        "culture_floraison_d_echo",
+        "culture_courge_des_brumes"
+      ],
+      "id": "saison_des_brumes",
+      "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
+      "length_days": 28,
+      "order": 3,
+      "quantity_status": "A_VALIDER",
+      "source": "INPUT/open_decisions.md (nombre) + brief (système saisons)",
+      "status": "PROPOSEE",
+      "weather_pool": [
+        "brouillard",
+        "pluie",
+        "nuageux",
+        "vent"
+      ]
+    },
+    {
+      "derivation": {
+        "animations": "Transitions de saison (fondu) + météo animée.",
+        "assets": "1 tileset de sol par saison (famille terrains).",
+        "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+        "consumers": "agriculture, météo, événements, exploration.",
+        "obtention": "N/A (cadre temporel).",
+        "system": "system_temps, system_meteo",
+        "tests": "test_saisons, test_temporel, test_reproductibilite.",
+        "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+      },
+      "description": "Repos ; pêche et artisanat.",
+      "display_name": "Saison du Repos",
+      "growable": [
+        "culture_lin_du_repos"
+      ],
+      "id": "saison_du_repos",
+      "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
+      "length_days": 28,
+      "order": 4,
+      "quantity_status": "A_VALIDER",
+      "source": "INPUT/open_decisions.md (nombre) + brief (système saisons)",
+      "status": "PROPOSEE",
+      "weather_pool": [
+        "neige",
+        "brouillard",
+        "nuageux",
+        "ensoleille"
+      ]
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

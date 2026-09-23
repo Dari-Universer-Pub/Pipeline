@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Zone de dépôt temporaire (les réponses importées vont dans accepted/rejected)
+RESULTS/incoming/*
+!RESULTS/incoming/.gitkeep
+
+# Archives locales temporaires
+*.tmp

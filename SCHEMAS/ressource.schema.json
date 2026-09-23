@@ -1,0 +1,69 @@
+{
+  "$id": "https://pipeline.local/schemas/ressource.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'ressource' dérivé de l'ontologie V5.",
+  "properties": {
+    "base_value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "consumers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'ressource_').",
+      "pattern": "^ressource_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "producers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seasonal": {
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "category"
+  ],
+  "title": "Ressource",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

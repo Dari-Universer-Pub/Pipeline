@@ -1,0 +1,280 @@
+{
+  "generated_deterministic": true,
+  "kind": "recipes",
+  "payload": [
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+        "system": "system_cuisine",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne cuisine."
+      },
+      "display_name": "Soupe de navet",
+      "duration": 2.0,
+      "id": "recette_soupe_de_navet",
+      "inputs": [
+        {
+          "item_id": "objet_navet",
+          "qty": 2
+        }
+      ],
+      "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "cuisine",
+      "outputs": [
+        {
+          "item_id": "objet_soupe_de_navet",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_foyer_de_la_maison_racine",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+        "system": "system_cuisine",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne cuisine."
+      },
+      "display_name": "Pain de blé",
+      "duration": 2.0,
+      "id": "recette_pain_de_ble",
+      "inputs": [
+        {
+          "item_id": "objet_grain_de_ble",
+          "qty": 3
+        }
+      ],
+      "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "cuisine",
+      "outputs": [
+        {
+          "item_id": "objet_pain_de_ble",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_foyer_de_la_maison_racine",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+        "system": "system_cuisine",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne cuisine."
+      },
+      "display_name": "Courge rôtie",
+      "duration": 2.0,
+      "id": "recette_courge_rotie",
+      "inputs": [
+        {
+          "item_id": "objet_courge",
+          "qty": 1
+        }
+      ],
+      "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "cuisine",
+      "outputs": [
+        {
+          "item_id": "objet_courge_rotie",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_foyer_de_la_maison_racine",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+        "system": "system_cuisine",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne cuisine."
+      },
+      "display_name": "Tisane de souci",
+      "duration": 2.0,
+      "id": "recette_tisane_de_souci",
+      "inputs": [
+        {
+          "item_id": "objet_fleur_de_souci",
+          "qty": 2
+        }
+      ],
+      "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "cuisine",
+      "outputs": [
+        {
+          "item_id": "objet_tisane_de_souci",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_foyer_de_la_maison_racine",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_etabli_de_marin avec les ingrédients requis.",
+        "system": "system_artisanat",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne artisanat."
+      },
+      "display_name": "Planche",
+      "duration": 2.0,
+      "id": "recette_planche",
+      "inputs": [
+        {
+          "item_id": "ressource_bois",
+          "qty": 2
+        }
+      ],
+      "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "artisanat",
+      "outputs": [
+        {
+          "item_id": "objet_planche",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (artisanat) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_etabli_de_marin",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
+        "system": "system_artisanat",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne artisanat."
+      },
+      "display_name": "Fil de lin",
+      "duration": 2.0,
+      "id": "recette_fil_de_lin",
+      "inputs": [
+        {
+          "item_id": "objet_fibre_de_lin",
+          "qty": 2
+        }
+      ],
+      "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "artisanat",
+      "outputs": [
+        {
+          "item_id": "objet_fil_de_lin",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (artisanat) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_metier_a_tisser",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
+        "system": "system_artisanat",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne artisanat."
+      },
+      "display_name": "Toile",
+      "duration": 2.0,
+      "id": "recette_toile",
+      "inputs": [
+        {
+          "item_id": "objet_fil_de_lin",
+          "qty": 3
+        }
+      ],
+      "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "artisanat",
+      "outputs": [
+        {
+          "item_id": "objet_toile",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (artisanat) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_metier_a_tisser",
+      "status": "PROPOSEE",
+      "unlocked_by": null
+    },
+    {
+      "derivation": {
+        "animations": "animation de la station + geste d'interaction.",
+        "assets": "icônes des entrées/sorties + sprite station active.",
+        "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+        "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+        "obtention": "Utiliser machine_puits_de_memoire avec les ingrédients requis.",
+        "system": "system_memoire",
+        "tests": "test_recette_complete, test_chaine_production, test_economique.",
+        "why": "Étape de transformation de la chaîne memoire."
+      },
+      "display_name": "Fragment ravivé",
+      "duration": 2.0,
+      "id": "recette_fragment_ravive",
+      "inputs": [
+        {
+          "item_id": "objet_echo_cristallin",
+          "qty": 1
+        }
+      ],
+      "justification": "Recette de memoire reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+      "kind": "memoire",
+      "outputs": [
+        {
+          "item_id": "objet_fragment_de_souvenir",
+          "qty": 1
+        }
+      ],
+      "quantity_status": "A_VALIDER",
+      "source": "brief#Systèmes (memoire) — recette exacte À_VALIDER (canon ouvert)",
+      "station_id": "machine_puits_de_memoire",
+      "status": "PROPOSEE",
+      "unlocked_by": "quete_le_premier_echo"
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

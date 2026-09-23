@@ -1,0 +1,93 @@
+{
+  "description": "Dialogue conditionnel d'Alba (après-midi) avec choix et effet déterministe.",
+  "domain": "dialogues",
+  "entities": [
+    {
+      "conditions": [
+        {
+          "params": {
+            "lieu_id": "lieu_maison_racine"
+          },
+          "type": "location"
+        },
+        {
+          "params": {
+            "hour": 14,
+            "op": ">="
+          },
+          "type": "time_of_day"
+        }
+      ],
+      "display_name": "Alba — l'après-midi",
+      "id": "dialogue_pnj_alba_apresmidi",
+      "justification": "Dialogue contextuel réel : conditions évaluées par le moteur, effet déterministe, révélation dans les connaissances d'Alba.",
+      "lines": [
+        {
+          "choices": [
+            {
+              "effect": {
+                "params": {
+                  "item_id": "objet_tisane_de_souci",
+                  "qty": 1
+                },
+                "type": "add_item"
+              },
+              "text": "Merci, Alba."
+            }
+          ],
+          "reveals": [
+            "fait_monde_valdore"
+          ],
+          "text": "L'après-midi, on écoute : les soucis racontent la vallée."
+        }
+      ],
+      "priority": 20,
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "speaker_id": "pnj_alba",
+      "status": "PROPOSEE",
+      "voice_consistency": "douce, pédagogue, phrases courtes"
+    }
+  ],
+  "invalid_variant": {
+    "conditions": [
+      {
+        "params": {
+          "lieu_id": "lieu_maison_racine"
+        },
+        "type": "location"
+      }
+    ],
+    "display_name": "Dialogue qui fuit",
+    "id": "dialogue_fuite_de_secret",
+    "justification": "rejet (révèle un fait INTERDIT à Alba : narr.secret_leak)",
+    "lines": [
+      {
+        "choices": [],
+        "reveals": [
+          "secret_passe_nox"
+        ],
+        "text": "Je connais le passé de Nox."
+      }
+    ],
+    "priority": 5,
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "speaker_id": "pnj_alba",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "conditions": [],
+    "display_name": "Dialogue orphelin",
+    "id": "dialogue_orphelin",
+    "justification": "orphelin (locuteur inexistant)",
+    "lines": [
+      {
+        "choices": [],
+        "reveals": [],
+        "text": "..."
+      }
+    ],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "speaker_id": "pnj_fantome",
+    "status": "PROPOSEE"
+  }
+}

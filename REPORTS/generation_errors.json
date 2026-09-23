@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "total": 7,
+    "accepted": 2,
+    "rejected": 4,
+    "blocked": 1
+  },
+  "results": [
+    {
+      "status": "ACCEPTED",
+      "filename": "asset_icone_graine_echo.json",
+      "entity_id": "asset_icone_objet_graine_d_echo",
+      "issues": []
+    },
+    {
+      "status": "REJECTED",
+      "filename": "asset_orphan.json",
+      "entity_id": "asset_icone_objet_inexistant",
+      "issues": [
+        {
+          "severity": "ERROR",
+          "code": "import.unresolved_ref",
+          "entity": "asset_icone_objet_inexistant",
+          "message": "référence 'entity_id' -> 'objet_totalement_inexistant' inexistante",
+          "fix": ""
+        }
+      ]
+    },
+    {
+      "status": "BLOCKED",
+      "filename": "blocked_response.md",
+      "reason": "dimension de l'asset non spécifiée dans le contexte (width/height absents du manifest).",
+      "entity_id": null,
+      "issues": []
+    },
+    {
+      "status": "REJECTED",
+      "filename": "broken.json",
+      "entity_id": null,
+      "issues": [
+        {
+          "severity": "ERROR",
+          "code": "import.parse",
+          "entity": "broken.json",
+          "message": "JSON illisible: Expecting property name enclosed in double quotes: line 1 column 55 (char 54)",
+          "fix": ""
+        }
+      ]
+    },
+    {
+      "status": "ACCEPTED",
+      "filename": "dialogue_alba_matin.json",
+      "entity_id": "dialogue_alba_accueil_matin",
+      "issues": []
+    },
+    {
+      "status": "REJECTED",
+      "filename": "forbidden_name.json",
+      "entity_id": "objet_epee_cosmique",
+      "issues": [
+        {
+          "severity": "ERROR",
+          "code": "import.forbidden_term",
+          "entity": "objet_epee_cosmique",
+          "message": "terme interdit 'épée' dans le nom",
+          "fix": ""
+        },
+        {
+          "severity": "ERROR",
+          "code": "import.forbidden_term",
+          "entity": "objet_epee_cosmique",
+          "message": "terme interdit 'cosmique' dans le nom",
+          "fix": ""
+        },
+        {
+          "severity": "ERROR",
+          "code": "import.forbidden_term",
+          "entity": "objet_epee_cosmique",
+          "message": "terme interdit 'laser' dans le nom",
+          "fix": ""
+        }
+      ]
+    },
+    {
+      "status": "REJECTED",
+      "filename": "recipe_no_output.json",
+      "entity_id": "recette_transformation_cassee",
+      "issues": [
+        {
+          "severity": "ERROR",
+          "code": "import.recipe_no_output",
+          "entity": "recette_transformation_cassee",
+          "message": "recette sans résultat",
+          "fix": ""
+        }
+      ]
+    }
+  ]
+}

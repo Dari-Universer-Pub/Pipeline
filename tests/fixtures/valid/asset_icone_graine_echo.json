@@ -1,0 +1,20 @@
+{
+  "id": "asset_icone_objet_graine_d_echo",
+  "display_name": "Icône Graine d'Écho",
+  "status": "CANONIQUE",
+  "entity_id": "objet_graine_d_echo",
+  "family": "famille_objets",
+  "kind": "icone",
+  "function": "famille_objets",
+  "width": 16,
+  "height": 16,
+  "resolution": "16px/tuile, échelle entière",
+  "style": "pixel art 16x16, contemplatif et chaleureux",
+  "palette": ["#2e2a24", "#7fae6b", "#c9a86a"],
+  "variants": ["defaut"],
+  "usage_rules": ["inventaire", "sol si droppable"],
+  "fingerprint": "graine_echo_icone_v1_unique",
+  "source": "prompt by_id objet_graine_d_echo",
+  "justification": "Icône d'inventaire de la Graine d'Écho canonique.",
+  "validation": {"dimensions": "16x16", "transparency": true}
+}

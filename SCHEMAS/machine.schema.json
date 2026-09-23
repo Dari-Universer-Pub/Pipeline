@@ -1,0 +1,85 @@
+{
+  "$id": "https://pipeline.local/schemas/machine.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'machine' dérivé de l'ontologie V5.",
+  "properties": {
+    "animation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "built_by": {
+      "description": "PNJ/artisan (canon: Marin).",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "function": {
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'machine_').",
+      "pattern": "^machine_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "inputs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "outputs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "placement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recipe_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "function"
+  ],
+  "title": "Machine / station",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

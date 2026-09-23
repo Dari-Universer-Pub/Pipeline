@@ -1,0 +1,33 @@
+{
+  "$id": "https://pipeline.local/schemas/effect.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "params": {
+      "type": "object"
+    },
+    "type": {
+      "enum": [
+        "add_item",
+        "advance_quest",
+        "change_relationship",
+        "discover_secret",
+        "modify_economy",
+        "remove_item",
+        "reveal_fact",
+        "set_flag",
+        "spawn_entity",
+        "transform_item",
+        "trigger_event",
+        "unlock_location"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Effet",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

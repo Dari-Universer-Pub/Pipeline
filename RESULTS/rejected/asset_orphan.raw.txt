@@ -1,0 +1,12 @@
+{
+  "id": "asset_icone_objet_inexistant",
+  "display_name": "Icône objet fantôme",
+  "status": "PROPOSEE",
+  "entity_id": "objet_totalement_inexistant",
+  "family": "famille_objets",
+  "kind": "icone",
+  "width": 16,
+  "height": 16,
+  "source": "prompt invalide",
+  "justification": "Exemple d'asset orphelin (entité propriétaire inexistante)."
+}

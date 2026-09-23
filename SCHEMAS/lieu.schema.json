@@ -1,0 +1,76 @@
+{
+  "$id": "https://pipeline.local/schemas/lieu.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'lieu' dérivé de l'ontologie V5.",
+  "properties": {
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "function": {
+      "description": "Fonction gameplay du lieu.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'lieu_').",
+      "pattern": "^lieu_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "carte",
+        "region",
+        "zone",
+        "interet",
+        "batiment",
+        "secret"
+      ],
+      "type": "string"
+    },
+    "map_id": {
+      "description": "Carte propriétaire si zone/POI.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "terrain": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "walkable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "function"
+  ],
+  "title": "Lieu / zone",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

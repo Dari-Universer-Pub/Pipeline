@@ -1,0 +1,200 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_machines",
+  "payload": [
+    {
+      "animation_ids": [
+        "anim_etabli_de_marin_actif"
+      ],
+      "built_by": "pnj_marin",
+      "derivation": {
+        "animations": "animation 'actif' bouclée + événement d'impact.",
+        "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+        "consequences": "Convertit entrées -> sorties (chaîne de production).",
+        "consumers": "Recettes de transformation.",
+        "obtention": "Fabriquée par pnj_marin",
+        "system": "system_artisanat",
+        "tests": "test_chaine_production, test_machine, test_placement.",
+        "why": "Station de transformation pour system_artisanat."
+      },
+      "description": "Station d'artisanat ; Marin (canon) fabrique les machines agricoles.",
+      "display_name": "Établi de Marin",
+      "function": "artisanat",
+      "id": "machine_etabli_de_marin",
+      "inputs": [
+        "ressource_bois",
+        "ressource_pierre"
+      ],
+      "justification": "Station d'artisanat ; Marin (canon) fabrique les machines agricoles.",
+      "outputs": [
+        "objet_planche"
+      ],
+      "placement_id": "placement_etabli_de_marin",
+      "recipe_ids": [
+        "recette_planche"
+      ],
+      "required_animations": [
+        "anim_machine_etabli_de_marin_inactif",
+        "anim_machine_etabli_de_marin_actif"
+      ],
+      "required_assets": [
+        "asset_machine_etabli_de_marin_inactif",
+        "asset_machine_etabli_de_marin_actif"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_artisanat)",
+      "status": "DEDUITE",
+      "system": "system_artisanat",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    },
+    {
+      "animation_ids": [
+        "anim_foyer_de_la_maison_racine_actif"
+      ],
+      "built_by": null,
+      "derivation": {
+        "animations": "animation 'actif' bouclée + événement d'impact.",
+        "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+        "consequences": "Convertit entrées -> sorties (chaîne de production).",
+        "consumers": "Recettes de transformation.",
+        "obtention": "Présente dans le refuge/lieu canonique.",
+        "system": "system_cuisine",
+        "tests": "test_chaine_production, test_machine, test_placement.",
+        "why": "Station de transformation pour system_cuisine."
+      },
+      "description": "Foyer de cuisine du refuge (canon Maison-Racine) ; bâti d'argile et de pierre ; système cuisine.",
+      "display_name": "Foyer de la Maison-Racine",
+      "function": "cuisine",
+      "id": "machine_foyer_de_la_maison_racine",
+      "inputs": [
+        "ressource_argile",
+        "ressource_pierre"
+      ],
+      "justification": "Foyer de cuisine du refuge (canon Maison-Racine) ; bâti d'argile et de pierre ; système cuisine.",
+      "outputs": [],
+      "placement_id": "placement_foyer_de_la_maison_racine",
+      "recipe_ids": [
+        "recette_soupe_de_navet",
+        "recette_pain_de_ble",
+        "recette_courge_rotie",
+        "recette_tisane_de_souci"
+      ],
+      "required_animations": [
+        "anim_machine_foyer_de_la_maison_racine_inactif",
+        "anim_machine_foyer_de_la_maison_racine_actif"
+      ],
+      "required_assets": [
+        "asset_machine_foyer_de_la_maison_racine_inactif",
+        "asset_machine_foyer_de_la_maison_racine_actif"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_cuisine)",
+      "status": "DEDUITE",
+      "system": "system_cuisine",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    },
+    {
+      "animation_ids": [
+        "anim_metier_a_tisser_actif"
+      ],
+      "built_by": "pnj_marin",
+      "derivation": {
+        "animations": "animation 'actif' bouclée + événement d'impact.",
+        "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+        "consequences": "Convertit entrées -> sorties (chaîne de production).",
+        "consumers": "Recettes de transformation.",
+        "obtention": "Fabriquée par pnj_marin",
+        "system": "system_artisanat",
+        "tests": "test_chaine_production, test_machine, test_placement.",
+        "why": "Station de transformation pour system_artisanat."
+      },
+      "description": "Transforme la fibre de lin en fil puis en toile ; système artisanat.",
+      "display_name": "Métier à tisser",
+      "function": "artisanat",
+      "id": "machine_metier_a_tisser",
+      "inputs": [
+        "objet_fibre_de_lin"
+      ],
+      "justification": "Transforme la fibre de lin en fil puis en toile ; système artisanat.",
+      "outputs": [
+        "objet_fil_de_lin"
+      ],
+      "placement_id": "placement_metier_a_tisser",
+      "recipe_ids": [
+        "recette_fil_de_lin",
+        "recette_toile"
+      ],
+      "required_animations": [
+        "anim_machine_metier_a_tisser_inactif",
+        "anim_machine_metier_a_tisser_actif"
+      ],
+      "required_assets": [
+        "asset_machine_metier_a_tisser_inactif",
+        "asset_machine_metier_a_tisser_actif"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_artisanat)",
+      "status": "DEDUITE",
+      "system": "system_artisanat",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    },
+    {
+      "animation_ids": [
+        "anim_puits_de_memoire_actif"
+      ],
+      "built_by": null,
+      "derivation": {
+        "animations": "animation 'actif' bouclée + événement d'impact.",
+        "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+        "consequences": "Convertit entrées -> sorties (chaîne de production).",
+        "consumers": "Recettes de transformation.",
+        "obtention": "Présente dans le refuge/lieu canonique.",
+        "system": "system_memoire",
+        "tests": "test_chaine_production, test_machine, test_placement.",
+        "why": "Station de transformation pour system_memoire."
+      },
+      "description": "Station mémorielle de la prémisse ; transforme les échos en fragments et révèle des souvenirs. Système mémoire.",
+      "display_name": "Puits de Mémoire",
+      "function": "memoire",
+      "id": "machine_puits_de_memoire",
+      "inputs": [
+        "objet_echo_cristallin"
+      ],
+      "justification": "Station mémorielle de la prémisse ; transforme les échos en fragments et révèle des souvenirs. Système mémoire.",
+      "outputs": [
+        "objet_fragment_de_souvenir"
+      ],
+      "placement_id": "placement_puits_de_memoire",
+      "recipe_ids": [
+        "recette_fragment_ravive"
+      ],
+      "required_animations": [
+        "anim_machine_puits_de_memoire_inactif",
+        "anim_machine_puits_de_memoire_actif"
+      ],
+      "required_assets": [
+        "asset_machine_puits_de_memoire_inactif",
+        "asset_machine_puits_de_memoire_actif"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_memoire)",
+      "status": "DEDUITE",
+      "system": "system_memoire",
+      "validation": {
+        "no_orphan": "au moins une relation d'usage",
+        "references": "toutes les références résolues",
+        "structure": "schéma JSON valide"
+      }
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

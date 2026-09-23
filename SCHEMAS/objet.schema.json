@@ -1,0 +1,122 @@
+{
+  "$id": "https://pipeline.local/schemas/objet.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'objet' dérivé de l'ontologie V5.",
+  "properties": {
+    "animation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "asset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "base_value": {
+      "description": "Valeur économique de base.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "category": {
+      "enum": [
+        "outil",
+        "graine",
+        "ressource",
+        "produit",
+        "fragment",
+        "consommable",
+        "artisanat",
+        "cle",
+        "decoratif",
+        "quotidien"
+      ],
+      "type": "string"
+    },
+    "decorative_only": {
+      "type": "boolean"
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "function": {
+      "description": "Fonction de l'objet.",
+      "type": "string"
+    },
+    "gameplay_verb": {
+      "description": "Verbe de gameplay associé.",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'objet_').",
+      "pattern": "^objet_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "loop_stage": {
+      "description": "Étape de la boucle (1-5).",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "obtention": {
+      "description": "Moyens d'obtention ( IDs recette/lieu/événement).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "stackable": {
+      "type": "boolean"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "transforms_into": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "users": {
+      "description": "Entités qui consomment/utilisent cet objet.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "category",
+    "function",
+    "gameplay_verb"
+  ],
+  "title": "Objet",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

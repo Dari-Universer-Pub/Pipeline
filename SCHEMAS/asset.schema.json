@@ -1,0 +1,113 @@
+{
+  "$id": "https://pipeline.local/schemas/asset.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'asset' dérivé de l'ontologie V5.",
+  "properties": {
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "entity_id": {
+      "description": "Entité rattachée (jamais isolé).",
+      "type": "string"
+    },
+    "family": {
+      "description": "Famille visuelle cohérente.",
+      "type": "string"
+    },
+    "fingerprint": {
+      "description": "Empreinte unique (dédoublonnage).",
+      "type": "string"
+    },
+    "function": {
+      "type": "string"
+    },
+    "height": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'asset_').",
+      "pattern": "^asset_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "sprite",
+        "tileset",
+        "tile",
+        "transition",
+        "objet",
+        "portrait",
+        "particule",
+        "ui",
+        "icone"
+      ],
+      "type": "string"
+    },
+    "palette": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "style": {
+      "type": "string"
+    },
+    "usage_rules": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "validation": {
+      "type": "object"
+    },
+    "variants": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "width": {
+      "minimum": 1,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "entity_id",
+    "family",
+    "kind",
+    "width",
+    "height"
+  ],
+  "title": "Asset visuel",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

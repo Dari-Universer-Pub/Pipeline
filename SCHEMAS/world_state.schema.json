@@ -1,0 +1,24 @@
+{
+  "$id": "https://pipeline.local/schemas/world_state.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "player": {
+      "type": "object"
+    },
+    "time": {
+      "type": "object"
+    },
+    "world": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "time",
+    "player",
+    "world"
+  ],
+  "title": "État du monde",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

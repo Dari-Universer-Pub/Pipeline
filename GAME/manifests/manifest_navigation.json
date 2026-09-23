@@ -1,0 +1,37 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_navigation",
+  "payload": [
+    {
+      "blocking_terrain": [
+        "eau",
+        "pierre",
+        "bois"
+      ],
+      "collision": "AABB par tuile solide",
+      "display_name": "Règles de navigation globales",
+      "id": "navigation_regles_globales",
+      "justification": "Navigation déterministe sur grille, sans LLM runtime.",
+      "map_transitions": "les entrées/sorties relient les cartes liées",
+      "movement": "grille 16×16, 8 directions interdites (4 directions)",
+      "pathfinding": "A* sur grille",
+      "source": "constraints#Architecture (navigation) + brief (2D vue du dessus)",
+      "status": "DEDUITE",
+      "validation": {
+        "aucune_zone_isolee": true,
+        "chemin_existe": true,
+        "entrees_sorties": true
+      },
+      "walkable_terrain": [
+        "herbe",
+        "sol_meuble",
+        "terre",
+        "plancher",
+        "pont",
+        "feuillage"
+      ]
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

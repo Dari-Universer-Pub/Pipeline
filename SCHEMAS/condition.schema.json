@@ -1,0 +1,35 @@
+{
+  "$id": "https://pipeline.local/schemas/condition.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "params": {
+      "type": "object"
+    },
+    "type": {
+      "enum": [
+        "and",
+        "crop_stage",
+        "fact_known",
+        "flag",
+        "item_count",
+        "location",
+        "not",
+        "or",
+        "quest_state",
+        "relationship",
+        "season",
+        "secret_discovered",
+        "time_of_day",
+        "weather"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "title": "Condition",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

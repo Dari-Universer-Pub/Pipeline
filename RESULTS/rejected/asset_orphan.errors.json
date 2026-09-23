@@ -1,0 +1,14 @@
+{
+  "status": "REJECTED",
+  "entity_id": "asset_icone_objet_inexistant",
+  "reason": null,
+  "issues": [
+    {
+      "severity": "ERROR",
+      "code": "import.unresolved_ref",
+      "entity": "asset_icone_objet_inexistant",
+      "message": "référence 'entity_id' -> 'objet_totalement_inexistant' inexistante",
+      "fix": ""
+    }
+  ]
+}

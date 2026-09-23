@@ -1,0 +1,3005 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_animations",
+  "payload": [
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "idle (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_idle_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": [
+        "marche"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "idle (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_idle_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": [
+        "marche"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "idle (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_idle_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": [
+        "marche"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "idle (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_idle_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": [
+        "marche"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "marche (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_marche_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "marche (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_marche_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "marche (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_marche_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "marche (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_marche_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_laboure",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'labourer' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "labourer (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_labourer_down",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'labourer' de joueur_jardinier.",
+      "logic_effect": "effet:sol_laboure",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "labourer",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_laboure",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'labourer' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "labourer (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_labourer_up",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'labourer' de joueur_jardinier.",
+      "logic_effect": "effet:sol_laboure",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "labourer",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_laboure",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'labourer' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "labourer (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_labourer_left",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'labourer' de joueur_jardinier.",
+      "logic_effect": "effet:sol_laboure",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "labourer",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_laboure",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'labourer' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "labourer (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_labourer_right",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'labourer' de joueur_jardinier.",
+      "logic_effect": "effet:sol_laboure",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "labourer",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_arrose",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'arroser' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "arroser (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_arroser_down",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'arroser' de joueur_jardinier.",
+      "logic_effect": "effet:sol_arrose",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "arroser",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_arrose",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'arroser' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "arroser (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_arroser_up",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'arroser' de joueur_jardinier.",
+      "logic_effect": "effet:sol_arrose",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "arroser",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_arrose",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'arroser' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "arroser (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_arroser_left",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'arroser' de joueur_jardinier.",
+      "logic_effect": "effet:sol_arrose",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "arroser",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:sol_arrose",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'arroser' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "arroser (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_arroser_right",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'arroser' de joueur_jardinier.",
+      "logic_effect": "effet:sol_arrose",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "arroser",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:graine_plantee",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'planter' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "planter (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_planter_down",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'planter' de joueur_jardinier.",
+      "logic_effect": "effet:graine_plantee",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "planter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:graine_plantee",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'planter' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "planter (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_planter_up",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'planter' de joueur_jardinier.",
+      "logic_effect": "effet:graine_plantee",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "planter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:graine_plantee",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'planter' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "planter (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_planter_left",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'planter' de joueur_jardinier.",
+      "logic_effect": "effet:graine_plantee",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "planter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:graine_plantee",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'planter' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "planter (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_planter_right",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'planter' de joueur_jardinier.",
+      "logic_effect": "effet:graine_plantee",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "planter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:recolte",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolter' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "recolter (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_recolter_down",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'recolter' de joueur_jardinier.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:recolte",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolter' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "recolter (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_recolter_up",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'recolter' de joueur_jardinier.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:recolte",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolter' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "recolter (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_recolter_left",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'recolter' de joueur_jardinier.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:recolte",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolter' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "recolter (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_recolter_right",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'recolter' de joueur_jardinier.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolter",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 5,
+        "logic_effect": "effet:prise_poisson",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'pecher' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "pecher (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 4,
+      "frames": 6,
+      "id": "anim_joueur_jardinier_pecher_down",
+      "impact_event": 5,
+      "justification": "Animation requise par l'action 'pecher' de joueur_jardinier.",
+      "logic_effect": "effet:prise_poisson",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "pecher",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 5,
+        "logic_effect": "effet:prise_poisson",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'pecher' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "pecher (up) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 4,
+      "frames": 6,
+      "id": "anim_joueur_jardinier_pecher_up",
+      "impact_event": 5,
+      "justification": "Animation requise par l'action 'pecher' de joueur_jardinier.",
+      "logic_effect": "effet:prise_poisson",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "pecher",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 5,
+        "logic_effect": "effet:prise_poisson",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'pecher' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "pecher (left) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 4,
+      "frames": 6,
+      "id": "anim_joueur_jardinier_pecher_left",
+      "impact_event": 5,
+      "justification": "Animation requise par l'action 'pecher' de joueur_jardinier.",
+      "logic_effect": "effet:prise_poisson",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "pecher",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 5,
+        "logic_effect": "effet:prise_poisson",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'pecher' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "pecher (right) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 4,
+      "frames": 6,
+      "id": "anim_joueur_jardinier_pecher_right",
+      "impact_event": 5,
+      "justification": "Animation requise par l'action 'pecher' de joueur_jardinier.",
+      "logic_effect": "effet:prise_poisson",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "pecher",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:artisanat",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'fabriquer' avec la logique."
+      },
+      "direction": null,
+      "display_name": "fabriquer (sans direction) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_fabriquer",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'fabriquer' de joueur_jardinier.",
+      "logic_effect": "effet:artisanat",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "fabriquer",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:cuisine",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'cuisiner' avec la logique."
+      },
+      "direction": null,
+      "display_name": "cuisiner (sans direction) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_joueur_jardinier_cuisiner",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'cuisiner' de joueur_jardinier.",
+      "logic_effect": "effet:cuisine",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "cuisiner",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'parler' avec la logique."
+      },
+      "direction": null,
+      "display_name": "parler (sans direction) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 4,
+      "frames": 2,
+      "id": "anim_joueur_jardinier_parler",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'parler' de joueur_jardinier.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "parler",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:don_relation",
+        "system": "joueur",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'offrir' avec la logique."
+      },
+      "direction": null,
+      "display_name": "offrir (sans direction) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_joueur_jardinier_offrir",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'offrir' de joueur_jardinier.",
+      "logic_effect": "effet:don_relation",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "offrir",
+      "status": "DEDUITE",
+      "transitions": [
+        "idle"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "idle (down) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_alba_idle_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "idle (up) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_alba_idle_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "idle (left) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_alba_idle_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "idle (right) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_alba_idle_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "marche (down) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_alba_marche_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "marche (up) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_alba_marche_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "marche (left) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_alba_marche_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "marche (right) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_alba_marche_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_alba.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'interaction' avec la logique."
+      },
+      "direction": null,
+      "display_name": "interaction (sans direction) — pnj_alba",
+      "entity_id": "pnj_alba",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_alba_interaction",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'interaction' de pnj_alba.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_pnj_alba"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "interaction",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "idle (down) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_marin_idle_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "idle (up) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_marin_idle_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "idle (left) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_marin_idle_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "idle (right) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_marin_idle_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "marche (down) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_marin_marche_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "marche (up) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_marin_marche_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "marche (left) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_marin_marche_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "marche (right) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_marin_marche_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_marin.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'interaction' avec la logique."
+      },
+      "direction": null,
+      "display_name": "interaction (sans direction) — pnj_marin",
+      "entity_id": "pnj_marin",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_marin_interaction",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'interaction' de pnj_marin.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_pnj_marin"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "interaction",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "idle (down) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_nox_idle_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "idle (up) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_nox_idle_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "idle (left) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_nox_idle_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'idle' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "idle (right) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_nox_idle_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'idle' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "idle",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "marche (down) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_nox_marche_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "marche (up) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_nox_marche_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "marche (left) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_nox_marche_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'marche' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "marche (right) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 8,
+      "frames": 4,
+      "id": "anim_pnj_nox_marche_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'marche' de pnj_nox.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "marche",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "pnj",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'interaction' avec la logique."
+      },
+      "direction": null,
+      "display_name": "interaction (sans direction) — pnj_nox",
+      "entity_id": "pnj_nox",
+      "entity_type": "pnj",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_pnj_nox_interaction",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'interaction' de pnj_nox.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_pnj_nox"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "interaction",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'nage' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "nage (down) — creature_poisson_du_lac",
+      "entity_id": "creature_poisson_du_lac",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_creature_poisson_du_lac_nage_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'nage' de creature_poisson_du_lac.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "nage",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'nage' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "nage (up) — creature_poisson_du_lac",
+      "entity_id": "creature_poisson_du_lac",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_creature_poisson_du_lac_nage_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'nage' de creature_poisson_du_lac.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "nage",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'nage' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "nage (left) — creature_poisson_du_lac",
+      "entity_id": "creature_poisson_du_lac",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_creature_poisson_du_lac_nage_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'nage' de creature_poisson_du_lac.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "nage",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'nage' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "nage (right) — creature_poisson_du_lac",
+      "entity_id": "creature_poisson_du_lac",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_creature_poisson_du_lac_nage_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'nage' de creature_poisson_du_lac.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "nage",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'reaction' avec la logique."
+      },
+      "direction": null,
+      "display_name": "reaction (sans direction) — creature_poisson_du_lac",
+      "entity_id": "creature_poisson_du_lac",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 2,
+      "id": "anim_creature_poisson_du_lac_reaction",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'reaction' de creature_poisson_du_lac.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "reaction",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'flotte' avec la logique."
+      },
+      "direction": "down",
+      "display_name": "flotte (down) — creature_echo_du_bois",
+      "entity_id": "creature_echo_du_bois",
+      "entity_type": "creature",
+      "fps": 4,
+      "frames": 4,
+      "id": "anim_creature_echo_du_bois_flotte_down",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'flotte' de creature_echo_du_bois.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "flotte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'flotte' avec la logique."
+      },
+      "direction": "up",
+      "display_name": "flotte (up) — creature_echo_du_bois",
+      "entity_id": "creature_echo_du_bois",
+      "entity_type": "creature",
+      "fps": 4,
+      "frames": 4,
+      "id": "anim_creature_echo_du_bois_flotte_up",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'flotte' de creature_echo_du_bois.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "flotte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'flotte' avec la logique."
+      },
+      "direction": "left",
+      "display_name": "flotte (left) — creature_echo_du_bois",
+      "entity_id": "creature_echo_du_bois",
+      "entity_type": "creature",
+      "fps": 4,
+      "frames": 4,
+      "id": "anim_creature_echo_du_bois_flotte_left",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'flotte' de creature_echo_du_bois.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "flotte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'flotte' avec la logique."
+      },
+      "direction": "right",
+      "display_name": "flotte (right) — creature_echo_du_bois",
+      "entity_id": "creature_echo_du_bois",
+      "entity_type": "creature",
+      "fps": 4,
+      "frames": 4,
+      "id": "anim_creature_echo_du_bois_flotte_right",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'flotte' de creature_echo_du_bois.",
+      "logic_effect": null,
+      "loop": true,
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "flotte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 4,
+        "logic_effect": "effet:apparition_echo",
+        "system": "creature",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'apparition' avec la logique."
+      },
+      "direction": null,
+      "display_name": "apparition (sans direction) — creature_echo_du_bois",
+      "entity_id": "creature_echo_du_bois",
+      "entity_type": "creature",
+      "fps": 6,
+      "frames": 5,
+      "id": "anim_creature_echo_du_bois_apparition",
+      "impact_event": 4,
+      "justification": "Animation requise par l'action 'apparition' de creature_echo_du_bois.",
+      "logic_effect": "effet:apparition_echo",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "apparition",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_floraison_d_echo",
+      "entity_id": "culture_floraison_d_echo",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_floraison_d_echo_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_floraison_d_echo.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_floraison_d_echo_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_floraison_d_echo",
+      "entity_id": "culture_floraison_d_echo",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_floraison_d_echo_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_floraison_d_echo.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_floraison_d_echo_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_floraison_d_echo",
+      "entity_id": "culture_floraison_d_echo",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_floraison_d_echo_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_floraison_d_echo.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_floraison_d_echo_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_floraison_d_echo",
+      "entity_id": "culture_floraison_d_echo",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_floraison_d_echo_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_floraison_d_echo.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_floraison_d_echo_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_floraison_d_echo",
+      "entity_id": "culture_floraison_d_echo",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_floraison_d_echo_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_floraison_d_echo.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_floraison_d_echo_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_navet_de_la_vallee",
+      "entity_id": "culture_navet_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_navet_de_la_vallee_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_navet_de_la_vallee.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_navet_de_la_vallee_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_navet_de_la_vallee",
+      "entity_id": "culture_navet_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_navet_de_la_vallee_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_navet_de_la_vallee.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_navet_de_la_vallee_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_navet_de_la_vallee",
+      "entity_id": "culture_navet_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_navet_de_la_vallee_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_navet_de_la_vallee.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_navet_de_la_vallee_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_navet_de_la_vallee",
+      "entity_id": "culture_navet_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_navet_de_la_vallee_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_navet_de_la_vallee.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_navet_de_la_vallee_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_navet_de_la_vallee",
+      "entity_id": "culture_navet_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_navet_de_la_vallee_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_navet_de_la_vallee.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_navet_de_la_vallee_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_ble_des_epis",
+      "entity_id": "culture_ble_des_epis",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_ble_des_epis_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_ble_des_epis.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_ble_des_epis_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_ble_des_epis",
+      "entity_id": "culture_ble_des_epis",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_ble_des_epis_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_ble_des_epis.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_ble_des_epis_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_ble_des_epis",
+      "entity_id": "culture_ble_des_epis",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_ble_des_epis_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_ble_des_epis.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_ble_des_epis_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_ble_des_epis",
+      "entity_id": "culture_ble_des_epis",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_ble_des_epis_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_ble_des_epis.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_ble_des_epis_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_ble_des_epis",
+      "entity_id": "culture_ble_des_epis",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_ble_des_epis_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_ble_des_epis.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_ble_des_epis_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_courge_des_brumes",
+      "entity_id": "culture_courge_des_brumes",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_courge_des_brumes_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_courge_des_brumes.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_courge_des_brumes_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_courge_des_brumes",
+      "entity_id": "culture_courge_des_brumes",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_courge_des_brumes_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_courge_des_brumes.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_courge_des_brumes_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_courge_des_brumes",
+      "entity_id": "culture_courge_des_brumes",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_courge_des_brumes_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_courge_des_brumes.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_courge_des_brumes_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_courge_des_brumes",
+      "entity_id": "culture_courge_des_brumes",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_courge_des_brumes_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_courge_des_brumes.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_courge_des_brumes_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_courge_des_brumes",
+      "entity_id": "culture_courge_des_brumes",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_courge_des_brumes_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_courge_des_brumes.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_courge_des_brumes_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_lin_du_repos",
+      "entity_id": "culture_lin_du_repos",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_lin_du_repos_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_lin_du_repos.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_lin_du_repos_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_lin_du_repos",
+      "entity_id": "culture_lin_du_repos",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_lin_du_repos_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_lin_du_repos.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_lin_du_repos_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_lin_du_repos",
+      "entity_id": "culture_lin_du_repos",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_lin_du_repos_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_lin_du_repos.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_lin_du_repos_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_lin_du_repos",
+      "entity_id": "culture_lin_du_repos",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_lin_du_repos_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_lin_du_repos.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_lin_du_repos_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_lin_du_repos",
+      "entity_id": "culture_lin_du_repos",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_lin_du_repos_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_lin_du_repos.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_lin_du_repos_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_pousse",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_semis' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_semis (sans direction) — culture_souci_de_la_vallee",
+      "entity_id": "culture_souci_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_souci_de_la_vallee_croissance_semis",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_semis' de culture_souci_de_la_vallee.",
+      "logic_effect": "effet:stade_pousse",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_souci_de_la_vallee_semis"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_semis",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_pousse"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_mature",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_pousse' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_pousse (sans direction) — culture_souci_de_la_vallee",
+      "entity_id": "culture_souci_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_souci_de_la_vallee_croissance_pousse",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_pousse' de culture_souci_de_la_vallee.",
+      "logic_effect": "effet:stade_mature",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_souci_de_la_vallee_pousse"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_pousse",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_mature"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "effet:stade_recoltable",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_mature' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_mature (sans direction) — culture_souci_de_la_vallee",
+      "entity_id": "culture_souci_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_souci_de_la_vallee_croissance_mature",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_mature' de culture_souci_de_la_vallee.",
+      "logic_effect": "effet:stade_recoltable",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_souci_de_la_vallee_mature"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_mature",
+      "status": "DEDUITE",
+      "transitions": [
+        "croissance_recoltable"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'croissance_recoltable' avec la logique."
+      },
+      "direction": null,
+      "display_name": "croissance_recoltable (sans direction) — culture_souci_de_la_vallee",
+      "entity_id": "culture_souci_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 2,
+      "frames": 2,
+      "id": "anim_culture_souci_de_la_vallee_croissance_recoltable",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'croissance_recoltable' de culture_souci_de_la_vallee.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_culture_souci_de_la_vallee_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "croissance_recoltable",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:recolte",
+        "system": "culture",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'recolte' avec la logique."
+      },
+      "direction": null,
+      "display_name": "recolte (sans direction) — culture_souci_de_la_vallee",
+      "entity_id": "culture_souci_de_la_vallee",
+      "entity_type": "culture",
+      "fps": 6,
+      "frames": 3,
+      "id": "anim_culture_souci_de_la_vallee_recolte",
+      "impact_event": 2,
+      "justification": "Animation requise par l'action 'recolte' de culture_souci_de_la_vallee.",
+      "logic_effect": "effet:recolte",
+      "loop": false,
+      "required_assets": [
+        "asset_culture_souci_de_la_vallee_recoltable"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "recolte",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'inactif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "inactif (sans direction) — machine_etabli_de_marin",
+      "entity_id": "machine_etabli_de_marin",
+      "entity_type": "machine",
+      "fps": 1,
+      "frames": 1,
+      "id": "anim_machine_etabli_de_marin_inactif",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'inactif' de machine_etabli_de_marin.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_machine_etabli_de_marin_inactif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "inactif",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:artisanat_fin",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'actif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "actif (sans direction) — machine_etabli_de_marin",
+      "entity_id": "machine_etabli_de_marin",
+      "entity_type": "machine",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_machine_etabli_de_marin_actif",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'actif' de machine_etabli_de_marin.",
+      "logic_effect": "effet:artisanat_fin",
+      "loop": true,
+      "required_assets": [
+        "asset_machine_etabli_de_marin_actif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "actif",
+      "status": "DEDUITE",
+      "transitions": [
+        "inactif"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'inactif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "inactif (sans direction) — machine_foyer_de_la_maison_racine",
+      "entity_id": "machine_foyer_de_la_maison_racine",
+      "entity_type": "machine",
+      "fps": 1,
+      "frames": 1,
+      "id": "anim_machine_foyer_de_la_maison_racine_inactif",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'inactif' de machine_foyer_de_la_maison_racine.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_machine_foyer_de_la_maison_racine_inactif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "inactif",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:cuisine_fin",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'actif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "actif (sans direction) — machine_foyer_de_la_maison_racine",
+      "entity_id": "machine_foyer_de_la_maison_racine",
+      "entity_type": "machine",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_machine_foyer_de_la_maison_racine_actif",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'actif' de machine_foyer_de_la_maison_racine.",
+      "logic_effect": "effet:cuisine_fin",
+      "loop": true,
+      "required_assets": [
+        "asset_machine_foyer_de_la_maison_racine_actif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "actif",
+      "status": "DEDUITE",
+      "transitions": [
+        "inactif"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'inactif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "inactif (sans direction) — machine_metier_a_tisser",
+      "entity_id": "machine_metier_a_tisser",
+      "entity_type": "machine",
+      "fps": 1,
+      "frames": 1,
+      "id": "anim_machine_metier_a_tisser_inactif",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'inactif' de machine_metier_a_tisser.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_machine_metier_a_tisser_inactif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "inactif",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:artisanat_fin",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'actif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "actif (sans direction) — machine_metier_a_tisser",
+      "entity_id": "machine_metier_a_tisser",
+      "entity_type": "machine",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_machine_metier_a_tisser_actif",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'actif' de machine_metier_a_tisser.",
+      "logic_effect": "effet:artisanat_fin",
+      "loop": true,
+      "required_assets": [
+        "asset_machine_metier_a_tisser_actif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "actif",
+      "status": "DEDUITE",
+      "transitions": [
+        "inactif"
+      ]
+    },
+    {
+      "derivation": {
+        "impact": "aucun",
+        "logic_effect": "aucun",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'inactif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "inactif (sans direction) — machine_puits_de_memoire",
+      "entity_id": "machine_puits_de_memoire",
+      "entity_type": "machine",
+      "fps": 1,
+      "frames": 1,
+      "id": "anim_machine_puits_de_memoire_inactif",
+      "impact_event": null,
+      "justification": "Animation requise par l'action 'inactif' de machine_puits_de_memoire.",
+      "logic_effect": null,
+      "loop": false,
+      "required_assets": [
+        "asset_machine_puits_de_memoire_inactif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "inactif",
+      "status": "DEDUITE",
+      "transitions": []
+    },
+    {
+      "derivation": {
+        "impact": 3,
+        "logic_effect": "effet:memoire_fin",
+        "system": "machine",
+        "tests": "test_animation_action, test_animation_asset, test_sync_impact",
+        "why": "Synchronise le visuel de 'actif' avec la logique."
+      },
+      "direction": null,
+      "display_name": "actif (sans direction) — machine_puits_de_memoire",
+      "entity_id": "machine_puits_de_memoire",
+      "entity_type": "machine",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_machine_puits_de_memoire_actif",
+      "impact_event": 3,
+      "justification": "Animation requise par l'action 'actif' de machine_puits_de_memoire.",
+      "logic_effect": "effet:memoire_fin",
+      "loop": true,
+      "required_assets": [
+        "asset_machine_puits_de_memoire_actif"
+      ],
+      "source": "dérivé des états/actions (constraints#Architecture)",
+      "state_or_action": "actif",
+      "status": "DEDUITE",
+      "transitions": [
+        "inactif"
+      ]
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

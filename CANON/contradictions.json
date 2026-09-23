@@ -1,0 +1,67 @@
+{
+  "generated_deterministic": true,
+  "kind": "contradictions",
+  "payload": [
+    {
+      "action": "Générer les saisons avec un défaut modulaire (4) marqué À_VALIDER ; ne pas verrouiller la quantité.",
+      "description": "Le système 'saisons' est implicite dans le brief, mais le NOMBRE de saisons est une décision ouverte. Le système est acquis, la quantité reste à valider.",
+      "id": "saison_saison",
+      "severite": "AMBIGUITE",
+      "sources": [
+        "INPUT/game_brief.md#Systèmes souhaités",
+        "INPUT/open_decisions.md"
+      ],
+      "statut_recommande": "A_VALIDER",
+      "sujet": "saison"
+    },
+    {
+      "action": "Pêche présente comme système mineur (DEDUITE) ; son ampleur est À_VALIDER.",
+      "description": "Le Lac Muet est canoniquement une 'zone de pêche', mais l'IMPORTANCE de la pêche est une décision ouverte. L'existence est déduite du canon, la profondeur reste à valider.",
+      "id": "peche_peche",
+      "severite": "AMBIGUITE",
+      "sources": [
+        "INPUT/canon_initial.md#Lieux connus",
+        "INPUT/open_decisions.md"
+      ],
+      "statut_recommande": "DEDUITE",
+      "sujet": "peche"
+    },
+    {
+      "action": "Défaut technique : aucun système de combat (cohérent avec le ton contemplatif) ; décision finale À_VALIDER.",
+      "description": "Le canon interdit la 'magie de combat traditionnelle', mais open_decisions demande la 'présence ou non d'un système de combat'. Absence de magie de combat != absence de tout système de combat : ambiguïté à trancher.",
+      "id": "combat_combat",
+      "severite": "AMBIGUITE",
+      "sources": [
+        "INPUT/canon_initial.md#Faits immuables",
+        "INPUT/open_decisions.md"
+      ],
+      "statut_recommande": "A_VALIDER",
+      "sujet": "combat"
+    },
+    {
+      "action": "Proposer une monnaie (nom + unité) marquée À_VALIDER ; bloquer seulement la validation économique tant que non tranchée.",
+      "description": "Le système 'économie simple' est souhaité mais aucune monnaie n'est définie dans le canon. Nécessaire pour les validateurs économiques.",
+      "id": "monnaie_monnaie",
+      "severite": "MANQUE",
+      "sources": [
+        "INPUT/game_brief.md#Systèmes souhaités",
+        "INPUT/canon_initial.md"
+      ],
+      "statut_recommande": "A_VALIDER",
+      "sujet": "monnaie"
+    },
+    {
+      "action": "Déduire un ensemble météo minimal par saison (DEDUITE) ; noms À_VALIDER.",
+      "description": "Le système 'météo' est souhaité mais aucun état météo n'est défini dans le canon. À déduire des saisons.",
+      "id": "meteo_meteo",
+      "severite": "MANQUE",
+      "sources": [
+        "INPUT/game_brief.md#Systèmes souhaités"
+      ],
+      "statut_recommande": "DEDUITE",
+      "sujet": "meteo"
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}

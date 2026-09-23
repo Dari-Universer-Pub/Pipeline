@@ -1,0 +1,14 @@
+{
+  "status": "REJECTED",
+  "entity_id": null,
+  "reason": null,
+  "issues": [
+    {
+      "severity": "ERROR",
+      "code": "import.parse",
+      "entity": "broken.json",
+      "message": "JSON illisible: Expecting property name enclosed in double quotes: line 1 column 55 (char 54)",
+      "fix": ""
+    }
+  ]
+}

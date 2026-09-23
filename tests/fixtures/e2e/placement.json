@@ -1,0 +1,65 @@
+{
+  "description": "Règle de placement intérieur (pots du refuge) : terrains réels, distance, conformité simulée.",
+  "domain": "placement",
+  "entities": [
+    {
+      "accessibility": "intérieur du refuge",
+      "allowed_terrain": [
+        "plancher",
+        "bois"
+      ],
+      "clustering": "pres_des_murs",
+      "density": "faible",
+      "discovery_conditions": "aucune",
+      "display_name": "Placement des pots du refuge",
+      "forbidden_terrain": [
+        "eau",
+        "pierre",
+        "herbe"
+      ],
+      "id": "placement_pots_du_refuge",
+      "justification": "Les pots décoratifs/utilitaires du refuge se posent sur plancher ou bois, jamais sur l'eau.",
+      "min_distance": 1,
+      "places": "objet",
+      "poi_relation": "près du foyer de la Maison-Racine",
+      "season": "toutes",
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "validation": {
+        "accessible": true,
+        "densite_max": true,
+        "distance_min": true,
+        "terrain_respecte": true
+      },
+      "weather": "indifférent"
+    }
+  ],
+  "invalid_variant": {
+    "allowed_terrain": [
+      "plancher"
+    ],
+    "display_name": "Placement invalide",
+    "forbidden_terrain": [],
+    "id": "placement_invalide",
+    "justification": "rejet (min_distance non entier)",
+    "min_distance": "deux",
+    "places": "objet",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "allowed_terrain": [
+      "eau"
+    ],
+    "display_name": "Placement orphelin",
+    "forbidden_terrain": [
+      "eau"
+    ],
+    "id": "placement_orphelin",
+    "justification": "orphelin/inapplicable (terrain autorisé ET interdit : place.terrain_conflict)",
+    "min_distance": 1,
+    "places": "objet",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  }
+}

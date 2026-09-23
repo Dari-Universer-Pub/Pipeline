@@ -1,0 +1,82 @@
+{
+  "$id": "https://pipeline.local/schemas/culture.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "description": "Schéma d'entité 'culture' dérivé de l'ontologie V5.",
+  "properties": {
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "growth_days": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'culture_').",
+      "pattern": "^culture_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "memory_plant": {
+      "description": "True si fait remonter un fragment (canon).",
+      "type": "boolean"
+    },
+    "regrows": {
+      "type": "boolean"
+    },
+    "seasons": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seed_id": {
+      "description": "ID graine requise.",
+      "type": "string"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "stages": {
+      "description": "États de croissance (pour animations/assets).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "water_needed": {
+      "type": "boolean"
+    },
+    "yield_id": {
+      "description": "ID produit récolté.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "seed_id",
+    "yield_id",
+    "growth_days"
+  ],
+  "title": "Culture / plante",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

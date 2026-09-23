@@ -1,0 +1,11 @@
+{
+  "id": "recette_transformation_cassee",
+  "display_name": "Recette sans résultat",
+  "status": "PROPOSEE",
+  "station_id": "machine_etabli_de_marin",
+  "inputs": [{"item_id": "ressource_bois", "qty": 2}],
+  "outputs": [],
+  "duration": 2.0,
+  "source": "prompt invalide",
+  "justification": "Exemple de recette sans sortie (rejet obligatoire)."
+}

@@ -1,0 +1,74 @@
+{
+  "description": "Recette de foyer + son objet produit (entrée existante, sortie intégrée).",
+  "domain": "recettes",
+  "entities": [
+    {
+      "display_name": "Infusion froide de souci",
+      "duration": 2.0,
+      "id": "recette_infusion_froide",
+      "inputs": [
+        {
+          "item_id": "objet_fleur_de_souci",
+          "qty": 1
+        }
+      ],
+      "justification": "Variante froide de la tisane (saison chaude) ; entrées et sorties réelles.",
+      "kind": "cuisine",
+      "outputs": [
+        {
+          "item_id": "objet_infusion_froide",
+          "qty": 1
+        }
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "station_id": "machine_foyer_de_la_maison_racine",
+      "status": "PROPOSEE"
+    },
+    {
+      "base_value": 20,
+      "category": "consommable",
+      "decorative_only": false,
+      "display_name": "Infusion froide",
+      "function": "Boisson apaisante offerte aux habitants.",
+      "gameplay_verb": "utiliser",
+      "id": "objet_infusion_froide",
+      "justification": "Sortie réelle de la recette ; valeur >= 1.4 x 12 (fleur).",
+      "loop_stage": 3,
+      "obtention": [
+        "recette:recette_infusion_froide"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "transforms_into": [],
+      "users": [
+        "system_relations",
+        "system_economie"
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "Recette sans sortie",
+    "id": "recette_sans_sortie",
+    "inputs": [
+      {
+        "item_id": "objet_navet",
+        "qty": 1
+      }
+    ],
+    "justification": "rejet (aucun résultat)",
+    "outputs": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "station_id": "machine_foyer_de_la_maison_racine",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "display_name": "Recette orpheline",
+    "id": "recette_orpheline",
+    "inputs": [],
+    "justification": "orpheline (ni entrée ni sortie)",
+    "outputs": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "station_id": "machine_foyer_de_la_maison_racine",
+    "status": "PROPOSEE"
+  }
+}

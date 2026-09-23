@@ -1,0 +1,232 @@
+{
+  "generated_deterministic": true,
+  "kind": "manifest_transitions",
+  "payload": [
+    {
+      "asset_id": "asset_transition_herbe_sol_meuble",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition herbe ↔ sol_meuble",
+      "from_terrain": "herbe",
+      "id": "transition_herbe_sol_meuble",
+      "justification": "Les terrains herbe et sol_meuble coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "sol_meuble",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_herbe_terre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition herbe ↔ terre",
+      "from_terrain": "herbe",
+      "id": "transition_herbe_terre",
+      "justification": "Les terrains herbe et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "terre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_eau_herbe",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition eau ↔ herbe",
+      "from_terrain": "eau",
+      "id": "transition_eau_herbe",
+      "justification": "Les terrains eau et herbe coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "herbe",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_feuillage_herbe",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition feuillage ↔ herbe",
+      "from_terrain": "feuillage",
+      "id": "transition_feuillage_herbe",
+      "justification": "Les terrains feuillage et herbe coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "herbe",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_sol_meuble_terre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition sol_meuble ↔ terre",
+      "from_terrain": "sol_meuble",
+      "id": "transition_sol_meuble_terre",
+      "justification": "Les terrains sol_meuble et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "terre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_feuillage_terre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition feuillage ↔ terre",
+      "from_terrain": "feuillage",
+      "id": "transition_feuillage_terre",
+      "justification": "Les terrains feuillage et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "terre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_pierre_terre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition pierre ↔ terre",
+      "from_terrain": "pierre",
+      "id": "transition_pierre_terre",
+      "justification": "Les terrains pierre et terre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "terre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_eau_pont",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition eau ↔ pont",
+      "from_terrain": "eau",
+      "id": "transition_eau_pont",
+      "justification": "Les terrains eau et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "pont",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_eau_pierre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition eau ↔ pierre",
+      "from_terrain": "eau",
+      "id": "transition_eau_pierre",
+      "justification": "Les terrains eau et pierre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "pierre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_herbe_pont",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition herbe ↔ pont",
+      "from_terrain": "herbe",
+      "id": "transition_herbe_pont",
+      "justification": "Les terrains herbe et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "pont",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_plancher_pont",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition plancher ↔ pont",
+      "from_terrain": "plancher",
+      "id": "transition_plancher_pont",
+      "justification": "Les terrains plancher et pont coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "pont",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_bois_plancher",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition bois ↔ plancher",
+      "from_terrain": "bois",
+      "id": "transition_bois_plancher",
+      "justification": "Les terrains bois et plancher coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "plancher",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_pierre_plancher",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition pierre ↔ plancher",
+      "from_terrain": "pierre",
+      "id": "transition_pierre_plancher",
+      "justification": "Les terrains pierre et plancher coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "plancher",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    },
+    {
+      "asset_id": "asset_transition_bois_pierre",
+      "auto_tile": true,
+      "bitmask": "47-tile ou 16-tile",
+      "display_name": "Transition bois ↔ pierre",
+      "from_terrain": "bois",
+      "id": "transition_bois_pierre",
+      "justification": "Les terrains bois et pierre coexistent sur les maps ; une transition visuelle est requise.",
+      "source": "dérivé de l'adjacence des terrains des maps",
+      "status": "DEDUITE",
+      "to_terrain": "pierre",
+      "validation": {
+        "auto_tile_complet": true,
+        "sans_couture": true
+      }
+    }
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
+}
