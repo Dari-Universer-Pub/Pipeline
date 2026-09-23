@@ -1,0 +1,88 @@
+{
+  "$id": "https://pipeline.local/schemas/placement_rule.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "accessibility": {
+      "type": "string"
+    },
+    "allowed_terrain": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "clustering": {
+      "type": "string"
+    },
+    "density": {
+      "type": "string"
+    },
+    "discovery_conditions": {
+      "type": "string"
+    },
+    "display_name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "forbidden_terrain": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'placement_').",
+      "pattern": "^placement_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "type": "string"
+    },
+    "min_distance": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "places": {
+      "description": "Type/entité placée (culture, machine, ...).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "poi_relation": {
+      "type": "string"
+    },
+    "season": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "validation": {
+      "type": "object"
+    },
+    "weather": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "status",
+    "places",
+    "allowed_terrain",
+    "forbidden_terrain",
+    "min_distance"
+  ],
+  "title": "Règle de placement",
+  "type": "object",
+  "x_schema_version": "5.0.0"
+}

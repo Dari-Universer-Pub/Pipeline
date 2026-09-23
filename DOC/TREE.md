@@ -25,7 +25,7 @@ Pipeline/
 │   └── contradictions.json         #   ambiguïtés/manques détectés
 ├── ONTOLOGY/
 │   └── ontology.json               # 17 entités, 18 relations, états, conditions, effets
-├── SCHEMAS/                        # 21 schémas JSON (draft-07, dérivés de l'ontologie)
+├── SCHEMAS/                        # 22 schémas JSON (draft-07, dérivés de l'ontologie)
 │   ├── objet.schema.json
 │   ├── culture.schema.json
 │   ├── recette.schema.json
@@ -37,6 +37,8 @@ Pipeline/
 │   ├── dialogue.schema.json
 │   ├── animation.schema.json
 │   ├── asset.schema.json
+│   ├── placement_rule.schema.json
+│   ├── world_state.schema.json
 │   ├── map.schema.json
 │   ├── transition.schema.json
 │   ├── placement_rule.schema.json
@@ -121,7 +123,9 @@ Pipeline/
 │   ├── generation_errors.md        #   erreurs de génération (feedback)
 │   ├── generation_errors.json
 │   ├── simulation.json
-│   └── reports.json
+│   ├── reports.json
+│   ├── traceability.json           #   V2 : 16 domaines x 6 tests (preuves complètes)
+│   └── V2_AUDIT_REPORT.md          #   V2 : rapport d'audit (modifications, limites, usage)
 ├── ENGINE_OUT/                     # SORTIES MOTEUR (Godot 4, SANS LLM runtime)
 │   ├── runtime_data.json           #   bundle runtime (80 entités, 280 relations)
 │   ├── dialogs_compiled.json       #   dialogues essentiels compilés en données
@@ -129,7 +133,10 @@ Pipeline/
 │   ├── save_schema.json            #   schéma de sauvegarde versionné + migrations
 │   └── godot/                      #   amorces de chargement de données (autoload)
 ├── OUTPUT/
-│   └── PIPELINE_RUN.json           #   journal du run complet
+│   ├── PIPELINE_RUN.json           #   journal du run complet
+│   ├── BOOTSTRAP_SPEC.md           #   spécification du bootstrapper
+│   ├── TRACEABILITY_MATRIX_TEMPLATE.md  # gabarit officiel de la matrice
+│   └── TRACEABILITY_MATRIX.md      #   matrice V2 générée (preuves vivantes)
 ├── tools/
 │   ├── pipeline.py                 # orchestrateur
 │   ├── bootstrap_pipeline.py       # bootstrapper (optionnel)
@@ -137,12 +144,14 @@ Pipeline/
 │   ├── import_results.py           # importateur de résultats
 │   ├── regenerate.py               # régénération ciblée
 │   ├── prompt_gen.py               # générateur de prompts (CLI)
-│   └── lib/                        # 13 modules de bibliothèque (voir SCRIPTS.md)
+│   ├── traceability.py             # matrice de traçabilité V2 (CLI, étape 12)
+│   └── lib/                        # 15 modules de bibliothèque (voir SCRIPTS.md)
 │       ├── common.py · canon.py · ontology.py · systems.py · catalog.py
 │       ├── graph.py · manifest.py · prompt.py · importer.py · validator.py
 │       ├── simulator.py · report.py · compiler.py
-│       └── ...
-├── tests/                          # suite de tests (120 tests)
+│       ├── integration.py          #   V2 : parcours E2E réels + 6 épreuves par domaine
+│       └── traceability.py         #   V2 : matrice sur preuves vivantes
+├── tests/                          # suite de tests (234 tests)
 │   ├── helpers.py
 │   ├── test_connectivity.py
 │   ├── test_production.py
@@ -153,9 +162,12 @@ Pipeline/
 │   ├── test_no_llm_runtime.py
 │   ├── test_dialogues.py           # cycle de vie des dialogues (repli/import/volume/rejet)
 │   ├── test_end_to_end.py
+│   ├── test_e2e_domains.py         # V2 : 16 domaines x 6 tests obligatoires (96 tests)
+│   ├── test_maturity_traceability.py  # V2 : maturité + matrice + protection du canon
 │   └── fixtures/                   # exemples valides/invalides pour tester l'import
 │       ├── valid/
-│       └── invalid/
+│       ├── invalid/
+│       └── e2e/                    #   V2 : 16 fixtures d'intégration de bout en bout
 └── DOC/                            # documentation détaillée
     ├── ARCHITECTURE.md             #   architecture complète
     ├── FORMATS.md                  #   formats de données

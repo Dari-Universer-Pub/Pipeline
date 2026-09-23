@@ -259,8 +259,8 @@ ENTITY_TYPES: dict[str, dict[str, Any]] = {
             "frames": {"type": "integer", "minimum": 1},
             "fps": {"type": "number", "minimum": 1},
             "loop": {"type": "boolean"},
-            "impact_event": {"type": ["string", "null"],
-                             "description": "Frame d'impact (synchronisation gameplay)."},
+            "impact_event": {"type": ["integer", "string", "null"],
+                             "description": "Frame d'impact (synchronisation gameplay) : entier (indice de frame) ou chaîne 'effet:<flag>'."},
             "logic_effect": {"type": ["string", "null"],
                              "description": "Effet logique déclenché ( ID effet)."},
             "transitions": {"type": "array", "items": {"type": "string"}},
@@ -547,6 +547,39 @@ def build_schemas() -> dict[str, dict]:
             "world": {"type": "object"},
         },
         "required": ["time", "player", "world"],
+        "additionalProperties": True,
+    }
+
+    # Schéma de règle de placement (contrat V2 : domaine 'placement' testable
+    # de bout en bout). Dérivé de la structure réelle du manifest_placement.
+    schemas["placement_rule"] = {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "https://pipeline.local/schemas/placement_rule.schema.json",
+        "title": "Règle de placement",
+        "type": "object",
+        "properties": {
+            "id": {"type": "string", "pattern": "^placement_[a-z0-9_]+$",
+                   "description": "Identifiant interne stable (préfixe 'placement_')."},
+            "display_name": {"type": "string", "minLength": 1},
+            "status": _status_field(),
+            "places": {"type": "string", "minLength": 1,
+                       "description": "Type/entité placée (culture, machine, ...)."},
+            "allowed_terrain": {"type": "array", "items": {"type": "string"}},
+            "forbidden_terrain": {"type": "array", "items": {"type": "string"}},
+            "min_distance": {"type": "integer", "minimum": 0},
+            "density": {"type": "string"},
+            "clustering": {"type": "string"},
+            "season": {"type": "string"},
+            "weather": {"type": "string"},
+            "accessibility": {"type": "string"},
+            "poi_relation": {"type": "string"},
+            "discovery_conditions": {"type": "string"},
+            "source": {"type": "string"},
+            "justification": {"type": "string"},
+            "validation": {"type": "object"},
+        },
+        "required": ["id", "status", "places", "allowed_terrain",
+                     "forbidden_terrain", "min_distance"],
         "additionalProperties": True,
     }
 

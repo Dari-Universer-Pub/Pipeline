@@ -1,0 +1,62 @@
+{
+  "description": "Infrastructure boss (kind='boss') : rencontre/épreuve SANS combat (canon : pas de magie de combat traditionnelle). La présence réelle d'un boss dépend de la décision ouverte 'système de combat' — le contenu reste À_VALIDER, jamais ajouté au canon ni aux catalogues.",
+  "domain": "boss",
+  "entities": [
+    {
+      "behavior": "gardien pacifique — épreuve de mémoire, pas de combat",
+      "decision_note": {
+        "blocked_content": "Aucun boss n'est ajouté aux catalogues tant que la décision n'est pas tranchée.",
+        "open_decision": "présence ou non d'un système de combat",
+        "status": "A_VALIDER"
+      },
+      "derivation": {
+        "animations": "idle + réaction (épreuve) — AUCUNE animation de combat.",
+        "assets": "1 sprite grande taille (famille_creatures).",
+        "consequences": "Fragment de souvenir ; révélations narratives.",
+        "consumers": "Le Jardinier (épreuve de souvenirs).",
+        "obtention": "Rencontre au Puits de Mémoire (fin de progression).",
+        "system": "system_memoire, system_secrets",
+        "tests": "test_e2e_boss",
+        "why": "Le puits de mémoire (prémisse du brief) appelle un gardien."
+      },
+      "description": "Une présence ancienne veille sur le puits de mémoire ; elle éprouve le Jardinier par des énigmes de souvenirs.",
+      "display_name": "Le Gardien du Puits",
+      "habitat": [
+        "lieu_puits_de_memoire"
+      ],
+      "hostile": false,
+      "id": "creature_gardien_du_puits",
+      "justification": "Fixture d'INFRASTRUCTURE boss. Découverte ouverte : 'présence ou non d'un système de combat' (INPUT/open_decisions.md). Canon : 'pas de magie de combat traditionnelle'. Le boss est donc câblé comme rencontre narrative (statut À_VALIDER), jamais comme contenu canonique.",
+      "kind": "boss",
+      "source": "fixture d'intégration E2E (contrat V2) — contenu bloqué sur décision ouverte",
+      "status": "A_VALIDER",
+      "system": "system_memoire",
+      "yields": [
+        "objet_fragment_de_souvenir"
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "behavior": "x",
+    "display_name": "Boss invalide",
+    "habitat": [],
+    "hostile": true,
+    "id": "creature_boss_invalide",
+    "justification": "rejet (kind hors enum)",
+    "kind": "titan",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "behavior": "errant",
+    "display_name": "Boss orphelin",
+    "habitat": [],
+    "hostile": false,
+    "id": "creature_boss_orphelin",
+    "justification": "orphelin (aucun habitat, aucun système)",
+    "kind": "boss",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "yields": []
+  }
+}

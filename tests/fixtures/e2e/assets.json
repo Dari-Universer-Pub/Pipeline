@@ -1,0 +1,82 @@
+{
+  "description": "Asset icone rattaché à une entité existante : famille, dimensions, palette, empreinte unique.",
+  "domain": "assets",
+  "entities": [
+    {
+      "display_name": "Icône Tisane (dialogue)",
+      "entity_id": "objet_tisane_de_souci",
+      "family": "famille_objets",
+      "fingerprint": "a1b2c3d4e5f60718",
+      "height": 16,
+      "id": "asset_icone_tisane_dialogue",
+      "justification": "Icône additionnelle pour les dialogues d'offrande ; rattachée à un objet existant, jamais isolée.",
+      "kind": "icone",
+      "palette": [
+        "#2e2a24",
+        "#6b5d4f",
+        "#a89279",
+        "#d9c7a3",
+        "#7fae6b",
+        "#c9a86a",
+        "#5b7d8c",
+        "#e8dcc0"
+      ],
+      "resolution": "16px/tuile, échelle entière x2..x4",
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "style": "pixel art 16×16, contours souples, lumière chaude",
+      "usage_rules": [
+        "inventaire",
+        "dialogue (offrande d'Alba)"
+      ],
+      "variants": [
+        "defaut",
+        "fumante"
+      ],
+      "width": 16
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "Asset invalide",
+    "entity_id": "objet_inexistant",
+    "family": "famille_objets",
+    "height": 16,
+    "id": "asset_invalide",
+    "justification": "rejet (entité propriétaire inexistante)",
+    "kind": "icone",
+    "palette": [
+      "#2e2a24",
+      "#6b5d4f",
+      "#a89279",
+      "#d9c7a3",
+      "#7fae6b",
+      "#c9a86a",
+      "#5b7d8c",
+      "#e8dcc0"
+    ],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "width": 16
+  },
+  "orphan_variant": {
+    "display_name": "Asset orphelin",
+    "family": "famille_objets",
+    "height": 16,
+    "id": "asset_orphelin_e2e",
+    "justification": "orphelin (aucune entité propriétaire : rejet schema/asset.orphan)",
+    "kind": "icone",
+    "palette": [
+      "#2e2a24",
+      "#6b5d4f",
+      "#a89279",
+      "#d9c7a3",
+      "#7fae6b",
+      "#c9a86a",
+      "#5b7d8c",
+      "#e8dcc0"
+    ],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "width": 16
+  }
+}

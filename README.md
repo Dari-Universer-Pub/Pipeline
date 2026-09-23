@@ -33,10 +33,13 @@ python3 tools/pipeline.py
 # 2. Vérifier la validation (0 erreur attendue)
 python3 tools/pipeline.py --check
 
-# 3. Lancer la suite de tests (120 tests)
+# 3. Lancer la suite de tests (234 tests)
 python3 tools/run_tests.py
 
-# 4. (Optionnel) régénérer la spécification du bootstrapper
+# 4. Matrice de traçabilité V2 (16 domaines x 6 tests, preuves réelles)
+python3 tools/traceability.py
+
+# 5. (Optionnel) régénérer la spécification du bootstrapper
 python3 tools/bootstrap_pipeline.py
 ```
 
@@ -55,7 +58,7 @@ REPORTS/decision_report.md .............. statuts CANONIQUE/DEDUITE/PROPOSEE/À_
 REPORTS/contradiction_report.md ......... contradictions & ambiguïtés
    ↓ (2) ontologie + schémas
 ONTOLOGY/ontology.json .................. types d'entités, relations, états, effets
-SCHEMAS/*.schema.json ................... 21 schémas JSON (draft-07)
+SCHEMAS/*.schema.json ................... 22 schémas JSON (draft-07, dont placement_rule)
    ↓ (3) systèmes de gameplay
 GAME/systems/systems.json ............... 15 systèmes + exigences de contenu
    ↓ (4) catalogues (quantités DÉRIVÉES)
@@ -79,6 +82,9 @@ REPORTS/validation_report.md ............ 16 familles de validateurs
 PROMPTS/generated/regeneration/ ......... prompts de correction
    ↓ (12) compilation pour le moteur
 ENGINE_OUT/ ............................. runtime sans LLM + amorces Godot 4
+   ↓ (13) traçabilité V2 (audit d'intégration, étape 12 de la pipeline)
+REPORTS/traceability.json ............... 16 domaines x 6 tests obligatoires (preuves)
+OUTPUT/TRACEABILITY_MATRIX.md ........... matrice de maturité (gabarit officiel)
 ```
 
 ---
@@ -129,6 +135,37 @@ produit, quels assets/animations elle nécessite, quels tests la couvrent.*
 
 ---
 
+## Audit V2 (contrat d'architecture v2 — officiel)
+
+Le contrat V2 (`CONTRACT/architecture_contract.md`, V1 archivée en `_v1.md`)
+ajoute une exigence centrale : **un fichier qui existe n'est pas une fonctionnalité
+terminée**. Chaque domaine de contenu doit prouver son intégration de bout en
+bout, du fichier d'entrée jusqu'à la sortie vérifiée du runtime.
+
+- **16 domaines audités** : objets, ressources, cultures, recettes, machines,
+  PNJ, dialogues, quêtes, événements, créatures, **boss**, maps, **placement**,
+  assets, animations, **sauvegardes**.
+- **Échelle de maturité** (calculée sur preuves, jamais déclarée) :
+  SPECIFIED → SCHEMA_VALIDATED → IMPORTED → CATALOGED → GRAPH_CONNECTED →
+  COMPILED → RUNTIME_TESTED → PRODUCTION_READY. PRODUCTION_READY est interdit
+  sans test d'intégration runtime réel.
+- **6 tests obligatoires par domaine** : nominal, rejet, volume (25 clones),
+  orphelin, reproductibilité (octet par octet), intégration runtime (sans LLM).
+- **Fixtures E2E réalistes** : `tests/fixtures/e2e/*.json` (16 fichiers) —
+  chacune traverse import → schéma → canon → graphe → catalogues → compilation
+  → sortie runtime vérifiée.
+- **Étape 12 « traçabilité »** : `python3 tools/traceability.py` (ou la
+  pipeline complète) écrit `REPORTS/traceability.json` et
+  `OUTPUT/TRACEABILITY_MATRIX.md` (gabarit officiel 8 colonnes + détail V2).
+- **Résultat de l'audit** : 16/16 domaines PRODUCTION_READY, 96/96 tests
+  obligatoires, 234/234 tests de la suite — voir `REPORTS/V2_AUDIT_REPORT.md`.
+- Le domaine **boss** est une infrastructure PRODUCTION_READY dont le CONTENU
+  reste À_VALIDER : décision ouverte « présence ou non d'un système de combat »
+  (canon : pas de magie de combat traditionnelle). Aucun boss n'est ajouté aux
+  catalogues.
+
+---
+
 ## Pour une autre IA : comment générer le jeu
 
 Lisez **`DOC/EXECUTION_PROCEDURE.md`** — la procédure pas-à-pas complète. En résumé :
@@ -142,6 +179,9 @@ Lisez **`DOC/EXECUTION_PROCEDURE.md`** — la procédure pas-à-pas complète. E
 6. Importez : `python3 tools/import_results.py --revalidate`.
 7. Si rejet : `python3 tools/regenerate.py` produit un prompt de correction ciblée.
 8. Répétez. Les sorties valides sont compilées dans `ENGINE_OUT/` (sans LLM runtime).
+9. Prouvez l'intégration : `python3 tools/run_tests.py` puis
+   `python3 tools/traceability.py` — la matrice `OUTPUT/TRACEABILITY_MATRIX.md`
+   doit rester sans ✗ (PRODUCTION_READY exige la sortie runtime vérifiée).
 
 **Vous n'avez jamais à deviner** : canon, contexte, fonction, relations, style,
 dimensions, variantes, animations, placement, validations — tout est injecté dans
@@ -161,7 +201,7 @@ Pipeline/
 ├── CONTRACT/                  ← contrat d'architecture Graph-Driven
 ├── CANON/                     ← canon central verrouillé + extractions
 ├── ONTOLOGY/                  ← ontologie (entités, relations, états, effets)
-├── SCHEMAS/                   ← 21 schémas JSON (draft-07)
+├── SCHEMAS/                   ← 22 schémas JSON (draft-07, dont placement_rule)
 ├── GAME/                      ← systèmes, catalogues, graphe, manifests
 │   ├── systems/  ├── catalogs/  ├── functional_catalog/  ├── graph/  └── manifests/
 ├── PROMPTS/                   ← templates, exemples, prompts générés
@@ -179,8 +219,11 @@ Pipeline/
 │   ├── import_results.py      ← importateur
 │   ├── regenerate.py          ← régénération ciblée
 │   ├── prompt_gen.py          ← générateur de prompts (CLI)
+│   ├── traceability.py        ← matrice de traçabilité V2 (CLI, étape 12)
 │   └── bootstrap_pipeline.py  ← script du bootstrapper d'origine
-└── tests/                     ← 120 tests (connectivité, production, simulation, dialogues, ...)
+└── tests/                     ← 234 tests (connectivité, production, simulation,
+                                  dialogues, E2E V2 16 domaines x 6, traçabilité)
+    └── fixtures/e2e/          ← 16 fixtures d'intégration de bout en bout
 ```
 
 ---
@@ -195,7 +238,7 @@ La pipeline n'est déclarée terminée que si toutes ces conditions sont remplie
 - [x] Les décisions ouvertes sont listées (21).
 - [x] Les contradictions/ambiguïtés sont signalées (5).
 - [x] L'ontologie est cohérente (17 types d'entités, 18 relations).
-- [x] Les schémas passent leurs tests (21 schémas).
+- [x] Les schémas passent leurs tests (22 schémas).
 - [x] Le graphe est construit (103 nœuds, ~280 arêtes, 100 % atteignables).
 - [x] Les relations sont validées (0 référence pendante).
 - [x] Les manifests sont générés (15 manifests).
@@ -209,6 +252,9 @@ La pipeline n'est déclarée terminée que si toutes ces conditions sont remplie
 - [x] Les corrections ciblées sont documentées (`regenerate.py`).
 - [x] Le test minimal de bout en bout réussit (`test_end_to_end.py`).
 - [x] Le jeu final n'a pas besoin d'un LLM à l'exécution (`ENGINE_OUT/`, testé).
+- [x] Audit V2 : 16 domaines × 6 tests obligatoires = 96/96 réussis.
+- [x] Audit V2 : 16/16 domaines PRODUCTION_READY (matrice `OUTPUT/TRACEABILITY_MATRIX.md`).
+- [x] Audit V2 : suite complète 234/234 tests ; double exécution octet par octet identique.
 
 ---
 

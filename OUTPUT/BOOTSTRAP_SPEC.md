@@ -1,91 +1,39 @@
-# Spécification initiale de pipeline
+# Bootstrap Specification
 
-Générée le : 2026-09-22T21:45:48
+Generated: 2026-09-23T08:53:32
 
-Cette sortie est une spécification de fabrication. Elle ne constitue pas le jeu final.
+## Input status
 
-## Statut des entrées
+[
+  {
+    "file": "game_brief.md",
+    "status": "LOADED",
+    "characters": 1235
+  },
+  {
+    "file": "canon_initial.md",
+    "status": "LOADED",
+    "characters": 1297
+  },
+  {
+    "file": "constraints.md",
+    "status": "LOADED",
+    "characters": 1023
+  },
+  {
+    "file": "open_decisions.md",
+    "status": "LOADED",
+    "characters": 589
+  }
+]
 
-- brief : chargé
-- canon : chargé
-- contraintes : chargées
-- décisions ouvertes : chargées
-- contrat architectural : chargé
+## Mandatory classification
+Every fact must be classified as CANONICAL, DERIVED, PROPOSED or TO_VALIDATE. Creative unknowns must not be silently invented.
 
-## Règles de travail
-
-1. Ne jamais inventer silencieusement un élément canonique.
-2. Déduire les quantités depuis les systèmes et les chaînes de gameplay.
-3. Générer des prompts contextualisés à partir du graphe et des manifests.
-4. Refuser les objets, assets, animations et quêtes orphelins.
-5. Importer et valider chaque sortie externe.
-6. Préparer un jeu fonctionnant sans LLM runtime.
-
-## Modules à construire
-
-- extraction du canon ;
-- ontologie ;
-- schémas ;
-- catalogue fonctionnel ;
-- graphe du monde ;
-- manifestes ;
-- placement de map ;
-- assets par familles ;
-- animations par états et actions ;
-- prompts contextualisés ;
-- importateur ;
-- validateurs ;
-- simulateur de partie ;
-- compilateur moteur.
-
-## Canon et contexte
-
-# Canon initial — Les Jardins de l’Écho
-
-## Faits immuables
-
-- Le monde s’appelle Valdore.
-- Le joueur est appelé le Jardinier.
-- Le refuge principal s’appelle la Maison-Racine.
-- Les souvenirs existent sous forme de fragments physiques.
-- Les graines d’écho peuvent faire pousser des plantes mémorielles.
-- Le jeu ne possède pas de magie de combat traditionnelle.
-
-## Lieux connus
-
-- La Maison-Racine : refuge et atelier principal.
-- La Vallée Claire : zone de départ et terres cultivables.
-- Le Bois des Retours : forêt où certains événements se répètent.
-- Le Lac Muet : zone d’exploration et de pêche.
-
-## Personnages connus
-
-- Alba : soigneuse des plantes et première guide du joueur.
-- Marin : artisan qui fabrique les machines agricoles.
-- Nox : pêcheur qui refuse de parler de son passé.
-
-## Objets canoniques
-
-- Graine d’Écho.
-- Houe de départ.
-- Arrosoir de cuivre.
-- Fragment de souvenir.
-- Carnet du Jardinier.
-
-## Règles de nommage
-
-Les noms doivent être simples, évocateurs et cohérents avec un monde rural mystérieux. Éviter les noms de fantasy génériques, les objets cosmiques et les termes technologiques modernes.
-
-## Éléments ouverts
-
-- Les noms des saisons supplémentaires.
-- Les recettes exactes.
-- Les secrets du Bois des Retours.
-- Le nombre final de cultures et de quêtes.
-
+## Required integration proof
+Every content type must pass import → schema → canon → graph → catalog → compiler → runtime fixture.
 
 ## Brief
-
 # Brief exemple — Les Jardins de l’Écho
 
 ## Identité
@@ -131,8 +79,52 @@ Cultiver, explorer les environs, aider les habitants et décider quels souvenirs
 Le nombre exact d’objets, de cultures, de PNJ et de quêtes doit être déduit par la pipeline à partir des systèmes et non inventé arbitrairement.
 
 
-## Contraintes
+## Canon
+# Canon initial — Les Jardins de l’Écho
 
+## Faits immuables
+
+- Le monde s’appelle Valdore.
+- Le joueur est appelé le Jardinier.
+- Le refuge principal s’appelle la Maison-Racine.
+- Les souvenirs existent sous forme de fragments physiques.
+- Les graines d’écho peuvent faire pousser des plantes mémorielles.
+- Le jeu ne possède pas de magie de combat traditionnelle.
+
+## Lieux connus
+
+- La Maison-Racine : refuge et atelier principal.
+- La Vallée Claire : zone de départ et terres cultivables.
+- Le Bois des Retours : forêt où certains événements se répètent.
+- Le Lac Muet : zone d’exploration et de pêche.
+
+## Personnages connus
+
+- Alba : soigneuse des plantes et première guide du joueur.
+- Marin : artisan qui fabrique les machines agricoles.
+- Nox : pêcheur qui refuse de parler de son passé.
+
+## Objets canoniques
+
+- Graine d’Écho.
+- Houe de départ.
+- Arrosoir de cuivre.
+- Fragment de souvenir.
+- Carnet du Jardinier.
+
+## Règles de nommage
+
+Les noms doivent être simples, évocateurs et cohérents avec un monde rural mystérieux. Éviter les noms de fantasy génériques, les objets cosmiques et les termes technologiques modernes.
+
+## Éléments ouverts
+
+- Les noms des saisons supplémentaires.
+- Les recettes exactes.
+- Les secrets du Bois des Retours.
+- Le nombre final de cultures et de quêtes.
+
+
+## Constraints
 # Contraintes de production
 
 ## Technique
@@ -167,8 +159,7 @@ Le nombre exact d’objets, de cultures, de PNJ et de quêtes doit être déduit
 - Toute sortie doit être validée avant import.
 
 
-## Décisions ouvertes
-
+## Open decisions
 # Décisions encore ouvertes
 
 Ces points peuvent être proposés par l’IA sous forme de recommandations, mais ils doivent être signalés comme décisions ouvertes :
@@ -187,22 +178,32 @@ Ces points peuvent être proposés par l’IA sous forme de recommandations, mai
 L’IA peut choisir des valeurs techniques par défaut, mais ne doit pas transformer silencieusement une décision créative en fait canonique.
 
 
-## Contrat architectural
+## Architecture contract
+# Contrat d’architecture Graph-Driven V2
 
-# Contrat d’architecture Graph-Driven
+## Mission
 
-Construire une pipeline de production autonome, documentée et réutilisable, pas le jeu final.
+Construire une pipeline de production autonome, documentée, testable et réutilisable pour un nouveau jeu. La pipeline produit les données, manifests, prompts, validateurs et compilateurs nécessaires. Elle ne produit pas le jeu final pendant cette phase.
 
-Flux obligatoire :
+## Entrées officielles
+
+- `INPUT/game_brief.md` : direction, genre, prémisse et boucles.
+- `INPUT/canon_initial.md` : source de vérité narrative et noms non négociables.
+- `INPUT/constraints.md` : contraintes techniques, visuelles et runtime.
+- `INPUT/open_decisions.md` : décisions créatives encore ouvertes.
+
+Chaque information reçoit un statut : `CANONICAL`, `DERIVED`, `PROPOSED` ou `TO_VALIDATE`.
+
+## Flux obligatoire
 
 ```text
-Brief + Canon + Contraintes
+Brief + Canon + Contraintes + Décisions ouvertes
+    ↓
+Analyse et rapport de contradictions
     ↓
 Canon central verrouillé
     ↓
-Ontologie
-    ↓
-Schémas
+Ontologie et schémas
     ↓
 Systèmes de gameplay
     ↓
@@ -210,7 +211,7 @@ Catalogue fonctionnel
     ↓
 Graphe du monde
     ↓
-Manifestes objets, maps, assets, animations
+Manifestes objets, maps, placement, assets, animations
     ↓
 Prompts spécialisés contextualisés
     ↓
@@ -220,18 +221,73 @@ Importation
     ↓
 Validation
     ↓
-Correction ciblée
+Correction ou régénération ciblée
     ↓
-Compilation pour le moteur
+Compilation runtime
 ```
 
-La pipeline doit calculer les quantités, noms, assets, variantes, animations, directions, états, transitions, placements et tests à partir du canon et des systèmes.
+## Obligations de contenu
 
-Elle doit produire des scripts, schémas, générateurs, templates, validateurs, rapports et documentation. Elle ne doit pas générer massivement le jeu à cette étape.
+Les quantités doivent être déduites des systèmes, chaînes de production, progression, canon, états, directions, variantes et contextes. Aucun objet, asset, animation, quête ou dialogue ne doit être créé sans fonction, relation et test.
 
-Le LLM ne doit pas être obligatoire pendant l’exécution finale du jeu.
+Les maps doivent inclure structure, terrain, transitions, relief, collisions, navigation, placement, POI et secrets. Les assets doivent être générés par familles quand ils sont interdépendants. Les animations doivent être liées aux états, actions, directions et effets logiques.
+
+## Intégration de bout en bout obligatoire
+
+Un schéma, un validateur ou un fichier de catalogue ne prouve pas qu’une fonctionnalité est intégrée.
+
+Pour chaque type de contenu, fournir une fixture réaliste traversant :
+
+```text
+entrée
+→ importation
+→ validation du schéma
+→ validation du canon
+→ validation du graphe
+→ catalogue
+→ état de pipeline
+→ compilation
+→ sortie runtime
+→ vérification finale
+```
+
+Une fonctionnalité est incomplète si elle possède un schéma mais aucun import réel, un validateur mais aucun test d’intégration, un catalogue mais aucun chargement par le compilateur, ou un compilateur sans sortie runtime vérifiée.
+
+## Statuts de maturité
+
+Chaque entité doit pouvoir être suivie par :
+
+`SPECIFIED → SCHEMA_VALIDATED → IMPORTED → CATALOGED → GRAPH_CONNECTED → COMPILED → RUNTIME_TESTED → PRODUCTION_READY`
+
+Aucune entité ne peut être déclarée `PRODUCTION_READY` sans `RUNTIME_TESTED`.
+
+## Tests obligatoires
+
+Chaque domaine doit avoir :
+
+- un test nominal ;
+- un test de rejet ;
+- un test de volume ;
+- un test de donnée orpheline ;
+- un test de reproductibilité ;
+- un test d’intégration runtime.
+
+Tester au minimum : objets, ressources, cultures, recettes, machines, PNJ, dialogues, quêtes, événements, créatures, boss, maps, placement, assets, animations et sauvegardes.
+
+## Prompts spécialisés
+
+Les prompts peuvent être individuels pour des éléments indépendants, par famille pour les éléments visuellement interdépendants et par séquence pour les animations. Aucun prompt ne doit être isolé : il reçoit le canon, l’ontologie, le graphe, le manifest, la fonction, les relations, dimensions, variantes, animations, placement, sortie attendue et validations.
+
+Une information manquante provoque `BLOCKED`, jamais une invention silencieuse.
+
+## Runtime
+
+Le LLM intervient hors ligne pour concevoir, générer, corriger et valider. Le jeu final doit fonctionner sans LLM pour règles, déplacement, navigation, routines, dialogues compilés, quêtes, événements, animations, sauvegardes et progression.
+
+## Reproductibilité et maintenance
+
+Prévoir versionnement, migrations, graines procédurales, sorties déterministes, rapports, sauvegardes, reprise et matrice de traçabilité. Les sorties JSON doivent être stables octet par octet lorsque cela est possible.
 
 
-## Première étape obligatoire
-
-Produire d’abord l’arborescence, les schémas, l’ontologie, le graphe initial, les manifests et les rapports de décisions. Ne pas générer massivement le contenu final.
+## First deliverables
+Produce the architecture, ontology, schemas, canon registry, decision report, graph, catalogs, manifests, prompt templates, importers, validators, traceability matrix and end-to-end fixtures before mass content generation.

@@ -39,8 +39,9 @@
       "type": "string"
     },
     "impact_event": {
-      "description": "Frame d'impact (synchronisation gameplay).",
+      "description": "Frame d'impact (synchronisation gameplay) : entier (indice de frame) ou chaîne 'effet:<flag>'.",
       "type": [
+        "integer",
         "string",
         "null"
       ]

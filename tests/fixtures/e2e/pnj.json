@@ -1,0 +1,77 @@
+{
+  "description": "PNJ secondaire : maison, lieux fréquentés, connaissances bornées.",
+  "domain": "pnj",
+  "entities": [
+    {
+      "beliefs": [
+        "la mémoire se cultive"
+      ],
+      "derivation": {
+        "animations": "idle/marche 4 directions + parler.",
+        "assets": "1 sprite (famille_personnages) + portrait.",
+        "consequences": "+relations ; dialogue ; vente de toiles.",
+        "consumers": "Quêtes de tissage ; commerce de toiles.",
+        "obtention": "Arrive par le sentier (exploration).",
+        "system": "system_relations, system_artisanat",
+        "tests": "test_e2e_pnj, test_simulation",
+        "why": "L'artisanat du lin appelle une tisserande itinérante."
+      },
+      "display_name": "Énora",
+      "emotions": [
+        "curiosité",
+        "mélancolie douce"
+      ],
+      "forbidden_knowledge": [
+        "secret_passe_nox"
+      ],
+      "frequented_places": [
+        "lieu_maison_racine",
+        "lieu_atelier_de_la_maison_racine"
+      ],
+      "function": "tisserande itinérante",
+      "goals": [
+        "retrouver l'écho de sa famille"
+      ],
+      "home": "lieu_vallee_claire",
+      "id": "pnj_enora",
+      "justification": "Nombre de PNJ = décision ouverte ; fixture d'intégration PROPOSEE reliée aux lieux canoniques.",
+      "knowledge": [
+        "fait_monde_valdore",
+        "fait_joueur_jardinier",
+        "lieu_vallee_claire"
+      ],
+      "needs": [
+        "un abri pour la nuit"
+      ],
+      "roles": [
+        "artisan"
+      ],
+      "routines": [],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "voice": "posée, précise, métaphores de tissage"
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "PNJ invalide",
+    "frequented_places": [],
+    "function": "x",
+    "home": "lieu_inexistant",
+    "id": "pnj_invalide",
+    "justification": "rejet (maison inexistante)",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "display_name": "PNJ orphelin",
+    "frequented_places": [],
+    "function": "inconnue",
+    "home": "",
+    "id": "pnj_orphelin",
+    "justification": "orphelin (aucun lieu, aucune routine)",
+    "knowledge": [],
+    "routines": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  }
+}

@@ -15,9 +15,12 @@ les états AVANT/APRÈS chaque action (un simple test d'existence ne suffit pas)
 from __future__ import annotations
 
 import copy
+import json
+import random
 from typing import Any
 
-from .common import DIRS, Status, write_json, write_text, versioned_envelope, unwrap, read_json
+from .common import (DIRS, SCHEMA_VERSION, Status, fingerprint, write_json,
+                     write_text, versioned_envelope, unwrap, read_json)
 
 DAY_HOURS = 24
 
@@ -593,6 +596,242 @@ def run_stage(catalogs: dict, write: bool = True) -> dict[str, Any]:
         write_json(DIRS["reports"] / "simulation.json",
                    versioned_envelope(artifact, kind="simulation"))
     return artifact
+
+
+# =============================================================================
+# COUCHE RUNTIME V2 — exécution depuis les données COMPILÉES, dialogues,
+# sauvegardes et sondes runtime (contrat V2 : « test d'intégration runtime
+# réel », déterministe et SANS LLM).
+# =============================================================================
+
+def from_runtime(runtime_data: dict) -> dict[str, Any]:
+    """Extrait les catalogues du bundle compilé (ENGINE_OUT/runtime_data.json).
+
+    Permet au simulateur de fonctionner uniquement depuis la sortie de
+    compilation — exactement ce que chargera le moteur final. C'est le point
+    d'intégration réel entre pipeline et runtime.
+    """
+    return runtime_data["entities"]
+
+
+def evaluate_dialogs(dialogs: list[dict], state: dict, speaker_id: str) -> dict | None:
+    """Sélection d'un dialogue par le moteur (déterministe, sans LLM).
+
+    Filtre les dialogues compilés par locuteur, évalue leurs CONDITIONS sur
+    l'état du monde, retient la priorité la plus haute (égalité : ordre
+    lexicographique de l'id — stable). Applique les `reveals` des lignes
+    sélectionnées aux faits connus du joueur.
+    """
+    candidates = [d for d in dialogs
+                  if d.get("speaker_id") == speaker_id
+                  and all(check_condition(state, c) for c in d.get("conditions", []))]
+    if not candidates:
+        return None
+    best = min(candidates,
+               key=lambda d: (-int(d.get("priority", 0)), str(d.get("id", ""))))
+    for line in best.get("lines", []):
+        for rv in line.get("reveals", []) or []:
+            if rv not in state["player"]["known_facts"]:
+                state["player"]["known_facts"].append(rv)
+    _log(state, f"dialogue évalué : {best['id']} ({speaker_id})")
+    return best
+
+
+def save_game(state: dict, save_schema: dict | None = None) -> str:
+    """Sérialise l'état du monde en sauvegarde (JSON déterministe + empreinte).
+
+    Format : {"save_version", "world": {time, player, world}, "checksum"}.
+    L'empreinte protège l'intégrité : toute altération (trucature) est détectée
+    au chargement, conformément à `llm_mutation_forbidden` du schéma compilé.
+    """
+    version = (save_schema or {}).get("save_version", SCHEMA_VERSION)
+    world = {"time": state["time"], "player": state["player"], "world": state["world"]}
+    blob = {"save_version": version, "world": world, "checksum": fingerprint(world)}
+    return json.dumps(blob, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+def load_game(blob: str | dict, save_schema: dict | None = None,
+              catalogs: dict | None = None) -> dict[str, Any]:
+    """Charge une sauvegarde : version (migration le cas échéant) + intégrité.
+
+    Lève ValueError si : version inconnue sans migration, ou empreinte
+    invalide (sauvegarde altérée/corrompue). Retourne un état complet
+    utilisable par le simulateur — sans LLM.
+    """
+    data = json.loads(blob) if isinstance(blob, str) else copy.deepcopy(blob)
+    version = (save_schema or {}).get("save_version", SCHEMA_VERSION)
+    sv = data.get("save_version")
+    world = data.get("world")
+    if not isinstance(world, dict):
+        raise ValueError("sauvegarde invalide : section 'world' absente")
+    if sv != version:
+        migrations = ((save_schema or {}).get("compatibility", {}) or {}).get("migrations", [])
+        if not any(m.get("from") == sv and m.get("to") == version for m in migrations):
+            raise ValueError(f"sauvegarde incompatible : {sv} -> {version} (aucune migration)")
+        # Migration initiale (0.0.0 -> courant) : complète la structure manquante.
+        base = initial_state(catalogs or {})
+        for section in ("time", "player", "world"):
+            merged = dict(base[section])
+            merged.update(world.get(section, {}) or {})
+            world[section] = merged
+        data["save_version"] = version
+        data["checksum"] = fingerprint(world)  # migration : empreinte recalculée
+    if data.get("checksum") != fingerprint(world):
+        raise ValueError("sauvegarde corrompue : empreinte invalide (altération non autorisée)")
+    state = {"time": world["time"], "player": world["player"],
+             "world": world["world"], "log": []}
+    _log(state, f"sauvegarde chargée (version {data['save_version']})")
+    return state
+
+
+def probe_maps(runtime: dict) -> dict[str, Any]:
+    """Vérification runtime des maps compilées : liens résolus, graines
+    présentes, tailles cohérentes, POI/zones dans les limites. Déterministe."""
+    maps = runtime["entities"].get("maps", [])
+    ids = {m["id"] for m in maps}
+    by_id = {m["id"]: m for m in maps}
+    unresolved = sorted({t for m in maps for t in m.get("linked_maps", []) or []
+                         if t not in ids})
+    no_seed = [m["id"] for m in maps if not isinstance(m.get("seed"), int)]
+    bad_size = [m["id"] for m in maps
+                if not (isinstance(m.get("size"), dict)
+                        and int(m["size"].get("w", 0)) > 0
+                        and int(m["size"].get("h", 0)) > 0)]
+    asym = [f"{m['id']}->{t}" for m in maps for t in m.get("linked_maps", []) or []
+            if t in by_id and m["id"] not in (by_id[t].get("linked_maps") or [])]
+    no_loc = [m["id"] for m in maps
+              if m.get("location_id") and m["location_id"] not in
+              {e["id"] for e in runtime["entities"].get("locations", [])}]
+    return {"maps": len(maps), "unresolved_links": unresolved, "missing_seed": no_seed,
+            "bad_size": bad_size, "asymmetric_links": asym, "location_unresolved": no_loc,
+            "ok": not (unresolved or no_seed or bad_size or no_loc)}
+
+
+def simulate_placement(rule: dict, terrains: list[str], seed: int,
+                       count: int = 8, grid: tuple[int, int] = (24, 18)) -> dict[str, Any]:
+    """Simulation déterministe de placement sur une mini-grille.
+
+    Génère un terrain depuis les terrains d'une map (graine stable), place
+    `count` éléments selon la règle (terrain autorisé/interdit, distance
+    minimale), puis vérifie la CONFORMITÉ de chaque placement. C'est le test
+    runtime du placement : la règle est une donnée exécutable sans LLM.
+    """
+    rnd = random.Random(seed)
+    w, h = grid
+    allowed = list(rule.get("allowed_terrain") or terrains)
+    forbidden = set(rule.get("forbidden_terrain") or [])
+    conflict = sorted(set(allowed) & forbidden)
+    min_d = int(rule.get("min_distance", 1) or 0)
+    field = [[(allowed[rnd.randrange(len(allowed))] if rnd.random() < 0.5
+               else terrains[rnd.randrange(len(terrains))]) for _ in range(w)]
+           for _ in range(h)]
+    placed: list[tuple[int, int]] = []
+    for y in range(h):
+        for x in range(w):
+            if len(placed) >= count:
+                break
+            t = field[y][x]
+            if t in forbidden or t not in allowed:
+                continue
+            if any(max(abs(x - px), abs(y - py)) < min_d for px, py in placed):
+                continue
+            placed.append((x, y))
+        if len(placed) >= count:
+            break
+    terrain_ok = all(field[y][x] in allowed and field[y][x] not in forbidden
+                     for x, y in placed)
+    distance_ok = all(max(abs(a[0] - b[0]), abs(a[1] - b[1])) >= min_d
+                      for i, a in enumerate(placed) for b in placed[i + 1:])
+    return {"rule_id": rule.get("id"), "requested": count, "placed": len(placed),
+            "terrain_conflict": conflict, "terrain_ok": terrain_ok,
+            "distance_ok": distance_ok,
+            "ok": terrain_ok and distance_ok and not conflict and len(placed) == count}
+
+
+def probe_assets(runtime: dict) -> dict[str, Any]:
+    """Vérification runtime des assets compilés : empreintes uniques, entités
+    propriétaires résolues, assets requis par les animations résolus."""
+    assets = runtime.get("assets_manifest", [])
+    anims = runtime.get("animations_manifest", [])
+    ent_ids = {n["id"] for n in runtime.get("nodes", [])}
+    for coll in runtime["entities"].values():
+        for e in coll:
+            if isinstance(e, dict) and "id" in e:
+                ent_ids.add(e["id"])
+    # IDs des manifests compilés (effets, transitions...) : entités légitimes.
+    for key in ("effects_manifest", "transitions_manifest", "maps_manifest",
+                "placement_manifest", "navigation_manifest"):
+        for m in runtime.get(key, []) or []:
+            if isinstance(m, dict) and m.get("id"):
+                ent_ids.add(m["id"])
+    fps = [a.get("fingerprint") for a in assets]
+    ids = {a["id"] for a in assets}
+    unresolved_entity = sorted({a["id"] for a in assets
+                                if a.get("entity_id")
+                                and a["entity_id"] not in ent_ids
+                                and not str(a["entity_id"]).startswith(("map_", "asset_"))})
+    unresolved_anim = sorted({ra for an in anims
+                              for ra in an.get("required_assets", []) or []
+                              if ra not in ids})
+    unique = len(set(fps)) == len(fps)
+    return {"assets": len(assets), "unique_fingerprints": unique,
+            "unresolved_entity_refs": unresolved_entity,
+            "unresolved_animation_refs": unresolved_anim,
+            "ok": unique and not unresolved_entity and not unresolved_anim}
+
+
+def animation_effect(logic_effect: Any) -> dict | None:
+    """Traduit un `logic_effect` d'animation en effet exécutable.
+
+    Forme symbolique 'effet:<drapeau>' -> set_flag (synchronisation
+    visuel/logique) ; forme dict {type, params} -> telle quelle.
+    """
+    if isinstance(logic_effect, dict) and logic_effect.get("type"):
+        return logic_effect
+    if isinstance(logic_effect, str) and logic_effect.startswith("effet:"):
+        return {"type": "set_flag",
+                "params": {"flag_id": logic_effect.split(":", 1)[1]}}
+    return None
+
+
+def probe_animations(runtime: dict, rules: dict, state: dict | None = None) -> dict[str, Any]:
+    """Vérification runtime des animations compilées : frames/fps valides,
+    assets requis résolus, effets logiques APPLIQUÉS par le moteur de règles
+    (la synchronisation visuel/logique est réellement exécutée, sans LLM)."""
+    anims = runtime.get("animations_manifest", [])
+    asset_ids = {a["id"] for a in runtime.get("assets_manifest", [])}
+    effect_types = set((rules or {}).get("effect_types", {}))
+    bad_frames = [a["id"] for a in anims
+                  if not (int(a.get("frames", 0)) > 0 and float(a.get("fps", 0)) > 0)]
+    missing_assets = sorted({ra for a in anims
+                             for ra in a.get("required_assets", []) or []
+                             if ra not in asset_ids})
+    bad_impact = [a["id"] for a in anims
+                  if isinstance(a.get("impact_event"), int)
+                  and not (0 <= a["impact_event"] < int(a.get("frames", 1)))]
+    if state is None:
+        state = initial_state(from_runtime(runtime))
+    applied = symbolic = failed = 0
+    for a in anims:
+        le = a.get("logic_effect")
+        if not le:
+            continue
+        eff = animation_effect(le)
+        if eff is None or eff["type"] not in effect_types:
+            failed += 1
+            continue
+        if isinstance(le, str):
+            symbolic += 1
+        if apply_effect(state, eff):
+            applied += 1
+        else:
+            failed += 1
+    return {"animations": len(anims), "bad_frames": bad_frames,
+            "bad_impact_frame": bad_impact, "missing_assets": missing_assets,
+            "effects_applied": applied, "symbolic_effects": symbolic,
+            "effects_failed": failed,
+            "ok": (not bad_frames and not missing_assets and not bad_impact
+                   and failed == 0 and applied > 0)}
 
 
 if __name__ == "__main__":

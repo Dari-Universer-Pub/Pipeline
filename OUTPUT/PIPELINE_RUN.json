@@ -2,7 +2,7 @@
   "generated_deterministic": true,
   "kind": "pipeline_run",
   "payload": {
-    "finished": "2026-09-23T07:46:17+00:00",
+    "finished": "2026-09-23T09:35:12+00:00",
     "pipeline_version": "5.0.0",
     "stages": {
       "canon": {
@@ -64,7 +64,7 @@
       "ontology": {
         "entity_types": 17,
         "relation_types": 18,
-        "schemas": 21
+        "schemas": 22
       },
       "prompt": {
         "blocked": 1,
@@ -95,13 +95,20 @@
       "systems": {
         "count": 15
       },
+      "traceability": {
+        "all_green": true,
+        "domains_total": 16,
+        "incomplete": [],
+        "production_ready": 16,
+        "tests": "96/96"
+      },
       "validate": {
         "errors": 0,
         "passed": true,
         "warnings": 0
       }
     },
-    "started": "2026-09-23T07:46:17+00:00",
+    "started": "2026-09-23T09:35:06+00:00",
     "validation_passed": true
   },
   "pipeline_version": "5.0.0",

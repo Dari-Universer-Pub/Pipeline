@@ -1,0 +1,99 @@
+{
+  "description": "Ressource + recette réelle qui la consomme + objet produit (chaîne complète).",
+  "domain": "ressources",
+  "entities": [
+    {
+      "base_value": 6,
+      "category": "matériau",
+      "consumers": [
+        "system_artisanat"
+      ],
+      "derivation": {
+        "animations": "geste 'couper'.",
+        "assets": "1 icône + sprite de gisement.",
+        "consequences": "Objets de refuge (nattes) ; économie.",
+        "consumers": "recette_natte_de_roseaux (tressage).",
+        "obtention": "Récolte sur les berges (exploration).",
+        "system": "system_artisanat, system_exploration",
+        "tests": "test_e2e_ressources, test_production",
+        "why": "L'artisanat exige un matériau renouvelable hors bois/pierre."
+      },
+      "description": "Roseaux coupés sur les berges du Lac Muet.",
+      "display_name": "Roseau du Lac",
+      "id": "ressource_roseau_du_lac",
+      "justification": "Ressource de tressage liée au Lac Muet (lieu canonique) et à l'artisanat.",
+      "producers": [
+        "system_exploration",
+        "lieu_lac_muet"
+      ],
+      "seasonal": false,
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE"
+    },
+    {
+      "display_name": "Natte de roseaux",
+      "duration": 2.0,
+      "id": "recette_natte_de_roseaux",
+      "inputs": [
+        {
+          "item_id": "ressource_roseau_du_lac",
+          "qty": 2
+        }
+      ],
+      "justification": "Consomme réellement la ressource (exigence V2 : producteur ET consommateur).",
+      "kind": "artisanat",
+      "outputs": [
+        {
+          "item_id": "objet_natte_de_roseaux",
+          "qty": 1
+        }
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "station_id": "machine_etabli_de_marin",
+      "status": "PROPOSEE"
+    },
+    {
+      "base_value": 24,
+      "category": "artisanat",
+      "decorative_only": false,
+      "display_name": "Natte de roseaux",
+      "function": "Isolant pour le refuge (amélioration).",
+      "gameplay_verb": "utiliser",
+      "id": "objet_natte_de_roseaux",
+      "justification": "Sortie de la recette ; valeur >= 1.4 x entrées (2 x 6 = 12).",
+      "loop_stage": 3,
+      "obtention": [
+        "recette:recette_natte_de_roseaux"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "transforms_into": [],
+      "users": [
+        "system_refuge",
+        "system_economie"
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "base_value": "six",
+    "category": "matériau",
+    "consumers": [],
+    "display_name": "Ressource invalide",
+    "id": "ressource_invalide",
+    "justification": "rejet (type)",
+    "producers": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "base_value": 1,
+    "category": "matériau",
+    "consumers": [],
+    "display_name": "Ressource orpheline",
+    "id": "ressource_orpheline",
+    "justification": "orpheline (ni producteur ni consommateur)",
+    "producers": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  }
+}

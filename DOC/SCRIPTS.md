@@ -12,12 +12,12 @@ Ils se lancent depuis la racine du projet.
 ### `tools/pipeline.py` — Orchestrateur principal
 Exécute la chaîne complète de la pipeline : canon → ontologie → schémas →
 systèmes → catalogues → graphe → manifests → prompts → validation → rapports →
-simulation → compilation moteur.
+simulation → compilation moteur → traçabilité V2 (étape 12).
 
 ```bash
 python3 tools/pipeline.py              # run complet + validation
 python3 tools/pipeline.py --check      # exit 0 si validation passe, sinon 1
-python3 tools/pipeline.py --stage N    # exécute uniquement l'étape N (1..11)
+python3 tools/pipeline.py --stage N    # exécute jusqu'à l'étape N (1..12)
 python3 tools/pipeline.py --validate   # validation seulement
 python3 tools/pipeline.py --quiet      # sans affichage
 ```
@@ -26,6 +26,22 @@ python3 tools/pipeline.py --quiet      # sans affichage
 ### `tools/bootstrap_pipeline.py` — Bootstrapper (optionnel)
 Lit les quatre entrées + le contrat et produit `OUTPUT/BOOTSTRAP_SPEC.md`, une
 spécification initiale consolidée. Ne lance pas la génération de contenu.
+
+### `tools/traceability.py` — Matrice de traçabilité V2 (étape 12)
+Construit la matrice de traçabilité des 16 domaines de contenu sur **preuves
+vivantes** : pour chaque domaine, exécute réellement les 6 tests obligatoires
+(nominal, rejet, volume, orphelin, reproductibilité, intégration runtime) via
+les fixtures `tests/fixtures/e2e/`, l'importateur, les validateurs, le graphe,
+le compilateur et le simulateur.
+
+```bash
+python3 tools/traceability.py               # matrice complète (volume n=25)
+python3 tools/traceability.py --volume-n 10 # test de volume allégé
+python3 tools/traceability.py --no-write    # sans écrire les artefacts
+```
+Écrit `REPORTS/traceability.json` (preuves complètes) et
+`OUTPUT/TRACEABILITY_MATRIX.md` (gabarit officiel 8 colonnes + détail V2).
+Code de sortie non-nul si un test obligatoire échoue.
 
 ### `tools/run_tests.py` — Lanceur de tests
 Découvre et exécute toute la suite de tests (`tests/`).
@@ -96,6 +112,8 @@ une fonction `run_stage(...)` retournant un dict et écrivant ses artefacts.
 | `simulator.py` | Simulateur déterministe (profils, chaînes, routines) | `simulate_profiles`, `simulate_production_chain`, `run_stage` |
 | `report.py` | Rapports maturité/manquants/isolés/décisions | `maturity_report`, `missing_report`, `isolated_report`, `run_stage` |
 | `compiler.py` | Compilation moteur (runtime sans LLM + amorces Godot) | `compile_runtime_data`, `compile_dialogs`, `compile_rules`, `compile_save_schema`, `run_stage` |
+| `integration.py` | Couche d'intégration V2 : parcours E2E réels par domaine (import → graphe → validation → compilation → runtime), 6 épreuves obligatoires, fixtures | `base_state`, `run_journey`, `run_rejection`, `run_orphan`, `run_volume`, `run_reproducibility`, `runtime_probe` |
+| `traceability.py` | Matrice de traçabilité V2 sur preuves vivantes (16 domaines) | `build_matrix`, `render_markdown`, `run_stage` |
 
 ---
 
@@ -113,6 +131,9 @@ une fonction `run_stage(...)` retournant un dict et écrivant ses artefacts.
 | `test_no_llm_runtime.py` | Exécution sans LLM, déterminisme, protection des sauvegardes |
 | `test_dialogues.py` | Dialogues : repli dérivé, import, compilation en volume, validation (conditions/choix/effets/révélations), rejet (fuite de secret, locuteur hors graphe) |
 | `test_end_to_end.py` | Chaîne bout-en-bout (mémoire + artefacts disque) |
+| `test_e2e_domains.py` | Audit V2 : 16 domaines × 6 tests obligatoires (96 tests) + isolation des fixtures (aucune fuite dans RESULTS/ ni les catalogues) |
+| `test_maturity_traceability.py` | Échelle de maturité (8 barreaux, PRODUCTION_READY interdit sans runtime), matrice de traçabilité, stabilité octet par octet, protection du canon (boss À_VALIDER) |
+| `fixtures/e2e/*.json` | 16 fixtures réalistes d'intégration de bout en bout (entités + variante invalide + variante orpheline par domaine) |
 
 ---
 
@@ -125,5 +146,6 @@ python3 tools/prompt_gen.py --id X --task objet   # 2. prompts à la demande
 python3 tools/import_results.py      # 4. importer/valider les réponses
 python3 tools/regenerate.py          # 5. corriger les rejets
 python3 tools/pipeline.py --check    # 6. revalider l'état complet
-python3 tools/run_tests.py           # 7. vérifier l'intégrité de la pipeline
+python3 tools/run_tests.py           # 7. vérifier l'intégrité de la pipeline (234 tests)
+python3 tools/traceability.py        # 8. prouver l'intégration V2 (16 domaines x 6 tests)
 ```

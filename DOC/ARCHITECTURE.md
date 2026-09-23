@@ -54,7 +54,7 @@ animations, prompts, validations et simulation.
 │ COUCHE 2 — ONTOLOGIE & SCHÉMAS                                               │
 │   ONTOLOGY/ontology.json (17 entités, 18 relations, états, conditions,      │
 │   effets, déclencheurs)                                                      │
-│   SCHEMAS/*.schema.json (21 schémas JSON draft-07, dérivés de l'ontologie)   │
+│   SCHEMAS/*.schema.json (22 schémas JSON draft-07, dérivés de l'ontologie)   │
 └───────────────────────────────────────────────────────────────────────────┘
                                    │  besoins de gameplay
                                    ▼

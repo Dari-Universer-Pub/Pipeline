@@ -1,0 +1,67 @@
+{
+  "description": "Objet artisanal offert : obtenu auprès d'Alba, utilisé par Nox (relations).",
+  "domain": "objets",
+  "entities": [
+    {
+      "base_value": 28,
+      "category": "artisanat",
+      "decorative_only": false,
+      "derivation": {
+        "animations": "geste 'offrir' (joueur).",
+        "assets": "1 icône (famille_objets).",
+        "consequences": "+relation Nox ; revenu de vente.",
+        "consumers": "pnj_nox (don), économie (vente).",
+        "obtention": "Auprès de pnj_alba (guide).",
+        "system": "system_relations, system_economie",
+        "tests": "test_e2e_objets, test_production",
+        "why": "La boucle principale exige des objets à offrir outre la nourriture."
+      },
+      "display_name": "Bouquet de Soucis",
+      "function": "Offrande végétale qui apaise les conversations.",
+      "gameplay_verb": "offrir",
+      "id": "objet_bouquet_de_souci",
+      "justification": "Boucle 'offrir' : un produit non alimentaire utile aux relations (system_relations), obtenu auprès d'un PNJ canonique.",
+      "loop_stage": 4,
+      "obtention": [
+        "pnj:pnj_alba"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "transforms_into": [],
+      "users": [
+        "pnj_nox",
+        "system_relations"
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "base_value": "beaucoup",
+    "category": "artisanat",
+    "display_name": "Bouquet invalide",
+    "function": "x",
+    "gameplay_verb": "offrir",
+    "id": "objet_bouquet_invalide",
+    "justification": "variante de rejet (type invalide)",
+    "loop_stage": 4,
+    "obtention": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "transforms_into": [],
+    "users": []
+  },
+  "orphan_variant": {
+    "base_value": 1,
+    "category": "artisanat",
+    "display_name": "Bouquet orphelin",
+    "function": "aucune",
+    "gameplay_verb": "aucun",
+    "id": "objet_bouquet_orphelin",
+    "justification": "variante orpheline (aucune obtention, aucun utilisateur)",
+    "loop_stage": 0,
+    "obtention": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "transforms_into": [],
+    "users": []
+  }
+}

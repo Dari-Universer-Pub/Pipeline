@@ -1,0 +1,62 @@
+{
+  "description": "Animation 'offrir' du joueur : frames, fps, frame d'impact, effet logique exécutable, asset requis existant.",
+  "domain": "animations",
+  "entities": [
+    {
+      "derivation": {
+        "impact": 2,
+        "logic_effect": "effet:don_offert",
+        "system": "system_relations",
+        "tests": "test_e2e_animations, test_sync_impact",
+        "why": "La boucle 'offrir' exige un geste dédié."
+      },
+      "direction": "down",
+      "display_name": "offrir (down) — joueur_jardinier",
+      "entity_id": "joueur_jardinier",
+      "entity_type": "joueur",
+      "fps": 6,
+      "frames": 4,
+      "id": "anim_jardinier_offrir_down",
+      "impact_event": 2,
+      "justification": "Le geste d'offrir est synchronisé avec la logique : à la frame d'impact, le drapeau 'don_offert' est posé (relation/offrande), exécutable sans LLM.",
+      "logic_effect": "effet:don_offert",
+      "loop": false,
+      "required_assets": [
+        "asset_spritesheet_jardinier"
+      ],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "state_or_action": "offrir",
+      "status": "PROPOSEE",
+      "transitions": [
+        "idle"
+      ]
+    }
+  ],
+  "invalid_variant": {
+    "direction": "down",
+    "display_name": "Animation invalide",
+    "entity_id": "joueur_jardinier",
+    "fps": 6,
+    "frames": 4,
+    "id": "anim_invalide",
+    "justification": "rejet (asset requis absent)",
+    "required_assets": [
+      "asset_inexistant"
+    ],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "state_or_action": "offrir",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "direction": "down",
+    "display_name": "Animation orpheline",
+    "entity_id": "joueur_jardinier",
+    "fps": 6,
+    "frames": 4,
+    "id": "anim_orpheline",
+    "justification": "orpheline (aucune action/état : anim sans fonction)",
+    "required_assets": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  }
+}

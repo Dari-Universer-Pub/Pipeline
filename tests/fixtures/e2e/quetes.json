@@ -1,0 +1,107 @@
+{
+  "description": "Quête de collecte : donneur canonique, étapes, effets et conséquences.",
+  "domain": "quetes",
+  "entities": [
+    {
+      "choices": [],
+      "consequences": [
+        "Nox confie un mot de son passé.",
+        "Le poste de pêche devient un lieu de collecte régulier."
+      ],
+      "derivation": {
+        "animations": "geste 'couper' existant.",
+        "assets": "aucun (icônes existantes).",
+        "consequences": "Fragment de souvenir + relation Nox.",
+        "consumers": "Le Jardinier ; Nox.",
+        "obtention": "Déclenchée par le seuil de relation avec Nox.",
+        "system": "system_progression, system_relations",
+        "tests": "test_e2e_quetes, test_simulation",
+        "why": "La boucle 'aider les habitants' exige des quêtes de collecte."
+      },
+      "discovery": "Parler à Nox au poste de pêche après la première pluie.",
+      "display_name": "Les roseaux du Lac",
+      "effects": [
+        {
+          "params": {
+            "item_id": "objet_fragment_de_souvenir",
+            "qty": 1
+          },
+          "type": "add_item"
+        },
+        {
+          "params": {
+            "delta": 5,
+            "pnj_id": "pnj_nox"
+          },
+          "type": "change_relationship"
+        },
+        {
+          "params": {
+            "quete_id": "quete_les_roseaux_du_lac",
+            "step": "complete"
+          },
+          "type": "advance_quest"
+        }
+      ],
+      "failure_conditions": [],
+      "fallback": "Si Nox est absent, la quête est reportée au jour suivant.",
+      "giver_id": "pnj_nox",
+      "id": "quete_les_roseaux_du_lac",
+      "justification": "Nombre de quêtes = décision ouverte ; fixture PROPOSEE ancrée sur Nox (canon) et le Lac Muet (canon).",
+      "location_id": "lieu_poste_de_peche_du_lac_muet",
+      "missable": false,
+      "participants": [
+        "pnj_nox"
+      ],
+      "preconditions": [],
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "steps": [
+        {
+          "id": "step_1",
+          "objective": "Couper des roseaux sur les berges du Lac Muet."
+        },
+        {
+          "id": "step_2",
+          "objective": "Rapporter la récolte à Nox."
+        }
+      ],
+      "systems": [
+        "system_exploration",
+        "system_peche"
+      ],
+      "trigger": {
+        "params": {
+          "pnj_id": "pnj_nox",
+          "value": 15
+        },
+        "type": "on_relationship_threshold"
+      }
+    }
+  ],
+  "invalid_variant": {
+    "consequences": [
+      "x"
+    ],
+    "display_name": "Quête invalide",
+    "effects": [],
+    "giver_id": "pnj_inexistant",
+    "id": "quete_invalide",
+    "justification": "rejet (donneur inexistant)",
+    "location_id": "lieu_maison_racine",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "steps": []
+  },
+  "orphan_variant": {
+    "consequences": [],
+    "display_name": "Quête orpheline",
+    "effects": [],
+    "giver_id": "",
+    "id": "quete_orpheline",
+    "justification": "orpheline (ni donneur ni conséquence)",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "steps": []
+  }
+}

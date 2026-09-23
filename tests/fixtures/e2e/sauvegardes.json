@@ -1,0 +1,97 @@
+{
+  "description": "État du monde nominal (world_state) : aller-retour save/load, migration, rejet de trucature.",
+  "domain": "sauvegardes",
+  "entities": [
+    {
+      "id": "sauvegarde_partie_nominale",
+      "justification": "Fixture de sauvegarde : toutes les références (lieu, objets, PNJ, faits, quête) résolvent dans le graphe.",
+      "player": {
+        "flags": {
+          "sol_laboure": true
+        },
+        "inventory": {
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_houe_de_depart": 1,
+          "objet_navet": 2
+        },
+        "known_facts": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier"
+        ],
+        "location": "lieu_vallee_claire",
+        "money": 80,
+        "relationships": {
+          "pnj_alba": 15,
+          "pnj_marin": 10,
+          "pnj_nox": 10
+        },
+        "unlocked_locations": [
+          "lieu_vallee_claire",
+          "lieu_maison_racine"
+        ]
+      },
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "time": {
+        "day": 3,
+        "hour": 8,
+        "minute": 0,
+        "season": "saison_des_premieres_pousses",
+        "season_index": 0,
+        "weather": "pluie"
+      },
+      "world": {
+        "active_quests": [
+          "quete_le_premier_echo"
+        ],
+        "completed_quests": [],
+        "crops": {},
+        "discovered_secrets": [],
+        "global_flags": {}
+      }
+    }
+  ],
+  "invalid_variant": {
+    "id": "sauvegarde_invalide",
+    "justification": "rejet (section 'world' absente : schema world_state)",
+    "player": {
+      "location": "lieu_vallee_claire"
+    },
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "time": {
+      "day": 1
+    }
+  },
+  "orphan_variant": {
+    "id": "sauvegarde_orpheline",
+    "justification": "orpheline (références hors graphe : détectée par les preuves de graphe)",
+    "player": {
+      "flags": {},
+      "inventory": {
+        "objet_fantome": 1
+      },
+      "known_facts": [
+        "fait_inexistant"
+      ],
+      "location": "lieu_inexistant",
+      "money": 0,
+      "relationships": {
+        "pnj_fantome": 5
+      },
+      "unlocked_locations": []
+    },
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "time": {
+      "day": 1,
+      "hour": 6
+    },
+    "world": {
+      "active_quests": [
+        "quete_inexistante"
+      ],
+      "completed_quests": [],
+      "crops": {},
+      "discovered_secrets": [],
+      "global_flags": {}
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "description": "Créature d'ambiance : habitat canonique, repère nocturne d'exploration.",
+  "domain": "creatures",
+  "entities": [
+    {
+      "behavior": "lumineuse au crépuscule",
+      "derivation": {
+        "animations": "vol scintillant (boucle).",
+        "assets": "1 sprite + particule lumineuse (famille_creatures).",
+        "consequences": "Atmosphère ; guidage vers les berges.",
+        "consumers": "Événements d'ambiance ; orientation du joueur.",
+        "obtention": "Observation au crépuscule (aucune capture).",
+        "system": "system_exploration, system_meteo",
+        "tests": "test_e2e_creatures",
+        "why": "L'exploration nocturne manque de repères vivants."
+      },
+      "description": "Petites lumières qui dansent au-dessus de l'eau à la tombée du jour.",
+      "display_name": "Luciole du Lac",
+      "habitat": [
+        "lieu_lac_muet",
+        "lieu_poste_de_peche_du_lac_muet"
+      ],
+      "hostile": false,
+      "id": "creature_luciole_du_lac",
+      "justification": "Repère visuel d'exploration (fonction réelle), reliée à son habitat.",
+      "kind": "animal",
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "system": "system_exploration",
+      "yields": []
+    }
+  ],
+  "invalid_variant": {
+    "behavior": "x",
+    "display_name": "Créature invalide",
+    "habitat": [],
+    "hostile": true,
+    "id": "creature_invalide",
+    "justification": "rejet (kind hors enum)",
+    "kind": "dragon",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE"
+  },
+  "orphan_variant": {
+    "behavior": "errante",
+    "display_name": "Créature orpheline",
+    "habitat": [],
+    "hostile": false,
+    "id": "creature_orpheline",
+    "justification": "orpheline (aucun habitat)",
+    "kind": "animal",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "yields": []
+  }
+}

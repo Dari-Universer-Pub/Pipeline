@@ -1,0 +1,70 @@
+{
+  "description": "Culture tardive du souci : graine et récolte existantes, saison du Repos.",
+  "domain": "cultures",
+  "entities": [
+    {
+      "derivation": {
+        "animations": "semis/arrosage/récolte.",
+        "assets": "4 stades (famille_cultures).",
+        "consequences": "Chaîne tisane/relations en saison du Repos.",
+        "consumers": "Fleur de souci -> tisane (recette existante).",
+        "obtention": "Graine de souci (objet existant).",
+        "system": "system_agriculture",
+        "tests": "test_e2e_cultures, test_production",
+        "why": "Couvrir la saison du Repos avec une culture existante."
+      },
+      "display_name": "Souci tardif",
+      "growth_days": 6,
+      "id": "culture_souci_tardif",
+      "justification": "Variante tardive du souci canonique (saison du Repos) ; nombre de cultures = décision ouverte, ceci est une fixture d'intégration PROPOSEE.",
+      "memory_plant": false,
+      "regrows": false,
+      "seasons": [
+        "saison_du_repos"
+      ],
+      "seed_id": "objet_graine_de_souci_de_la_vallee",
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "status": "PROPOSEE",
+      "used_by": "system_agriculture",
+      "water_needed": true,
+      "yield_id": "objet_fleur_de_souci"
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "Culture invalide",
+    "growth_days": 4,
+    "id": "culture_invalide",
+    "justification": "rejet (graine inexistante)",
+    "seasons": [
+      "saison_du_repos"
+    ],
+    "seed_id": "objet_graine_inexistante",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "stages": [
+      "semis",
+      "mature"
+    ],
+    "status": "PROPOSEE",
+    "water_needed": true,
+    "yield_id": "objet_navet"
+  },
+  "orphan_variant": {
+    "display_name": "Culture orpheline",
+    "growth_days": 4,
+    "id": "culture_orpheline",
+    "justification": "orpheline (ni graine ni récolte : détectée par le schéma)",
+    "seasons": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "stages": [
+      "semis"
+    ],
+    "status": "PROPOSEE",
+    "water_needed": true
+  }
+}

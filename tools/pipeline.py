@@ -16,6 +16,7 @@ Point d'entrée unique. Exécute le flux obligatoire du contrat d'architecture :
         -> Rapports (maturité, manquants, isolés, décisions ouvertes)
         -> Simulation (profils + chaînes de production)
         -> Compilation pour le moteur (Godot 4, sans LLM runtime)
+        -> Traçabilité V2 (matrice 16 domaines x 6 tests, preuves réelles)
 
 L'importation des résultats d'une autre IA et la régénération ciblée sont
 gérées par `tools/import_results.py`.
@@ -44,7 +45,8 @@ from lib import (  # noqa: E402
 from lib.common import PIPELINE_VERSION, now_iso  # noqa: E402
 
 STAGES = ["canon", "ontology", "systems", "catalog", "graph", "manifest",
-          "prompt", "validate", "report", "simulate", "compile"]
+          "prompt", "validate", "report", "simulate", "compile",
+          "traceability"]
 
 
 def run_full(verbose: bool = True) -> dict:
@@ -146,6 +148,19 @@ def run_full(verbose: bool = True) -> dict:
     log("• Étape 11 — Compilation pour le moteur (Godot 4, sans LLM runtime)")
     comp = compiler_mod.run_stage(st, write=True)
     summary["stages"]["compile"] = comp
+
+    # 12. Traçabilité V2 — matrice des 16 domaines sur preuves réelles
+    # (fixtures E2E : import -> validation -> graphe -> compilation -> runtime).
+    log("• Étape 12 — Traçabilité V2 (16 domaines x 6 tests obligatoires)")
+    from lib import traceability as traceability_mod
+    tm = traceability_mod.run_stage(write=True)
+    summary["stages"]["traceability"] = {
+        "domains_total": tm["summary"]["domains_total"],
+        "production_ready": len(tm["summary"]["production_ready"]),
+        "incomplete": tm["summary"]["incomplete"],
+        "tests": f"{tm['summary']['tests_passed']}/{tm['summary']['tests_total']}",
+        "all_green": tm["summary"]["all_green"],
+    }
 
     summary["finished"] = now_iso()
     summary["validation_passed"] = rep["passed"]

@@ -1,0 +1,84 @@
+{
+  "description": "Événement saisonnier contextualisé au Lac Muet, effets déterministes.",
+  "domain": "evenements",
+  "entities": [
+    {
+      "derivation": {
+        "animations": "aucune (fondu météo).",
+        "assets": "effet de brume (famille_effets).",
+        "consequences": "Drapeau 'brume_sur_le_lac' ; pêche facilitée.",
+        "consumers": "Le Jardinier s'il est au Lac Muet.",
+        "obtention": "Changement de saison (saison_des_brumes).",
+        "system": "system_meteo, system_evenements",
+        "tests": "test_e2e_evenements, test_simulation",
+        "why": "Le système météo/saisons exige des événements saisonniers."
+      },
+      "description": "À la saison des Brumes, le lac se couvre de brume ; Nox pêche en silence.",
+      "display_name": "Brume sur le Lac",
+      "effects": [
+        {
+          "params": {
+            "flag_id": "brume_sur_le_lac"
+          },
+          "type": "set_flag"
+        },
+        {
+          "params": {
+            "item_id": "objet_poisson_du_lac",
+            "qty": 1
+          },
+          "type": "add_item"
+        }
+      ],
+      "id": "evenement_brume_sur_le_lac",
+      "justification": "Événement contextuel réel : déclencheur saisonnier évalué par le moteur.",
+      "location_id": "lieu_lac_muet",
+      "missable": true,
+      "participants": [
+        "pnj_nox"
+      ],
+      "preconditions": [],
+      "repeatable": true,
+      "source": "fixture d'intégration E2E (contrat V2)",
+      "status": "PROPOSEE",
+      "systems": [
+        "system_meteo",
+        "system_evenements"
+      ],
+      "timing": {
+        "seasonal": true
+      },
+      "trigger": {
+        "params": {
+          "season_id": "saison_des_brumes"
+        },
+        "type": "on_season_change"
+      }
+    }
+  ],
+  "invalid_variant": {
+    "display_name": "Événement invalide",
+    "effects": [],
+    "id": "evenement_invalide",
+    "justification": "rejet (lieu inexistant)",
+    "location_id": "lieu_inexistant",
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "trigger": {
+      "params": {
+        "season_id": "saison_des_brumes"
+      },
+      "type": "on_season_change"
+    }
+  },
+  "orphan_variant": {
+    "display_name": "Événement orphelin",
+    "effects": [],
+    "id": "evenement_orphelin",
+    "justification": "orphelin (ni lieu ni déclencheur ni effet)",
+    "participants": [],
+    "source": "fixture d'intégration E2E (contrat V2)",
+    "status": "PROPOSEE",
+    "trigger": {}
+  }
+}

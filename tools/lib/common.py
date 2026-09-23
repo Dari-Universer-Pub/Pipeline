@@ -52,6 +52,11 @@ class Status:
     DEDUITE   : information dérivée logiquement du canon ou des systèmes.
     PROPOSEE  : recommandation technique ou créative proposée par la pipeline.
     A_VALIDER : décision qui dépend encore du propriétaire du projet.
+
+    Le contrat V2 nomme ces statuts en anglais (CANONICAL, DERIVED, PROPOSED,
+    TO_VALIDATE). Les valeurs internes restent françaises (aucun remplacement
+    silencieux de l'existant) ; `EN`/`FR` fournissent la correspondance
+    officielle pour les artefacts orientés V2 (traçabilité, maturité).
     """
 
     CANONIQUE = "CANONIQUE"
@@ -63,6 +68,69 @@ class Status:
 
     # Ordre de confiance décroissant (utile pour les rapports).
     ORDER = {CANONIQUE: 0, DEDUITE: 1, PROPOSEE: 2, A_VALIDER: 3}
+
+    # Correspondance officielle V1 (FR) <-> V2 (EN).
+    EN = {CANONIQUE: "CANONICAL", DEDUITE: "DERIVED",
+          PROPOSEE: "PROPOSED", A_VALIDER: "TO_VALIDATE"}
+    FR = {v: k for k, v in EN.items()}
+
+    @classmethod
+    def to_v2(cls, status: str) -> str:
+        """Traduit un statut interne (FR) vers le vocabulaire du contrat V2."""
+        return cls.EN.get(status, status)
+
+
+class Maturity:
+    """Échelle de maturité V2 (contrat d'architecture, section 'Statuts').
+
+    Chaque entité/domaine progresse :
+    SPECIFIED -> SCHEMA_VALIDATED -> IMPORTED -> CATALOGED -> GRAPH_CONNECTED
+    -> COMPILED -> RUNTIME_TESTED -> PRODUCTION_READY.
+
+    Règle dure du contrat : PRODUCTION_READY exige RUNTIME_TESTED (test
+    d'intégration runtime réel). `promote()` refuse toute promotion qui saute
+    un échelon ou déclare PRODUCTION_READY sans RUNTIME_TESTED.
+    """
+
+    SPECIFIED = "SPECIFIED"
+    SCHEMA_VALIDATED = "SCHEMA_VALIDATED"
+    IMPORTED = "IMPORTED"
+    CATALOGED = "CATALOGED"
+    GRAPH_CONNECTED = "GRAPH_CONNECTED"
+    COMPILED = "COMPILED"
+    RUNTIME_TESTED = "RUNTIME_TESTED"
+    PRODUCTION_READY = "PRODUCTION_READY"
+
+    LADDER = (SPECIFIED, SCHEMA_VALIDATED, IMPORTED, CATALOGED,
+              GRAPH_CONNECTED, COMPILED, RUNTIME_TESTED, PRODUCTION_READY)
+    RANK = {s: i for i, s in enumerate(LADDER)}
+
+    @classmethod
+    def from_evidence(cls, evidence: dict) -> str:
+        """Calcule le statut le plus élevé JUSTIFIÉ par les preuves.
+
+        `evidence` : dict échelon -> bool (preuves réelles : schéma présent et
+        validé, import réel accepté, catalogue alimenté, nœuds dans le graphe,
+        entités dans la sortie compilée, test runtime réel passé).
+        Un échelon manquant arrête la progression (pas de saut).
+        """
+        reached = None
+        for step in cls.LADDER:
+            if evidence.get(step):
+                reached = step
+            else:
+                break
+        return reached or "SPECIFIED"
+
+    @classmethod
+    def promote(cls, current: str, target: str, *, runtime_tested: bool) -> str:
+        """Promotion contrôlée : interdit les sauts et PRODUCTION_READY sans
+        RUNTIME_TESTED (lève ValueError sinon)."""
+        if cls.RANK[target] > cls.RANK[current] + 1:
+            raise ValueError(f"promotion invalide {current} -> {target} (saut d'échelon)")
+        if target == cls.PRODUCTION_READY and not runtime_tested:
+            raise ValueError("PRODUCTION_READY interdit sans test d'intégration runtime")
+        return target
 
 
 # --- Normalisation d'identifiants -------------------------------------------

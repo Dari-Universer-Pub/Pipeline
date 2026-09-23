@@ -1,0 +1,1043 @@
+{
+  "domains": {
+    "animations": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "anim_jardinier_offrir_down"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "anim",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "effect_applied": true,
+        "flag_set": true,
+        "found": true,
+        "impact_in_frames": true,
+        "probe_ok": true
+      },
+      "schema": "animation",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "schema.required",
+            "import.anim_no_action"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "import.anim_asset_missing"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "9ede4f8a65b7a70b"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_animations"
+      ]
+    },
+    "assets": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "asset_icone_tisane_dialogue"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "asset",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "fingerprint_unique": true,
+        "found": true
+      },
+      "schema": "asset",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "schema.required"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "9ede4f8a65b7a70b"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_assets"
+      ]
+    },
+    "boss": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "creature_gardien_du_puits"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "creature",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "content_note": "combat = décision ouverte (INPUT/open_decisions.md) ; canon : pas de magie de combat traditionnelle -> aucune mécanique de combat simulée, boss traité comme rencontre/épreuve",
+        "kind": "boss",
+        "spawned": true,
+        "yields_ok": true
+      },
+      "schema": "creature",
+      "schema_present": true,
+      "status_note": "Infrastructure PRODUCTION_READY (schéma, import, graphe, compilation, runtime). Le contenu boss reste À_VALIDER : décision ouverte « présence ou non d'un système de combat » (INPUT/open_decisions.md) ; canon : pas de magie de combat traditionnelle. Aucun boss n'est ajouté aux catalogues.",
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.enum"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "901a14ed890c1100"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_references",
+        "validate_connectivity"
+      ]
+    },
+    "creatures": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "creature_luciole_du_lac"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "creature",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "explored": false,
+        "habitat_ok": true,
+        "yields_ok": true
+      },
+      "schema": "creature",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.enum"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "7e40bd6cf9545bf3"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_references",
+        "validate_connectivity"
+      ]
+    },
+    "cultures": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "culture_souci_tardif"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "culture",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "days_to_mature": 5,
+        "harvested": true,
+        "planted": true,
+        "yield_qty": 1
+      },
+      "schema": "culture",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "schema.required"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "e8fd1a22bb5d039d"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_temporal",
+        "validate_connectivity"
+      ]
+    },
+    "dialogues": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "dialogue_pnj_alba_apresmidi"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "dialogue",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "chosen": "dialogue_pnj_alba_apresmidi",
+        "compiled": true,
+        "context_sensitive": true,
+        "reveals_applied": true
+      },
+      "schema": "dialogue",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "import.unresolved_ref"
+          ]
+        },
+        "rejection": {
+          "at": "validation",
+          "issues": [
+            "narr.secret_leak"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "fdd72b64f66f2c45"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_narrative",
+        "validate_connectivity"
+      ]
+    },
+    "evenements": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "evenement_brume_sur_le_lac"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "evenement",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "effects_applied": true,
+        "trigger_matches": true
+      },
+      "schema": "evenement",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable",
+            "conn.event_unreachable"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "bfc8b94f2d43193e"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_temporal",
+        "validate_connectivity"
+      ]
+    },
+    "machines": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "machine_sechoir_de_marin",
+        "recette_toile_sechee",
+        "objet_toile_sechee",
+        "placement_sechoir_de_marin"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "machine",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "crafted": true,
+        "placement_ok": true,
+        "station_of": "recette_toile_sechee"
+      },
+      "schema": "machine",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable"
+          ]
+        },
+        "rejection": {
+          "at": "validation",
+          "issues": [
+            "ref.unresolved"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "f7c96f7064fb3fa7"
+        },
+        "volume": {
+          "entities": 100,
+          "integrated": 100,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_references",
+        "validate_connectivity"
+      ]
+    },
+    "maps": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "map_clairiere_qui_se_repete"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "map",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "explored": true,
+        "seed_stable": true
+      },
+      "schema": "map",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "schema.required"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "schema.required",
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "51075e85410b89f4"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_maps",
+        "validate_collisions"
+      ]
+    },
+    "objets": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "objet_bouquet_de_souci"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "objet",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "inventory": 1,
+        "money_gain": 28
+      },
+      "schema": "objet",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable",
+            "conn.object_no_usage"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.type"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "0ea4307e5a8c654a"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_references",
+        "validate_connectivity"
+      ]
+    },
+    "placement": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "placement_pots_du_refuge"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "placement",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "places_ok": true,
+        "rule_found": true,
+        "simulation": {
+          "distance_ok": true,
+          "ok": true,
+          "placed": 8,
+          "requested": 8,
+          "rule_id": "placement_pots_du_refuge",
+          "terrain_conflict": [],
+          "terrain_ok": true
+        },
+        "terrain_source": true
+      },
+      "schema": "placement_rule",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "place.no_density",
+            "place.terrain_conflict"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.type"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "9ede4f8a65b7a70b"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_placement"
+      ]
+    },
+    "pnj": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "pnj_enora"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "pnj",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "gift_raised": true,
+        "places_ok": true,
+        "talked": true
+      },
+      "schema": "pnj",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "narr.no_voice",
+            "conn.npc_no_routine",
+            "conn.npc_no_interaction"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "b7c23ebf0c968e26"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_narrative",
+        "validate_connectivity"
+      ]
+    },
+    "quetes": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "quete_les_roseaux_du_lac"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "quete",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "active": false,
+        "completed": true,
+        "consequences": true,
+        "effects_applied": true
+      },
+      "schema": "quete",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "schema.required"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.required",
+            "import.unresolved_ref"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "222bffea3fa31d0e"
+        },
+        "volume": {
+          "entities": 25,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_progression",
+        "validate_connectivity"
+      ]
+    },
+    "recettes": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "recette_infusion_froide",
+        "objet_infusion_froide"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "recette",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "crafted": true,
+        "outputs": true,
+        "station_ok": true
+      },
+      "schema": "recette",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "import",
+          "issues": [
+            "import.recipe_no_input",
+            "import.recipe_no_output"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "import.forbidden_term",
+            "import.recipe_no_output"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "129d02b971586687"
+        },
+        "volume": {
+          "entities": 50,
+          "integrated": 50,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_economic",
+        "validate_connectivity"
+      ]
+    },
+    "ressources": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "ressource_roseau_du_lac",
+        "recette_natte_de_roseaux",
+        "objet_natte_de_roseaux"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "ressource",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "real_consumer": "recette_natte_de_roseaux"
+      },
+      "schema": "ressource",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "validation/connectivité",
+          "issues": [
+            "conn.orphan",
+            "conn.unreachable",
+            "conn.resource_no_producer",
+            "conn.resource_no_consumer"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.type"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "c6ef76249e972472"
+        },
+        "volume": {
+          "entities": 75,
+          "integrated": 75,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_economic",
+        "validate_connectivity"
+      ]
+    },
+    "sauvegardes": {
+      "catalog_fed": true,
+      "compiler_fed": true,
+      "fixture_entities": [
+        "sauvegarde_partie_nominale"
+      ],
+      "graph_fed": true,
+      "importer_prefix": "sauvegarde",
+      "importer_present": true,
+      "maturity": "PRODUCTION_READY",
+      "runtime_output_produced": true,
+      "runtime_outputs": {
+        "byte_stable": true,
+        "migration": true,
+        "roundtrip": true,
+        "tamper_rejected": true
+      },
+      "schema": "world_state",
+      "schema_present": true,
+      "status_note": null,
+      "test_details": {
+        "orphan": {
+          "at": "graphe (références)",
+          "issues": [
+            "facts",
+            "inventory",
+            "location",
+            "quests",
+            "relationships"
+          ]
+        },
+        "rejection": {
+          "at": "import",
+          "issues": [
+            "schema.required"
+          ]
+        },
+        "reproducibility": {
+          "byte_identical_runtime": true,
+          "byte_identical_save": true,
+          "fingerprint": "9ede4f8a65b7a70b"
+        },
+        "volume": {
+          "entities": null,
+          "integrated": 25,
+          "n": 25,
+          "runtime_ok": true
+        }
+      },
+      "tests": {
+        "nominal": true,
+        "orphan": true,
+        "rejection": true,
+        "reproducibility": true,
+        "runtime_integration": true,
+        "volume": true
+      },
+      "tests_passed": 6,
+      "validation_passed": true,
+      "validation_present": true,
+      "validators": [
+        "validate_structural",
+        "validate_schemas"
+      ]
+    }
+  },
+  "kind": "traceability_matrix",
+  "maturity_ladder": [
+    "SPECIFIED",
+    "SCHEMA_VALIDATED",
+    "IMPORTED",
+    "CATALOGED",
+    "GRAPH_CONNECTED",
+    "COMPILED",
+    "RUNTIME_TESTED",
+    "PRODUCTION_READY"
+  ],
+  "pipeline_version": "5.0.0",
+  "summary": {
+    "all_green": true,
+    "domains_total": 16,
+    "incomplete": [],
+    "production_ready": [
+      "animations",
+      "assets",
+      "boss",
+      "creatures",
+      "cultures",
+      "dialogues",
+      "evenements",
+      "machines",
+      "maps",
+      "objets",
+      "placement",
+      "pnj",
+      "quetes",
+      "recettes",
+      "ressources",
+      "sauvegardes"
+    ],
+    "tests_failed": 0,
+    "tests_passed": 96,
+    "tests_total": 96
+  },
+  "volume_n": 25
+}

@@ -33,6 +33,8 @@ PREFIX_TO_SCHEMA = {
     "pnj": "pnj", "creature": "creature", "lieu": "lieu", "map": "map",
     "asset": "asset", "anim": "animation", "evenement": "evenement",
     "dialogue": "dialogue", "saison": "saison",
+    # Contrat V2 : domaines 'placement' et 'sauvegardes' importables.
+    "placement": "placement_rule", "sauvegarde": "world_state",
 }
 
 

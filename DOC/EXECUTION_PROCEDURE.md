@@ -191,12 +191,15 @@ sauvegardes, objets, quêtes majeures ou secrets non débloqués.
 ## Phase E — Vérifier l'intégrité de la pipeline
 
 ```bash
-python3 tools/run_tests.py            # 120 tests, attendus OK
+python3 tools/run_tests.py            # 234 tests, attendus OK
 python3 tools/pipeline.py --check     # validation globale, attendue PASS
+python3 tools/traceability.py         # matrice V2 : 16 domaines, 96/96 tests
 ```
 
 Attendu :
-- **Tests** : `OK` (120 tests) ;
+- **Tests** : `OK` (234 tests, dont 96 tests E2E V2 : 16 domaines × 6) ;
+- **Traçabilité V2** : 16/16 domaines `PRODUCTION_READY`, matrice sans ✗
+  (`OUTPUT/TRACEABILITY_MATRIX.md`, preuves dans `REPORTS/traceability.json`) ;
 - **Validation** : `passed=True, 0 erreurs` ;
 - **Graphe** : 100 % atteignable, 0 référence pendante, 0 orphelin, 0 système
   isolé ;

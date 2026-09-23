@@ -1,87 +1,16 @@
 from pathlib import Path
 from datetime import datetime
-
-ROOT = Path(__file__).resolve().parents[1]
-INPUT = ROOT / 'INPUT'
-CONTRACT = ROOT / 'CONTRACT'
-OUTPUT = ROOT / 'OUTPUT'
-OUTPUT.mkdir(exist_ok=True)
-
-def read(name):
-    path = INPUT / name
-    if not path.exists():
-        raise SystemExit(f'MISSING_INPUT: {path}')
-    return path.read_text(encoding='utf-8')
-
-brief = read('game_brief.md')
-canon = read('canon_initial.md')
-constraints = read('constraints.md')
-decisions = read('open_decisions.md')
-contract = (CONTRACT / 'architecture_contract.md').read_text(encoding='utf-8')
-
-spec = f'''# Spécification initiale de pipeline
-
-Générée le : {datetime.now().isoformat(timespec="seconds")}
-
-Cette sortie est une spécification de fabrication. Elle ne constitue pas le jeu final.
-
-## Statut des entrées
-
-- brief : chargé
-- canon : chargé
-- contraintes : chargées
-- décisions ouvertes : chargées
-- contrat architectural : chargé
-
-## Règles de travail
-
-1. Ne jamais inventer silencieusement un élément canonique.
-2. Déduire les quantités depuis les systèmes et les chaînes de gameplay.
-3. Générer des prompts contextualisés à partir du graphe et des manifests.
-4. Refuser les objets, assets, animations et quêtes orphelins.
-5. Importer et valider chaque sortie externe.
-6. Préparer un jeu fonctionnant sans LLM runtime.
-
-## Modules à construire
-
-- extraction du canon ;
-- ontologie ;
-- schémas ;
-- catalogue fonctionnel ;
-- graphe du monde ;
-- manifestes ;
-- placement de map ;
-- assets par familles ;
-- animations par états et actions ;
-- prompts contextualisés ;
-- importateur ;
-- validateurs ;
-- simulateur de partie ;
-- compilateur moteur.
-
-## Canon et contexte
-
-{canon}
-
-## Brief
-
-{brief}
-
-## Contraintes
-
-{constraints}
-
-## Décisions ouvertes
-
-{decisions}
-
-## Contrat architectural
-
-{contract}
-
-## Première étape obligatoire
-
-Produire d’abord l’arborescence, les schémas, l’ontologie, le graphe initial, les manifests et les rapports de décisions. Ne pas générer massivement le contenu final.
-'''
-(OUTPUT / 'BOOTSTRAP_SPEC.md').write_text(spec, encoding='utf-8')
-print(f'CREATED {OUTPUT / "BOOTSTRAP_SPEC.md"}')
+import json
+ROOT=Path(__file__).resolve().parents[1]; INPUT=ROOT/'INPUT'; CONTRACT=ROOT/'CONTRACT'; OUTPUT=ROOT/'OUTPUT'; OUTPUT.mkdir(exist_ok=True)
+def read(p):
+    p=INPUT/p
+    if not p.exists(): raise SystemExit(f'MISSING_INPUT: {p}')
+    return p.read_text(encoding='utf-8')
+files={n:read(n) for n in ['game_brief.md','canon_initial.md','constraints.md','open_decisions.md']}
+contract=(CONTRACT/'architecture_contract.md').read_text(encoding='utf-8')
+status=[]
+for name,text in files.items(): status.append({'file':name,'status':'LOADED','characters':len(text)})
+spec=f'''# Bootstrap Specification\n\nGenerated: {datetime.now().isoformat(timespec="seconds")}\n\n## Input status\n\n{json.dumps(status,ensure_ascii=False,indent=2)}\n\n## Mandatory classification\nEvery fact must be classified as CANONICAL, DERIVED, PROPOSED or TO_VALIDATE. Creative unknowns must not be silently invented.\n\n## Required integration proof\nEvery content type must pass import → schema → canon → graph → catalog → compiler → runtime fixture.\n\n## Brief\n{files['game_brief.md']}\n\n## Canon\n{files['canon_initial.md']}\n\n## Constraints\n{files['constraints.md']}\n\n## Open decisions\n{files['open_decisions.md']}\n\n## Architecture contract\n{contract}\n\n## First deliverables\nProduce the architecture, ontology, schemas, canon registry, decision report, graph, catalogs, manifests, prompt templates, importers, validators, traceability matrix and end-to-end fixtures before mass content generation.\n'''
+(OUTPUT/'BOOTSTRAP_SPEC.md').write_text(spec,encoding='utf-8')
+(OUTPUT/'TRACEABILITY_MATRIX_TEMPLATE.md').write_text('''# Traceability Matrix\n\n| Type | Specified | Schema | Imported | Cataloged | Graph | Compiled | Runtime tested | Status |\n|---|---|---|---|---|---|---|---|---|\n| objects | | | | | | | | |\n| dialogues | | | | | | | | |\n| quests | | | | | | | | |\n| maps | | | | | | | | |\n| assets | | | | | | | | |\n| animations | | | | | | | | |\n''',encoding='utf-8')
+print('BOOTSTRAP_OK',OUTPUT/'BOOTSTRAP_SPEC.md')
