@@ -1,0 +1,190 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "locations",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "lieu_maison_racine",
+      "display_name": "La Maison-Racine",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Lieux connus",
+      "justification": "Lieu explicitement défini dans le canon initial.",
+      "description": "refuge et atelier principal",
+      "kind": "carte",
+      "map_id": "map_maison_racine",
+      "clean_name": "Maison-Racine",
+      "function": "refuge",
+      "terrain": [],
+      "walkable": true
+    },
+    {
+      "id": "lieu_vallee_claire",
+      "display_name": "La Vallée Claire",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Lieux connus",
+      "justification": "Lieu explicitement défini dans le canon initial.",
+      "description": "zone de départ et terres cultivables",
+      "kind": "carte",
+      "map_id": "map_vallee_claire",
+      "clean_name": "Vallée Claire",
+      "function": "farmland",
+      "terrain": [],
+      "walkable": true
+    },
+    {
+      "id": "lieu_bois_des_retours",
+      "display_name": "Le Bois des Retours",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Lieux connus",
+      "justification": "Lieu explicitement défini dans le canon initial.",
+      "description": "forêt où certains événements se répètent",
+      "kind": "carte",
+      "map_id": "map_bois_des_retours",
+      "clean_name": "Bois des Retours",
+      "function": "secret",
+      "terrain": [],
+      "walkable": true
+    },
+    {
+      "id": "lieu_lac_muet",
+      "display_name": "Le Lac Muet",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Lieux connus",
+      "justification": "Lieu explicitement défini dans le canon initial.",
+      "description": "zone d’exploration et de pêche",
+      "kind": "carte",
+      "map_id": "map_lac_muet",
+      "clean_name": "Lac Muet",
+      "function": "fishing_spot",
+      "terrain": [],
+      "walkable": true
+    },
+    {
+      "id": "lieu_champ_de_la_vallee_claire",
+      "display_name": "Champ de la Vallée Claire",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Terres cultivables déduites de 'zone de départ et terres cultivables' (canon).",
+      "description": "Terres cultivables déduites de 'zone de départ et terres cultivables' (canon).",
+      "kind": "zone",
+      "map_id": "map_vallee_claire",
+      "parent_id": "lieu_vallee_claire",
+      "function": "agriculture",
+      "terrain": [
+        "sol_meuble",
+        "herbe"
+      ],
+      "walkable": true,
+      "system": "system_agriculture"
+    },
+    {
+      "id": "lieu_puits_de_memoire",
+      "display_name": "Puits de Mémoire",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Puits ancien de la prémisse : 'jardin construit autour d'un ancien puits de mémoire'.",
+      "description": "Puits ancien de la prémisse : 'jardin construit autour d'un ancien puits de mémoire'.",
+      "kind": "interet",
+      "map_id": "map_vallee_claire",
+      "parent_id": "lieu_vallee_claire",
+      "function": "memoire",
+      "terrain": [
+        "pierre",
+        "eau"
+      ],
+      "walkable": true,
+      "system": "system_memoire"
+    },
+    {
+      "id": "lieu_atelier_de_la_maison_racine",
+      "display_name": "Atelier de la Maison-Racine",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Atelier principal (canon) ; Marin y fabrique les machines agricoles.",
+      "description": "Atelier principal (canon) ; Marin y fabrique les machines agricoles.",
+      "kind": "zone",
+      "map_id": "map_maison_racine",
+      "parent_id": "lieu_maison_racine",
+      "function": "artisanat",
+      "terrain": [
+        "plancher",
+        "bois"
+      ],
+      "walkable": true,
+      "system": "system_artisanat"
+    },
+    {
+      "id": "lieu_cuisine_de_la_maison_racine",
+      "display_name": "Cuisine de la Maison-Racine",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Cuisine du refuge (canon) ; système 'cuisine'.",
+      "description": "Cuisine du refuge (canon) ; système 'cuisine'.",
+      "kind": "zone",
+      "map_id": "map_maison_racine",
+      "parent_id": "lieu_maison_racine",
+      "function": "cuisine",
+      "terrain": [
+        "plancher",
+        "pierre"
+      ],
+      "walkable": true,
+      "system": "system_cuisine"
+    },
+    {
+      "id": "lieu_clairiere_qui_se_repete",
+      "display_name": "Clairière qui se répète",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Zone secrète déduite de 'forêt où certains événements se répètent' (canon) ; système 'secrets'.",
+      "description": "Zone secrète déduite de 'forêt où certains événements se répètent' (canon) ; système 'secrets'.",
+      "kind": "secret",
+      "map_id": "map_bois_des_retours",
+      "parent_id": "lieu_bois_des_retours",
+      "function": "secrets",
+      "terrain": [
+        "herbe",
+        "feuillage"
+      ],
+      "walkable": true,
+      "system": "system_secrets"
+    },
+    {
+      "id": "lieu_sentier_des_retours",
+      "display_name": "Sentier des Retours",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Sentier d'exploration ; système 'exploration'.",
+      "description": "Sentier d'exploration ; système 'exploration'.",
+      "kind": "interet",
+      "map_id": "map_bois_des_retours",
+      "parent_id": "lieu_bois_des_retours",
+      "function": "exploration",
+      "terrain": [
+        "terre",
+        "feuillage"
+      ],
+      "walkable": true,
+      "system": "system_exploration"
+    },
+    {
+      "id": "lieu_poste_de_peche_du_lac_muet",
+      "display_name": "Poste de pêche du Lac Muet",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé) + brief#Systèmes",
+      "justification": "Poste de pêche déduit de 'zone d'exploration et de pêche' (canon) ; Nox y pêche.",
+      "description": "Poste de pêche déduit de 'zone d'exploration et de pêche' (canon) ; Nox y pêche.",
+      "kind": "interet",
+      "map_id": "map_lac_muet",
+      "parent_id": "lieu_lac_muet",
+      "function": "peche",
+      "terrain": [
+        "eau",
+        "pont"
+      ],
+      "walkable": true,
+      "system": "system_peche"
+    }
+  ]
+}

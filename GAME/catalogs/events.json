@@ -1,0 +1,182 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "events",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "evenement_retour_du_bois",
+      "display_name": "Retour du Bois",
+      "status": "PROPOSEE",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_secrets, system_evenements)",
+      "justification": "Un événement se répète dans le Bois des Retours (canon).",
+      "description": "Un événement se répète dans le Bois des Retours (canon).",
+      "trigger": {
+        "type": "on_season_change",
+        "params": {
+          "season_id": "saison_des_brumes"
+        }
+      },
+      "preconditions": [],
+      "participants": [],
+      "location_id": "lieu_bois_des_retours",
+      "timing": {
+        "seasonal": true
+      },
+      "effects": [
+        {
+          "type": "discover_secret",
+          "params": {
+            "secret_id": "secret_clairiere_repetition"
+          }
+        }
+      ],
+      "missable": true,
+      "repeatable": true,
+      "systems": [
+        "system_secrets",
+        "system_evenements"
+      ],
+      "derivation": {
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
+        "system": "system_secrets, system_evenements",
+        "obtention": "Déclencheur on_season_change à lieu_bois_des_retours.",
+        "consumers": "system_evenements, system_progression.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "assets": "effet visuel/particules de l'événement.",
+        "animations": "animation contextuelle de l'événement.",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel."
+      }
+    },
+    {
+      "id": "evenement_pluie_sur_la_vallee",
+      "display_name": "Pluie sur la Vallée",
+      "status": "PROPOSEE",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_meteo, system_agriculture)",
+      "justification": "La pluie arrose naturellement les cultures.",
+      "description": "La pluie arrose naturellement les cultures.",
+      "trigger": {
+        "type": "on_weather",
+        "params": {
+          "weather_id": "pluie"
+        }
+      },
+      "preconditions": [],
+      "participants": [],
+      "location_id": "lieu_champ_de_la_vallee_claire",
+      "timing": {
+        "seasonal": false
+      },
+      "effects": [
+        {
+          "type": "set_flag",
+          "params": {
+            "flag_id": "sol_arrose",
+            "value": true
+          }
+        }
+      ],
+      "missable": false,
+      "repeatable": false,
+      "systems": [
+        "system_meteo",
+        "system_agriculture"
+      ],
+      "derivation": {
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
+        "system": "system_meteo, system_agriculture",
+        "obtention": "Déclencheur on_weather à lieu_champ_de_la_vallee_claire.",
+        "consumers": "system_evenements, system_progression.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "assets": "effet visuel/particules de l'événement.",
+        "animations": "animation contextuelle de l'événement.",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel."
+      }
+    },
+    {
+      "id": "evenement_le_puits_chante",
+      "display_name": "Le Puits chante",
+      "status": "PROPOSEE",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_memoire)",
+      "justification": "Le Puits de Mémoire réagit à un Écho Cristallin.",
+      "description": "Le Puits de Mémoire réagit à un Écho Cristallin.",
+      "trigger": {
+        "type": "on_item_acquired",
+        "params": {
+          "item_id": "objet_echo_cristallin"
+        }
+      },
+      "preconditions": [],
+      "participants": [],
+      "location_id": "lieu_puits_de_memoire",
+      "timing": {
+        "seasonal": false
+      },
+      "effects": [
+        {
+          "type": "reveal_fact",
+          "params": {
+            "fait_id": "fait_valdore",
+            "to": "joueur"
+          }
+        }
+      ],
+      "missable": true,
+      "repeatable": true,
+      "systems": [
+        "system_memoire"
+      ],
+      "derivation": {
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
+        "system": "system_memoire",
+        "obtention": "Déclencheur on_item_acquired à lieu_puits_de_memoire.",
+        "consumers": "system_evenements, system_progression.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "assets": "effet visuel/particules de l'événement.",
+        "animations": "animation contextuelle de l'événement.",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel."
+      }
+    },
+    {
+      "id": "evenement_marche_de_la_vallee",
+      "display_name": "Marché de la Vallée",
+      "status": "PROPOSEE",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_economie, system_relations)",
+      "justification": "Les habitants échangent leurs productions.",
+      "description": "Les habitants échangent leurs productions.",
+      "trigger": {
+        "type": "on_day_start"
+      },
+      "preconditions": [],
+      "participants": [],
+      "location_id": "lieu_champ_de_la_vallee_claire",
+      "timing": {
+        "seasonal": false
+      },
+      "effects": [
+        {
+          "type": "modify_economy",
+          "params": {
+            "amount": 10
+          }
+        }
+      ],
+      "missable": false,
+      "repeatable": false,
+      "systems": [
+        "system_economie",
+        "system_relations"
+      ],
+      "derivation": {
+        "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
+        "system": "system_economie, system_relations",
+        "obtention": "Déclencheur on_day_start à lieu_champ_de_la_vallee_claire.",
+        "consumers": "system_evenements, system_progression.",
+        "consequences": "Applique des effets (narration/économie/cultures).",
+        "assets": "effet visuel/particules de l'événement.",
+        "animations": "animation contextuelle de l'événement.",
+        "tests": "test_evenement_atteignable, test_evenement, test_temporel."
+      }
+    }
+  ]
+}

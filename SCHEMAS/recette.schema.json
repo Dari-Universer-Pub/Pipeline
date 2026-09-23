@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/recette.schema.json",
+  "title": "Recette / transformation",
+  "description": "Schéma d'entité 'recette' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^recette_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'recette_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "station_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Machine requise."
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Ingrédients {item_id, qty}."
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Résultats {item_id, qty}."
+    },
+    "duration": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unlocked_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "inputs",
+    "outputs"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

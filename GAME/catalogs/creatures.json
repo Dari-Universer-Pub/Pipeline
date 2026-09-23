@@ -1,0 +1,64 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "creatures",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "creature_poisson_du_lac",
+      "display_name": "Poisson du Lac",
+      "status": "PROPOSEE",
+      "kind": "animal",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_peche)",
+      "justification": "Poisson pêché au Lac Muet (système peche).",
+      "description": "Poisson pêché au Lac Muet (système peche).",
+      "behavior": "passif",
+      "habitat": [
+        "lieu_lac_muet"
+      ],
+      "yields": [
+        "objet_poisson_du_lac"
+      ],
+      "hostile": false,
+      "system": "system_peche",
+      "derivation": {
+        "why": "Faune liée à system_peche et à un lieu canonique.",
+        "system": "system_peche",
+        "obtention": "Pêche/observation dans son habitat.",
+        "consumers": "system_peche, system_secrets, économie.",
+        "consequences": "Produit une ressource/fragment ; événement narratif.",
+        "assets": "1 sprite (famille créatures) + variantes.",
+        "animations": "idle/nage + réaction.",
+        "tests": "test_creature, test_chaine_production, test_placement."
+      }
+    },
+    {
+      "id": "creature_echo_du_bois",
+      "display_name": "Écho du Bois",
+      "status": "PROPOSEE",
+      "kind": "creature",
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_secrets)",
+      "justification": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
+      "description": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
+      "behavior": "passif",
+      "habitat": [
+        "lieu_bois_des_retours"
+      ],
+      "yields": [
+        "objet_fragment_de_souvenir"
+      ],
+      "hostile": false,
+      "system": "system_secrets",
+      "derivation": {
+        "why": "Faune liée à system_secrets et à un lieu canonique.",
+        "system": "system_secrets",
+        "obtention": "Pêche/observation dans son habitat.",
+        "consumers": "system_peche, system_secrets, économie.",
+        "consequences": "Produit une ressource/fragment ; événement narratif.",
+        "assets": "1 sprite (famille créatures) + variantes.",
+        "animations": "idle/nage + réaction.",
+        "tests": "test_creature, test_chaine_production, test_placement."
+      }
+    }
+  ]
+}

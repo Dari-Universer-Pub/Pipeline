@@ -1,0 +1,112 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "quantity_plan",
+  "generated_deterministic": true,
+  "payload": {
+    "saison": {
+      "canonical": 0,
+      "derived": 0,
+      "proposed_total": 4,
+      "system_floor": 2,
+      "quantity_status": "A_VALIDER",
+      "justification": "Nombre de saisons = décision ouverte ; défaut technique 4 (1 par cycle)."
+    },
+    "lieu": {
+      "canonical": 4,
+      "derived": 7,
+      "proposed_total": 11,
+      "system_floor": 5,
+      "quantity_status": "DEDUITE",
+      "justification": "4 lieux canoniques + zones/POI déduites des descriptions et des systèmes."
+    },
+    "culture": {
+      "canonical": 0,
+      "derived": 1,
+      "proposed_total": 6,
+      "system_floor": 2,
+      "quantity_status": "A_VALIDER",
+      "justification": "Nombre exact de cultures = décision ouverte ; proposé = 1 plante mémorielle (canon) + couverture des 4 saisons + besoins cuisine/artisanat/relations."
+    },
+    "objet": {
+      "canonical": 5,
+      "derived": 8,
+      "proposed_total": 25,
+      "system_floor": 6,
+      "quantity_status": "DEDUITE",
+      "justification": "5 objets canoniques + graines/produits/outils déduits des cultures, recettes et systèmes. Aucun objet sans utilité."
+    },
+    "ressource": {
+      "canonical": 0,
+      "derived": 2,
+      "proposed_total": 5,
+      "system_floor": 1,
+      "quantity_status": "PROPOSEE",
+      "justification": "Matériaux d'artisanat (bois/pierre/argile) + ressources de récolte/pêche."
+    },
+    "machine": {
+      "canonical": 0,
+      "derived": 4,
+      "proposed_total": 4,
+      "system_floor": 2,
+      "quantity_status": "PROPOSEE",
+      "justification": "1 station par système de transformation (artisanat, cuisine, mémoire) + métier à tisser pour la chaîne lin->fil->toile."
+    },
+    "recette": {
+      "canonical": 0,
+      "derived": 0,
+      "proposed_total": 8,
+      "system_floor": 3,
+      "quantity_status": "A_VALIDER",
+      "justification": "Recettes exactes = élément ouvert du canon ; proposé = couverture des chaînes cuisine/artisanat/mémoire (1 recette par station minimum)."
+    },
+    "pnj": {
+      "canonical": 3,
+      "derived": 0,
+      "proposed_total": 3,
+      "system_floor": 2,
+      "quantity_status": "A_VALIDER",
+      "justification": "3 PNJ canoniques ; nombre exact = décision ouverte. Rôles merchant couverts par Marin/Nox (DEDUIT), donc pas de PNJ inventé requis."
+    },
+    "creature": {
+      "canonical": 0,
+      "derived": 0,
+      "proposed_total": 2,
+      "system_floor": 1,
+      "quantity_status": "PROPOSEE",
+      "justification": "1 poisson (pêche, Lac Muet canon) + 1 écho du Bois (secrets, canon)."
+    },
+    "quete": {
+      "canonical": 0,
+      "derived": 0,
+      "proposed_total": 4,
+      "system_floor": 1,
+      "quantity_status": "A_VALIDER",
+      "justification": "Nombre exact de quêtes = décision ouverte ; proposé = 1 quête par PNJ canonique + 1 quête de secret (Bois des Retours)."
+    },
+    "evenement": {
+      "canonical": 0,
+      "derived": 0,
+      "proposed_total": 4,
+      "system_floor": 2,
+      "quantity_status": "PROPOSEE",
+      "justification": "1 événement par contexte déclencheur (saison, météo, objet, jour) pour couvrir le système 'événements contextuels'."
+    },
+    "map": {
+      "canonical": 0,
+      "derived": 4,
+      "proposed_total": 4,
+      "system_floor": 2,
+      "quantity_status": "A_VALIDER",
+      "justification": "1 carte par lieu canonique (4). Nombre de biomes = décision ouverte."
+    },
+    "secret": {
+      "canonical": 0,
+      "derived": 2,
+      "proposed_total": 2,
+      "system_floor": 1,
+      "quantity_status": "A_VALIDER",
+      "justification": "Secrets du Bois des Retours = élément ouvert du canon ; existence DEDUITE (Bois qui se répète, passé de Nox), contenu exact À_VALIDER. Chaque secret a un chemin de découverte."
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "manifest_npcs",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "pnj_alba",
+      "display_name": "Alba",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Personnages connus",
+      "justification": "Personnage explicitement défini dans le canon initial.",
+      "description": "soigneuse des plantes et première guide du joueur",
+      "function": "soigneuse_des_plantes",
+      "goals": [
+        "soigner les plantes",
+        "guider le Jardinier"
+      ],
+      "needs": [
+        "plantes médicinales",
+        "souci"
+      ],
+      "beliefs": [
+        "les souvenirs doivent être soignés, pas effacés"
+      ],
+      "knowledge": [
+        "fait_monde_valdore",
+        "fait_joueur_jardinier",
+        "lieu_maison_racine",
+        "lieu_vallee_claire",
+        "culture_souci_de_la_vallee"
+      ],
+      "forbidden_knowledge": [
+        "secret_clairiere_repetition",
+        "secret_passe_nox"
+      ],
+      "emotions": [
+        "chaleureuse",
+        "inquiete"
+      ],
+      "routines": [],
+      "frequented_places": [
+        "lieu_maison_racine",
+        "lieu_champ_de_la_vallee_claire"
+      ],
+      "voice": "douce, pédagogue, phrases courtes, métaphores végétales",
+      "home": "lieu_maison_racine",
+      "roles": [
+        "guide",
+        "soins"
+      ],
+      "derivation": {
+        "why": "Personnage canonique ; porte un rôle social/économique.",
+        "system": "system_relations, system_economie",
+        "obtention": "Présent dans le monde (canon).",
+        "consumers": "Dialogues, quêtes, dons, économie.",
+        "consequences": "Modifie relations, débloque lieux/quêtes.",
+        "assets": "1 sprite de personnage (famille) + portrait.",
+        "animations": "idle + marche 4 directions + geste d'interaction.",
+        "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
+      },
+      "required_assets": [
+        "asset_spritesheet_pnj_alba",
+        "asset_portrait_pnj_alba"
+      ],
+      "required_animations": [
+        "anim_pnj_alba_idle_down",
+        "anim_pnj_alba_idle_up",
+        "anim_pnj_alba_idle_left",
+        "anim_pnj_alba_idle_right",
+        "anim_pnj_alba_marche_down",
+        "anim_pnj_alba_marche_up",
+        "anim_pnj_alba_marche_left",
+        "anim_pnj_alba_marche_right",
+        "anim_pnj_alba_interaction"
+      ],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "pnj_marin",
+      "display_name": "Marin",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Personnages connus",
+      "justification": "Personnage explicitement défini dans le canon initial.",
+      "description": "artisan qui fabrique les machines agricoles",
+      "function": "artisan_machines",
+      "goals": [
+        "fabriquer des machines",
+        "améliorer le refuge"
+      ],
+      "needs": [
+        "bois",
+        "pierre",
+        "argile"
+      ],
+      "beliefs": [
+        "le travail bien fait répare la mémoire"
+      ],
+      "knowledge": [
+        "fait_monde_valdore",
+        "machine_etabli_de_marin",
+        "machine_metier_a_tisser",
+        "ressource_bois",
+        "ressource_pierre"
+      ],
+      "forbidden_knowledge": [
+        "secret_passe_nox"
+      ],
+      "emotions": [
+        "bourru",
+        "fier"
+      ],
+      "routines": [],
+      "frequented_places": [
+        "lieu_atelier_de_la_maison_racine"
+      ],
+      "voice": "directe, technique, peu de mots, jargon d'atelier",
+      "home": "lieu_atelier_de_la_maison_racine",
+      "roles": [
+        "merchant",
+        "artisan"
+      ],
+      "derivation": {
+        "why": "Personnage canonique ; porte un rôle social/économique.",
+        "system": "system_relations, system_economie",
+        "obtention": "Présent dans le monde (canon).",
+        "consumers": "Dialogues, quêtes, dons, économie.",
+        "consequences": "Modifie relations, débloque lieux/quêtes.",
+        "assets": "1 sprite de personnage (famille) + portrait.",
+        "animations": "idle + marche 4 directions + geste d'interaction.",
+        "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
+      },
+      "required_assets": [
+        "asset_spritesheet_pnj_marin",
+        "asset_portrait_pnj_marin"
+      ],
+      "required_animations": [
+        "anim_pnj_marin_idle_down",
+        "anim_pnj_marin_idle_up",
+        "anim_pnj_marin_idle_left",
+        "anim_pnj_marin_idle_right",
+        "anim_pnj_marin_marche_down",
+        "anim_pnj_marin_marche_up",
+        "anim_pnj_marin_marche_left",
+        "anim_pnj_marin_marche_right",
+        "anim_pnj_marin_interaction"
+      ],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "pnj_nox",
+      "display_name": "Nox",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Personnages connus",
+      "justification": "Personnage explicitement défini dans le canon initial.",
+      "description": "pêcheur qui refuse de parler de son passé",
+      "function": "pecheur",
+      "goals": [
+        "pêcher",
+        "éviter son passé"
+      ],
+      "needs": [
+        "poisson",
+        "solitude"
+      ],
+      "beliefs": [
+        "certains souvenirs doivent rester au fond de l'eau"
+      ],
+      "knowledge": [
+        "lieu_lac_muet",
+        "creature_poisson_du_lac",
+        "fait_monde_valdore"
+      ],
+      "forbidden_knowledge": [
+        "secret_passe_nox",
+        "secret_clairiere_repetition"
+      ],
+      "emotions": [
+        "silencieux",
+        "melancolique"
+      ],
+      "routines": [],
+      "frequented_places": [
+        "lieu_poste_de_peche_du_lac_muet",
+        "lieu_lac_muet"
+      ],
+      "voice": "laconique, silences, non-dits, phrases inachevées",
+      "home": "lieu_poste_de_peche_du_lac_muet",
+      "roles": [
+        "merchant",
+        "peche"
+      ],
+      "derivation": {
+        "why": "Personnage canonique ; porte un rôle social/économique.",
+        "system": "system_relations, system_economie",
+        "obtention": "Présent dans le monde (canon).",
+        "consumers": "Dialogues, quêtes, dons, économie.",
+        "consequences": "Modifie relations, débloque lieux/quêtes.",
+        "assets": "1 sprite de personnage (famille) + portrait.",
+        "animations": "idle + marche 4 directions + geste d'interaction.",
+        "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
+      },
+      "required_assets": [
+        "asset_spritesheet_pnj_nox",
+        "asset_portrait_pnj_nox"
+      ],
+      "required_animations": [
+        "anim_pnj_nox_idle_down",
+        "anim_pnj_nox_idle_up",
+        "anim_pnj_nox_idle_left",
+        "anim_pnj_nox_idle_right",
+        "anim_pnj_nox_marche_down",
+        "anim_pnj_nox_marche_up",
+        "anim_pnj_nox_marche_left",
+        "anim_pnj_nox_marche_right",
+        "anim_pnj_nox_interaction"
+      ],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    }
+  ]
+}

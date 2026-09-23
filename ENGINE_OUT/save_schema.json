@@ -1,0 +1,57 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "save_schema",
+  "generated_deterministic": true,
+  "payload": {
+    "save_version": "5.0.0",
+    "schema": {
+      "time": {
+        "day": "int",
+        "hour": "int",
+        "season_index": "int",
+        "weather": "string"
+      },
+      "player": {
+        "location": "string",
+        "inventory": "{item_id:int}",
+        "money": "int",
+        "relationships": "{pnj_id:int}",
+        "flags": "{flag_id:any}",
+        "unlocked_locations": "[string]",
+        "known_facts": "[string]"
+      },
+      "world": {
+        "discovered_secrets": "[string]",
+        "active_quests": "[string]",
+        "completed_quests": "[string]",
+        "crops": "{crop_id:obj}",
+        "global_flags": "{flag_id:any}"
+      }
+    },
+    "compatibility": {
+      "policy": "Une sauvegarde est compatible si save_version == version courante OU si une migration existe.",
+      "migrations": [
+        {
+          "from": "0.0.0",
+          "to": "5.0.0",
+          "changes": "Migration initiale : crée la structure de sauvegarde V5."
+        }
+      ]
+    },
+    "reproducibility": {
+      "seed_stored": true,
+      "note": "La graine procédurale est stockée pour régénérer les maps de façon identique (reproductibilité)."
+    },
+    "llm_mutation_forbidden": [
+      "canon",
+      "progression",
+      "rules",
+      "stats",
+      "saves",
+      "objects",
+      "major_quests",
+      "unlocked_secrets"
+    ]
+  }
+}

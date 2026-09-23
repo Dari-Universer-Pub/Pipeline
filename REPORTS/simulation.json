@@ -1,0 +1,1217 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "simulation",
+  "generated_deterministic": true,
+  "payload": {
+    "profiles": {
+      "agriculteur": {
+        "profile": "agriculteur",
+        "trace": [
+          [
+            "harvest_echo",
+            1
+          ],
+          [
+            "craft_soupe",
+            1
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 1,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_echo_cristallin": 1,
+            "objet_graine_de_navet_de_la_vallee": 0,
+            "objet_navet": 0,
+            "objet_soupe_de_navet": 1,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 140,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 15,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_vallee_claire",
+            "inventory": {
+              "objet_graine_d_echo": 1,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_echo_cristallin": 1,
+              "objet_graine_de_navet_de_la_vallee": 0,
+              "objet_navet": 0,
+              "objet_soupe_de_navet": 1,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 140,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 10
+            },
+            "flags": {
+              "sol_arrose": true
+            },
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J2",
+              "evenement_marche_de_la_vallee@J3",
+              "evenement_marche_de_la_vallee@J4",
+              "evenement_marche_de_la_vallee@J5",
+              "evenement_pluie_sur_la_vallee@J6",
+              "evenement_marche_de_la_vallee@J6",
+              "evenement_marche_de_la_vallee@J7",
+              "evenement_marche_de_la_vallee@J8",
+              "evenement_marche_de_la_vallee@J9",
+              "evenement_le_puits_chante@J15",
+              "evenement_marche_de_la_vallee@J15"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] planté objet_graine_d_echo -> culture_floraison_d_echo",
+          "[J1 06h] arrosé culture_floraison_d_echo",
+          "[J2 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J2 06h] arrosé culture_floraison_d_echo",
+          "[J3 06h] culture_floraison_d_echo -> stade 1",
+          "[J3 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J3 06h] arrosé culture_floraison_d_echo",
+          "[J4 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J4 06h] arrosé culture_floraison_d_echo",
+          "[J5 06h] culture_floraison_d_echo -> stade 2",
+          "[J5 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J5 06h] arrosé culture_floraison_d_echo",
+          "[J6 06h] culture_floraison_d_echo -> stade 3",
+          "[J6 06h] événement déclenché: evenement_pluie_sur_la_vallee",
+          "[J6 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J6 06h] arrosé culture_floraison_d_echo",
+          "[J7 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J7 06h] arrosé culture_floraison_d_echo",
+          "[J8 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J8 06h] arrosé culture_floraison_d_echo",
+          "[J9 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J9 06h] récolté culture_floraison_d_echo -> objet_echo_cristallin",
+          "[J9 06h] planté objet_graine_de_navet_de_la_vallee -> culture_navet_de_la_vallee",
+          "[J9 06h] arrosé culture_navet_de_la_vallee",
+          "[J10 06h] culture_navet_de_la_vallee -> stade 1",
+          "[J10 06h] arrosé culture_navet_de_la_vallee",
+          "[J11 06h] culture_navet_de_la_vallee -> stade 2",
+          "[J11 06h] arrosé culture_navet_de_la_vallee",
+          "[J12 06h] culture_navet_de_la_vallee -> stade 3",
+          "[J12 06h] arrosé culture_navet_de_la_vallee",
+          "[J13 06h] arrosé culture_navet_de_la_vallee",
+          "[J14 06h] arrosé culture_navet_de_la_vallee",
+          "[J15 06h] récolté culture_navet_de_la_vallee -> objet_navet",
+          "[J15 06h] recette recette_soupe_de_navet exécutée",
+          "[J15 06h] quête activée: quete_le_premier_echo",
+          "[J15 06h] événement déclenché: evenement_le_puits_chante",
+          "[J15 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "explorateur": {
+        "profile": "explorateur",
+        "trace": [
+          [
+            "events_fired",
+            [
+              "evenement_retour_du_bois",
+              "evenement_marche_de_la_vallee"
+            ]
+          ],
+          [
+            "secrets",
+            [
+              "secret_clairiere_repetition"
+            ]
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_fragment_de_souvenir": 2,
+            "objet_ligne_de_peche": 1
+          },
+          "money": 60,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 25
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_brumes",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_lac_muet",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_fragment_de_souvenir": 2,
+              "objet_ligne_de_peche": 1
+            },
+            "money": 60,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 25
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine",
+              "lieu_maison_racine",
+              "lieu_bois_des_retours",
+              "lieu_lac_muet"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [
+              "secret_clairiere_repetition"
+            ],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo",
+              "quete_le_silence_de_nox",
+              "quete_ce_qui_se_repete"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_retour_du_bois@J1",
+              "evenement_marche_de_la_vallee@J1",
+              "evenement_retour_du_bois@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] exploré lieu_maison_racine",
+          "[J1 06h] exploré lieu_bois_des_retours",
+          "[J1 06h] exploré lieu_lac_muet",
+          "[J1 06h] événement déclenché: evenement_retour_du_bois",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] quête activée: quete_le_silence_de_nox",
+          "[J1 06h] quête activée: quete_ce_qui_se_repete",
+          "[J1 06h] événement déclenché: evenement_retour_du_bois"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo",
+          "quete_le_silence_de_nox",
+          "quete_ce_qui_se_repete"
+        ],
+        "secrets_discovered": [
+          "secret_clairiere_repetition"
+        ],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "social": {
+        "profile": "social",
+        "trace": [
+          [
+            "rel_alba",
+            17
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 60,
+          "relationships": {
+            "pnj_alba": 17,
+            "pnj_marin": 11,
+            "pnj_nox": 11
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_vallee_claire",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 60,
+            "relationships": {
+              "pnj_alba": 17,
+              "pnj_marin": 11,
+              "pnj_nox": 11
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] parlé à pnj_alba",
+          "[J1 06h] parlé à pnj_marin",
+          "[J1 06h] parlé à pnj_nox",
+          "[J1 06h] offert objet_fragment_de_souvenir à pnj_alba",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "ignore_quetes": {
+        "profile": "ignore_quetes",
+        "trace": [
+          [
+            "money",
+            86
+          ],
+          [
+            "quests_completed",
+            []
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_navet": 2,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 96,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_vallee_claire",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_navet": 2,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 96,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 10
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] vendu 1× objet_navet (+12)",
+          "[J1 06h] vendu 1× objet_navet (+12)",
+          "[J1 06h] vendu 1× objet_navet (+12)",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "optimise_economie": {
+        "profile": "optimise_economie",
+        "trace": [
+          [
+            "money_delta",
+            20
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "ressource_bois": 2,
+            "objet_planche": 0,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 80,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_vallee_claire",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "ressource_bois": 2,
+              "objet_planche": 0,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 80,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 10
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] recette recette_planche exécutée",
+          "[J1 06h] vendu 1× objet_planche (+20)",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "rate_evenements": {
+        "profile": "rate_evenements",
+        "trace": [
+          [
+            "missed_events",
+            true
+          ],
+          [
+            "quests_active",
+            []
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 60,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 6,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "pluie",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_vallee_claire",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 60,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 10
+            },
+            "flags": {
+              "sol_arrose": true
+            },
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_pluie_sur_la_vallee@J6",
+              "evenement_marche_de_la_vallee@J6"
+            ]
+          }
+        },
+        "log": [
+          "[J6 06h] quête activée: quete_le_premier_echo",
+          "[J6 06h] événement déclenché: evenement_pluie_sur_la_vallee",
+          "[J6 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "specialiste": {
+        "profile": "specialiste",
+        "trace": [
+          [
+            "poisson",
+            3
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_ligne_de_peche": 2,
+            "objet_poisson_du_lac": 3,
+            "objet_fragment_de_souvenir": 1
+          },
+          "money": 60,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 25
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_lac_muet",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_ligne_de_peche": 2,
+              "objet_poisson_du_lac": 3,
+              "objet_fragment_de_souvenir": 1
+            },
+            "money": 60,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 25
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine",
+              "lieu_lac_muet"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo",
+              "quete_le_silence_de_nox"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] exploré lieu_lac_muet",
+          "[J1 06h] pêché objet_poisson_du_lac",
+          "[J1 06h] pêché objet_poisson_du_lac",
+          "[J1 06h] pêché objet_poisson_du_lac",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] quête activée: quete_le_silence_de_nox",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo",
+          "quete_le_silence_de_nox"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      },
+      "contrarian": {
+        "profile": "contrarian",
+        "trace": [
+          [
+            "money",
+            80
+          ],
+          [
+            "location",
+            "lieu_lac_muet"
+          ]
+        ],
+        "before": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1
+          },
+          "money": 50,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 10
+          }
+        },
+        "after": {
+          "inventory": {
+            "objet_graine_d_echo": 2,
+            "objet_houe_de_depart": 1,
+            "objet_arrosoir_de_cuivre": 1,
+            "objet_carnet_du_jardinier": 1,
+            "objet_fragment_de_souvenir": 1,
+            "objet_ligne_de_peche": 1
+          },
+          "money": 90,
+          "relationships": {
+            "pnj_alba": 10,
+            "pnj_marin": 10,
+            "pnj_nox": 25
+          }
+        },
+        "final_state": {
+          "time": {
+            "day": 1,
+            "hour": 6,
+            "minute": 0,
+            "season_index": 0,
+            "seasons": [
+              "saison_des_premieres_pousses",
+              "saison_des_epis",
+              "saison_des_brumes",
+              "saison_du_repos"
+            ],
+            "season": "saison_des_premieres_pousses",
+            "weather": "ensoleille",
+            "day_length": 24,
+            "season_length": 28
+          },
+          "player": {
+            "location": "lieu_lac_muet",
+            "inventory": {
+              "objet_graine_d_echo": 2,
+              "objet_houe_de_depart": 1,
+              "objet_arrosoir_de_cuivre": 1,
+              "objet_carnet_du_jardinier": 1,
+              "objet_fragment_de_souvenir": 1,
+              "objet_ligne_de_peche": 1
+            },
+            "money": 90,
+            "relationships": {
+              "pnj_alba": 10,
+              "pnj_marin": 10,
+              "pnj_nox": 25
+            },
+            "flags": {},
+            "unlocked_locations": [
+              "lieu_vallee_claire",
+              "lieu_maison_racine",
+              "lieu_lac_muet"
+            ],
+            "known_facts": [
+              "fait_monde_valdore",
+              "fait_joueur_jardinier",
+              "fait_refuge_maison_racine",
+              "fait_valdore"
+            ]
+          },
+          "world": {
+            "discovered_secrets": [],
+            "active_quests": [],
+            "completed_quests": [
+              "quete_le_premier_echo",
+              "quete_le_silence_de_nox"
+            ],
+            "global_flags": {},
+            "crops": {},
+            "machines": {},
+            "currency": "unité À_VALIDER",
+            "fired_events": [
+              "evenement_marche_de_la_vallee@J1"
+            ]
+          }
+        },
+        "log": [
+          "[J1 06h] vendu 1× objet_fragment_de_souvenir (+30)",
+          "[J1 06h] exploré lieu_lac_muet",
+          "[J1 06h] quête activée: quete_le_premier_echo",
+          "[J1 06h] quête activée: quete_le_silence_de_nox",
+          "[J1 06h] événement déclenché: evenement_marche_de_la_vallee"
+        ],
+        "quests_completed": [
+          "quete_le_premier_echo",
+          "quete_le_silence_de_nox"
+        ],
+        "secrets_discovered": [],
+        "facts_known": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "fait_refuge_maison_racine",
+          "fait_valdore"
+        ]
+      }
+    },
+    "production_chains": {
+      "recette_soupe_de_navet": {
+        "recipe_id": "recette_soupe_de_navet",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_navet": 2
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_navet": 0,
+          "objet_soupe_de_navet": 1
+        }
+      },
+      "recette_pain_de_ble": {
+        "recipe_id": "recette_pain_de_ble",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_grain_de_ble": 3
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_grain_de_ble": 0,
+          "objet_pain_de_ble": 1
+        }
+      },
+      "recette_courge_rotie": {
+        "recipe_id": "recette_courge_rotie",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_courge": 1
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_courge": 0,
+          "objet_courge_rotie": 1
+        }
+      },
+      "recette_tisane_de_souci": {
+        "recipe_id": "recette_tisane_de_souci",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fleur_de_souci": 2
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fleur_de_souci": 0,
+          "objet_tisane_de_souci": 1
+        }
+      },
+      "recette_planche": {
+        "recipe_id": "recette_planche",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "ressource_bois": 2
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "ressource_bois": 0,
+          "objet_planche": 1
+        }
+      },
+      "recette_fil_de_lin": {
+        "recipe_id": "recette_fil_de_lin",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fibre_de_lin": 2
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fibre_de_lin": 0,
+          "objet_fil_de_lin": 1
+        }
+      },
+      "recette_toile": {
+        "recipe_id": "recette_toile",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fil_de_lin": 3
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_fil_de_lin": 0,
+          "objet_toile": 1
+        }
+      },
+      "recette_fragment_ravive": {
+        "recipe_id": "recette_fragment_ravive",
+        "ok": true,
+        "executed": true,
+        "inputs_consumed": true,
+        "outputs_produced": true,
+        "before": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_echo_cristallin": 1
+        },
+        "after": {
+          "objet_graine_d_echo": 2,
+          "objet_houe_de_depart": 1,
+          "objet_arrosoir_de_cuivre": 1,
+          "objet_carnet_du_jardinier": 1,
+          "objet_echo_cristallin": 0,
+          "objet_fragment_de_souvenir": 1
+        }
+      }
+    }
+  }
+}

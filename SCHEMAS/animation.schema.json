@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/animation.schema.json",
+  "title": "Animation",
+  "description": "Schéma d'entité 'animation' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^anim_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'anim_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "state_or_action": {
+      "type": "string",
+      "description": "État/action déclencheur."
+    },
+    "direction": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "down",
+        "up",
+        "left",
+        "right",
+        null
+      ]
+    },
+    "frames": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "fps": {
+      "type": "number",
+      "minimum": 1
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "impact_event": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Frame d'impact (synchronisation gameplay)."
+    },
+    "logic_effect": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Effet logique déclenché ( ID effet)."
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_assets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "entity_id",
+    "state_or_action",
+    "frames",
+    "fps",
+    "loop"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/pnj.schema.json",
+  "title": "PNJ / agent",
+  "description": "Schéma d'entité 'pnj' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^pnj_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'pnj_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "function": {
+      "type": "string"
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "needs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "beliefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "knowledge": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Faits connus (limite ce que le dialogue peut révéler)."
+    },
+    "forbidden_knowledge": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Faits que le PNJ ignore/taise."
+    },
+    "emotions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "routines": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "frequented_places": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "voice": {
+      "type": "string",
+      "description": "Signature de voix (validation narrative)."
+    },
+    "home": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "function"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

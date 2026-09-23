@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/relation.schema.json",
+  "title": "Relation",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "adjacent_a",
+        "affecte",
+        "connecte_a",
+        "consomme",
+        "contient",
+        "declenche",
+        "decrit",
+        "donne",
+        "evolue_vers",
+        "frequente",
+        "habite",
+        "obtenu_par",
+        "pousse_dans",
+        "produit",
+        "releve_de",
+        "requiert",
+        "transforme",
+        "utilise"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "weight": {
+      "type": "number"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "type",
+    "source",
+    "target"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

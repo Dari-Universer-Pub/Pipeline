@@ -1,0 +1,178 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "manifest_effects",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "effet_sol_laboure",
+      "display_name": "Sol laboure",
+      "status": "PROPOSEE",
+      "system": "system_agriculture",
+      "description": "Particules de terre soulevée.",
+      "trigger_verb": "labourer",
+      "asset_id": "asset_particule_sol_laboure",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "justification": "Effet visuel synchronisé avec l'action 'labourer'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_sol_arrose",
+      "display_name": "Sol arrose",
+      "status": "PROPOSEE",
+      "system": "system_agriculture",
+      "description": "Gouttelettes d'eau.",
+      "trigger_verb": "arroser",
+      "asset_id": "asset_particule_sol_arrose",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "justification": "Effet visuel synchronisé avec l'action 'arroser'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_graine_plantee",
+      "display_name": "Graine plantee",
+      "status": "PROPOSEE",
+      "system": "system_agriculture",
+      "description": "Petite pousse qui émerge.",
+      "trigger_verb": "planter",
+      "asset_id": "asset_particule_graine_plantee",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "justification": "Effet visuel synchronisé avec l'action 'planter'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_recolte",
+      "display_name": "Recolte",
+      "status": "PROPOSEE",
+      "system": "system_agriculture",
+      "description": "Éclats de récolte + icône qui vole.",
+      "trigger_verb": "recolter",
+      "asset_id": "asset_particule_recolte",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_agriculture)",
+      "justification": "Effet visuel synchronisé avec l'action 'recolter'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_prise_poisson",
+      "display_name": "Prise poisson",
+      "status": "PROPOSEE",
+      "system": "system_peche",
+      "description": "Éclaboussures + poisson.",
+      "trigger_verb": "pecher",
+      "asset_id": "asset_particule_prise_poisson",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_peche)",
+      "justification": "Effet visuel synchronisé avec l'action 'pecher'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_artisanat",
+      "display_name": "Artisanat",
+      "status": "PROPOSEE",
+      "system": "system_artisanat",
+      "description": "Étincelles d'atelier.",
+      "trigger_verb": "fabriquer",
+      "asset_id": "asset_particule_artisanat",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_artisanat)",
+      "justification": "Effet visuel synchronisé avec l'action 'fabriquer'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_cuisine",
+      "display_name": "Cuisine",
+      "status": "PROPOSEE",
+      "system": "system_cuisine",
+      "description": "Vapeur du foyer.",
+      "trigger_verb": "cuisiner",
+      "asset_id": "asset_particule_cuisine",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_cuisine)",
+      "justification": "Effet visuel synchronisé avec l'action 'cuisiner'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_don_relation",
+      "display_name": "Don relation",
+      "status": "PROPOSEE",
+      "system": "system_relations",
+      "description": "Cœur/note chaleureuse.",
+      "trigger_verb": "offrir",
+      "asset_id": "asset_particule_don_relation",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_relations)",
+      "justification": "Effet visuel synchronisé avec l'action 'offrir'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_apparition_echo",
+      "display_name": "Apparition echo",
+      "status": "PROPOSEE",
+      "system": "system_secrets",
+      "description": "Lueur mémorielle qui apparaît.",
+      "trigger_verb": "evenement",
+      "asset_id": "asset_particule_apparition_echo",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_secrets)",
+      "justification": "Effet visuel synchronisé avec l'action 'evenement'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    },
+    {
+      "id": "effet_revele_fragment",
+      "display_name": "Revele fragment",
+      "status": "PROPOSEE",
+      "system": "system_memoire",
+      "description": "Fragment de souvenir qui brille.",
+      "trigger_verb": "memoire",
+      "asset_id": "asset_particule_revele_fragment",
+      "duration": 0.8,
+      "loop": false,
+      "source": "dérivé des animations/événements (system_memoire)",
+      "justification": "Effet visuel synchronisé avec l'action 'memoire'.",
+      "validation": {
+        "asset_present": true,
+        "sync_animation": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "canon_locked",
+  "generated_deterministic": true,
+  "payload": {
+    "world": {
+      "id": "monde_valdore",
+      "display_name": "Valdore",
+      "category": "monde",
+      "description": "Nom du monde.",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "justification": "Fait immuable explicite."
+    },
+    "player": {
+      "id": "joueur_jardinier",
+      "display_name": "le Jardinier",
+      "category": "joueur",
+      "description": "Rôle incarné par le joueur.",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "justification": "Fait immuable explicite."
+    },
+    "refuge": {
+      "id": "lieu_maison_racine",
+      "display_name": "la Maison-Racine",
+      "category": "lieu",
+      "description": "Refuge et atelier principal.",
+      "status": "CANONIQUE",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "justification": "Fait immuable explicite."
+    },
+    "immutable_facts": [
+      {
+        "id": "fait_monde_valdore",
+        "statement": "Le monde s’appelle Valdore",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      },
+      {
+        "id": "fait_joueur_jardinier",
+        "statement": "Le joueur est appelé le Jardinier",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      },
+      {
+        "id": "fait_refuge_maison_racine",
+        "statement": "Le refuge principal s’appelle la Maison-Racine",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      },
+      {
+        "id": "fait_fragments_physiques",
+        "statement": "Les souvenirs existent sous forme de fragments physiques",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      },
+      {
+        "id": "fait_graines_echo",
+        "statement": "Les graines d’écho peuvent faire pousser des plantes mémorielles",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      },
+      {
+        "id": "fait_pas_magie_combat",
+        "statement": "Le jeu ne possède pas de magie de combat traditionnelle",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Faits immuables"
+      }
+    ],
+    "locations": [
+      {
+        "id": "lieu_maison_racine",
+        "display_name": "La Maison-Racine",
+        "category": "lieu",
+        "description": "refuge et atelier principal",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "clean_name": "Maison-Racine",
+        "map_id": "map_maison_racine"
+      },
+      {
+        "id": "lieu_vallee_claire",
+        "display_name": "La Vallée Claire",
+        "category": "lieu",
+        "description": "zone de départ et terres cultivables",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "clean_name": "Vallée Claire",
+        "map_id": "map_vallee_claire"
+      },
+      {
+        "id": "lieu_bois_des_retours",
+        "display_name": "Le Bois des Retours",
+        "category": "lieu",
+        "description": "forêt où certains événements se répètent",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "clean_name": "Bois des Retours",
+        "map_id": "map_bois_des_retours"
+      },
+      {
+        "id": "lieu_lac_muet",
+        "display_name": "Le Lac Muet",
+        "category": "lieu",
+        "description": "zone d’exploration et de pêche",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "clean_name": "Lac Muet",
+        "map_id": "map_lac_muet"
+      }
+    ],
+    "npcs": [
+      {
+        "id": "pnj_alba",
+        "display_name": "Alba",
+        "category": "pnj",
+        "description": "soigneuse des plantes et première guide du joueur",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Personnages connus",
+        "justification": "Personnage explicitement défini dans le canon initial."
+      },
+      {
+        "id": "pnj_marin",
+        "display_name": "Marin",
+        "category": "pnj",
+        "description": "artisan qui fabrique les machines agricoles",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Personnages connus",
+        "justification": "Personnage explicitement défini dans le canon initial."
+      },
+      {
+        "id": "pnj_nox",
+        "display_name": "Nox",
+        "category": "pnj",
+        "description": "pêcheur qui refuse de parler de son passé",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Personnages connus",
+        "justification": "Personnage explicitement défini dans le canon initial."
+      }
+    ],
+    "objects": [
+      {
+        "id": "objet_graine_d_echo",
+        "display_name": "Graine d’Écho",
+        "category": "objet",
+        "description": "",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Objets canoniques",
+        "justification": "Objet explicitement défini dans le canon initial."
+      },
+      {
+        "id": "objet_houe_de_depart",
+        "display_name": "Houe de départ",
+        "category": "objet",
+        "description": "",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Objets canoniques",
+        "justification": "Objet explicitement défini dans le canon initial."
+      },
+      {
+        "id": "objet_arrosoir_de_cuivre",
+        "display_name": "Arrosoir de cuivre",
+        "category": "objet",
+        "description": "",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Objets canoniques",
+        "justification": "Objet explicitement défini dans le canon initial."
+      },
+      {
+        "id": "objet_fragment_de_souvenir",
+        "display_name": "Fragment de souvenir",
+        "category": "objet",
+        "description": "",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Objets canoniques",
+        "justification": "Objet explicitement défini dans le canon initial."
+      },
+      {
+        "id": "objet_carnet_du_jardinier",
+        "display_name": "Carnet du Jardinier",
+        "category": "objet",
+        "description": "",
+        "status": "CANONIQUE",
+        "source": "INPUT/canon_initial.md#Objets canoniques",
+        "justification": "Objet explicitement défini dans le canon initial."
+      }
+    ],
+    "naming_rules": "Les noms doivent être simples, évocateurs et cohérents avec un monde rural mystérieux. Éviter les noms de fantasy génériques, les objets cosmiques et les termes technologiques modernes",
+    "technical_constraints": {
+      "engine": "Godot 4",
+      "perspective": "jeu 2D vue du dessus",
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "rendering": "pixel art, mise à l'échelle entière",
+      "data_export": [
+        "JSON",
+        "ressources Godot"
+      ],
+      "runtime_llm_required": false
+    },
+    "gameplay_systems_canonical": [
+      "agriculture",
+      "saisons",
+      "météo",
+      "exploration",
+      "relations avec les PNJ",
+      "artisanat",
+      "cuisine",
+      "économie simple",
+      "refuge améliorable",
+      "secrets",
+      "événements contextuels"
+    ],
+    "main_loops": [
+      "Explorer et trouver des graines ou des fragments",
+      "Planter, arroser, faire pousser et récolter",
+      "Transformer les récoltes et les fragments dans des machines",
+      "Offrir, vendre ou utiliser les productions",
+      "Modifier les relations et débloquer des lieux"
+    ],
+    "lock": {
+      "locked": true,
+      "policy": "Aucun élément de ce fichier ne peut être modifié sans signalement explicite. Les propositions et décisions ouvertes sont stockées hors de ce fichier."
+    }
+  }
+}

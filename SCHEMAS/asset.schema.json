@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/asset.schema.json",
+  "title": "Asset visuel",
+  "description": "Schéma d'entité 'asset' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^asset_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'asset_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "entity_id": {
+      "type": "string",
+      "description": "Entité rattachée (jamais isolé)."
+    },
+    "family": {
+      "type": "string",
+      "description": "Famille visuelle cohérente."
+    },
+    "function": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "sprite",
+        "tileset",
+        "tile",
+        "transition",
+        "objet",
+        "portrait",
+        "particule",
+        "ui",
+        "icone"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "resolution": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string"
+    },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "usage_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fingerprint": {
+      "type": "string",
+      "description": "Empreinte unique (dédoublonnage)."
+    },
+    "validation": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "entity_id",
+    "family",
+    "kind",
+    "width",
+    "height"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

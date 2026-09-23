@@ -1,0 +1,262 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "rules_compiled",
+  "generated_deterministic": true,
+  "payload": {
+    "deterministic": true,
+    "llm_required_at_runtime": false,
+    "condition_types": {
+      "flag": {
+        "params": [
+          "flag_id",
+          "expected"
+        ],
+        "desc": "État d'un drapeau monde."
+      },
+      "item_count": {
+        "params": [
+          "item_id",
+          "op",
+          "qty"
+        ],
+        "desc": "Quantité d'un objet en inventaire."
+      },
+      "relationship": {
+        "params": [
+          "pnj_id",
+          "op",
+          "value"
+        ],
+        "desc": "Niveau de relation."
+      },
+      "season": {
+        "params": [
+          "season_id"
+        ],
+        "desc": "Saison courante."
+      },
+      "weather": {
+        "params": [
+          "weather_id"
+        ],
+        "desc": "Météo courante."
+      },
+      "time_of_day": {
+        "params": [
+          "op",
+          "hour"
+        ],
+        "desc": "Heure de la journée."
+      },
+      "location": {
+        "params": [
+          "lieu_id"
+        ],
+        "desc": "Joueur présent dans un lieu."
+      },
+      "quest_state": {
+        "params": [
+          "quete_id",
+          "state"
+        ],
+        "desc": "État d'une quête."
+      },
+      "fact_known": {
+        "params": [
+          "fait_id"
+        ],
+        "desc": "Fait connu du joueur/PNJ."
+      },
+      "secret_discovered": {
+        "params": [
+          "secret_id"
+        ],
+        "desc": "Secret découvert."
+      },
+      "crop_stage": {
+        "params": [
+          "crop_id",
+          "op",
+          "stage"
+        ],
+        "desc": "Stade de croissance."
+      },
+      "and": {
+        "params": [
+          "conditions"
+        ],
+        "desc": "Conjonction."
+      },
+      "or": {
+        "params": [
+          "conditions"
+        ],
+        "desc": "Disjonction."
+      },
+      "not": {
+        "params": [
+          "condition"
+        ],
+        "desc": "Négation."
+      }
+    },
+    "effect_types": {
+      "add_item": {
+        "params": [
+          "item_id",
+          "qty"
+        ],
+        "desc": "Ajoute un objet.",
+        "reversible": true
+      },
+      "remove_item": {
+        "params": [
+          "item_id",
+          "qty"
+        ],
+        "desc": "Retire un objet.",
+        "reversible": true
+      },
+      "set_flag": {
+        "params": [
+          "flag_id",
+          "value"
+        ],
+        "desc": "Positionne un drapeau.",
+        "reversible": true
+      },
+      "change_relationship": {
+        "params": [
+          "pnj_id",
+          "delta"
+        ],
+        "desc": "Modifie une relation.",
+        "reversible": true
+      },
+      "unlock_location": {
+        "params": [
+          "lieu_id"
+        ],
+        "desc": "Débloque un lieu.",
+        "reversible": false
+      },
+      "trigger_event": {
+        "params": [
+          "evenement_id"
+        ],
+        "desc": "Déclenche un événement.",
+        "reversible": false
+      },
+      "advance_quest": {
+        "params": [
+          "quete_id",
+          "step"
+        ],
+        "desc": "Fait avancer une quête.",
+        "reversible": true
+      },
+      "reveal_fact": {
+        "params": [
+          "fait_id",
+          "to"
+        ],
+        "desc": "Révèle un fait (mémoire PNJ).",
+        "reversible": false
+      },
+      "discover_secret": {
+        "params": [
+          "secret_id"
+        ],
+        "desc": "Marque un secret découvert.",
+        "reversible": false
+      },
+      "spawn_entity": {
+        "params": [
+          "entity_id",
+          "lieu_id"
+        ],
+        "desc": "Fait apparaître une entité.",
+        "reversible": true
+      },
+      "transform_item": {
+        "params": [
+          "from_id",
+          "to_id",
+          "qty"
+        ],
+        "desc": "Transforme un objet.",
+        "reversible": true
+      },
+      "modify_economy": {
+        "params": [
+          "amount"
+        ],
+        "desc": "Modifie la monnaie du joueur.",
+        "reversible": true
+      }
+    },
+    "event_trigger_types": {
+      "on_enter_location": {
+        "params": [
+          "lieu_id"
+        ]
+      },
+      "on_day_start": {
+        "params": []
+      },
+      "on_season_change": {
+        "params": [
+          "season_id"
+        ]
+      },
+      "on_weather": {
+        "params": [
+          "weather_id"
+        ]
+      },
+      "on_item_acquired": {
+        "params": [
+          "item_id"
+        ]
+      },
+      "on_quest_complete": {
+        "params": [
+          "quete_id"
+        ]
+      },
+      "on_relationship_threshold": {
+        "params": [
+          "pnj_id",
+          "value"
+        ]
+      },
+      "on_crop_harvest": {
+        "params": [
+          "culture_id"
+        ]
+      },
+      "on_time": {
+        "params": [
+          "hour",
+          "minute"
+        ]
+      },
+      "on_secret_discovered": {
+        "params": [
+          "secret_id"
+        ]
+      },
+      "random_daily": {
+        "params": [
+          "probability"
+        ]
+      }
+    },
+    "evaluation_contract": {
+      "conditions": "évaluées en booléen depuis l'état du monde (voir simulator).",
+      "effects": "appliqués de façon déterministe et réversible si marqué.",
+      "no_free_mutation": "un LLM runtime éventuel ne peut PAS modifier canon, progression, règles, stats, sauvegardes, objets, quêtes majeures, secrets non débloqués."
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/objet.schema.json",
+  "title": "Objet",
+  "description": "Schéma d'entité 'objet' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^objet_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'objet_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "outil",
+        "graine",
+        "ressource",
+        "produit",
+        "fragment",
+        "consommable",
+        "artisanat",
+        "cle",
+        "decoratif",
+        "quotidien"
+      ]
+    },
+    "function": {
+      "type": "string",
+      "description": "Fonction de l'objet."
+    },
+    "gameplay_verb": {
+      "type": "string",
+      "description": "Verbe de gameplay associé."
+    },
+    "obtention": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Moyens d'obtention ( IDs recette/lieu/événement)."
+    },
+    "loop_stage": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Étape de la boucle (1-5)."
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Entités qui consomment/utilisent cet objet."
+    },
+    "transforms_into": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stackable": {
+      "type": "boolean"
+    },
+    "base_value": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "description": "Valeur économique de base."
+    },
+    "asset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "animation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decorative_only": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "category",
+    "function",
+    "gameplay_verb"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

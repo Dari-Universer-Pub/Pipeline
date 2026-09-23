@@ -1,0 +1,634 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "manifest_maps",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "map_maison_racine",
+      "display_name": "Maison-Racine",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Maison-Racine' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Refuge et atelier principal (canon).",
+      "location_id": "lieu_maison_racine",
+      "size": {
+        "w": 40,
+        "h": 30
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "plancher",
+        "bois",
+        "pierre"
+      ],
+      "linked_maps": [
+        "map_vallee_claire"
+      ],
+      "seed": 138343252,
+      "regions": [
+        {
+          "id": "region_maison_racine_principale",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "w": 40,
+            "h": 30
+          }
+        }
+      ],
+      "zones": [
+        {
+          "id": "zone_maison_racine_explorable",
+          "walkable": true
+        },
+        {
+          "id": "zone_atelier",
+          "walkable": true
+        },
+        {
+          "id": "zone_cuisine",
+          "walkable": true
+        }
+      ],
+      "paths": [
+        {
+          "id": "chemin_maison_racine_central",
+          "walkable": true,
+          "width": 2
+        }
+      ],
+      "entrances": [
+        {
+          "id": "entree_maison_racine_vallee_claire",
+          "to_map": "map_vallee_claire",
+          "edge": "bord"
+        }
+      ],
+      "exits": [
+        {
+          "id": "sortie_maison_racine_vallee_claire",
+          "to_map": "map_vallee_claire"
+        }
+      ],
+      "collisions": [
+        {
+          "terrain": "plancher",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "bois",
+          "solid": true,
+          "blocks": true
+        },
+        {
+          "terrain": "pierre",
+          "solid": true,
+          "blocks": true
+        }
+      ],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [
+        {
+          "id": "lieu_atelier_de_la_maison_racine",
+          "name": "Atelier de la Maison-Racine",
+          "function": "artisanat"
+        },
+        {
+          "id": "lieu_cuisine_de_la_maison_racine",
+          "name": "Cuisine de la Maison-Racine",
+          "function": "cuisine"
+        }
+      ],
+      "buildings": [
+        {
+          "id": "batiment_maison_racine",
+          "walkable_inside": true
+        }
+      ],
+      "secret_zones": [],
+      "resources": [],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [
+        {
+          "season": "saison_des_premieres_pousses",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_epis",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_brumes",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_du_repos",
+          "effect": "palette/terrain"
+        }
+      ],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_vallee_claire",
+      "display_name": "Vallée Claire",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Zone de départ et terres cultivables (canon).",
+      "location_id": "lieu_vallee_claire",
+      "size": {
+        "w": 80,
+        "h": 60
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "herbe",
+        "sol_meuble",
+        "eau",
+        "terre"
+      ],
+      "linked_maps": [
+        "map_maison_racine",
+        "map_bois_des_retours",
+        "map_lac_muet"
+      ],
+      "seed": 1304492282,
+      "regions": [
+        {
+          "id": "region_vallee_claire_principale",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 60
+          }
+        }
+      ],
+      "zones": [
+        {
+          "id": "zone_vallee_claire_explorable",
+          "walkable": true
+        },
+        {
+          "id": "zone_parcelles",
+          "walkable": true,
+          "cultivable": true,
+          "terrain": "sol_meuble"
+        }
+      ],
+      "paths": [
+        {
+          "id": "chemin_vallee_claire_central",
+          "walkable": true,
+          "width": 2
+        }
+      ],
+      "entrances": [
+        {
+          "id": "entree_vallee_claire_maison_racine",
+          "to_map": "map_maison_racine",
+          "edge": "bord"
+        },
+        {
+          "id": "entree_vallee_claire_bois_des_retours",
+          "to_map": "map_bois_des_retours",
+          "edge": "bord"
+        },
+        {
+          "id": "entree_vallee_claire_lac_muet",
+          "to_map": "map_lac_muet",
+          "edge": "bord"
+        }
+      ],
+      "exits": [
+        {
+          "id": "sortie_vallee_claire_maison_racine",
+          "to_map": "map_maison_racine"
+        },
+        {
+          "id": "sortie_vallee_claire_bois_des_retours",
+          "to_map": "map_bois_des_retours"
+        },
+        {
+          "id": "sortie_vallee_claire_lac_muet",
+          "to_map": "map_lac_muet"
+        }
+      ],
+      "collisions": [
+        {
+          "terrain": "herbe",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "sol_meuble",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "eau",
+          "solid": true,
+          "blocks": true
+        },
+        {
+          "terrain": "terre",
+          "solid": false,
+          "blocks": false
+        }
+      ],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [
+        {
+          "id": "lieu_champ_de_la_vallee_claire",
+          "name": "Champ de la Vallée Claire",
+          "function": "agriculture"
+        },
+        {
+          "id": "lieu_puits_de_memoire",
+          "name": "Puits de Mémoire",
+          "function": "memoire"
+        }
+      ],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [
+        {
+          "resource_id": "ressource_pierre",
+          "density": "faible"
+        }
+      ],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [
+        {
+          "season": "saison_des_premieres_pousses",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_epis",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_brumes",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_du_repos",
+          "effect": "palette/terrain"
+        }
+      ],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_bois_des_retours",
+      "display_name": "Bois des Retours",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Bois des Retours' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Forêt où certains événements se répètent (canon).",
+      "location_id": "lieu_bois_des_retours",
+      "size": {
+        "w": 70,
+        "h": 70
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "feuillage",
+        "terre",
+        "herbe"
+      ],
+      "linked_maps": [
+        "map_vallee_claire",
+        "map_lac_muet"
+      ],
+      "seed": 2146203072,
+      "regions": [
+        {
+          "id": "region_bois_des_retours_principale",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 70
+          }
+        }
+      ],
+      "zones": [
+        {
+          "id": "zone_bois_des_retours_explorable",
+          "walkable": true
+        },
+        {
+          "id": "zone_clairiere_cachee",
+          "walkable": true,
+          "hidden": true
+        }
+      ],
+      "paths": [
+        {
+          "id": "chemin_bois_des_retours_central",
+          "walkable": true,
+          "width": 2
+        }
+      ],
+      "entrances": [
+        {
+          "id": "entree_bois_des_retours_vallee_claire",
+          "to_map": "map_vallee_claire",
+          "edge": "bord"
+        },
+        {
+          "id": "entree_bois_des_retours_lac_muet",
+          "to_map": "map_lac_muet",
+          "edge": "bord"
+        }
+      ],
+      "exits": [
+        {
+          "id": "sortie_bois_des_retours_vallee_claire",
+          "to_map": "map_vallee_claire"
+        },
+        {
+          "id": "sortie_bois_des_retours_lac_muet",
+          "to_map": "map_lac_muet"
+        }
+      ],
+      "collisions": [
+        {
+          "terrain": "feuillage",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "terre",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "herbe",
+          "solid": false,
+          "blocks": false
+        }
+      ],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [
+        {
+          "id": "lieu_clairiere_qui_se_repete",
+          "name": "Clairière qui se répète",
+          "function": "secrets"
+        },
+        {
+          "id": "lieu_sentier_des_retours",
+          "name": "Sentier des Retours",
+          "function": "exploration"
+        }
+      ],
+      "buildings": [],
+      "secret_zones": [
+        {
+          "id": "secret_clairiere_repetition",
+          "discovery": "evenement_retour_du_bois"
+        }
+      ],
+      "resources": [
+        {
+          "resource_id": "ressource_bois",
+          "density": "moyenne"
+        }
+      ],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [
+        {
+          "entity_id": "creature_echo_du_bois",
+          "condition": "saison:saison_des_brumes",
+          "season": "saison_des_brumes"
+        }
+      ],
+      "seasonal_conditions": [
+        {
+          "season": "saison_des_premieres_pousses",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_epis",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_brumes",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_du_repos",
+          "effect": "palette/terrain"
+        }
+      ],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_lac_muet",
+      "display_name": "Lac Muet",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Lac Muet' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Zone d'exploration et de pêche (canon).",
+      "location_id": "lieu_lac_muet",
+      "size": {
+        "w": 60,
+        "h": 50
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "eau",
+        "pont",
+        "herbe"
+      ],
+      "linked_maps": [
+        "map_vallee_claire",
+        "map_bois_des_retours"
+      ],
+      "seed": 1556140070,
+      "regions": [
+        {
+          "id": "region_lac_muet_principale",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "w": 60,
+            "h": 50
+          }
+        }
+      ],
+      "zones": [
+        {
+          "id": "zone_lac_muet_explorable",
+          "walkable": true
+        },
+        {
+          "id": "zone_poste_de_peche",
+          "walkable": true,
+          "terrain": "pont"
+        }
+      ],
+      "paths": [
+        {
+          "id": "chemin_lac_muet_central",
+          "walkable": true,
+          "width": 2
+        }
+      ],
+      "entrances": [
+        {
+          "id": "entree_lac_muet_vallee_claire",
+          "to_map": "map_vallee_claire",
+          "edge": "bord"
+        },
+        {
+          "id": "entree_lac_muet_bois_des_retours",
+          "to_map": "map_bois_des_retours",
+          "edge": "bord"
+        }
+      ],
+      "exits": [
+        {
+          "id": "sortie_lac_muet_vallee_claire",
+          "to_map": "map_vallee_claire"
+        },
+        {
+          "id": "sortie_lac_muet_bois_des_retours",
+          "to_map": "map_bois_des_retours"
+        }
+      ],
+      "collisions": [
+        {
+          "terrain": "eau",
+          "solid": true,
+          "blocks": true
+        },
+        {
+          "terrain": "pont",
+          "solid": false,
+          "blocks": false
+        },
+        {
+          "terrain": "herbe",
+          "solid": false,
+          "blocks": false
+        }
+      ],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [
+        {
+          "id": "lieu_poste_de_peche_du_lac_muet",
+          "name": "Poste de pêche du Lac Muet",
+          "function": "peche"
+        }
+      ],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [
+        {
+          "resource_id": "ressource_argile",
+          "density": "faible"
+        }
+      ],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [
+        {
+          "entity_id": "creature_poisson_du_lac",
+          "condition": "zone:eau",
+          "season": "toutes"
+        }
+      ],
+      "seasonal_conditions": [
+        {
+          "season": "saison_des_premieres_pousses",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_epis",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_des_brumes",
+          "effect": "palette/terrain"
+        },
+        {
+          "season": "saison_du_repos",
+          "effect": "palette/terrain"
+        }
+      ],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    }
+  ]
+}

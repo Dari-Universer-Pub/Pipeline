@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED",
+  "entity_id": null,
+  "reason": "dimension de l'asset non spécifiée dans le contexte (width/height absents du manifest).",
+  "issues": []
+}

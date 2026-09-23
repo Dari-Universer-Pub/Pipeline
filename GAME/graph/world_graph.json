@@ -1,0 +1,2948 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "world_graph",
+  "generated_deterministic": true,
+  "payload": {
+    "node_count": 103,
+    "edge_count": 280,
+    "nodes": [
+      {
+        "id": "monde_valdore",
+        "type": "monde",
+        "display_name": "Valdore",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "joueur_jardinier",
+        "type": "joueur",
+        "display_name": "le Jardinier",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "system_temps",
+        "type": "system",
+        "display_name": "temps",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_meteo",
+        "type": "system",
+        "display_name": "meteo",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_agriculture",
+        "type": "system",
+        "display_name": "agriculture",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_memoire",
+        "type": "system",
+        "display_name": "memoire",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_artisanat",
+        "type": "system",
+        "display_name": "artisanat",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_cuisine",
+        "type": "system",
+        "display_name": "cuisine",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_exploration",
+        "type": "system",
+        "display_name": "exploration",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_navigation",
+        "type": "system",
+        "display_name": "navigation",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_relations",
+        "type": "system",
+        "display_name": "relations",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_economie",
+        "type": "system",
+        "display_name": "economie",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_refuge",
+        "type": "system",
+        "display_name": "refuge",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_secrets",
+        "type": "system",
+        "display_name": "secrets",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_evenements",
+        "type": "system",
+        "display_name": "evenements",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_progression",
+        "type": "system",
+        "display_name": "progression",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "system_peche",
+        "type": "system",
+        "display_name": "peche",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "fait_monde_valdore",
+        "type": "fait",
+        "display_name": "Le monde s’appelle Valdore",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "fait_joueur_jardinier",
+        "type": "fait",
+        "display_name": "Le joueur est appelé le Jardinier",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "fait_refuge_maison_racine",
+        "type": "fait",
+        "display_name": "Le refuge principal s’appelle la Maison-Racine",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "fait_fragments_physiques",
+        "type": "fait",
+        "display_name": "Les souvenirs existent sous forme de fragments physiques",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "fait_graines_echo",
+        "type": "fait",
+        "display_name": "Les graines d’écho peuvent faire pousser des plantes mémorielles",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "fait_pas_magie_combat",
+        "type": "fait",
+        "display_name": "Le jeu ne possède pas de magie de combat traditionnelle",
+        "status": "CANONIQUE"
+      },
+      {
+        "id": "saison_des_premieres_pousses",
+        "type": "saison",
+        "display_name": "Saison des Premières Pousses",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "saison_des_epis",
+        "type": "saison",
+        "display_name": "Saison des Épis",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "saison_des_brumes",
+        "type": "saison",
+        "display_name": "Saison des Brumes",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "saison_du_repos",
+        "type": "saison",
+        "display_name": "Saison du Repos",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "lieu_maison_racine",
+        "type": "lieu",
+        "display_name": "La Maison-Racine",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "lieu_vallee_claire",
+        "type": "lieu",
+        "display_name": "La Vallée Claire",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "lieu_bois_des_retours",
+        "type": "lieu",
+        "display_name": "Le Bois des Retours",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "lieu_lac_muet",
+        "type": "lieu",
+        "display_name": "Le Lac Muet",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "lieu_champ_de_la_vallee_claire",
+        "type": "lieu",
+        "display_name": "Champ de la Vallée Claire",
+        "status": "DEDUITE",
+        "system": "system_agriculture"
+      },
+      {
+        "id": "lieu_puits_de_memoire",
+        "type": "lieu",
+        "display_name": "Puits de Mémoire",
+        "status": "DEDUITE",
+        "system": "system_memoire"
+      },
+      {
+        "id": "lieu_atelier_de_la_maison_racine",
+        "type": "lieu",
+        "display_name": "Atelier de la Maison-Racine",
+        "status": "DEDUITE",
+        "system": "system_artisanat"
+      },
+      {
+        "id": "lieu_cuisine_de_la_maison_racine",
+        "type": "lieu",
+        "display_name": "Cuisine de la Maison-Racine",
+        "status": "DEDUITE",
+        "system": "system_cuisine"
+      },
+      {
+        "id": "lieu_clairiere_qui_se_repete",
+        "type": "lieu",
+        "display_name": "Clairière qui se répète",
+        "status": "DEDUITE",
+        "system": "system_secrets"
+      },
+      {
+        "id": "lieu_sentier_des_retours",
+        "type": "lieu",
+        "display_name": "Sentier des Retours",
+        "status": "DEDUITE",
+        "system": "system_exploration"
+      },
+      {
+        "id": "lieu_poste_de_peche_du_lac_muet",
+        "type": "lieu",
+        "display_name": "Poste de pêche du Lac Muet",
+        "status": "DEDUITE",
+        "system": "system_peche"
+      },
+      {
+        "id": "culture_floraison_d_echo",
+        "type": "culture",
+        "display_name": "Floraison d'Écho",
+        "status": "DEDUITE",
+        "system": "system_memoire"
+      },
+      {
+        "id": "culture_navet_de_la_vallee",
+        "type": "culture",
+        "display_name": "Navet de la Vallée",
+        "status": "PROPOSEE",
+        "system": "system_cuisine"
+      },
+      {
+        "id": "culture_ble_des_epis",
+        "type": "culture",
+        "display_name": "Blé des Épis",
+        "status": "PROPOSEE",
+        "system": "system_cuisine"
+      },
+      {
+        "id": "culture_courge_des_brumes",
+        "type": "culture",
+        "display_name": "Courge des Brumes",
+        "status": "PROPOSEE",
+        "system": "system_cuisine"
+      },
+      {
+        "id": "culture_lin_du_repos",
+        "type": "culture",
+        "display_name": "Lin du Repos",
+        "status": "PROPOSEE",
+        "system": "system_artisanat"
+      },
+      {
+        "id": "culture_souci_de_la_vallee",
+        "type": "culture",
+        "display_name": "Souci de la Vallée",
+        "status": "PROPOSEE",
+        "system": "system_relations"
+      },
+      {
+        "id": "ressource_bois",
+        "type": "ressource",
+        "display_name": "Bois",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "ressource_pierre",
+        "type": "ressource",
+        "display_name": "Pierre",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "ressource_argile",
+        "type": "ressource",
+        "display_name": "Argile",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "machine_etabli_de_marin",
+        "type": "machine",
+        "display_name": "Établi de Marin",
+        "status": "DEDUITE",
+        "system": "system_artisanat"
+      },
+      {
+        "id": "machine_foyer_de_la_maison_racine",
+        "type": "machine",
+        "display_name": "Foyer de la Maison-Racine",
+        "status": "DEDUITE",
+        "system": "system_cuisine"
+      },
+      {
+        "id": "machine_metier_a_tisser",
+        "type": "machine",
+        "display_name": "Métier à tisser",
+        "status": "DEDUITE",
+        "system": "system_artisanat"
+      },
+      {
+        "id": "machine_puits_de_memoire",
+        "type": "machine",
+        "display_name": "Puits de Mémoire",
+        "status": "DEDUITE",
+        "system": "system_memoire"
+      },
+      {
+        "id": "recette_soupe_de_navet",
+        "type": "recette",
+        "display_name": "Soupe de navet",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_pain_de_ble",
+        "type": "recette",
+        "display_name": "Pain de blé",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_courge_rotie",
+        "type": "recette",
+        "display_name": "Courge rôtie",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_tisane_de_souci",
+        "type": "recette",
+        "display_name": "Tisane de souci",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_planche",
+        "type": "recette",
+        "display_name": "Planche",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_fil_de_lin",
+        "type": "recette",
+        "display_name": "Fil de lin",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_toile",
+        "type": "recette",
+        "display_name": "Toile",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "recette_fragment_ravive",
+        "type": "recette",
+        "display_name": "Fragment ravivé",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_d_echo",
+        "type": "objet",
+        "display_name": "Graine d’Écho",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "objet_houe_de_depart",
+        "type": "objet",
+        "display_name": "Houe de départ",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "objet_arrosoir_de_cuivre",
+        "type": "objet",
+        "display_name": "Arrosoir de cuivre",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "objet_fragment_de_souvenir",
+        "type": "objet",
+        "display_name": "Fragment de souvenir",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "objet_carnet_du_jardinier",
+        "type": "objet",
+        "display_name": "Carnet du Jardinier",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "objet_ligne_de_peche",
+        "type": "objet",
+        "display_name": "Ligne de pêche",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_echo_cristallin",
+        "type": "objet",
+        "display_name": "Écho Cristallin",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_de_navet_de_la_vallee",
+        "type": "objet",
+        "display_name": "Graine de Navet de la Vallée",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_navet",
+        "type": "objet",
+        "display_name": "Navet",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_de_ble_des_epis",
+        "type": "objet",
+        "display_name": "Graine de Blé des Épis",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_grain_de_ble",
+        "type": "objet",
+        "display_name": "Grain de blé",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_de_courge_des_brumes",
+        "type": "objet",
+        "display_name": "Graine de Courge des Brumes",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_courge",
+        "type": "objet",
+        "display_name": "Courge",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_de_lin_du_repos",
+        "type": "objet",
+        "display_name": "Graine de Lin du Repos",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_fibre_de_lin",
+        "type": "objet",
+        "display_name": "Fibre de lin",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_graine_de_souci_de_la_vallee",
+        "type": "objet",
+        "display_name": "Graine de Souci de la Vallée",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "objet_fleur_de_souci",
+        "type": "objet",
+        "display_name": "Fleur de souci",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_soupe_de_navet",
+        "type": "objet",
+        "display_name": "Soupe de navet",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_pain_de_ble",
+        "type": "objet",
+        "display_name": "Pain de ble",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_courge_rotie",
+        "type": "objet",
+        "display_name": "Courge rotie",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_tisane_de_souci",
+        "type": "objet",
+        "display_name": "Tisane de souci",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_planche",
+        "type": "objet",
+        "display_name": "Planche",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_fil_de_lin",
+        "type": "objet",
+        "display_name": "Fil de lin",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_toile",
+        "type": "objet",
+        "display_name": "Toile",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "objet_poisson_du_lac",
+        "type": "objet",
+        "display_name": "Poisson du lac",
+        "status": "DEDUITE",
+        "system": null
+      },
+      {
+        "id": "pnj_alba",
+        "type": "pnj",
+        "display_name": "Alba",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "pnj_marin",
+        "type": "pnj",
+        "display_name": "Marin",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "pnj_nox",
+        "type": "pnj",
+        "display_name": "Nox",
+        "status": "CANONIQUE",
+        "system": null
+      },
+      {
+        "id": "creature_poisson_du_lac",
+        "type": "creature",
+        "display_name": "Poisson du Lac",
+        "status": "PROPOSEE",
+        "system": "system_peche"
+      },
+      {
+        "id": "creature_echo_du_bois",
+        "type": "creature",
+        "display_name": "Écho du Bois",
+        "status": "PROPOSEE",
+        "system": "system_secrets"
+      },
+      {
+        "id": "quete_le_premier_echo",
+        "type": "quete",
+        "display_name": "Le premier écho",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "quete_l_outil_de_marin",
+        "type": "quete",
+        "display_name": "L'outil de Marin",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "quete_le_silence_de_nox",
+        "type": "quete",
+        "display_name": "Le silence de Nox",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "quete_ce_qui_se_repete",
+        "type": "quete",
+        "display_name": "Ce qui se répète",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "evenement_retour_du_bois",
+        "type": "evenement",
+        "display_name": "Retour du Bois",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "evenement_pluie_sur_la_vallee",
+        "type": "evenement",
+        "display_name": "Pluie sur la Vallée",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "evenement_le_puits_chante",
+        "type": "evenement",
+        "display_name": "Le Puits chante",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "evenement_marche_de_la_vallee",
+        "type": "evenement",
+        "display_name": "Marché de la Vallée",
+        "status": "PROPOSEE",
+        "system": null
+      },
+      {
+        "id": "secret_clairiere_repetition",
+        "type": "secret",
+        "display_name": "Ce qui se répète dans le Bois",
+        "status": "DEDUITE",
+        "system": "system_secrets, system_memoire"
+      },
+      {
+        "id": "secret_passe_nox",
+        "type": "secret",
+        "display_name": "Le passé tu de Nox",
+        "status": "DEDUITE",
+        "system": "system_relations, system_memoire"
+      },
+      {
+        "id": "map_maison_racine",
+        "type": "map",
+        "display_name": "Maison-Racine",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "map_vallee_claire",
+        "type": "map",
+        "display_name": "Vallée Claire",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "map_bois_des_retours",
+        "type": "map",
+        "display_name": "Bois des Retours",
+        "status": "DEDUITE"
+      },
+      {
+        "id": "map_lac_muet",
+        "type": "map",
+        "display_name": "Lac Muet",
+        "status": "DEDUITE"
+      }
+    ],
+    "edges": [
+      {
+        "id": "utilise:system_meteo->system_temps",
+        "type": "utilise",
+        "source": "system_meteo",
+        "target": "system_temps",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->system_temps",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "system_temps",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->system_meteo",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "system_meteo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_memoire->system_agriculture",
+        "type": "utilise",
+        "source": "system_memoire",
+        "target": "system_agriculture",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->system_agriculture",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "system_agriculture",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_cuisine->system_artisanat",
+        "type": "utilise",
+        "source": "system_cuisine",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_cuisine->system_agriculture",
+        "type": "utilise",
+        "source": "system_cuisine",
+        "target": "system_agriculture",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_exploration->system_temps",
+        "type": "utilise",
+        "source": "system_exploration",
+        "target": "system_temps",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_navigation->system_exploration",
+        "type": "utilise",
+        "source": "system_navigation",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->system_exploration",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->system_artisanat",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->system_relations",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_refuge->system_artisanat",
+        "type": "utilise",
+        "source": "system_refuge",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_secrets->system_exploration",
+        "type": "utilise",
+        "source": "system_secrets",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_secrets->system_memoire",
+        "type": "utilise",
+        "source": "system_secrets",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_evenements->system_temps",
+        "type": "utilise",
+        "source": "system_evenements",
+        "target": "system_temps",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_evenements->system_relations",
+        "type": "utilise",
+        "source": "system_evenements",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_evenements->system_exploration",
+        "type": "utilise",
+        "source": "system_evenements",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_progression->system_relations",
+        "type": "utilise",
+        "source": "system_progression",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_progression->system_evenements",
+        "type": "utilise",
+        "source": "system_progression",
+        "target": "system_evenements",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_progression->system_exploration",
+        "type": "utilise",
+        "source": "system_progression",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_peche->system_exploration",
+        "type": "utilise",
+        "source": "system_peche",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_floraison_d_echo->objet_graine_d_echo",
+        "type": "consomme",
+        "source": "culture_floraison_d_echo",
+        "target": "objet_graine_d_echo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_floraison_d_echo->objet_echo_cristallin",
+        "type": "produit",
+        "source": "culture_floraison_d_echo",
+        "target": "objet_echo_cristallin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_floraison_d_echo->saison_des_brumes",
+        "type": "pousse_dans",
+        "source": "culture_floraison_d_echo",
+        "target": "saison_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_floraison_d_echo->system_memoire",
+        "type": "releve_de",
+        "source": "culture_floraison_d_echo",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_navet_de_la_vallee->objet_graine_de_navet_de_la_vallee",
+        "type": "consomme",
+        "source": "culture_navet_de_la_vallee",
+        "target": "objet_graine_de_navet_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_navet_de_la_vallee->objet_navet",
+        "type": "produit",
+        "source": "culture_navet_de_la_vallee",
+        "target": "objet_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_navet_de_la_vallee->saison_des_premieres_pousses",
+        "type": "pousse_dans",
+        "source": "culture_navet_de_la_vallee",
+        "target": "saison_des_premieres_pousses",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_navet_de_la_vallee->system_cuisine",
+        "type": "releve_de",
+        "source": "culture_navet_de_la_vallee",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_ble_des_epis->objet_graine_de_ble_des_epis",
+        "type": "consomme",
+        "source": "culture_ble_des_epis",
+        "target": "objet_graine_de_ble_des_epis",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_ble_des_epis->objet_grain_de_ble",
+        "type": "produit",
+        "source": "culture_ble_des_epis",
+        "target": "objet_grain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_ble_des_epis->saison_des_epis",
+        "type": "pousse_dans",
+        "source": "culture_ble_des_epis",
+        "target": "saison_des_epis",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_ble_des_epis->system_cuisine",
+        "type": "releve_de",
+        "source": "culture_ble_des_epis",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_courge_des_brumes->objet_graine_de_courge_des_brumes",
+        "type": "consomme",
+        "source": "culture_courge_des_brumes",
+        "target": "objet_graine_de_courge_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_courge_des_brumes->objet_courge",
+        "type": "produit",
+        "source": "culture_courge_des_brumes",
+        "target": "objet_courge",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_courge_des_brumes->saison_des_brumes",
+        "type": "pousse_dans",
+        "source": "culture_courge_des_brumes",
+        "target": "saison_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_courge_des_brumes->system_cuisine",
+        "type": "releve_de",
+        "source": "culture_courge_des_brumes",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_lin_du_repos->objet_graine_de_lin_du_repos",
+        "type": "consomme",
+        "source": "culture_lin_du_repos",
+        "target": "objet_graine_de_lin_du_repos",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_lin_du_repos->objet_fibre_de_lin",
+        "type": "produit",
+        "source": "culture_lin_du_repos",
+        "target": "objet_fibre_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_lin_du_repos->saison_du_repos",
+        "type": "pousse_dans",
+        "source": "culture_lin_du_repos",
+        "target": "saison_du_repos",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_lin_du_repos->system_artisanat",
+        "type": "releve_de",
+        "source": "culture_lin_du_repos",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:culture_souci_de_la_vallee->objet_graine_de_souci_de_la_vallee",
+        "type": "consomme",
+        "source": "culture_souci_de_la_vallee",
+        "target": "objet_graine_de_souci_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:culture_souci_de_la_vallee->objet_fleur_de_souci",
+        "type": "produit",
+        "source": "culture_souci_de_la_vallee",
+        "target": "objet_fleur_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_souci_de_la_vallee->saison_des_premieres_pousses",
+        "type": "pousse_dans",
+        "source": "culture_souci_de_la_vallee",
+        "target": "saison_des_premieres_pousses",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "pousse_dans:culture_souci_de_la_vallee->saison_des_epis",
+        "type": "pousse_dans",
+        "source": "culture_souci_de_la_vallee",
+        "target": "saison_des_epis",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:culture_souci_de_la_vallee->system_relations",
+        "type": "releve_de",
+        "source": "culture_souci_de_la_vallee",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_maison_racine->lieu_maison_racine",
+        "type": "contient",
+        "source": "map_maison_racine",
+        "target": "lieu_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "connecte_a:map_maison_racine->map_vallee_claire",
+        "type": "connecte_a",
+        "source": "map_maison_racine",
+        "target": "map_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:map_maison_racine->system_navigation",
+        "type": "releve_de",
+        "source": "map_maison_racine",
+        "target": "system_navigation",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_vallee_claire->lieu_vallee_claire",
+        "type": "contient",
+        "source": "map_vallee_claire",
+        "target": "lieu_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "connecte_a:map_vallee_claire->map_maison_racine",
+        "type": "connecte_a",
+        "source": "map_vallee_claire",
+        "target": "map_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "connecte_a:map_vallee_claire->map_bois_des_retours",
+        "type": "connecte_a",
+        "source": "map_vallee_claire",
+        "target": "map_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "connecte_a:map_vallee_claire->map_lac_muet",
+        "type": "connecte_a",
+        "source": "map_vallee_claire",
+        "target": "map_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:map_vallee_claire->system_navigation",
+        "type": "releve_de",
+        "source": "map_vallee_claire",
+        "target": "system_navigation",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_bois_des_retours->lieu_bois_des_retours",
+        "type": "contient",
+        "source": "map_bois_des_retours",
+        "target": "lieu_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "connecte_a:map_bois_des_retours->map_vallee_claire",
+        "type": "connecte_a",
+        "source": "map_bois_des_retours",
+        "target": "map_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "connecte_a:map_bois_des_retours->map_lac_muet",
+        "type": "connecte_a",
+        "source": "map_bois_des_retours",
+        "target": "map_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:map_bois_des_retours->system_navigation",
+        "type": "releve_de",
+        "source": "map_bois_des_retours",
+        "target": "system_navigation",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_lac_muet->lieu_lac_muet",
+        "type": "contient",
+        "source": "map_lac_muet",
+        "target": "lieu_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "connecte_a:map_lac_muet->map_vallee_claire",
+        "type": "connecte_a",
+        "source": "map_lac_muet",
+        "target": "map_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "connecte_a:map_lac_muet->map_bois_des_retours",
+        "type": "connecte_a",
+        "source": "map_lac_muet",
+        "target": "map_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:map_lac_muet->system_navigation",
+        "type": "releve_de",
+        "source": "map_lac_muet",
+        "target": "system_navigation",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_refuge->lieu_maison_racine",
+        "type": "utilise",
+        "source": "system_refuge",
+        "target": "lieu_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->lieu_vallee_claire",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "lieu_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_secrets->lieu_bois_des_retours",
+        "type": "utilise",
+        "source": "system_secrets",
+        "target": "lieu_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_peche->lieu_lac_muet",
+        "type": "utilise",
+        "source": "system_peche",
+        "target": "lieu_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_vallee_claire->lieu_champ_de_la_vallee_claire",
+        "type": "contient",
+        "source": "map_vallee_claire",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_vallee_claire->lieu_champ_de_la_vallee_claire",
+        "type": "contient",
+        "source": "lieu_vallee_claire",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_champ_de_la_vallee_claire->system_agriculture",
+        "type": "releve_de",
+        "source": "lieu_champ_de_la_vallee_claire",
+        "target": "system_agriculture",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_vallee_claire->lieu_puits_de_memoire",
+        "type": "contient",
+        "source": "map_vallee_claire",
+        "target": "lieu_puits_de_memoire",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_vallee_claire->lieu_puits_de_memoire",
+        "type": "contient",
+        "source": "lieu_vallee_claire",
+        "target": "lieu_puits_de_memoire",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_puits_de_memoire->system_memoire",
+        "type": "releve_de",
+        "source": "lieu_puits_de_memoire",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_maison_racine->lieu_atelier_de_la_maison_racine",
+        "type": "contient",
+        "source": "map_maison_racine",
+        "target": "lieu_atelier_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_maison_racine->lieu_atelier_de_la_maison_racine",
+        "type": "contient",
+        "source": "lieu_maison_racine",
+        "target": "lieu_atelier_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_atelier_de_la_maison_racine->system_artisanat",
+        "type": "releve_de",
+        "source": "lieu_atelier_de_la_maison_racine",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_maison_racine->lieu_cuisine_de_la_maison_racine",
+        "type": "contient",
+        "source": "map_maison_racine",
+        "target": "lieu_cuisine_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_maison_racine->lieu_cuisine_de_la_maison_racine",
+        "type": "contient",
+        "source": "lieu_maison_racine",
+        "target": "lieu_cuisine_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_cuisine_de_la_maison_racine->system_cuisine",
+        "type": "releve_de",
+        "source": "lieu_cuisine_de_la_maison_racine",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_bois_des_retours->lieu_clairiere_qui_se_repete",
+        "type": "contient",
+        "source": "map_bois_des_retours",
+        "target": "lieu_clairiere_qui_se_repete",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_bois_des_retours->lieu_clairiere_qui_se_repete",
+        "type": "contient",
+        "source": "lieu_bois_des_retours",
+        "target": "lieu_clairiere_qui_se_repete",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_clairiere_qui_se_repete->system_secrets",
+        "type": "releve_de",
+        "source": "lieu_clairiere_qui_se_repete",
+        "target": "system_secrets",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_bois_des_retours->lieu_sentier_des_retours",
+        "type": "contient",
+        "source": "map_bois_des_retours",
+        "target": "lieu_sentier_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_bois_des_retours->lieu_sentier_des_retours",
+        "type": "contient",
+        "source": "lieu_bois_des_retours",
+        "target": "lieu_sentier_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_sentier_des_retours->system_exploration",
+        "type": "releve_de",
+        "source": "lieu_sentier_des_retours",
+        "target": "system_exploration",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:map_lac_muet->lieu_poste_de_peche_du_lac_muet",
+        "type": "contient",
+        "source": "map_lac_muet",
+        "target": "lieu_poste_de_peche_du_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:lieu_lac_muet->lieu_poste_de_peche_du_lac_muet",
+        "type": "contient",
+        "source": "lieu_lac_muet",
+        "target": "lieu_poste_de_peche_du_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:lieu_poste_de_peche_du_lac_muet->system_peche",
+        "type": "releve_de",
+        "source": "lieu_poste_de_peche_du_lac_muet",
+        "target": "system_peche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_etabli_de_marin->ressource_bois",
+        "type": "consomme",
+        "source": "machine_etabli_de_marin",
+        "target": "ressource_bois",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_etabli_de_marin->ressource_pierre",
+        "type": "consomme",
+        "source": "machine_etabli_de_marin",
+        "target": "ressource_pierre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:machine_etabli_de_marin->objet_planche",
+        "type": "produit",
+        "source": "machine_etabli_de_marin",
+        "target": "objet_planche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:pnj_marin->machine_etabli_de_marin",
+        "type": "produit",
+        "source": "pnj_marin",
+        "target": "machine_etabli_de_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:machine_etabli_de_marin->recette_planche",
+        "type": "contient",
+        "source": "machine_etabli_de_marin",
+        "target": "recette_planche",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:machine_etabli_de_marin->system_artisanat",
+        "type": "releve_de",
+        "source": "machine_etabli_de_marin",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_foyer_de_la_maison_racine->ressource_argile",
+        "type": "consomme",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "ressource_argile",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_foyer_de_la_maison_racine->ressource_pierre",
+        "type": "consomme",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "ressource_pierre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:machine_foyer_de_la_maison_racine->recette_soupe_de_navet",
+        "type": "contient",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "recette_soupe_de_navet",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:machine_foyer_de_la_maison_racine->recette_pain_de_ble",
+        "type": "contient",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "recette_pain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:machine_foyer_de_la_maison_racine->recette_courge_rotie",
+        "type": "contient",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "recette_courge_rotie",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:machine_foyer_de_la_maison_racine->recette_tisane_de_souci",
+        "type": "contient",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "recette_tisane_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:machine_foyer_de_la_maison_racine->system_cuisine",
+        "type": "releve_de",
+        "source": "machine_foyer_de_la_maison_racine",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_metier_a_tisser->objet_fibre_de_lin",
+        "type": "consomme",
+        "source": "machine_metier_a_tisser",
+        "target": "objet_fibre_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:machine_metier_a_tisser->objet_fil_de_lin",
+        "type": "produit",
+        "source": "machine_metier_a_tisser",
+        "target": "objet_fil_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:pnj_marin->machine_metier_a_tisser",
+        "type": "produit",
+        "source": "pnj_marin",
+        "target": "machine_metier_a_tisser",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:machine_metier_a_tisser->recette_fil_de_lin",
+        "type": "contient",
+        "source": "machine_metier_a_tisser",
+        "target": "recette_fil_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:machine_metier_a_tisser->recette_toile",
+        "type": "contient",
+        "source": "machine_metier_a_tisser",
+        "target": "recette_toile",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:machine_metier_a_tisser->system_artisanat",
+        "type": "releve_de",
+        "source": "machine_metier_a_tisser",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:machine_puits_de_memoire->objet_echo_cristallin",
+        "type": "consomme",
+        "source": "machine_puits_de_memoire",
+        "target": "objet_echo_cristallin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:machine_puits_de_memoire->objet_fragment_de_souvenir",
+        "type": "produit",
+        "source": "machine_puits_de_memoire",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:machine_puits_de_memoire->recette_fragment_ravive",
+        "type": "contient",
+        "source": "machine_puits_de_memoire",
+        "target": "recette_fragment_ravive",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "releve_de:machine_puits_de_memoire->system_memoire",
+        "type": "releve_de",
+        "source": "machine_puits_de_memoire",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_soupe_de_navet->machine_foyer_de_la_maison_racine",
+        "type": "utilise",
+        "source": "recette_soupe_de_navet",
+        "target": "machine_foyer_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_soupe_de_navet->objet_navet",
+        "type": "consomme",
+        "source": "recette_soupe_de_navet",
+        "target": "objet_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_soupe_de_navet->objet_soupe_de_navet",
+        "type": "transforme",
+        "source": "recette_soupe_de_navet",
+        "target": "objet_soupe_de_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_soupe_de_navet->system_cuisine",
+        "type": "releve_de",
+        "source": "recette_soupe_de_navet",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_pain_de_ble->machine_foyer_de_la_maison_racine",
+        "type": "utilise",
+        "source": "recette_pain_de_ble",
+        "target": "machine_foyer_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_pain_de_ble->objet_grain_de_ble",
+        "type": "consomme",
+        "source": "recette_pain_de_ble",
+        "target": "objet_grain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_pain_de_ble->objet_pain_de_ble",
+        "type": "transforme",
+        "source": "recette_pain_de_ble",
+        "target": "objet_pain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_pain_de_ble->system_cuisine",
+        "type": "releve_de",
+        "source": "recette_pain_de_ble",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_courge_rotie->machine_foyer_de_la_maison_racine",
+        "type": "utilise",
+        "source": "recette_courge_rotie",
+        "target": "machine_foyer_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_courge_rotie->objet_courge",
+        "type": "consomme",
+        "source": "recette_courge_rotie",
+        "target": "objet_courge",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_courge_rotie->objet_courge_rotie",
+        "type": "transforme",
+        "source": "recette_courge_rotie",
+        "target": "objet_courge_rotie",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_courge_rotie->system_cuisine",
+        "type": "releve_de",
+        "source": "recette_courge_rotie",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_tisane_de_souci->machine_foyer_de_la_maison_racine",
+        "type": "utilise",
+        "source": "recette_tisane_de_souci",
+        "target": "machine_foyer_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_tisane_de_souci->objet_fleur_de_souci",
+        "type": "consomme",
+        "source": "recette_tisane_de_souci",
+        "target": "objet_fleur_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_tisane_de_souci->objet_tisane_de_souci",
+        "type": "transforme",
+        "source": "recette_tisane_de_souci",
+        "target": "objet_tisane_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_tisane_de_souci->system_cuisine",
+        "type": "releve_de",
+        "source": "recette_tisane_de_souci",
+        "target": "system_cuisine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_planche->machine_etabli_de_marin",
+        "type": "utilise",
+        "source": "recette_planche",
+        "target": "machine_etabli_de_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_planche->ressource_bois",
+        "type": "consomme",
+        "source": "recette_planche",
+        "target": "ressource_bois",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_planche->objet_planche",
+        "type": "transforme",
+        "source": "recette_planche",
+        "target": "objet_planche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_planche->system_artisanat",
+        "type": "releve_de",
+        "source": "recette_planche",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_fil_de_lin->machine_metier_a_tisser",
+        "type": "utilise",
+        "source": "recette_fil_de_lin",
+        "target": "machine_metier_a_tisser",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_fil_de_lin->objet_fibre_de_lin",
+        "type": "consomme",
+        "source": "recette_fil_de_lin",
+        "target": "objet_fibre_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_fil_de_lin->objet_fil_de_lin",
+        "type": "transforme",
+        "source": "recette_fil_de_lin",
+        "target": "objet_fil_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_fil_de_lin->system_artisanat",
+        "type": "releve_de",
+        "source": "recette_fil_de_lin",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_toile->machine_metier_a_tisser",
+        "type": "utilise",
+        "source": "recette_toile",
+        "target": "machine_metier_a_tisser",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_toile->objet_fil_de_lin",
+        "type": "consomme",
+        "source": "recette_toile",
+        "target": "objet_fil_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_toile->objet_toile",
+        "type": "transforme",
+        "source": "recette_toile",
+        "target": "objet_toile",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_toile->system_artisanat",
+        "type": "releve_de",
+        "source": "recette_toile",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:recette_fragment_ravive->machine_puits_de_memoire",
+        "type": "utilise",
+        "source": "recette_fragment_ravive",
+        "target": "machine_puits_de_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:recette_fragment_ravive->objet_echo_cristallin",
+        "type": "consomme",
+        "source": "recette_fragment_ravive",
+        "target": "objet_echo_cristallin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:recette_fragment_ravive->objet_fragment_de_souvenir",
+        "type": "transforme",
+        "source": "recette_fragment_ravive",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:recette_fragment_ravive->quete_le_premier_echo",
+        "type": "requiert",
+        "source": "recette_fragment_ravive",
+        "target": "quete_le_premier_echo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:recette_fragment_ravive->system_memoire",
+        "type": "releve_de",
+        "source": "recette_fragment_ravive",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:system_exploration->ressource_bois",
+        "type": "produit",
+        "source": "system_exploration",
+        "target": "ressource_bois",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:system_artisanat->ressource_bois",
+        "type": "consomme",
+        "source": "system_artisanat",
+        "target": "ressource_bois",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:system_exploration->ressource_pierre",
+        "type": "produit",
+        "source": "system_exploration",
+        "target": "ressource_pierre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:system_artisanat->ressource_pierre",
+        "type": "consomme",
+        "source": "system_artisanat",
+        "target": "ressource_pierre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:system_exploration->ressource_argile",
+        "type": "produit",
+        "source": "system_exploration",
+        "target": "ressource_argile",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "consomme:system_artisanat->ressource_argile",
+        "type": "consomme",
+        "source": "system_artisanat",
+        "target": "ressource_argile",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_memoire->objet_graine_d_echo",
+        "type": "utilise",
+        "source": "system_memoire",
+        "target": "objet_graine_d_echo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->objet_graine_d_echo",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "objet_graine_d_echo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->objet_houe_de_depart",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "objet_houe_de_depart",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_agriculture->objet_arrosoir_de_cuivre",
+        "type": "utilise",
+        "source": "system_agriculture",
+        "target": "objet_arrosoir_de_cuivre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_memoire->objet_fragment_de_souvenir",
+        "type": "utilise",
+        "source": "system_memoire",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_fragment_de_souvenir",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_progression->objet_carnet_du_jardinier",
+        "type": "utilise",
+        "source": "system_progression",
+        "target": "objet_carnet_du_jardinier",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "obtenu_par:objet_ligne_de_peche->pnj_nox",
+        "type": "obtenu_par",
+        "source": "objet_ligne_de_peche",
+        "target": "pnj_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_peche->objet_ligne_de_peche",
+        "type": "utilise",
+        "source": "system_peche",
+        "target": "objet_ligne_de_peche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_memoire->objet_echo_cristallin",
+        "type": "utilise",
+        "source": "system_memoire",
+        "target": "objet_echo_cristallin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:culture_navet_de_la_vallee->objet_graine_de_navet_de_la_vallee",
+        "type": "utilise",
+        "source": "culture_navet_de_la_vallee",
+        "target": "objet_graine_de_navet_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:objet_graine_de_navet_de_la_vallee->culture_navet_de_la_vallee",
+        "type": "transforme",
+        "source": "objet_graine_de_navet_de_la_vallee",
+        "target": "culture_navet_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_cuisine->objet_navet",
+        "type": "utilise",
+        "source": "system_cuisine",
+        "target": "objet_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:culture_ble_des_epis->objet_graine_de_ble_des_epis",
+        "type": "utilise",
+        "source": "culture_ble_des_epis",
+        "target": "objet_graine_de_ble_des_epis",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:objet_graine_de_ble_des_epis->culture_ble_des_epis",
+        "type": "transforme",
+        "source": "objet_graine_de_ble_des_epis",
+        "target": "culture_ble_des_epis",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_cuisine->objet_grain_de_ble",
+        "type": "utilise",
+        "source": "system_cuisine",
+        "target": "objet_grain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:culture_courge_des_brumes->objet_graine_de_courge_des_brumes",
+        "type": "utilise",
+        "source": "culture_courge_des_brumes",
+        "target": "objet_graine_de_courge_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:objet_graine_de_courge_des_brumes->culture_courge_des_brumes",
+        "type": "transforme",
+        "source": "objet_graine_de_courge_des_brumes",
+        "target": "culture_courge_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_cuisine->objet_courge",
+        "type": "utilise",
+        "source": "system_cuisine",
+        "target": "objet_courge",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:culture_lin_du_repos->objet_graine_de_lin_du_repos",
+        "type": "utilise",
+        "source": "culture_lin_du_repos",
+        "target": "objet_graine_de_lin_du_repos",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:objet_graine_de_lin_du_repos->culture_lin_du_repos",
+        "type": "transforme",
+        "source": "objet_graine_de_lin_du_repos",
+        "target": "culture_lin_du_repos",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->objet_fibre_de_lin",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "objet_fibre_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:culture_souci_de_la_vallee->objet_graine_de_souci_de_la_vallee",
+        "type": "utilise",
+        "source": "culture_souci_de_la_vallee",
+        "target": "objet_graine_de_souci_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "transforme:objet_graine_de_souci_de_la_vallee->culture_souci_de_la_vallee",
+        "type": "transforme",
+        "source": "objet_graine_de_souci_de_la_vallee",
+        "target": "culture_souci_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_fleur_de_souci",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_fleur_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->objet_soupe_de_navet",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "objet_soupe_de_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_soupe_de_navet",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_soupe_de_navet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->objet_pain_de_ble",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "objet_pain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_pain_de_ble",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_pain_de_ble",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->objet_courge_rotie",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "objet_courge_rotie",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_courge_rotie",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_courge_rotie",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->objet_tisane_de_souci",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "objet_tisane_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->objet_tisane_de_souci",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "objet_tisane_de_souci",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->objet_planche",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "objet_planche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->objet_fil_de_lin",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "objet_fil_de_lin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->objet_toile",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "objet_toile",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:creature_poisson_du_lac->objet_poisson_du_lac",
+        "type": "produit",
+        "source": "creature_poisson_du_lac",
+        "target": "objet_poisson_du_lac",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_peche->objet_poisson_du_lac",
+        "type": "utilise",
+        "source": "system_peche",
+        "target": "objet_poisson_du_lac",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->objet_poisson_du_lac",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "objet_poisson_du_lac",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "habite:pnj_alba->lieu_maison_racine",
+        "type": "habite",
+        "source": "pnj_alba",
+        "target": "lieu_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "frequente:pnj_alba->lieu_maison_racine",
+        "type": "frequente",
+        "source": "pnj_alba",
+        "target": "lieu_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "frequente:pnj_alba->lieu_champ_de_la_vallee_claire",
+        "type": "frequente",
+        "source": "pnj_alba",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_alba->fait_monde_valdore",
+        "type": "requiert",
+        "source": "pnj_alba",
+        "target": "fait_monde_valdore",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_alba->fait_joueur_jardinier",
+        "type": "requiert",
+        "source": "pnj_alba",
+        "target": "fait_joueur_jardinier",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_alba->lieu_maison_racine",
+        "type": "requiert",
+        "source": "pnj_alba",
+        "target": "lieu_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_alba->lieu_vallee_claire",
+        "type": "requiert",
+        "source": "pnj_alba",
+        "target": "lieu_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_alba->culture_souci_de_la_vallee",
+        "type": "requiert",
+        "source": "pnj_alba",
+        "target": "culture_souci_de_la_vallee",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_relations->pnj_alba",
+        "type": "utilise",
+        "source": "system_relations",
+        "target": "pnj_alba",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:pnj_alba->system_relations",
+        "type": "releve_de",
+        "source": "pnj_alba",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "habite:pnj_marin->lieu_atelier_de_la_maison_racine",
+        "type": "habite",
+        "source": "pnj_marin",
+        "target": "lieu_atelier_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "frequente:pnj_marin->lieu_atelier_de_la_maison_racine",
+        "type": "frequente",
+        "source": "pnj_marin",
+        "target": "lieu_atelier_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_marin->fait_monde_valdore",
+        "type": "requiert",
+        "source": "pnj_marin",
+        "target": "fait_monde_valdore",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_marin->machine_etabli_de_marin",
+        "type": "requiert",
+        "source": "pnj_marin",
+        "target": "machine_etabli_de_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_marin->machine_metier_a_tisser",
+        "type": "requiert",
+        "source": "pnj_marin",
+        "target": "machine_metier_a_tisser",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_marin->ressource_bois",
+        "type": "requiert",
+        "source": "pnj_marin",
+        "target": "ressource_bois",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_marin->ressource_pierre",
+        "type": "requiert",
+        "source": "pnj_marin",
+        "target": "ressource_pierre",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->pnj_marin",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "pnj_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_artisanat->pnj_marin",
+        "type": "utilise",
+        "source": "system_artisanat",
+        "target": "pnj_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:pnj_marin->system_relations",
+        "type": "releve_de",
+        "source": "pnj_marin",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "habite:pnj_nox->lieu_poste_de_peche_du_lac_muet",
+        "type": "habite",
+        "source": "pnj_nox",
+        "target": "lieu_poste_de_peche_du_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "frequente:pnj_nox->lieu_poste_de_peche_du_lac_muet",
+        "type": "frequente",
+        "source": "pnj_nox",
+        "target": "lieu_poste_de_peche_du_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "frequente:pnj_nox->lieu_lac_muet",
+        "type": "frequente",
+        "source": "pnj_nox",
+        "target": "lieu_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_nox->lieu_lac_muet",
+        "type": "requiert",
+        "source": "pnj_nox",
+        "target": "lieu_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_nox->creature_poisson_du_lac",
+        "type": "requiert",
+        "source": "pnj_nox",
+        "target": "creature_poisson_du_lac",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:pnj_nox->fait_monde_valdore",
+        "type": "requiert",
+        "source": "pnj_nox",
+        "target": "fait_monde_valdore",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_economie->pnj_nox",
+        "type": "utilise",
+        "source": "system_economie",
+        "target": "pnj_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "utilise:system_peche->pnj_nox",
+        "type": "utilise",
+        "source": "system_peche",
+        "target": "pnj_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:pnj_nox->system_relations",
+        "type": "releve_de",
+        "source": "pnj_nox",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "habite:creature_poisson_du_lac->lieu_lac_muet",
+        "type": "habite",
+        "source": "creature_poisson_du_lac",
+        "target": "lieu_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:creature_poisson_du_lac->system_peche",
+        "type": "releve_de",
+        "source": "creature_poisson_du_lac",
+        "target": "system_peche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "habite:creature_echo_du_bois->lieu_bois_des_retours",
+        "type": "habite",
+        "source": "creature_echo_du_bois",
+        "target": "lieu_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "produit:creature_echo_du_bois->objet_fragment_de_souvenir",
+        "type": "produit",
+        "source": "creature_echo_du_bois",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:creature_echo_du_bois->system_secrets",
+        "type": "releve_de",
+        "source": "creature_echo_du_bois",
+        "target": "system_secrets",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "donne:pnj_alba->quete_le_premier_echo",
+        "type": "donne",
+        "source": "pnj_alba",
+        "target": "quete_le_premier_echo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:quete_le_premier_echo->lieu_champ_de_la_vallee_claire",
+        "type": "requiert",
+        "source": "quete_le_premier_echo",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_le_premier_echo->system_memoire",
+        "type": "releve_de",
+        "source": "quete_le_premier_echo",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_le_premier_echo->system_progression",
+        "type": "releve_de",
+        "source": "quete_le_premier_echo",
+        "target": "system_progression",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_le_premier_echo->objet_fragment_de_souvenir",
+        "type": "affecte",
+        "source": "quete_le_premier_echo",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "donne:pnj_marin->quete_l_outil_de_marin",
+        "type": "donne",
+        "source": "pnj_marin",
+        "target": "quete_l_outil_de_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:quete_l_outil_de_marin->lieu_atelier_de_la_maison_racine",
+        "type": "requiert",
+        "source": "quete_l_outil_de_marin",
+        "target": "lieu_atelier_de_la_maison_racine",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_l_outil_de_marin->system_artisanat",
+        "type": "releve_de",
+        "source": "quete_l_outil_de_marin",
+        "target": "system_artisanat",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_l_outil_de_marin->system_economie",
+        "type": "releve_de",
+        "source": "quete_l_outil_de_marin",
+        "target": "system_economie",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_l_outil_de_marin->machine_etabli_de_marin",
+        "type": "affecte",
+        "source": "quete_l_outil_de_marin",
+        "target": "machine_etabli_de_marin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "donne:pnj_nox->quete_le_silence_de_nox",
+        "type": "donne",
+        "source": "pnj_nox",
+        "target": "quete_le_silence_de_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:quete_le_silence_de_nox->lieu_poste_de_peche_du_lac_muet",
+        "type": "requiert",
+        "source": "quete_le_silence_de_nox",
+        "target": "lieu_poste_de_peche_du_lac_muet",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_le_silence_de_nox->system_relations",
+        "type": "releve_de",
+        "source": "quete_le_silence_de_nox",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_le_silence_de_nox->system_peche",
+        "type": "releve_de",
+        "source": "quete_le_silence_de_nox",
+        "target": "system_peche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_le_silence_de_nox->pnj_nox",
+        "type": "affecte",
+        "source": "quete_le_silence_de_nox",
+        "target": "pnj_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_le_silence_de_nox->objet_ligne_de_peche",
+        "type": "affecte",
+        "source": "quete_le_silence_de_nox",
+        "target": "objet_ligne_de_peche",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "donne:pnj_alba->quete_ce_qui_se_repete",
+        "type": "donne",
+        "source": "pnj_alba",
+        "target": "quete_ce_qui_se_repete",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:quete_ce_qui_se_repete->lieu_bois_des_retours",
+        "type": "requiert",
+        "source": "quete_ce_qui_se_repete",
+        "target": "lieu_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_ce_qui_se_repete->system_secrets",
+        "type": "releve_de",
+        "source": "quete_ce_qui_se_repete",
+        "target": "system_secrets",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:quete_ce_qui_se_repete->system_memoire",
+        "type": "releve_de",
+        "source": "quete_ce_qui_se_repete",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_ce_qui_se_repete->objet_fragment_de_souvenir",
+        "type": "affecte",
+        "source": "quete_ce_qui_se_repete",
+        "target": "objet_fragment_de_souvenir",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:quete_ce_qui_se_repete->secret_clairiere_repetition",
+        "type": "affecte",
+        "source": "quete_ce_qui_se_repete",
+        "target": "secret_clairiere_repetition",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_retour_du_bois->lieu_bois_des_retours",
+        "type": "requiert",
+        "source": "evenement_retour_du_bois",
+        "target": "lieu_bois_des_retours",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_retour_du_bois->system_secrets",
+        "type": "releve_de",
+        "source": "evenement_retour_du_bois",
+        "target": "system_secrets",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_retour_du_bois->system_evenements",
+        "type": "releve_de",
+        "source": "evenement_retour_du_bois",
+        "target": "system_evenements",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_retour_du_bois->saison_des_brumes",
+        "type": "requiert",
+        "source": "evenement_retour_du_bois",
+        "target": "saison_des_brumes",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "affecte:evenement_retour_du_bois->secret_clairiere_repetition",
+        "type": "affecte",
+        "source": "evenement_retour_du_bois",
+        "target": "secret_clairiere_repetition",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_pluie_sur_la_vallee->lieu_champ_de_la_vallee_claire",
+        "type": "requiert",
+        "source": "evenement_pluie_sur_la_vallee",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_pluie_sur_la_vallee->system_meteo",
+        "type": "releve_de",
+        "source": "evenement_pluie_sur_la_vallee",
+        "target": "system_meteo",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_pluie_sur_la_vallee->system_agriculture",
+        "type": "releve_de",
+        "source": "evenement_pluie_sur_la_vallee",
+        "target": "system_agriculture",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_le_puits_chante->lieu_puits_de_memoire",
+        "type": "requiert",
+        "source": "evenement_le_puits_chante",
+        "target": "lieu_puits_de_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_le_puits_chante->system_memoire",
+        "type": "releve_de",
+        "source": "evenement_le_puits_chante",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_le_puits_chante->objet_echo_cristallin",
+        "type": "requiert",
+        "source": "evenement_le_puits_chante",
+        "target": "objet_echo_cristallin",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "requiert:evenement_marche_de_la_vallee->lieu_champ_de_la_vallee_claire",
+        "type": "requiert",
+        "source": "evenement_marche_de_la_vallee",
+        "target": "lieu_champ_de_la_vallee_claire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_marche_de_la_vallee->system_economie",
+        "type": "releve_de",
+        "source": "evenement_marche_de_la_vallee",
+        "target": "system_economie",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:evenement_marche_de_la_vallee->system_relations",
+        "type": "releve_de",
+        "source": "evenement_marche_de_la_vallee",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:lieu_clairiere_qui_se_repete->secret_clairiere_repetition",
+        "type": "contient",
+        "source": "lieu_clairiere_qui_se_repete",
+        "target": "secret_clairiere_repetition",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "declenche:quete_ce_qui_se_repete->secret_clairiere_repetition",
+        "type": "declenche",
+        "source": "quete_ce_qui_se_repete",
+        "target": "secret_clairiere_repetition",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "declenche:evenement_retour_du_bois->secret_clairiere_repetition",
+        "type": "declenche",
+        "source": "evenement_retour_du_bois",
+        "target": "secret_clairiere_repetition",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:secret_clairiere_repetition->system_secrets",
+        "type": "releve_de",
+        "source": "secret_clairiere_repetition",
+        "target": "system_secrets",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:secret_clairiere_repetition->system_memoire",
+        "type": "releve_de",
+        "source": "secret_clairiere_repetition",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:lieu_poste_de_peche_du_lac_muet->secret_passe_nox",
+        "type": "contient",
+        "source": "lieu_poste_de_peche_du_lac_muet",
+        "target": "secret_passe_nox",
+        "status": "DEDUITE",
+        "implies_usage": false
+      },
+      {
+        "id": "declenche:quete_le_silence_de_nox->secret_passe_nox",
+        "type": "declenche",
+        "source": "quete_le_silence_de_nox",
+        "target": "secret_passe_nox",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:secret_passe_nox->system_relations",
+        "type": "releve_de",
+        "source": "secret_passe_nox",
+        "target": "system_relations",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:secret_passe_nox->system_memoire",
+        "type": "releve_de",
+        "source": "secret_passe_nox",
+        "target": "system_memoire",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "contient:monde_valdore->map_maison_racine",
+        "type": "contient",
+        "source": "monde_valdore",
+        "target": "map_maison_racine",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:monde_valdore->map_vallee_claire",
+        "type": "contient",
+        "source": "monde_valdore",
+        "target": "map_vallee_claire",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:monde_valdore->map_bois_des_retours",
+        "type": "contient",
+        "source": "monde_valdore",
+        "target": "map_bois_des_retours",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "contient:monde_valdore->map_lac_muet",
+        "type": "contient",
+        "source": "monde_valdore",
+        "target": "map_lac_muet",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "habite:joueur_jardinier->lieu_maison_racine",
+        "type": "habite",
+        "source": "joueur_jardinier",
+        "target": "lieu_maison_racine",
+        "status": "CANONIQUE",
+        "implies_usage": true
+      },
+      {
+        "id": "releve_de:joueur_jardinier->system_progression",
+        "type": "releve_de",
+        "source": "joueur_jardinier",
+        "target": "system_progression",
+        "status": "DEDUITE",
+        "implies_usage": true
+      },
+      {
+        "id": "decrit:fait_monde_valdore->monde_valdore",
+        "type": "decrit",
+        "source": "fait_monde_valdore",
+        "target": "monde_valdore",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "decrit:fait_joueur_jardinier->joueur_jardinier",
+        "type": "decrit",
+        "source": "fait_joueur_jardinier",
+        "target": "joueur_jardinier",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "decrit:fait_refuge_maison_racine->lieu_maison_racine",
+        "type": "decrit",
+        "source": "fait_refuge_maison_racine",
+        "target": "lieu_maison_racine",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "decrit:fait_fragments_physiques->objet_fragment_de_souvenir",
+        "type": "decrit",
+        "source": "fait_fragments_physiques",
+        "target": "objet_fragment_de_souvenir",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "decrit:fait_graines_echo->objet_graine_d_echo",
+        "type": "decrit",
+        "source": "fait_graines_echo",
+        "target": "objet_graine_d_echo",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      },
+      {
+        "id": "decrit:fait_pas_magie_combat->monde_valdore",
+        "type": "decrit",
+        "source": "fait_pas_magie_combat",
+        "target": "monde_valdore",
+        "status": "CANONIQUE",
+        "implies_usage": false
+      }
+    ]
+  }
+}

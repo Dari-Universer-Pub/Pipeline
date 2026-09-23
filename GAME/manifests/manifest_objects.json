@@ -1,0 +1,1028 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "manifest_objects",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "objet_graine_d_echo",
+      "display_name": "Graine d’Écho",
+      "status": "CANONIQUE",
+      "category": "graine",
+      "source": "INPUT/canon_initial.md#Objets canoniques",
+      "justification": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
+      "function": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "canon"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "system_memoire",
+        "system_agriculture"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": null,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Objet canonique non négociable.",
+        "system": "system_memoire, system_agriculture",
+        "obtention": "Défini par le canon.",
+        "consumers": "Systèmes canoniques associés.",
+        "consequences": "Ancre la boucle principale / la narration.",
+        "assets": "1 icône + sprite monde si applicable.",
+        "animations": "geste d'usage propre à l'outil.",
+        "tests": "test_canon, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_d_echo"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_houe_de_depart",
+      "display_name": "Houe de départ",
+      "status": "CANONIQUE",
+      "category": "outil",
+      "source": "INPUT/canon_initial.md#Objets canoniques",
+      "justification": "Outil de départ canonique ; prépare le sol.",
+      "function": "Outil de départ canonique ; prépare le sol.",
+      "gameplay_verb": "labourer",
+      "obtention": [
+        "canon"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "system_agriculture"
+      ],
+      "transforms_into": [],
+      "stackable": false,
+      "base_value": null,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Objet canonique non négociable.",
+        "system": "system_agriculture",
+        "obtention": "Défini par le canon.",
+        "consumers": "Systèmes canoniques associés.",
+        "consequences": "Ancre la boucle principale / la narration.",
+        "assets": "1 icône + sprite monde si applicable.",
+        "animations": "geste d'usage propre à l'outil.",
+        "tests": "test_canon, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_houe_de_depart",
+        "asset_sprite_outil_objet_houe_de_depart"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_arrosoir_de_cuivre",
+      "display_name": "Arrosoir de cuivre",
+      "status": "CANONIQUE",
+      "category": "outil",
+      "source": "INPUT/canon_initial.md#Objets canoniques",
+      "justification": "Arrosoir canonique ; arrose les cultures.",
+      "function": "Arrosoir canonique ; arrose les cultures.",
+      "gameplay_verb": "arroser",
+      "obtention": [
+        "canon"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "system_agriculture"
+      ],
+      "transforms_into": [],
+      "stackable": false,
+      "base_value": null,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Objet canonique non négociable.",
+        "system": "system_agriculture",
+        "obtention": "Défini par le canon.",
+        "consumers": "Systèmes canoniques associés.",
+        "consequences": "Ancre la boucle principale / la narration.",
+        "assets": "1 icône + sprite monde si applicable.",
+        "animations": "geste d'usage propre à l'outil.",
+        "tests": "test_canon, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_arrosoir_de_cuivre",
+        "asset_sprite_outil_objet_arrosoir_de_cuivre"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_fragment_de_souvenir",
+      "display_name": "Fragment de souvenir",
+      "status": "CANONIQUE",
+      "category": "fragment",
+      "source": "INPUT/canon_initial.md#Objets canoniques",
+      "justification": "Fragment de souvenir canonique ; unité narrative du système mémoire.",
+      "function": "Fragment de souvenir canonique ; unité narrative du système mémoire.",
+      "gameplay_verb": "commemorer",
+      "obtention": [
+        "canon"
+      ],
+      "loop_stage": 4,
+      "users": [
+        "system_memoire",
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 42,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Objet canonique non négociable.",
+        "system": "system_memoire, system_relations",
+        "obtention": "Défini par le canon.",
+        "consumers": "Systèmes canoniques associés.",
+        "consequences": "Ancre la boucle principale / la narration.",
+        "assets": "1 icône + sprite monde si applicable.",
+        "animations": "geste d'usage propre à l'outil.",
+        "tests": "test_canon, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_fragment_de_souvenir"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_carnet_du_jardinier",
+      "display_name": "Carnet du Jardinier",
+      "status": "CANONIQUE",
+      "category": "cle",
+      "source": "INPUT/canon_initial.md#Objets canoniques",
+      "justification": "Carnet canonique ; journal de progression et des souvenirs.",
+      "function": "Carnet canonique ; journal de progression et des souvenirs.",
+      "gameplay_verb": "consigner",
+      "obtention": [
+        "canon"
+      ],
+      "loop_stage": 0,
+      "users": [
+        "system_progression"
+      ],
+      "transforms_into": [],
+      "stackable": false,
+      "base_value": null,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Objet canonique non négociable.",
+        "system": "system_progression",
+        "obtention": "Défini par le canon.",
+        "consumers": "Systèmes canoniques associés.",
+        "consequences": "Ancre la boucle principale / la narration.",
+        "assets": "1 icône + sprite monde si applicable.",
+        "animations": "geste d'usage propre à l'outil.",
+        "tests": "test_canon, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_carnet_du_jardinier"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_ligne_de_peche",
+      "display_name": "Ligne de pêche",
+      "status": "DEDUITE",
+      "category": "outil",
+      "source": "INPUT/canon_initial.md#Lieux (Lac Muet) + brief#Systèmes",
+      "justification": "Outil requis par le système pêche (Lac Muet canonique).",
+      "function": "Pêcher au Lac Muet.",
+      "gameplay_verb": "pecher",
+      "obtention": [
+        "pnj:pnj_nox"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "system_peche"
+      ],
+      "transforms_into": [],
+      "stackable": false,
+      "base_value": 40,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet la pêche au Lac Muet (système peche).",
+        "system": "system_peche",
+        "obtention": "Don/achat auprès de Nox ou artisanat.",
+        "consumers": "system_peche.",
+        "consequences": "Produit du poisson (ressource).",
+        "assets": "1 icône + sprite de canne.",
+        "animations": "geste 'pêcher' 4 directions.",
+        "tests": "test_chaine_production, test_objet_utile, test_peche."
+      },
+      "required_assets": [
+        "asset_icone_objet_ligne_de_peche",
+        "asset_sprite_outil_objet_ligne_de_peche"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_echo_cristallin",
+      "display_name": "Écho Cristallin",
+      "status": "DEDUITE",
+      "category": "fragment",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "justification": "Produit de la plante mémorielle culture_floraison_d_echo.",
+      "function": "Écho Cristallin",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_floraison_d_echo"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_memoire"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 30,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Fragment du passé remonté par la culture (prémisse).",
+        "system": "system_agriculture, system_memoire",
+        "obtention": "Récolte de culture_floraison_d_echo à maturité.",
+        "consumers": "system_memoire ; recettes de transformation.",
+        "consequences": "Alimente le système mémoire/narration.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_echo_cristallin"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_graine_de_navet_de_la_vallee",
+      "display_name": "Graine de Navet de la Vallée",
+      "status": "DEDUITE",
+      "category": "graine",
+      "source": "brief#Boucles (explorer et trouver des graines)",
+      "justification": "Graine nécessaire pour planter culture_navet_de_la_vallee (système agriculture).",
+      "function": "Semence de Navet de la Vallée.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "lieu:exploration"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "culture_navet_de_la_vallee"
+      ],
+      "transforms_into": [
+        "culture_navet_de_la_vallee"
+      ],
+      "stackable": true,
+      "base_value": 5,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet de démarrer la culture culture_navet_de_la_vallee.",
+        "system": "system_agriculture, system_exploration",
+        "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+        "consumers": "culture culture_navet_de_la_vallee (plantée).",
+        "consequences": "Plantée -> croissance -> récolte.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste 'planter'.",
+        "tests": "test_chaine_production, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_de_navet_de_la_vallee"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_navet",
+      "display_name": "Navet",
+      "status": "PROPOSEE",
+      "category": "produit",
+      "source": "brief#Systèmes (system_cuisine)",
+      "justification": "Produit récolté de culture_navet_de_la_vallee.",
+      "function": "Navet",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_navet_de_la_vallee"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_cuisine"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 12,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Récolte consommée/transformée par system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Récolte de culture_navet_de_la_vallee à maturité.",
+        "consumers": "system_cuisine ; recettes de transformation.",
+        "consequences": "Alimente cuisine/artisanat/économie.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_navet"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_graine_de_ble_des_epis",
+      "display_name": "Graine de Blé des Épis",
+      "status": "DEDUITE",
+      "category": "graine",
+      "source": "brief#Boucles (explorer et trouver des graines)",
+      "justification": "Graine nécessaire pour planter culture_ble_des_epis (système agriculture).",
+      "function": "Semence de Blé des Épis.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "lieu:exploration"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "culture_ble_des_epis"
+      ],
+      "transforms_into": [
+        "culture_ble_des_epis"
+      ],
+      "stackable": true,
+      "base_value": 5,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet de démarrer la culture culture_ble_des_epis.",
+        "system": "system_agriculture, system_exploration",
+        "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+        "consumers": "culture culture_ble_des_epis (plantée).",
+        "consequences": "Plantée -> croissance -> récolte.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste 'planter'.",
+        "tests": "test_chaine_production, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_de_ble_des_epis"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_grain_de_ble",
+      "display_name": "Grain de blé",
+      "status": "PROPOSEE",
+      "category": "produit",
+      "source": "brief#Systèmes (system_cuisine)",
+      "justification": "Produit récolté de culture_ble_des_epis.",
+      "function": "Grain de blé",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_ble_des_epis"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_cuisine"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 12,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Récolte consommée/transformée par system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Récolte de culture_ble_des_epis à maturité.",
+        "consumers": "system_cuisine ; recettes de transformation.",
+        "consequences": "Alimente cuisine/artisanat/économie.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_grain_de_ble"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_graine_de_courge_des_brumes",
+      "display_name": "Graine de Courge des Brumes",
+      "status": "DEDUITE",
+      "category": "graine",
+      "source": "brief#Boucles (explorer et trouver des graines)",
+      "justification": "Graine nécessaire pour planter culture_courge_des_brumes (système agriculture).",
+      "function": "Semence de Courge des Brumes.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "lieu:exploration"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "culture_courge_des_brumes"
+      ],
+      "transforms_into": [
+        "culture_courge_des_brumes"
+      ],
+      "stackable": true,
+      "base_value": 5,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet de démarrer la culture culture_courge_des_brumes.",
+        "system": "system_agriculture, system_exploration",
+        "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+        "consumers": "culture culture_courge_des_brumes (plantée).",
+        "consequences": "Plantée -> croissance -> récolte.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste 'planter'.",
+        "tests": "test_chaine_production, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_de_courge_des_brumes"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_courge",
+      "display_name": "Courge",
+      "status": "PROPOSEE",
+      "category": "produit",
+      "source": "brief#Systèmes (system_cuisine)",
+      "justification": "Produit récolté de culture_courge_des_brumes.",
+      "function": "Courge",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_courge_des_brumes"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_cuisine"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 12,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Récolte consommée/transformée par system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Récolte de culture_courge_des_brumes à maturité.",
+        "consumers": "system_cuisine ; recettes de transformation.",
+        "consequences": "Alimente cuisine/artisanat/économie.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_courge"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_graine_de_lin_du_repos",
+      "display_name": "Graine de Lin du Repos",
+      "status": "DEDUITE",
+      "category": "graine",
+      "source": "brief#Boucles (explorer et trouver des graines)",
+      "justification": "Graine nécessaire pour planter culture_lin_du_repos (système agriculture).",
+      "function": "Semence de Lin du Repos.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "lieu:exploration"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "culture_lin_du_repos"
+      ],
+      "transforms_into": [
+        "culture_lin_du_repos"
+      ],
+      "stackable": true,
+      "base_value": 5,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet de démarrer la culture culture_lin_du_repos.",
+        "system": "system_agriculture, system_exploration",
+        "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+        "consumers": "culture culture_lin_du_repos (plantée).",
+        "consequences": "Plantée -> croissance -> récolte.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste 'planter'.",
+        "tests": "test_chaine_production, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_de_lin_du_repos"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_fibre_de_lin",
+      "display_name": "Fibre de lin",
+      "status": "PROPOSEE",
+      "category": "ressource",
+      "source": "brief#Systèmes (system_artisanat)",
+      "justification": "Produit récolté de culture_lin_du_repos.",
+      "function": "Fibre de lin",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_lin_du_repos"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_artisanat"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 12,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Récolte consommée/transformée par system_artisanat.",
+        "system": "system_agriculture, system_artisanat",
+        "obtention": "Récolte de culture_lin_du_repos à maturité.",
+        "consumers": "system_artisanat ; recettes de transformation.",
+        "consequences": "Alimente cuisine/artisanat/économie.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_fibre_de_lin"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_graine_de_souci_de_la_vallee",
+      "display_name": "Graine de Souci de la Vallée",
+      "status": "DEDUITE",
+      "category": "graine",
+      "source": "brief#Boucles (explorer et trouver des graines)",
+      "justification": "Graine nécessaire pour planter culture_souci_de_la_vallee (système agriculture).",
+      "function": "Semence de Souci de la Vallée.",
+      "gameplay_verb": "planter",
+      "obtention": [
+        "lieu:exploration"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "culture_souci_de_la_vallee"
+      ],
+      "transforms_into": [
+        "culture_souci_de_la_vallee"
+      ],
+      "stackable": true,
+      "base_value": 5,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Permet de démarrer la culture culture_souci_de_la_vallee.",
+        "system": "system_agriculture, system_exploration",
+        "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+        "consumers": "culture culture_souci_de_la_vallee (plantée).",
+        "consequences": "Plantée -> croissance -> récolte.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste 'planter'.",
+        "tests": "test_chaine_production, test_objet_utile."
+      },
+      "required_assets": [
+        "asset_icone_objet_graine_de_souci_de_la_vallee"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_fleur_de_souci",
+      "display_name": "Fleur de souci",
+      "status": "PROPOSEE",
+      "category": "produit",
+      "source": "brief#Systèmes (system_relations)",
+      "justification": "Produit récolté de culture_souci_de_la_vallee.",
+      "function": "Fleur de souci",
+      "gameplay_verb": "recolter",
+      "obtention": [
+        "culture:culture_souci_de_la_vallee"
+      ],
+      "loop_stage": 2,
+      "users": [
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 12,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Récolte consommée/transformée par system_relations.",
+        "system": "system_agriculture, system_relations",
+        "obtention": "Récolte de culture_souci_de_la_vallee à maturité.",
+        "consumers": "system_relations ; recettes de transformation.",
+        "consequences": "Alimente cuisine/artisanat/économie.",
+        "assets": "1 icône d'inventaire + sprite de récolte.",
+        "animations": "geste 'récolter' + effet de ramassage.",
+        "tests": "test_chaine_production, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_fleur_de_souci"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_soupe_de_navet",
+      "display_name": "Soupe de navet",
+      "status": "PROPOSEE",
+      "category": "consommable",
+      "source": "brief#Systèmes (cuisine)",
+      "justification": "Produit de la recette 'Soupe de navet' (cuisine).",
+      "function": "Soupe de navet",
+      "gameplay_verb": "utiliser",
+      "obtention": [
+        "recette:recette_soupe_de_navet"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_economie",
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 34,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation cuisine.",
+        "system": "system_cuisine, system_economie",
+        "obtention": "Recette 'Soupe de navet'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_soupe_de_navet"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_pain_de_ble",
+      "display_name": "Pain de ble",
+      "status": "PROPOSEE",
+      "category": "consommable",
+      "source": "brief#Systèmes (cuisine)",
+      "justification": "Produit de la recette 'Pain de blé' (cuisine).",
+      "function": "Pain de ble",
+      "gameplay_verb": "utiliser",
+      "obtention": [
+        "recette:recette_pain_de_ble"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_economie",
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 50,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation cuisine.",
+        "system": "system_cuisine, system_economie",
+        "obtention": "Recette 'Pain de blé'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_pain_de_ble"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_courge_rotie",
+      "display_name": "Courge rotie",
+      "status": "PROPOSEE",
+      "category": "consommable",
+      "source": "brief#Systèmes (cuisine)",
+      "justification": "Produit de la recette 'Courge rôtie' (cuisine).",
+      "function": "Courge rotie",
+      "gameplay_verb": "utiliser",
+      "obtention": [
+        "recette:recette_courge_rotie"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_economie",
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 25,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation cuisine.",
+        "system": "system_cuisine, system_economie",
+        "obtention": "Recette 'Courge rôtie'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_courge_rotie"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_tisane_de_souci",
+      "display_name": "Tisane de souci",
+      "status": "PROPOSEE",
+      "category": "consommable",
+      "source": "brief#Systèmes (cuisine)",
+      "justification": "Produit de la recette 'Tisane de souci' (cuisine).",
+      "function": "Tisane de souci",
+      "gameplay_verb": "utiliser",
+      "obtention": [
+        "recette:recette_tisane_de_souci"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_economie",
+        "system_relations"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 34,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation cuisine.",
+        "system": "system_cuisine, system_economie",
+        "obtention": "Recette 'Tisane de souci'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_tisane_de_souci"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_planche",
+      "display_name": "Planche",
+      "status": "PROPOSEE",
+      "category": "artisanat",
+      "source": "brief#Systèmes (artisanat)",
+      "justification": "Produit de la recette 'Planche' (artisanat).",
+      "function": "Planche",
+      "gameplay_verb": "fabriquer",
+      "obtention": [
+        "recette:recette_planche"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_artisanat"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 22,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation artisanat.",
+        "system": "system_artisanat, system_economie",
+        "obtention": "Recette 'Planche'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_planche"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_fil_de_lin",
+      "display_name": "Fil de lin",
+      "status": "PROPOSEE",
+      "category": "artisanat",
+      "source": "brief#Systèmes (artisanat)",
+      "justification": "Produit de la recette 'Fil de lin' (artisanat).",
+      "function": "Fil de lin",
+      "gameplay_verb": "fabriquer",
+      "obtention": [
+        "recette:recette_fil_de_lin"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_artisanat"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 34,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation artisanat.",
+        "system": "system_artisanat, system_economie",
+        "obtention": "Recette 'Fil de lin'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_fil_de_lin"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_toile",
+      "display_name": "Toile",
+      "status": "PROPOSEE",
+      "category": "artisanat",
+      "source": "brief#Systèmes (artisanat)",
+      "justification": "Produit de la recette 'Toile' (artisanat).",
+      "function": "Toile",
+      "gameplay_verb": "fabriquer",
+      "obtention": [
+        "recette:recette_toile"
+      ],
+      "loop_stage": 3,
+      "users": [
+        "system_artisanat"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 143,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Sortie de la chaîne de transformation artisanat.",
+        "system": "system_artisanat, system_economie",
+        "obtention": "Recette 'Toile'.",
+        "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+        "consequences": "Valeur économique supérieure ; effets sur relations.",
+        "assets": "1 icône d'inventaire.",
+        "animations": "geste d'usage/offrande.",
+        "tests": "test_recette_complete, test_objet_utile, test_economique."
+      },
+      "required_assets": [
+        "asset_icone_objet_toile"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    },
+    {
+      "id": "objet_poisson_du_lac",
+      "display_name": "Poisson du lac",
+      "status": "DEDUITE",
+      "category": "ressource",
+      "source": "brief#Systèmes (system_peche)",
+      "justification": "Produit par creature_poisson_du_lac.",
+      "function": "Poisson du lac",
+      "gameplay_verb": "pecher",
+      "obtention": [
+        "creature:creature_poisson_du_lac"
+      ],
+      "loop_stage": 1,
+      "users": [
+        "system_peche",
+        "system_economie"
+      ],
+      "transforms_into": [],
+      "stackable": true,
+      "base_value": 15,
+      "decorative_only": false,
+      "derivation": {
+        "why": "Ressource produite par creature_poisson_du_lac.",
+        "system": "system_peche",
+        "obtention": "Récolte sur creature_poisson_du_lac.",
+        "consumers": "cuisine/économie.",
+        "consequences": "Alimente économie/recettes.",
+        "assets": "1 icône.",
+        "animations": "geste de collecte.",
+        "tests": "test_chaine_production, test_ressource."
+      },
+      "required_assets": [
+        "asset_icone_objet_poisson_du_lac"
+      ],
+      "required_animations": [],
+      "validation": {
+        "structure": "schéma JSON valide",
+        "references": "toutes les références résolues",
+        "no_orphan": "au moins une relation d'usage"
+      }
+    }
+  ]
+}

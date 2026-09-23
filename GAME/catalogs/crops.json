@@ -1,0 +1,213 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "crops",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "culture_floraison_d_echo",
+      "display_name": "Floraison d'Écho",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Faits immuables (dérivé)",
+      "justification": "Plante mémorielle déduite du canon : 'les graines d'écho peuvent faire pousser des plantes mémorielles'.",
+      "seed_id": "objet_graine_d_echo",
+      "yield_id": "objet_echo_cristallin",
+      "seasons": [
+        "saison_des_brumes"
+      ],
+      "growth_days": 6,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": true,
+      "regrows": false,
+      "used_by": "system_memoire",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Fait remonter un fragment du passé (cœur de la prémisse).",
+        "system": "system_agriculture, system_memoire",
+        "obtention": "Planter objet_graine_d_echo puis arroser 6 jour(s).",
+        "consumers": "system_memoire ; recettes associées.",
+        "consequences": "Récolte -> Écho Cristallin -> fragment de souvenir.",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    },
+    {
+      "id": "culture_navet_de_la_vallee",
+      "display_name": "Navet de la Vallée",
+      "status": "PROPOSEE",
+      "source": "brief#Systèmes souhaités (agriculture)",
+      "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
+      "seed_id": "objet_graine_de_navet_de_la_vallee",
+      "yield_id": "objet_navet",
+      "seasons": [
+        "saison_des_premieres_pousses"
+      ],
+      "growth_days": 4,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": false,
+      "regrows": false,
+      "used_by": "system_cuisine",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Alimente la boucle de production pour system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Planter objet_graine_de_navet_de_la_vallee puis arroser 4 jour(s).",
+        "consumers": "system_cuisine ; recettes associées.",
+        "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    },
+    {
+      "id": "culture_ble_des_epis",
+      "display_name": "Blé des Épis",
+      "status": "PROPOSEE",
+      "source": "brief#Systèmes souhaités (agriculture)",
+      "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
+      "seed_id": "objet_graine_de_ble_des_epis",
+      "yield_id": "objet_grain_de_ble",
+      "seasons": [
+        "saison_des_epis"
+      ],
+      "growth_days": 5,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": false,
+      "regrows": false,
+      "used_by": "system_cuisine",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Alimente la boucle de production pour system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Planter objet_graine_de_ble_des_epis puis arroser 5 jour(s).",
+        "consumers": "system_cuisine ; recettes associées.",
+        "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    },
+    {
+      "id": "culture_courge_des_brumes",
+      "display_name": "Courge des Brumes",
+      "status": "PROPOSEE",
+      "source": "brief#Systèmes souhaités (agriculture)",
+      "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
+      "seed_id": "objet_graine_de_courge_des_brumes",
+      "yield_id": "objet_courge",
+      "seasons": [
+        "saison_des_brumes"
+      ],
+      "growth_days": 6,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": false,
+      "regrows": false,
+      "used_by": "system_cuisine",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Alimente la boucle de production pour system_cuisine.",
+        "system": "system_agriculture, system_cuisine",
+        "obtention": "Planter objet_graine_de_courge_des_brumes puis arroser 6 jour(s).",
+        "consumers": "system_cuisine ; recettes associées.",
+        "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    },
+    {
+      "id": "culture_lin_du_repos",
+      "display_name": "Lin du Repos",
+      "status": "PROPOSEE",
+      "source": "brief#Systèmes souhaités (agriculture)",
+      "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
+      "seed_id": "objet_graine_de_lin_du_repos",
+      "yield_id": "objet_fibre_de_lin",
+      "seasons": [
+        "saison_du_repos"
+      ],
+      "growth_days": 5,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": false,
+      "regrows": false,
+      "used_by": "system_artisanat",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Alimente la boucle de production pour system_artisanat.",
+        "system": "system_agriculture, system_artisanat",
+        "obtention": "Planter objet_graine_de_lin_du_repos puis arroser 5 jour(s).",
+        "consumers": "system_artisanat ; recettes associées.",
+        "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    },
+    {
+      "id": "culture_souci_de_la_vallee",
+      "display_name": "Souci de la Vallée",
+      "status": "PROPOSEE",
+      "source": "brief#Systèmes souhaités (agriculture)",
+      "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
+      "seed_id": "objet_graine_de_souci_de_la_vallee",
+      "yield_id": "objet_fleur_de_souci",
+      "seasons": [
+        "saison_des_premieres_pousses",
+        "saison_des_epis"
+      ],
+      "growth_days": 3,
+      "stages": [
+        "semis",
+        "pousse",
+        "mature",
+        "recoltable"
+      ],
+      "water_needed": true,
+      "memory_plant": false,
+      "regrows": true,
+      "used_by": "system_relations",
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Alimente la boucle de production pour system_relations.",
+        "system": "system_agriculture, system_relations",
+        "obtention": "Planter objet_graine_de_souci_de_la_vallee puis arroser 3 jour(s).",
+        "consumers": "system_relations ; recettes associées.",
+        "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+        "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+        "animations": "animation de croissance par stade + geste récolte.",
+        "tests": "test_chaine_production, test_culture, test_temporel."
+      }
+    }
+  ]
+}

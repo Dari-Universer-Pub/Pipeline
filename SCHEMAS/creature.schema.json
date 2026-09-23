@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/creature.schema.json",
+  "title": "Créature / animal",
+  "description": "Schéma d'entité 'creature' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^creature_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'creature_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "animal",
+        "creature",
+        "boss"
+      ]
+    },
+    "behavior": {
+      "type": "string"
+    },
+    "habitat": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "yields": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Ressources produites ( IDs objet/ressource)."
+    },
+    "hostile": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "kind"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

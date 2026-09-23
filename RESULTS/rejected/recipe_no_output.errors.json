@@ -1,0 +1,14 @@
+{
+  "status": "REJECTED",
+  "entity_id": "recette_transformation_cassee",
+  "reason": null,
+  "issues": [
+    {
+      "severity": "ERROR",
+      "code": "import.recipe_no_output",
+      "entity": "recette_transformation_cassee",
+      "message": "recette sans résultat",
+      "fix": ""
+    }
+  ]
+}

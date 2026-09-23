@@ -1,0 +1,36 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "brief_extracted",
+  "generated_deterministic": true,
+  "payload": {
+    "title": "Les Jardins de l’Écho",
+    "genre": "simulation agricole, exploration et narration",
+    "perspective": "jeu 2D vue du dessus",
+    "platform": "PC",
+    "style": "contemplatif, mystérieux, chaleureux",
+    "premise": "Le joueur est le dernier gardien d’un jardin construit autour d’un ancien puits de mémoire. Chaque culture fait remonter un fragment du passé de la vallée",
+    "player_role": "Cultiver, explorer les environs, aider les habitants et décider quels souvenirs doivent être conservés, transformés ou oubliés",
+    "loops": [
+      "Explorer et trouver des graines ou des fragments",
+      "Planter, arroser, faire pousser et récolter",
+      "Transformer les récoltes et les fragments dans des machines",
+      "Offrir, vendre ou utiliser les productions",
+      "Modifier les relations et débloquer des lieux"
+    ],
+    "systems": [
+      "agriculture",
+      "saisons",
+      "météo",
+      "exploration",
+      "relations avec les PNJ",
+      "artisanat",
+      "cuisine",
+      "économie simple",
+      "refuge améliorable",
+      "secrets",
+      "événements contextuels"
+    ],
+    "source": "INPUT/game_brief.md"
+  }
+}

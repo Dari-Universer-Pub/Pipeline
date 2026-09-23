@@ -1,0 +1,28 @@
+{
+  "status": "REJECTED",
+  "entity_id": "objet_epee_cosmique",
+  "reason": null,
+  "issues": [
+    {
+      "severity": "ERROR",
+      "code": "import.forbidden_term",
+      "entity": "objet_epee_cosmique",
+      "message": "terme interdit 'épée' dans le nom",
+      "fix": ""
+    },
+    {
+      "severity": "ERROR",
+      "code": "import.forbidden_term",
+      "entity": "objet_epee_cosmique",
+      "message": "terme interdit 'cosmique' dans le nom",
+      "fix": ""
+    },
+    {
+      "severity": "ERROR",
+      "code": "import.forbidden_term",
+      "entity": "objet_epee_cosmique",
+      "message": "terme interdit 'laser' dans le nom",
+      "fix": ""
+    }
+  ]
+}

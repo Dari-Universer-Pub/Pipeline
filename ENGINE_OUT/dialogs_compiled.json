@@ -1,0 +1,107 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "dialogs_compiled",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "dialogue_pnj_alba_salutation",
+      "speaker_id": "pnj_alba",
+      "voice": "douce, pédagogue, phrases courtes, métaphores végétales",
+      "priority": 0,
+      "conditions": [
+        {
+          "type": "location",
+          "params": {
+            "lieu_id": "lieu_maison_racine"
+          }
+        }
+      ],
+      "lines": [
+        {
+          "text": "Bonjour, Jardinier. (soigneuse_des_plantes)",
+          "reveals": [],
+          "choices": []
+        }
+      ],
+      "knowledge_boundary": {
+        "allowed": [
+          "fait_monde_valdore",
+          "fait_joueur_jardinier",
+          "lieu_maison_racine",
+          "lieu_vallee_claire",
+          "culture_souci_de_la_vallee"
+        ],
+        "forbidden": [
+          "secret_clairiere_repetition",
+          "secret_passe_nox"
+        ]
+      }
+    },
+    {
+      "id": "dialogue_pnj_marin_salutation",
+      "speaker_id": "pnj_marin",
+      "voice": "directe, technique, peu de mots, jargon d'atelier",
+      "priority": 0,
+      "conditions": [
+        {
+          "type": "location",
+          "params": {
+            "lieu_id": "lieu_atelier_de_la_maison_racine"
+          }
+        }
+      ],
+      "lines": [
+        {
+          "text": "Bonjour, Jardinier. (artisan_machines)",
+          "reveals": [],
+          "choices": []
+        }
+      ],
+      "knowledge_boundary": {
+        "allowed": [
+          "fait_monde_valdore",
+          "machine_etabli_de_marin",
+          "machine_metier_a_tisser",
+          "ressource_bois",
+          "ressource_pierre"
+        ],
+        "forbidden": [
+          "secret_passe_nox"
+        ]
+      }
+    },
+    {
+      "id": "dialogue_pnj_nox_salutation",
+      "speaker_id": "pnj_nox",
+      "voice": "laconique, silences, non-dits, phrases inachevées",
+      "priority": 0,
+      "conditions": [
+        {
+          "type": "location",
+          "params": {
+            "lieu_id": "lieu_poste_de_peche_du_lac_muet"
+          }
+        }
+      ],
+      "lines": [
+        {
+          "text": "Bonjour, Jardinier. (pecheur)",
+          "reveals": [],
+          "choices": []
+        }
+      ],
+      "knowledge_boundary": {
+        "allowed": [
+          "lieu_lac_muet",
+          "creature_poisson_du_lac",
+          "fait_monde_valdore"
+        ],
+        "forbidden": [
+          "secret_passe_nox",
+          "secret_clairiere_repetition"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Contraintes de production
+
+## Technique
+
+- Moteur cible : Godot 4.
+- Jeu 2D vue du dessus.
+- Tuiles logiques : 16 × 16 pixels.
+- Rendu pixel art avec mise à l’échelle entière.
+- Données exportables en JSON ou ressources Godot.
+
+## Architecture
+
+- Le canon est une source de vérité.
+- Les entités sont reliées dans un graphe.
+- Les objets sont générés depuis les systèmes et les chaînes d’utilisation.
+- Les assets sont dérivés des entités et des actions.
+- Les animations sont dérivées des états, actions, directions et contextes.
+- Les maps doivent inclure terrain, placement, collisions, navigation et points d’intérêt.
+
+## IA
+
+- Le LLM est utilisé hors ligne pour concevoir, générer, vérifier et corriger.
+- Le jeu final ne doit pas dépendre d’un LLM en permanence.
+- Aucun prompt ne doit fonctionner sans contexte canonique.
+
+## Qualité
+
+- Aucun objet orphelin.
+- Aucun asset non référencé.
+- Aucune animation sans action ou état.
+- Aucune quête impossible à atteindre.
+- Toute sortie doit être validée avant import.

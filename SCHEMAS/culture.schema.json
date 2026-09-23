@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/culture.schema.json",
+  "title": "Culture / plante",
+  "description": "Schéma d'entité 'culture' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^culture_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'culture_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "seed_id": {
+      "type": "string",
+      "description": "ID graine requise."
+    },
+    "yield_id": {
+      "type": "string",
+      "description": "ID produit récolté."
+    },
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "growth_days": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "États de croissance (pour animations/assets)."
+    },
+    "water_needed": {
+      "type": "boolean"
+    },
+    "memory_plant": {
+      "type": "boolean",
+      "description": "True si fait remonter un fragment (canon)."
+    },
+    "regrows": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "seed_id",
+    "yield_id",
+    "growth_days"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

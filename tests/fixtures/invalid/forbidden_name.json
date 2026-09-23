@@ -1,0 +1,10 @@
+{
+  "id": "objet_epee_cosmique",
+  "display_name": "Épée Cosmique Laser",
+  "status": "PROPOSEE",
+  "category": "outil",
+  "function": "arme",
+  "gameplay_verb": "frapper",
+  "source": "prompt invalide",
+  "justification": "Exemple violant les règles de nommage du canon (termes interdits)."
+}

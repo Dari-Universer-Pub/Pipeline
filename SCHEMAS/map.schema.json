@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pipeline.local/schemas/map.schema.json",
+  "title": "Carte",
+  "description": "Schéma d'entité 'map' dérivé de l'ontologie V5.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^map_[a-z0-9_]+$",
+      "description": "Identifiant interne stable (préfixe 'map_')."
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "description": "Statut de l'information."
+    },
+    "source": {
+      "type": "string",
+      "description": "Fichier/section d'origine."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Pourquoi cet élément existe."
+    },
+    "size": {
+      "type": "object",
+      "description": "{w,h} en tuiles."
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "zones": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "entrances": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "exits": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "collisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "height_levels": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "terrains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Noms de terrains présents (tilesets dérivés)."
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "points_of_interest": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "buildings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "secret_zones": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "placement_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "navigation_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "spawn_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "seasonal_conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "linked_maps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Graine procédurale (reproductibilité)."
+    }
+  },
+  "required": [
+    "id",
+    "display_name",
+    "status",
+    "size",
+    "terrains",
+    "placement_rules",
+    "navigation_rules"
+  ],
+  "additionalProperties": true,
+  "x_schema_version": "5.0.0"
+}

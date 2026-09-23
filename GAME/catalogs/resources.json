@@ -1,0 +1,89 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "resources",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "ressource_bois",
+      "display_name": "Bois",
+      "status": "PROPOSEE",
+      "category": "matériau",
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "description": "Bûches ramassées dans le Bois des Retours.",
+      "producers": [
+        "system_exploration"
+      ],
+      "consumers": [
+        "system_artisanat"
+      ],
+      "seasonal": false,
+      "base_value": 8,
+      "derivation": {
+        "why": "Matériau de base des chaînes d'artisanat (artisanat).",
+        "system": "system_artisanat, system_exploration",
+        "obtention": "Forage/exploration (exploration).",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "animations": "geste 'extraire' + effet de récolte.",
+        "tests": "test_chaine_production, test_ressource, test_economique."
+      }
+    },
+    {
+      "id": "ressource_pierre",
+      "display_name": "Pierre",
+      "status": "PROPOSEE",
+      "category": "matériau",
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "description": "Pierres ramassées près du Puits de Mémoire.",
+      "producers": [
+        "system_exploration"
+      ],
+      "consumers": [
+        "system_artisanat"
+      ],
+      "seasonal": false,
+      "base_value": 8,
+      "derivation": {
+        "why": "Matériau de base des chaînes d'artisanat (artisanat).",
+        "system": "system_artisanat, system_exploration",
+        "obtention": "Forage/exploration (exploration).",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "animations": "geste 'extraire' + effet de récolte.",
+        "tests": "test_chaine_production, test_ressource, test_economique."
+      }
+    },
+    {
+      "id": "ressource_argile",
+      "display_name": "Argile",
+      "status": "PROPOSEE",
+      "category": "matériau",
+      "source": "brief#Systèmes (artisanat/exploration)",
+      "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
+      "description": "Argile au bord du Lac Muet.",
+      "producers": [
+        "system_exploration"
+      ],
+      "consumers": [
+        "system_artisanat"
+      ],
+      "seasonal": false,
+      "base_value": 8,
+      "derivation": {
+        "why": "Matériau de base des chaînes d'artisanat (artisanat).",
+        "system": "system_artisanat, system_exploration",
+        "obtention": "Forage/exploration (exploration).",
+        "consumers": "Recettes d'artisanat via artisanat.",
+        "consequences": "Transformé en objets/machines améliorées.",
+        "assets": "1 icône + sprite de gisement sur la carte.",
+        "animations": "geste 'extraire' + effet de récolte.",
+        "tests": "test_chaine_production, test_ressource, test_economique."
+      }
+    }
+  ]
+}

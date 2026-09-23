@@ -1,0 +1,233 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "maps",
+  "generated_deterministic": true,
+  "payload": [
+    {
+      "id": "map_maison_racine",
+      "display_name": "Maison-Racine",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Maison-Racine' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Refuge et atelier principal (canon).",
+      "location_id": "lieu_maison_racine",
+      "size": {
+        "w": 40,
+        "h": 30
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "plancher",
+        "bois",
+        "pierre"
+      ],
+      "linked_maps": [
+        "map_vallee_claire"
+      ],
+      "seed": 138343252,
+      "regions": [],
+      "zones": [],
+      "paths": [],
+      "entrances": [],
+      "exits": [],
+      "collisions": [],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_vallee_claire",
+      "display_name": "Vallée Claire",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Zone de départ et terres cultivables (canon).",
+      "location_id": "lieu_vallee_claire",
+      "size": {
+        "w": 80,
+        "h": 60
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "herbe",
+        "sol_meuble",
+        "eau",
+        "terre"
+      ],
+      "linked_maps": [
+        "map_maison_racine",
+        "map_bois_des_retours",
+        "map_lac_muet"
+      ],
+      "seed": 1304492282,
+      "regions": [],
+      "zones": [],
+      "paths": [],
+      "entrances": [],
+      "exits": [],
+      "collisions": [],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_bois_des_retours",
+      "display_name": "Bois des Retours",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Bois des Retours' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Forêt où certains événements se répètent (canon).",
+      "location_id": "lieu_bois_des_retours",
+      "size": {
+        "w": 70,
+        "h": 70
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "feuillage",
+        "terre",
+        "herbe"
+      ],
+      "linked_maps": [
+        "map_vallee_claire",
+        "map_lac_muet"
+      ],
+      "seed": 2146203072,
+      "regions": [],
+      "zones": [],
+      "paths": [],
+      "entrances": [],
+      "exits": [],
+      "collisions": [],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    },
+    {
+      "id": "map_lac_muet",
+      "display_name": "Lac Muet",
+      "status": "DEDUITE",
+      "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+      "justification": "Carte du lieu canonique 'Lac Muet' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+      "description": "Zone d'exploration et de pêche (canon).",
+      "location_id": "lieu_lac_muet",
+      "size": {
+        "w": 60,
+        "h": 50
+      },
+      "tile_size": {
+        "w": 16,
+        "h": 16
+      },
+      "terrains": [
+        "eau",
+        "pont",
+        "herbe"
+      ],
+      "linked_maps": [
+        "map_vallee_claire",
+        "map_bois_des_retours"
+      ],
+      "seed": 1556140070,
+      "regions": [],
+      "zones": [],
+      "paths": [],
+      "entrances": [],
+      "exits": [],
+      "collisions": [],
+      "height_levels": [
+        0
+      ],
+      "points_of_interest": [],
+      "buildings": [],
+      "secret_zones": [],
+      "resources": [],
+      "placement_rules": [],
+      "navigation_rules": [],
+      "spawn_rules": [],
+      "seasonal_conditions": [],
+      "transitions": [],
+      "quantity_status": "A_VALIDER",
+      "derivation": {
+        "why": "Chaque lieu canonique a besoin d'une carte navigable.",
+        "system": "system_exploration, system_navigation",
+        "obtention": "Déduite du lieu canonique.",
+        "consumers": "navigation, placement, spawn, exploration.",
+        "consequences": "Permet le déplacement, le placement et les transitions.",
+        "assets": "1 tileset par famille de terrain + transitions.",
+        "animations": "animations météo/saisonnières de la carte.",
+        "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
+      }
+    }
+  ]
+}

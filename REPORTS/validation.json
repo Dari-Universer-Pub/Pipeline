@@ -1,0 +1,49 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "validation_report",
+  "generated_deterministic": true,
+  "payload": {
+    "passed": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "info_count": 0,
+    "by_validator": {
+      "structurelle": 0,
+      "schemas": 0,
+      "encodage": 0,
+      "references": 0,
+      "canonique": 0,
+      "logique": 0,
+      "narrative": 0,
+      "economique": 0,
+      "temporelle": 0,
+      "progression": 0,
+      "maps": 0,
+      "collisions": 0,
+      "placement": 0,
+      "assets": 0,
+      "animations": 0,
+      "connectivite": 0
+    },
+    "issues": [],
+    "results": {
+      "structurelle": [],
+      "schemas": [],
+      "encodage": [],
+      "references": [],
+      "canonique": [],
+      "logique": [],
+      "narrative": [],
+      "economique": [],
+      "temporelle": [],
+      "progression": [],
+      "maps": [],
+      "collisions": [],
+      "placement": [],
+      "assets": [],
+      "animations": [],
+      "connectivite": []
+    }
+  }
+}

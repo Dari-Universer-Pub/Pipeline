@@ -1,0 +1,23 @@
+{
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0",
+  "kind": "prompt_index",
+  "generated_deterministic": true,
+  "payload": {
+    "total": 10,
+    "ok": 9,
+    "blocked": 1,
+    "names": [
+      "blocked_demo",
+      "by_family_famille_personnages",
+      "by_family_famille_terrains",
+      "by_id_asset_icone_objet_fragment_de_souvenir",
+      "by_id_map_vallee_claire",
+      "by_id_objet_graine_d_echo",
+      "by_id_pnj_alba",
+      "by_id_recette_soupe_de_navet",
+      "by_seq_joueur_marche",
+      "by_seq_machine_actif"
+    ]
+  }
+}
