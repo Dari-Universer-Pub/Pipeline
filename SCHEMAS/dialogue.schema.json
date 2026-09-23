@@ -1,62 +1,61 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/dialogue.schema.json",
-  "title": "Dialogue contextuel",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'dialogue' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^dialogue_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'dialogue_')."
+    "conditions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
     },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'dialogue_').",
+      "pattern": "^dialogue_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "lines": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "reveals": {
+      "description": "Faits révélés (doivent être dans knowledge du PNJ).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "speaker_id": {
+      "type": "string"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "speaker_id": {
       "type": "string"
-    },
-    "conditions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "lines": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "reveals": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Faits révélés (doivent être dans knowledge du PNJ)."
-    },
-    "priority": {
-      "type": "integer"
     }
   },
   "required": [
@@ -65,6 +64,7 @@
     "conditions",
     "lines"
   ],
-  "additionalProperties": true,
+  "title": "Dialogue contextuel",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

@@ -42,26 +42,26 @@ demandé, à partir du contexte injecté.
 
 ```json
 {
-  "id": "objet_graine_d_echo",
-  "display_name": "Graine d’Écho",
-  "status": "CANONIQUE",
+  "base_value": null,
   "category": "graine",
-  "source": "INPUT/canon_initial.md#Objets canoniques",
-  "justification": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
+  "decorative_only": false,
+  "display_name": "Graine d’Écho",
   "function": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
   "gameplay_verb": "planter",
+  "id": "objet_graine_d_echo",
+  "justification": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
+  "loop_stage": 1,
   "obtention": [
     "canon"
   ],
-  "loop_stage": 1,
+  "source": "INPUT/canon_initial.md#Objets canoniques",
+  "stackable": true,
+  "status": "CANONIQUE",
+  "transforms_into": [],
   "users": [
     "system_memoire",
     "system_agriculture"
-  ],
-  "transforms_into": [],
-  "stackable": true,
-  "base_value": null,
-  "decorative_only": false
+  ]
 }
 ```
 

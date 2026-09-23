@@ -88,11 +88,20 @@ Chaque système : `id`, `display_name`, `status`, `depends_on[]`, `verbs[]`,
 | --- | --- |
 | **Module** | `lib/catalog.py` (`run_stage`) |
 | **Entrées** | canon (étape 1), systèmes (étape 3) |
-| **Sorties** | `GAME/catalogs/{seasons,locations,crops,resources,machines,recipes,objects,npcs,creatures,quests,events,secrets,maps,quantity_plan}.json` ; `GAME/functional_catalog/functional_catalog.json` |
+| **Sorties** | `GAME/catalogs/{seasons,locations,crops,resources,machines,recipes,objects,npcs,creatures,quests,events,secrets,maps,dialogues,quantity_plan}.json` ; `GAME/functional_catalog/functional_catalog.json` |
 | **In-memory** | dict des catalogues + `quantity_plan` + `functional_catalog` |
 
 **quantity_plan.json** : par type, `{canonical, derived, proposed_total,
 system_floor, quantity_status, justification}`.
+
+**dialogues.json** : contrairement aux autres catalogues, les dialogues ne sont
+**pas dérivés** ici — c'est le **point d'intégration** du contenu produit par
+l'IA de construction. Vide par défaut (`[]`) ; le fichier est préservé d'un run
+à l'autre. Tant qu'il est vide, la compilation (étape 13) replie sur les
+**salutations essentielles dérivées des PNJ canoniques**. Lorsqu'il est alimenté
+par des dialogues **importés + validés** (schéma + relations du graphe), le
+compilateur les compile tous et le repli disparaît. Voir
+`DOC/EXECUTION_PROCEDURE.md` et `tests/test_dialogues.py`.
 
 ---
 

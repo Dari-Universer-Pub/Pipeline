@@ -42,52 +42,52 @@ demandé, à partir du contexte injecté.
 
 ```json
 {
-  "id": "map_vallee_claire",
-  "display_name": "Vallée Claire",
-  "status": "DEDUITE",
-  "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
-  "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+  "buildings": [],
+  "collisions": [],
   "description": "Zone de départ et terres cultivables (canon).",
+  "display_name": "Vallée Claire",
+  "entrances": [],
+  "exits": [],
+  "height_levels": [
+    0
+  ],
+  "id": "map_vallee_claire",
+  "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
+  "linked_maps": [
+    "map_maison_racine",
+    "map_bois_des_retours",
+    "map_lac_muet"
+  ],
   "location_id": "lieu_vallee_claire",
+  "navigation_rules": [],
+  "paths": [],
+  "placement_rules": [],
+  "points_of_interest": [],
+  "quantity_status": "A_VALIDER",
+  "regions": [],
+  "resources": [],
+  "seasonal_conditions": [],
+  "secret_zones": [],
+  "seed": 1304492282,
   "size": {
-    "w": 80,
-    "h": 60
+    "h": 60,
+    "w": 80
   },
-  "tile_size": {
-    "w": 16,
-    "h": 16
-  },
+  "source": "INPUT/canon_initial.md#Lieux connus (dérivé)",
+  "spawn_rules": [],
+  "status": "DEDUITE",
   "terrains": [
     "herbe",
     "sol_meuble",
     "eau",
     "terre"
   ],
-  "linked_maps": [
-    "map_maison_racine",
-    "map_bois_des_retours",
-    "map_lac_muet"
-  ],
-  "seed": 1304492282,
-  "regions": [],
-  "zones": [],
-  "paths": [],
-  "entrances": [],
-  "exits": [],
-  "collisions": [],
-  "height_levels": [
-    0
-  ],
-  "points_of_interest": [],
-  "buildings": [],
-  "secret_zones": [],
-  "resources": [],
-  "placement_rules": [],
-  "navigation_rules": [],
-  "spawn_rules": [],
-  "seasonal_conditions": [],
+  "tile_size": {
+    "h": 16,
+    "w": 16
+  },
   "transitions": [],
-  "quantity_status": "A_VALIDER"
+  "zones": []
 }
 ```
 

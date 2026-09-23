@@ -1,39 +1,28 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "manifest_creatures",
   "generated_deterministic": true,
+  "kind": "manifest_creatures",
   "payload": [
     {
-      "id": "creature_poisson_du_lac",
-      "display_name": "Poisson du Lac",
-      "status": "PROPOSEE",
-      "kind": "animal",
-      "source": "INPUT/canon_initial.md/brief#Systèmes (system_peche)",
-      "justification": "Poisson pêché au Lac Muet (système peche).",
-      "description": "Poisson pêché au Lac Muet (système peche).",
       "behavior": "passif",
+      "derivation": {
+        "animations": "idle/nage + réaction.",
+        "assets": "1 sprite (famille créatures) + variantes.",
+        "consequences": "Produit une ressource/fragment ; événement narratif.",
+        "consumers": "system_peche, system_secrets, économie.",
+        "obtention": "Pêche/observation dans son habitat.",
+        "system": "system_peche",
+        "tests": "test_creature, test_chaine_production, test_placement.",
+        "why": "Faune liée à system_peche et à un lieu canonique."
+      },
+      "description": "Poisson pêché au Lac Muet (système peche).",
+      "display_name": "Poisson du Lac",
       "habitat": [
         "lieu_lac_muet"
       ],
-      "yields": [
-        "objet_poisson_du_lac"
-      ],
       "hostile": false,
-      "system": "system_peche",
-      "derivation": {
-        "why": "Faune liée à system_peche et à un lieu canonique.",
-        "system": "system_peche",
-        "obtention": "Pêche/observation dans son habitat.",
-        "consumers": "system_peche, system_secrets, économie.",
-        "consequences": "Produit une ressource/fragment ; événement narratif.",
-        "assets": "1 sprite (famille créatures) + variantes.",
-        "animations": "idle/nage + réaction.",
-        "tests": "test_creature, test_chaine_production, test_placement."
-      },
-      "required_assets": [
-        "asset_spritesheet_creature_poisson_du_lac"
-      ],
+      "id": "creature_poisson_du_lac",
+      "justification": "Poisson pêché au Lac Muet (système peche).",
+      "kind": "animal",
       "required_animations": [
         "anim_creature_poisson_du_lac_nage_down",
         "anim_creature_poisson_du_lac_nage_up",
@@ -41,42 +30,42 @@
         "anim_creature_poisson_du_lac_nage_right",
         "anim_creature_poisson_du_lac_reaction"
       ],
+      "required_assets": [
+        "asset_spritesheet_creature_poisson_du_lac"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_peche)",
+      "status": "PROPOSEE",
+      "system": "system_peche",
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
-      }
+        "structure": "schéma JSON valide"
+      },
+      "yields": [
+        "objet_poisson_du_lac"
+      ]
     },
     {
-      "id": "creature_echo_du_bois",
-      "display_name": "Écho du Bois",
-      "status": "PROPOSEE",
-      "kind": "creature",
-      "source": "INPUT/canon_initial.md/brief#Systèmes (system_secrets)",
-      "justification": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
-      "description": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
       "behavior": "passif",
+      "derivation": {
+        "animations": "idle/nage + réaction.",
+        "assets": "1 sprite (famille créatures) + variantes.",
+        "consequences": "Produit une ressource/fragment ; événement narratif.",
+        "consumers": "system_peche, system_secrets, économie.",
+        "obtention": "Pêche/observation dans son habitat.",
+        "system": "system_secrets",
+        "tests": "test_creature, test_chaine_production, test_placement.",
+        "why": "Faune liée à system_secrets et à un lieu canonique."
+      },
+      "description": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
+      "display_name": "Écho du Bois",
       "habitat": [
         "lieu_bois_des_retours"
       ],
-      "yields": [
-        "objet_fragment_de_souvenir"
-      ],
       "hostile": false,
-      "system": "system_secrets",
-      "derivation": {
-        "why": "Faune liée à system_secrets et à un lieu canonique.",
-        "system": "system_secrets",
-        "obtention": "Pêche/observation dans son habitat.",
-        "consumers": "system_peche, system_secrets, économie.",
-        "consequences": "Produit une ressource/fragment ; événement narratif.",
-        "assets": "1 sprite (famille créatures) + variantes.",
-        "animations": "idle/nage + réaction.",
-        "tests": "test_creature, test_chaine_production, test_placement."
-      },
-      "required_assets": [
-        "asset_spritesheet_creature_echo_du_bois"
-      ],
+      "id": "creature_echo_du_bois",
+      "justification": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
+      "kind": "creature",
       "required_animations": [
         "anim_creature_echo_du_bois_flotte_down",
         "anim_creature_echo_du_bois_flotte_up",
@@ -84,11 +73,22 @@
         "anim_creature_echo_du_bois_flotte_right",
         "anim_creature_echo_du_bois_apparition"
       ],
+      "required_assets": [
+        "asset_spritesheet_creature_echo_du_bois"
+      ],
+      "source": "INPUT/canon_initial.md/brief#Systèmes (system_secrets)",
+      "status": "PROPOSEE",
+      "system": "system_secrets",
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
-      }
+        "structure": "schéma JSON valide"
+      },
+      "yields": [
+        "objet_fragment_de_souvenir"
+      ]
     }
-  ]
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

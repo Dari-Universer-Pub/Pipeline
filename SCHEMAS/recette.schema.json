@@ -1,64 +1,63 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/recette.schema.json",
-  "title": "Recette / transformation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'recette' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^recette_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'recette_')."
-    },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "station_id": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "description": "Machine requise."
-    },
-    "inputs": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      },
-      "description": "Ingrédients {item_id, qty}."
-    },
-    "outputs": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      },
-      "description": "Résultats {item_id, qty}."
+      "type": "string"
     },
     "duration": {
       "type": [
         "number",
         "null"
       ]
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'recette_').",
+      "pattern": "^recette_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "inputs": {
+      "description": "Ingrédients {item_id, qty}.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "outputs": {
+      "description": "Résultats {item_id, qty}.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "station_id": {
+      "description": "Machine requise.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
     },
     "unlocked_by": {
       "type": [
@@ -74,6 +73,7 @@
     "inputs",
     "outputs"
   ],
-  "additionalProperties": true,
+  "title": "Recette / transformation",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

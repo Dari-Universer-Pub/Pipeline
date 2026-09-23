@@ -1,72 +1,71 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/culture.schema.json",
-  "title": "Culture / plante",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'culture' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^culture_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'culture_')."
-    },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "growth_days": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'culture_').",
+      "pattern": "^culture_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "memory_plant": {
+      "description": "True si fait remonter un fragment (canon).",
+      "type": "boolean"
+    },
+    "regrows": {
+      "type": "boolean"
+    },
+    "seasons": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seed_id": {
+      "description": "ID graine requise.",
+      "type": "string"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "stages": {
+      "description": "États de croissance (pour animations/assets).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "seed_id": {
-      "type": "string",
-      "description": "ID graine requise."
-    },
-    "yield_id": {
-      "type": "string",
-      "description": "ID produit récolté."
-    },
-    "seasons": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "growth_days": {
-      "type": "integer",
-      "minimum": 1
-    },
-    "stages": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "États de croissance (pour animations/assets)."
+      "type": "string"
     },
     "water_needed": {
       "type": "boolean"
     },
-    "memory_plant": {
-      "type": "boolean",
-      "description": "True si fait remonter un fragment (canon)."
-    },
-    "regrows": {
-      "type": "boolean"
+    "yield_id": {
+      "description": "ID produit récolté.",
+      "type": "string"
     }
   },
   "required": [
@@ -77,6 +76,7 @@
     "yield_id",
     "growth_days"
   ],
-  "additionalProperties": true,
+  "title": "Culture / plante",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

@@ -1,78 +1,78 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "open_decisions",
   "generated_deterministic": true,
+  "kind": "open_decisions",
   "payload": [
     {
       "id": "decision_nombre_exact_de_biomes",
-      "topic": "nombre exact de biomes",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre exact de biomes"
     },
     {
       "id": "decision_nombre_exact_de_cultures",
-      "topic": "nombre exact de cultures",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre exact de cultures"
     },
     {
       "id": "decision_nombre_exact_de_pnj",
-      "topic": "nombre exact de PNJ",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre exact de PNJ"
     },
     {
       "id": "decision_nombre_exact_de_recettes",
-      "topic": "nombre exact de recettes",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre exact de recettes"
     },
     {
       "id": "decision_nombre_exact_de_quetes",
-      "topic": "nombre exact de quêtes",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre exact de quêtes"
     },
     {
       "id": "decision_niveau_de_generation_procedurale",
-      "topic": "niveau de génération procédurale",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "niveau de génération procédurale"
     },
     {
       "id": "decision_duree_d_une_journee",
-      "topic": "durée d’une journée",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "durée d’une journée"
     },
     {
       "id": "decision_nombre_de_saisons",
-      "topic": "nombre de saisons",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "nombre de saisons"
     },
     {
       "id": "decision_importance_de_la_peche",
-      "topic": "importance de la pêche",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "importance de la pêche"
     },
     {
       "id": "decision_presence_ou_non_d_un_systeme_de_combat",
-      "topic": "présence ou non d’un système de combat",
-      "status": "A_VALIDER",
+      "justification": "Décision explicitement listée comme ouverte par le propriétaire.",
       "source": "INPUT/open_decisions.md",
-      "justification": "Décision explicitement listée comme ouverte par le propriétaire."
+      "status": "A_VALIDER",
+      "topic": "présence ou non d’un système de combat"
     }
-  ]
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

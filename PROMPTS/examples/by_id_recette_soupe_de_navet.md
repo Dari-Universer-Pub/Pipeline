@@ -42,28 +42,28 @@ demandé, à partir du contexte injecté.
 
 ```json
 {
-  "id": "recette_soupe_de_navet",
   "display_name": "Soupe de navet",
-  "status": "PROPOSEE",
-  "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
-  "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-  "station_id": "machine_foyer_de_la_maison_racine",
+  "duration": 2.0,
+  "id": "recette_soupe_de_navet",
   "inputs": [
     {
       "item_id": "objet_navet",
       "qty": 2
     }
   ],
+  "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
+  "kind": "cuisine",
   "outputs": [
     {
       "item_id": "objet_soupe_de_navet",
       "qty": 1
     }
   ],
-  "duration": 2.0,
-  "unlocked_by": null,
-  "kind": "cuisine",
-  "quantity_status": "A_VALIDER"
+  "quantity_status": "A_VALIDER",
+  "source": "brief#Systèmes (cuisine) — recette exacte À_VALIDER (canon ouvert)",
+  "station_id": "machine_foyer_de_la_maison_racine",
+  "status": "PROPOSEE",
+  "unlocked_by": null
 }
 ```
 

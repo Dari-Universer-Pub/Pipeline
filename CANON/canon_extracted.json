@@ -1,226 +1,226 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "canon_extracted",
   "generated_deterministic": true,
+  "kind": "canon_extracted",
   "payload": {
-    "world": {
-      "id": "monde_valdore",
-      "display_name": "Valdore",
-      "category": "monde",
-      "description": "Nom du monde.",
-      "status": "CANONIQUE",
-      "source": "INPUT/canon_initial.md#Faits immuables",
-      "justification": "Fait immuable explicite."
-    },
-    "player": {
-      "id": "joueur_jardinier",
-      "display_name": "le Jardinier",
-      "category": "joueur",
-      "description": "Rôle incarné par le joueur.",
-      "status": "CANONIQUE",
-      "source": "INPUT/canon_initial.md#Faits immuables",
-      "justification": "Fait immuable explicite."
-    },
-    "refuge": {
-      "id": "lieu_maison_racine",
-      "display_name": "la Maison-Racine",
-      "category": "lieu",
-      "description": "Refuge et atelier principal.",
-      "status": "CANONIQUE",
-      "source": "INPUT/canon_initial.md#Faits immuables",
-      "justification": "Fait immuable explicite."
-    },
     "facts": [
       {
         "id": "fait_monde_valdore",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Le monde s’appelle Valdore",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       },
       {
         "id": "fait_joueur_jardinier",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Le joueur est appelé le Jardinier",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       },
       {
         "id": "fait_refuge_maison_racine",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Le refuge principal s’appelle la Maison-Racine",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       },
       {
         "id": "fait_fragments_physiques",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Les souvenirs existent sous forme de fragments physiques",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       },
       {
         "id": "fait_graines_echo",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Les graines d’écho peuvent faire pousser des plantes mémorielles",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       },
       {
         "id": "fait_pas_magie_combat",
+        "source": "INPUT/canon_initial.md#Faits immuables",
         "statement": "Le jeu ne possède pas de magie de combat traditionnelle",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Faits immuables"
+        "status": "CANONIQUE"
       }
     ],
     "locations": [
       {
-        "id": "lieu_maison_racine",
-        "display_name": "La Maison-Racine",
         "category": "lieu",
-        "description": "refuge et atelier principal",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Lieux connus",
-        "justification": "Lieu explicitement défini dans le canon initial.",
         "clean_name": "Maison-Racine",
-        "map_id": "map_maison_racine"
+        "description": "refuge et atelier principal",
+        "display_name": "La Maison-Racine",
+        "id": "lieu_maison_racine",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "map_id": "map_maison_racine",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "status": "CANONIQUE"
       },
       {
-        "id": "lieu_vallee_claire",
-        "display_name": "La Vallée Claire",
         "category": "lieu",
-        "description": "zone de départ et terres cultivables",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Lieux connus",
-        "justification": "Lieu explicitement défini dans le canon initial.",
         "clean_name": "Vallée Claire",
-        "map_id": "map_vallee_claire"
+        "description": "zone de départ et terres cultivables",
+        "display_name": "La Vallée Claire",
+        "id": "lieu_vallee_claire",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "map_id": "map_vallee_claire",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "status": "CANONIQUE"
       },
       {
-        "id": "lieu_bois_des_retours",
-        "display_name": "Le Bois des Retours",
         "category": "lieu",
-        "description": "forêt où certains événements se répètent",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Lieux connus",
-        "justification": "Lieu explicitement défini dans le canon initial.",
         "clean_name": "Bois des Retours",
-        "map_id": "map_bois_des_retours"
+        "description": "forêt où certains événements se répètent",
+        "display_name": "Le Bois des Retours",
+        "id": "lieu_bois_des_retours",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "map_id": "map_bois_des_retours",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "status": "CANONIQUE"
       },
       {
-        "id": "lieu_lac_muet",
-        "display_name": "Le Lac Muet",
         "category": "lieu",
-        "description": "zone d’exploration et de pêche",
-        "status": "CANONIQUE",
-        "source": "INPUT/canon_initial.md#Lieux connus",
-        "justification": "Lieu explicitement défini dans le canon initial.",
         "clean_name": "Lac Muet",
-        "map_id": "map_lac_muet"
+        "description": "zone d’exploration et de pêche",
+        "display_name": "Le Lac Muet",
+        "id": "lieu_lac_muet",
+        "justification": "Lieu explicitement défini dans le canon initial.",
+        "map_id": "map_lac_muet",
+        "source": "INPUT/canon_initial.md#Lieux connus",
+        "status": "CANONIQUE"
       }
     ],
+    "naming_rules": "Les noms doivent être simples, évocateurs et cohérents avec un monde rural mystérieux. Éviter les noms de fantasy génériques, les objets cosmiques et les termes technologiques modernes",
     "npcs": [
       {
-        "id": "pnj_alba",
-        "display_name": "Alba",
         "category": "pnj",
         "description": "soigneuse des plantes et première guide du joueur",
-        "status": "CANONIQUE",
+        "display_name": "Alba",
+        "id": "pnj_alba",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Personnages connus",
-        "justification": "Personnage explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "pnj_marin",
-        "display_name": "Marin",
         "category": "pnj",
         "description": "artisan qui fabrique les machines agricoles",
-        "status": "CANONIQUE",
+        "display_name": "Marin",
+        "id": "pnj_marin",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Personnages connus",
-        "justification": "Personnage explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "pnj_nox",
-        "display_name": "Nox",
         "category": "pnj",
         "description": "pêcheur qui refuse de parler de son passé",
-        "status": "CANONIQUE",
+        "display_name": "Nox",
+        "id": "pnj_nox",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Personnages connus",
-        "justification": "Personnage explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       }
     ],
     "objects": [
       {
-        "id": "objet_graine_d_echo",
+        "category": "objet",
+        "description": "",
         "display_name": "Graine d’Écho",
-        "category": "objet",
-        "description": "",
-        "status": "CANONIQUE",
+        "id": "objet_graine_d_echo",
+        "justification": "Objet explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Objets canoniques",
-        "justification": "Objet explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "objet_houe_de_depart",
+        "category": "objet",
+        "description": "",
         "display_name": "Houe de départ",
-        "category": "objet",
-        "description": "",
-        "status": "CANONIQUE",
+        "id": "objet_houe_de_depart",
+        "justification": "Objet explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Objets canoniques",
-        "justification": "Objet explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "objet_arrosoir_de_cuivre",
+        "category": "objet",
+        "description": "",
         "display_name": "Arrosoir de cuivre",
-        "category": "objet",
-        "description": "",
-        "status": "CANONIQUE",
+        "id": "objet_arrosoir_de_cuivre",
+        "justification": "Objet explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Objets canoniques",
-        "justification": "Objet explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "objet_fragment_de_souvenir",
+        "category": "objet",
+        "description": "",
         "display_name": "Fragment de souvenir",
-        "category": "objet",
-        "description": "",
-        "status": "CANONIQUE",
+        "id": "objet_fragment_de_souvenir",
+        "justification": "Objet explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Objets canoniques",
-        "justification": "Objet explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       },
       {
-        "id": "objet_carnet_du_jardinier",
-        "display_name": "Carnet du Jardinier",
         "category": "objet",
         "description": "",
-        "status": "CANONIQUE",
+        "display_name": "Carnet du Jardinier",
+        "id": "objet_carnet_du_jardinier",
+        "justification": "Objet explicitement défini dans le canon initial.",
         "source": "INPUT/canon_initial.md#Objets canoniques",
-        "justification": "Objet explicitement défini dans le canon initial."
+        "status": "CANONIQUE"
       }
     ],
-    "naming_rules": "Les noms doivent être simples, évocateurs et cohérents avec un monde rural mystérieux. Éviter les noms de fantasy génériques, les objets cosmiques et les termes technologiques modernes",
     "open_in_canon": [
       {
         "id": "ouvert_les_noms_des_saisons_supplementaires",
-        "topic": "Les noms des saisons supplémentaires",
-        "status": "A_VALIDER",
+        "justification": "Élément explicitement marqué ouvert dans le canon.",
         "source": "INPUT/canon_initial.md#Éléments ouverts",
-        "justification": "Élément explicitement marqué ouvert dans le canon."
+        "status": "A_VALIDER",
+        "topic": "Les noms des saisons supplémentaires"
       },
       {
         "id": "ouvert_les_recettes_exactes",
-        "topic": "Les recettes exactes",
-        "status": "A_VALIDER",
+        "justification": "Élément explicitement marqué ouvert dans le canon.",
         "source": "INPUT/canon_initial.md#Éléments ouverts",
-        "justification": "Élément explicitement marqué ouvert dans le canon."
+        "status": "A_VALIDER",
+        "topic": "Les recettes exactes"
       },
       {
         "id": "ouvert_les_secrets_du_bois_des_retours",
-        "topic": "Les secrets du Bois des Retours",
-        "status": "A_VALIDER",
+        "justification": "Élément explicitement marqué ouvert dans le canon.",
         "source": "INPUT/canon_initial.md#Éléments ouverts",
-        "justification": "Élément explicitement marqué ouvert dans le canon."
+        "status": "A_VALIDER",
+        "topic": "Les secrets du Bois des Retours"
       },
       {
         "id": "ouvert_le_nombre_final_de_cultures_et_de_quetes",
-        "topic": "Le nombre final de cultures et de quêtes",
-        "status": "A_VALIDER",
+        "justification": "Élément explicitement marqué ouvert dans le canon.",
         "source": "INPUT/canon_initial.md#Éléments ouverts",
-        "justification": "Élément explicitement marqué ouvert dans le canon."
+        "status": "A_VALIDER",
+        "topic": "Le nombre final de cultures et de quêtes"
       }
-    ]
-  }
+    ],
+    "player": {
+      "category": "joueur",
+      "description": "Rôle incarné par le joueur.",
+      "display_name": "le Jardinier",
+      "id": "joueur_jardinier",
+      "justification": "Fait immuable explicite.",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "status": "CANONIQUE"
+    },
+    "refuge": {
+      "category": "lieu",
+      "description": "Refuge et atelier principal.",
+      "display_name": "la Maison-Racine",
+      "id": "lieu_maison_racine",
+      "justification": "Fait immuable explicite.",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "status": "CANONIQUE"
+    },
+    "world": {
+      "category": "monde",
+      "description": "Nom du monde.",
+      "display_name": "Valdore",
+      "id": "monde_valdore",
+      "justification": "Fait immuable explicite.",
+      "source": "INPUT/canon_initial.md#Faits immuables",
+      "status": "CANONIQUE"
+    }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

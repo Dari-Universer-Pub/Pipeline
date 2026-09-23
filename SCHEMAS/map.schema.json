@@ -1,154 +1,153 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/map.schema.json",
-  "title": "Carte",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'map' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^map_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'map_')."
+    "buildings": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "collisions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
     },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "entrances": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "exits": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "height_levels": {
+      "items": {
+        "type": "integer"
+      },
+      "type": "array"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'map_').",
+      "pattern": "^map_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "linked_maps": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "navigation_rules": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "paths": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "placement_rules": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "points_of_interest": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "regions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "resources": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "seasonal_conditions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "secret_zones": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "seed": {
+      "description": "Graine procédurale (reproductibilité).",
+      "type": "integer"
+    },
+    "size": {
+      "description": "{w,h} en tuiles.",
+      "type": "object"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "spawn_rules": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "size": {
-      "type": "object",
-      "description": "{w,h} en tuiles."
-    },
-    "regions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "zones": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "paths": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "entrances": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "exits": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "collisions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "height_levels": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      }
+      "type": "string"
     },
     "terrains": {
-      "type": "array",
+      "description": "Noms de terrains présents (tilesets dérivés).",
       "items": {
         "type": "string"
       },
-      "description": "Noms de terrains présents (tilesets dérivés)."
+      "type": "array"
     },
     "transitions": {
-      "type": "array",
       "items": {
         "type": "object"
-      }
+      },
+      "type": "array"
     },
-    "points_of_interest": {
-      "type": "array",
+    "zones": {
       "items": {
         "type": "object"
-      }
-    },
-    "buildings": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "secret_zones": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "resources": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "placement_rules": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "navigation_rules": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "spawn_rules": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "seasonal_conditions": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
-    "linked_maps": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "seed": {
-      "type": "integer",
-      "description": "Graine procédurale (reproductibilité)."
+      },
+      "type": "array"
     }
   },
   "required": [
@@ -160,6 +159,7 @@
     "placement_rules",
     "navigation_rules"
   ],
-  "additionalProperties": true,
+  "title": "Carte",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

@@ -1,64 +1,63 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/creature.schema.json",
-  "title": "Créature / animal",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'creature' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^creature_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'creature_')."
+    "behavior": {
+      "type": "string"
     },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "habitat": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "hostile": {
+      "type": "boolean"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'creature_').",
+      "pattern": "^creature_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "animal",
+        "creature",
+        "boss"
+      ],
+      "type": "string"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "kind": {
-      "type": "string",
-      "enum": [
-        "animal",
-        "creature",
-        "boss"
-      ]
-    },
-    "behavior": {
       "type": "string"
     },
-    "habitat": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "yields": {
-      "type": "array",
+      "description": "Ressources produites ( IDs objet/ressource).",
       "items": {
         "type": "string"
       },
-      "description": "Ressources produites ( IDs objet/ressource)."
-    },
-    "hostile": {
-      "type": "boolean"
+      "type": "array"
     }
   },
   "required": [
@@ -67,6 +66,7 @@
     "status",
     "kind"
   ],
-  "additionalProperties": true,
+  "title": "Créature / animal",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

@@ -111,6 +111,7 @@ une fonction `run_stage(...)` retournant un dict et écrivant ses artefacts.
 | `test_reproducibility.py` | IDs stables, empreintes, reproductibilité, versionnement |
 | `test_naming_canon.py` | Nommage, unicité des IDs, canon verrouillé, pureté canonique |
 | `test_no_llm_runtime.py` | Exécution sans LLM, déterminisme, protection des sauvegardes |
+| `test_dialogues.py` | Dialogues : repli dérivé, import, compilation en volume, validation (conditions/choix/effets/révélations), rejet (fuite de secret, locuteur hors graphe) |
 | `test_end_to_end.py` | Chaîne bout-en-bout (mémoire + artefacts disque) |
 
 ---

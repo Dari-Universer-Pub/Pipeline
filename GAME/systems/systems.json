@@ -1,586 +1,586 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "systems_catalog",
   "generated_deterministic": true,
+  "kind": "systems_catalog",
   "payload": {
+    "count": 15,
+    "requirements": {
+      "creature:fish": 1,
+      "culture:crop": 1,
+      "culture:memory_plant": 1,
+      "dialogue:conversation": 1,
+      "evenement:contextual": 1,
+      "evenement:discovery": 1,
+      "lieu:farmland": 1,
+      "lieu:fishing_spot": 1,
+      "lieu:poi": 1,
+      "lieu:refuge": 1,
+      "lieu:secret": 1,
+      "machine:kitchen": 1,
+      "machine:station": 1,
+      "map:explorable": 1,
+      "map:navigable": 1,
+      "objet:fishing_tool": 1,
+      "objet:fragment": 1,
+      "objet:seed": 1,
+      "objet:tool": 2,
+      "objet:tradable": 1,
+      "pnj:agent": 1,
+      "pnj:merchant": 1,
+      "quete:quest": 1,
+      "recette:cook": 1,
+      "recette:craft": 1,
+      "recette:upgrade": 1,
+      "ressource:material": 1,
+      "saison:cycle": 1,
+      "saison:weather_pool": 1
+    },
     "systems": [
       {
-        "id": "system_temps",
-        "display_name": "temps",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Gère le cycle jour/saison/météo. Socle temporel de tous les autres systèmes.",
+        "consumes": [],
         "depends_on": [],
-        "verbs": [
-          "attendre",
-          "observer"
-        ],
+        "description": "Gère le cycle jour/saison/météo. Socle temporel de tous les autres systèmes.",
+        "display_name": "temps",
         "entity_types": [
           "saison"
         ],
-        "requires": [
-          {
-            "entity_type": "saison",
-            "role": "cycle",
-            "min": 1
-          }
-        ],
+        "id": "system_temps",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "contexte_temporel"
         ],
-        "consumes": []
-      },
-      {
-        "id": "system_meteo",
-        "display_name": "meteo",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "États météo dérivés des saisons, affecte la croissance et l'exploration.",
-        "depends_on": [
-          "system_temps"
-        ],
-        "verbs": [
-          "observer"
-        ],
-        "entity_types": [
-          "saison"
-        ],
         "requires": [
           {
             "entity_type": "saison",
-            "role": "weather_pool",
-            "min": 1
+            "min": 1,
+            "role": "cycle"
           }
         ],
-        "produces": [],
-        "consumes": []
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "attendre",
+          "observer"
+        ]
       },
       {
-        "id": "system_agriculture",
-        "display_name": "agriculture",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "consumes": [],
+        "depends_on": [
+          "system_temps"
+        ],
+        "description": "États météo dérivés des saisons, affecte la croissance et l'exploration.",
+        "display_name": "meteo",
+        "entity_types": [
+          "saison"
+        ],
+        "id": "system_meteo",
         "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Planter, arroser, faire pousser, récolter. Cœur de la boucle principale ; chaque culture mémorielle fait remonter un fragment.",
+        "produces": [],
+        "requires": [
+          {
+            "entity_type": "saison",
+            "min": 1,
+            "role": "weather_pool"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "observer"
+        ]
+      },
+      {
+        "consumes": [
+          "objet:graine"
+        ],
         "depends_on": [
           "system_temps",
           "system_meteo"
         ],
-        "verbs": [
-          "planter",
-          "arroser",
-          "recolter",
-          "cultiver"
-        ],
+        "description": "Planter, arroser, faire pousser, récolter. Cœur de la boucle principale ; chaque culture mémorielle fait remonter un fragment.",
+        "display_name": "agriculture",
         "entity_types": [
           "culture",
           "objet",
           "lieu"
         ],
-        "requires": [
-          {
-            "entity_type": "culture",
-            "role": "crop",
-            "min": 1
-          },
-          {
-            "entity_type": "objet",
-            "role": "tool",
-            "min": 2
-          },
-          {
-            "entity_type": "objet",
-            "role": "seed",
-            "min": 1
-          },
-          {
-            "entity_type": "lieu",
-            "role": "farmland",
-            "min": 1
-          }
-        ],
+        "id": "system_agriculture",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:produit",
           "ressource"
         ],
-        "consumes": [
-          "objet:graine"
+        "requires": [
+          {
+            "entity_type": "culture",
+            "min": 1,
+            "role": "crop"
+          },
+          {
+            "entity_type": "objet",
+            "min": 2,
+            "role": "tool"
+          },
+          {
+            "entity_type": "objet",
+            "min": 1,
+            "role": "seed"
+          },
+          {
+            "entity_type": "lieu",
+            "min": 1,
+            "role": "farmland"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "planter",
+          "arroser",
+          "recolter",
+          "cultiver"
         ]
       },
       {
-        "id": "system_memoire",
-        "display_name": "memoire",
-        "status": "DEDUITE",
-        "source": "INPUT/canon_initial.md#Faits immuables",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Système canonique : les souvenirs existent en fragments physiques ; les graines d'écho font pousser des plantes mémorielles.",
+        "consumes": [],
         "depends_on": [
           "system_agriculture"
         ],
-        "verbs": [
-          "commemorer",
-          "transformer",
-          "oublier"
-        ],
+        "description": "Système canonique : les souvenirs existent en fragments physiques ; les graines d'écho font pousser des plantes mémorielles.",
+        "display_name": "memoire",
         "entity_types": [
           "objet",
           "evenement",
           "pnj"
         ],
-        "requires": [
-          {
-            "entity_type": "objet",
-            "role": "fragment",
-            "min": 1
-          },
-          {
-            "entity_type": "culture",
-            "role": "memory_plant",
-            "min": 1
-          }
-        ],
+        "id": "system_memoire",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "narration"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "objet",
+            "min": 1,
+            "role": "fragment"
+          },
+          {
+            "entity_type": "culture",
+            "min": 1,
+            "role": "memory_plant"
+          }
+        ],
+        "source": "INPUT/canon_initial.md#Faits immuables",
+        "status": "DEDUITE",
+        "verbs": [
+          "commemorer",
+          "transformer",
+          "oublier"
+        ]
       },
       {
-        "id": "system_artisanat",
-        "display_name": "artisanat",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Fabriquer machines et objets via des recettes et des stations. Marin (canon) fabrique les machines agricoles.",
+        "consumes": [
+          "ressource"
+        ],
         "depends_on": [
           "system_agriculture"
         ],
-        "verbs": [
-          "fabriquer",
-          "ameliorer",
-          "reparer"
-        ],
+        "description": "Fabriquer machines et objets via des recettes et des stations. Marin (canon) fabrique les machines agricoles.",
+        "display_name": "artisanat",
         "entity_types": [
           "machine",
           "recette",
           "objet",
           "ressource"
         ],
-        "requires": [
-          {
-            "entity_type": "machine",
-            "role": "station",
-            "min": 1
-          },
-          {
-            "entity_type": "recette",
-            "role": "craft",
-            "min": 1
-          },
-          {
-            "entity_type": "ressource",
-            "role": "material",
-            "min": 1
-          }
-        ],
+        "id": "system_artisanat",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:artisanat",
           "machine"
         ],
-        "consumes": [
-          "ressource"
+        "requires": [
+          {
+            "entity_type": "machine",
+            "min": 1,
+            "role": "station"
+          },
+          {
+            "entity_type": "recette",
+            "min": 1,
+            "role": "craft"
+          },
+          {
+            "entity_type": "ressource",
+            "min": 1,
+            "role": "material"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "fabriquer",
+          "ameliorer",
+          "reparer"
         ]
       },
       {
-        "id": "system_cuisine",
-        "display_name": "cuisine",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Transformer les récoltes en plats via des recettes de cuisine ; effets sur relations/énergie.",
+        "consumes": [
+          "objet:produit"
+        ],
         "depends_on": [
           "system_artisanat",
           "system_agriculture"
         ],
-        "verbs": [
-          "cuisiner",
-          "offrir"
-        ],
+        "description": "Transformer les récoltes en plats via des recettes de cuisine ; effets sur relations/énergie.",
+        "display_name": "cuisine",
         "entity_types": [
           "recette",
           "machine",
           "objet"
         ],
-        "requires": [
-          {
-            "entity_type": "machine",
-            "role": "kitchen",
-            "min": 1
-          },
-          {
-            "entity_type": "recette",
-            "role": "cook",
-            "min": 1
-          }
-        ],
+        "id": "system_cuisine",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:consommable"
         ],
-        "consumes": [
-          "objet:produit"
+        "requires": [
+          {
+            "entity_type": "machine",
+            "min": 1,
+            "role": "kitchen"
+          },
+          {
+            "entity_type": "recette",
+            "min": 1,
+            "role": "cook"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "cuisiner",
+          "offrir"
         ]
       },
       {
-        "id": "system_exploration",
-        "display_name": "exploration",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Explorer les environs, découvrir lieux, ressources et secrets. Nécessite des cartes navigables.",
+        "consumes": [],
         "depends_on": [
           "system_temps"
         ],
-        "verbs": [
-          "explorer",
-          "decouvrir",
-          "voyager"
-        ],
+        "description": "Explorer les environs, découvrir lieux, ressources et secrets. Nécessite des cartes navigables.",
+        "display_name": "exploration",
         "entity_types": [
           "map",
           "lieu",
           "ressource",
           "objet"
         ],
-        "requires": [
-          {
-            "entity_type": "map",
-            "role": "explorable",
-            "min": 1
-          },
-          {
-            "entity_type": "lieu",
-            "role": "poi",
-            "min": 1
-          }
-        ],
+        "id": "system_exploration",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:graine",
           "objet:fragment",
           "ressource"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "map",
+            "min": 1,
+            "role": "explorable"
+          },
+          {
+            "entity_type": "lieu",
+            "min": 1,
+            "role": "poi"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "explorer",
+          "decouvrir",
+          "voyager"
+        ]
       },
       {
-        "id": "system_navigation",
-        "display_name": "navigation",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Règles de déplacement, collisions, adjacences de terrain et transitions entre cartes.",
+        "consumes": [],
         "depends_on": [
           "system_exploration"
         ],
-        "verbs": [
-          "marcher",
-          "courir"
-        ],
+        "description": "Règles de déplacement, collisions, adjacences de terrain et transitions entre cartes.",
+        "display_name": "navigation",
         "entity_types": [
           "map",
           "lieu"
         ],
+        "id": "system_navigation",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
+        "produces": [],
         "requires": [
           {
             "entity_type": "map",
-            "role": "navigable",
-            "min": 1
+            "min": 1,
+            "role": "navigable"
           }
         ],
-        "produces": [],
-        "consumes": []
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "marcher",
+          "courir"
+        ]
       },
       {
-        "id": "system_relations",
-        "display_name": "relations",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Relations avec les PNJ, modifiées par dons, quêtes et événements ; débloquent des lieux et dialogues.",
+        "consumes": [],
         "depends_on": [
           "system_exploration"
         ],
-        "verbs": [
-          "parler",
-          "offrir",
-          "aider"
-        ],
+        "description": "Relations avec les PNJ, modifiées par dons, quêtes et événements ; débloquent des lieux et dialogues.",
+        "display_name": "relations",
         "entity_types": [
           "pnj",
           "dialogue",
           "objet"
         ],
-        "requires": [
-          {
-            "entity_type": "pnj",
-            "role": "agent",
-            "min": 1
-          },
-          {
-            "entity_type": "dialogue",
-            "role": "conversation",
-            "min": 1
-          }
-        ],
+        "id": "system_relations",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "acces_lieu"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "pnj",
+            "min": 1,
+            "role": "agent"
+          },
+          {
+            "entity_type": "dialogue",
+            "min": 1,
+            "role": "conversation"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "parler",
+          "offrir",
+          "aider"
+        ]
       },
       {
-        "id": "system_economie",
-        "display_name": "economie",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Économie simple : monnaie, prix, vente/achat, boucles d'argent. (Monnaie À_VALIDER : non définie dans le canon.)",
+        "consumes": [],
         "depends_on": [
           "system_artisanat",
           "system_relations"
         ],
-        "verbs": [
-          "vendre",
-          "acheter",
-          "echanger"
-        ],
+        "description": "Économie simple : monnaie, prix, vente/achat, boucles d'argent. (Monnaie À_VALIDER : non définie dans le canon.)",
+        "display_name": "economie",
         "entity_types": [
           "objet",
           "pnj",
           "ressource"
         ],
-        "requires": [
-          {
-            "entity_type": "objet",
-            "role": "tradable",
-            "min": 1
-          },
-          {
-            "entity_type": "pnj",
-            "role": "merchant",
-            "min": 1
-          }
-        ],
+        "id": "system_economie",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "monnaie"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "objet",
+            "min": 1,
+            "role": "tradable"
+          },
+          {
+            "entity_type": "pnj",
+            "min": 1,
+            "role": "merchant"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "vendre",
+          "acheter",
+          "echanger"
+        ]
       },
       {
-        "id": "system_refuge",
-        "display_name": "refuge",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Refuge améliorable : la Maison-Racine (canon), améliorée via recettes d'upgrade.",
+        "consumes": [],
         "depends_on": [
           "system_artisanat"
         ],
-        "verbs": [
-          "ameliorer",
-          "amenager"
-        ],
+        "description": "Refuge améliorable : la Maison-Racine (canon), améliorée via recettes d'upgrade.",
+        "display_name": "refuge",
         "entity_types": [
           "lieu",
           "machine",
           "recette"
         ],
+        "id": "system_refuge",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
+        "produces": [],
         "requires": [
           {
             "entity_type": "lieu",
-            "role": "refuge",
-            "min": 1
+            "min": 1,
+            "role": "refuge"
           },
           {
             "entity_type": "recette",
-            "role": "upgrade",
-            "min": 1
+            "min": 1,
+            "role": "upgrade"
           }
         ],
-        "produces": [],
-        "consumes": []
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "ameliorer",
+          "amenager"
+        ]
       },
       {
-        "id": "system_secrets",
-        "display_name": "secrets",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Secrets et zones cachées découvrables ; le Bois des Retours (canon) contient des événements qui se répètent.",
+        "consumes": [],
         "depends_on": [
           "system_exploration",
           "system_memoire"
         ],
-        "verbs": [
-          "decouvrir",
-          "enqueter"
-        ],
+        "description": "Secrets et zones cachées découvrables ; le Bois des Retours (canon) contient des événements qui se répètent.",
+        "display_name": "secrets",
         "entity_types": [
           "lieu",
           "evenement",
           "objet"
         ],
-        "requires": [
-          {
-            "entity_type": "lieu",
-            "role": "secret",
-            "min": 1
-          },
-          {
-            "entity_type": "evenement",
-            "role": "discovery",
-            "min": 1
-          }
-        ],
+        "id": "system_secrets",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:fragment"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "lieu",
+            "min": 1,
+            "role": "secret"
+          },
+          {
+            "entity_type": "evenement",
+            "min": 1,
+            "role": "discovery"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "decouvrir",
+          "enqueter"
+        ]
       },
       {
-        "id": "system_evenements",
-        "display_name": "evenements",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Événements contextuels déclenchés par le temps, le lieu, la météo, les relations ou les récoltes.",
+        "consumes": [],
         "depends_on": [
           "system_temps",
           "system_relations",
           "system_exploration"
         ],
-        "verbs": [
-          "assister"
-        ],
+        "description": "Événements contextuels déclenchés par le temps, le lieu, la météo, les relations ou les récoltes.",
+        "display_name": "evenements",
         "entity_types": [
           "evenement",
           "quete"
         ],
+        "id": "system_evenements",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
+        "produces": [],
         "requires": [
           {
             "entity_type": "evenement",
-            "role": "contextual",
-            "min": 1
+            "min": 1,
+            "role": "contextual"
           }
         ],
-        "produces": [],
-        "consumes": []
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "assister"
+        ]
       },
       {
-        "id": "system_progression",
-        "display_name": "progression",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Quêtes, déblocages et avancement ; relie les systèmes entre eux et donne des conséquences durables.",
+        "consumes": [],
         "depends_on": [
           "system_relations",
           "system_evenements",
           "system_exploration"
         ],
-        "verbs": [
-          "accomplir",
-          "choisir"
-        ],
+        "description": "Quêtes, déblocages et avancement ; relie les systèmes entre eux et donne des conséquences durables.",
+        "display_name": "progression",
         "entity_types": [
           "quete",
           "evenement",
           "pnj",
           "lieu"
         ],
-        "requires": [
-          {
-            "entity_type": "quete",
-            "role": "quest",
-            "min": 1
-          }
-        ],
+        "id": "system_progression",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "deblocage"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "quete",
+            "min": 1,
+            "role": "quest"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "accomplir",
+          "choisir"
+        ]
       },
       {
-        "id": "system_peche",
-        "display_name": "peche",
-        "status": "DEDUITE",
-        "source": "INPUT/game_brief.md#Systèmes souhaités",
-        "justification": "Système requis par la boucle de gameplay / le brief.",
-        "description": "Pêche au Lac Muet (canon). Système mineur : existence DEDUITE du canon, ampleur À_VALIDER.",
+        "consumes": [],
         "depends_on": [
           "system_exploration"
         ],
-        "verbs": [
-          "pecher"
-        ],
+        "description": "Pêche au Lac Muet (canon). Système mineur : existence DEDUITE du canon, ampleur À_VALIDER.",
+        "display_name": "peche",
         "entity_types": [
           "objet",
           "creature",
           "lieu"
         ],
-        "requires": [
-          {
-            "entity_type": "objet",
-            "role": "fishing_tool",
-            "min": 1
-          },
-          {
-            "entity_type": "creature",
-            "role": "fish",
-            "min": 1
-          },
-          {
-            "entity_type": "lieu",
-            "role": "fishing_spot",
-            "min": 1
-          }
-        ],
+        "id": "system_peche",
+        "justification": "Système requis par la boucle de gameplay / le brief.",
         "produces": [
           "objet:ressource"
         ],
-        "consumes": []
+        "requires": [
+          {
+            "entity_type": "objet",
+            "min": 1,
+            "role": "fishing_tool"
+          },
+          {
+            "entity_type": "creature",
+            "min": 1,
+            "role": "fish"
+          },
+          {
+            "entity_type": "lieu",
+            "min": 1,
+            "role": "fishing_spot"
+          }
+        ],
+        "source": "INPUT/game_brief.md#Systèmes souhaités",
+        "status": "DEDUITE",
+        "verbs": [
+          "pecher"
+        ]
       }
-    ],
-    "requirements": {
-      "saison:cycle": 1,
-      "saison:weather_pool": 1,
-      "culture:crop": 1,
-      "objet:tool": 2,
-      "objet:seed": 1,
-      "lieu:farmland": 1,
-      "objet:fragment": 1,
-      "culture:memory_plant": 1,
-      "machine:station": 1,
-      "recette:craft": 1,
-      "ressource:material": 1,
-      "machine:kitchen": 1,
-      "recette:cook": 1,
-      "map:explorable": 1,
-      "lieu:poi": 1,
-      "map:navigable": 1,
-      "pnj:agent": 1,
-      "dialogue:conversation": 1,
-      "objet:tradable": 1,
-      "pnj:merchant": 1,
-      "lieu:refuge": 1,
-      "recette:upgrade": 1,
-      "lieu:secret": 1,
-      "evenement:discovery": 1,
-      "evenement:contextual": 1,
-      "quete:quest": 1,
-      "objet:fishing_tool": 1,
-      "creature:fish": 1,
-      "lieu:fishing_spot": 1
-    },
-    "count": 15
-  }
+    ]
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

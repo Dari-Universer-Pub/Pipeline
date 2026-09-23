@@ -160,11 +160,16 @@ def read_json(path: Path, default: Any = None) -> Any:
 
 
 def write_json(path: Path, data: Any, *, indent: int = 2) -> Path:
-    """Écrit un JSON en UTF-8 (sans BOM), crée les dossiers parents."""
+    """Écrit un JSON en UTF-8 (sans BOM), crée les dossiers parents.
+
+    `sort_keys=True` garantit une sérialisation **déterministe** : à entrées et
+    graines fixées, deux runs produisent des fichiers octet pour octet identiques
+    (l'ordre d'insertion des dicts/sets ne fuite plus dans les artefacts).
+    """
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as fh:
-        json.dump(data, fh, ensure_ascii=False, indent=indent, sort_keys=False)
+        json.dump(data, fh, ensure_ascii=False, indent=indent, sort_keys=True)
         fh.write("\n")
     return path
 

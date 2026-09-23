@@ -133,6 +133,38 @@ python3 tools/pipeline.py --check              # revalidation globale
 ```
 Répéter C.1→C.4 jusqu'à `passed=True` et 0 erreur.
 
+### C.5 Consolider les dialogues validés dans le catalogue
+Les réponses acceptées sont stockées dans `RESULTS/accepted/` (preuve). Pour que
+le **compilateur** les prenne en compte, les dialogues validés doivent être
+consolidés dans le catalogue `GAME/catalogs/dialogues.json` (une liste
+d'objets-dialogues). Ce catalogue est le **point d'intégration** : il est vide
+par défaut et préservé d'un run à l'autre.
+
+```bash
+# Exemple : consolider tous les dialogues acceptés dans le catalogue.
+python3 - <<'PY'
+import json, glob
+from pathlib import Path
+acc = []
+for f in glob.glob("RESULTS/accepted/dialogue_*.json"):
+    acc.append(json.load(open(f, encoding="utf-8")))
+cat = Path("GAME/catalogs/dialogues.json")
+env = json.load(open(cat, encoding="utf-8")) if cat.exists() else \
+      {"pipeline_version":"5.0.0","schema_version":"5.0.0","kind":"dialogues",
+       "generated_deterministic":True,"payload":[]}
+env["payload"] = acc
+json.dump(env, open(cat,"w",encoding="utf-8"), ensure_ascii=False, indent=2)
+print("dialogues consolidés :", len(acc))
+PY
+python3 tools/pipeline.py --check     # revalidation (schéma + graphe + narratif)
+```
+
+Tant que `dialogues.json` est vide, la compilation replie sur les **salutations
+essentielles dérivées des PNJ** (3 dialogues déterministes). Dès qu'il contient
+des dialogues validés, `compile_dialogs` les compile **tous** (conditions →
+lignes → choix → effets) et le repli disparaît. Le volume n'est pas limité :
+le compilateur itère sur toute la collection (voir `tests/test_dialogues.py`).
+
 ---
 
 ## Phase D — Compiler pour le moteur
@@ -140,7 +172,10 @@ Répéter C.1→C.4 jusqu'à `passed=True` et 0 erreur.
 ### D.1 Compiler les sorties runtime (sans LLM)
 Déjà fait par `pipeline.py` (étape 12). Vérifier `ENGINE_OUT/` :
 - `runtime_data.json` : bundle runtime (entités + relations) ;
-- `dialogs_compiled.json` : dialogues essentiels en données conditionnelles ;
+- `dialogs_compiled.json` : dialogues en données conditionnelles (conditions →
+  lignes → choix → effets + frontière de connaissance du locuteur). Source :
+  `GAME/catalogs/dialogues.json` ; si vide, repli déterministe sur les
+  salutations essentielles dérivées des PNJ canoniques (3 par défaut) ;
 - `rules_compiled.json` : tables de règles/effets déterministes ;
 - `save_schema.json` : schéma de sauvegarde versionné + migrations
   (`llm_mutation_forbidden: true`) ;
@@ -156,12 +191,12 @@ sauvegardes, objets, quêtes majeures ou secrets non débloqués.
 ## Phase E — Vérifier l'intégrité de la pipeline
 
 ```bash
-python3 tools/run_tests.py            # 103 tests, attendus OK
+python3 tools/run_tests.py            # 120 tests, attendus OK
 python3 tools/pipeline.py --check     # validation globale, attendue PASS
 ```
 
 Attendu :
-- **Tests** : `OK` (103 tests) ;
+- **Tests** : `OK` (120 tests) ;
 - **Validation** : `passed=True, 0 erreurs` ;
 - **Graphe** : 100 % atteignable, 0 référence pendante, 0 orphelin, 0 système
   isolé ;

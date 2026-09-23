@@ -1,325 +1,325 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "manifest_quests",
   "generated_deterministic": true,
+  "kind": "manifest_quests",
   "payload": [
     {
-      "id": "quete_le_premier_echo",
-      "display_name": "Le premier écho",
-      "status": "PROPOSEE",
-      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
-      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-      "description": "Alba guide le Jardinier pour planter la première Graine d'Écho.",
-      "giver_id": "pnj_alba",
-      "trigger": {
-        "type": "on_day_start"
+      "choices": [],
+      "consequences": [
+        "Débloque la recette 'Fragment ravivé' au Puits de Mémoire.",
+        "Le Jardinier apprend que les cultures font remonter le passé."
+      ],
+      "derivation": {
+        "animations": "geste de dialogue/don.",
+        "assets": "icônes de quête + marqueur de donneur.",
+        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+        "consumers": "system_progression, system_relations.",
+        "obtention": "Donneur pnj_alba + déclencheur.",
+        "system": "system_memoire, system_progression",
+        "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+        "why": "Donne une conséquence durable et relie les systèmes entre eux."
       },
-      "preconditions": [],
+      "description": "Alba guide le Jardinier pour planter la première Graine d'Écho.",
+      "discovery": "Parler à pnj_alba ou déclencheur contextuel.",
+      "display_name": "Le premier écho",
+      "effects": [
+        {
+          "params": {
+            "quete_id": "quete_le_premier_echo",
+            "step": "complete"
+          },
+          "type": "advance_quest"
+        },
+        {
+          "params": {
+            "fait_id": "fait_valdore",
+            "to": "joueur"
+          },
+          "type": "reveal_fact"
+        },
+        {
+          "params": {
+            "item_id": "objet_fragment_de_souvenir",
+            "qty": 1
+          },
+          "type": "add_item"
+        }
+      ],
+      "failure_conditions": [],
+      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
+      "giver_id": "pnj_alba",
+      "id": "quete_le_premier_echo",
+      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
+      "location_id": "lieu_champ_de_la_vallee_claire",
+      "missable": false,
       "participants": [
         "pnj_alba"
       ],
-      "location_id": "lieu_champ_de_la_vallee_claire",
+      "preconditions": [],
+      "quantity_status": "A_VALIDER",
+      "required_animations": [],
+      "required_assets": [],
+      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
+      "status": "PROPOSEE",
       "steps": [
         {
           "id": "step_1",
           "objective": "Alba guide le Jardinier pour planter la première Graine d'Écho."
         }
       ],
-      "choices": [],
-      "effects": [
-        {
-          "type": "advance_quest",
-          "params": {
-            "quete_id": "quete_le_premier_echo",
-            "step": "complete"
-          }
-        },
-        {
-          "type": "reveal_fact",
-          "params": {
-            "fait_id": "fait_valdore",
-            "to": "joueur"
-          }
-        },
-        {
-          "type": "add_item",
-          "params": {
-            "item_id": "objet_fragment_de_souvenir",
-            "qty": 1
-          }
-        }
-      ],
-      "consequences": [
-        "Débloque la recette 'Fragment ravivé' au Puits de Mémoire.",
-        "Le Jardinier apprend que les cultures font remonter le passé."
-      ],
-      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
-      "failure_conditions": [],
-      "missable": false,
-      "discovery": "Parler à pnj_alba ou déclencheur contextuel.",
       "systems": [
         "system_memoire",
         "system_progression"
       ],
-      "quantity_status": "A_VALIDER",
-      "derivation": {
-        "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-        "system": "system_memoire, system_progression",
-        "obtention": "Donneur pnj_alba + déclencheur.",
-        "consumers": "system_progression, system_relations.",
-        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-        "assets": "icônes de quête + marqueur de donneur.",
-        "animations": "geste de dialogue/don.",
-        "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
+      "trigger": {
+        "type": "on_day_start"
       },
-      "required_assets": [],
-      "required_animations": [],
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
+        "structure": "schéma JSON valide"
       }
     },
     {
-      "id": "quete_l_outil_de_marin",
-      "display_name": "L'outil de Marin",
-      "status": "PROPOSEE",
-      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
-      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-      "description": "Marin demande des matériaux pour construire une machine.",
-      "giver_id": "pnj_marin",
-      "trigger": {
-        "type": "on_relationship_threshold",
-        "params": {
-          "pnj_id": "pnj_marin",
-          "value": 20
-        }
+      "choices": [],
+      "consequences": [
+        "Marin fabrique l'Établi ; accès à l'artisanat avancé.",
+        "Relation Marin augmentée."
+      ],
+      "derivation": {
+        "animations": "geste de dialogue/don.",
+        "assets": "icônes de quête + marqueur de donneur.",
+        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+        "consumers": "system_progression, system_relations.",
+        "obtention": "Donneur pnj_marin + déclencheur.",
+        "system": "system_artisanat, system_economie",
+        "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+        "why": "Donne une conséquence durable et relie les systèmes entre eux."
       },
-      "preconditions": [],
+      "description": "Marin demande des matériaux pour construire une machine.",
+      "discovery": "Parler à pnj_marin ou déclencheur contextuel.",
+      "display_name": "L'outil de Marin",
+      "effects": [
+        {
+          "params": {
+            "quete_id": "quete_l_outil_de_marin",
+            "step": "complete"
+          },
+          "type": "advance_quest"
+        },
+        {
+          "params": {
+            "item_id": "machine_etabli_de_marin",
+            "qty": 1
+          },
+          "type": "add_item"
+        }
+      ],
+      "failure_conditions": [],
+      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
+      "giver_id": "pnj_marin",
+      "id": "quete_l_outil_de_marin",
+      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
+      "location_id": "lieu_atelier_de_la_maison_racine",
+      "missable": false,
       "participants": [
         "pnj_marin"
       ],
-      "location_id": "lieu_atelier_de_la_maison_racine",
+      "preconditions": [],
+      "quantity_status": "A_VALIDER",
+      "required_animations": [],
+      "required_assets": [],
+      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
+      "status": "PROPOSEE",
       "steps": [
         {
           "id": "step_1",
           "objective": "Marin demande des matériaux pour construire une machine."
         }
       ],
-      "choices": [],
-      "effects": [
-        {
-          "type": "advance_quest",
-          "params": {
-            "quete_id": "quete_l_outil_de_marin",
-            "step": "complete"
-          }
-        },
-        {
-          "type": "add_item",
-          "params": {
-            "item_id": "machine_etabli_de_marin",
-            "qty": 1
-          }
-        }
-      ],
-      "consequences": [
-        "Marin fabrique l'Établi ; accès à l'artisanat avancé.",
-        "Relation Marin augmentée."
-      ],
-      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
-      "failure_conditions": [],
-      "missable": false,
-      "discovery": "Parler à pnj_marin ou déclencheur contextuel.",
       "systems": [
         "system_artisanat",
         "system_economie"
       ],
-      "quantity_status": "A_VALIDER",
-      "derivation": {
-        "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-        "system": "system_artisanat, system_economie",
-        "obtention": "Donneur pnj_marin + déclencheur.",
-        "consumers": "system_progression, system_relations.",
-        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-        "assets": "icônes de quête + marqueur de donneur.",
-        "animations": "geste de dialogue/don.",
-        "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
+      "trigger": {
+        "params": {
+          "pnj_id": "pnj_marin",
+          "value": 20
+        },
+        "type": "on_relationship_threshold"
       },
-      "required_assets": [],
-      "required_animations": [],
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
+        "structure": "schéma JSON valide"
       }
     },
     {
-      "id": "quete_le_silence_de_nox",
-      "display_name": "Le silence de Nox",
-      "status": "PROPOSEE",
-      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
-      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-      "description": "Nox refuse de parler ; le Jardinier doit gagner sa confiance.",
-      "giver_id": "pnj_nox",
-      "trigger": {
-        "type": "on_enter_location",
-        "params": {
-          "lieu_id": "lieu_lac_muet"
-        }
+      "choices": [],
+      "consequences": [
+        "Nox partage un fragment de son passé (narration).",
+        "Accès à la pêche profonde au Lac Muet."
+      ],
+      "derivation": {
+        "animations": "geste de dialogue/don.",
+        "assets": "icônes de quête + marqueur de donneur.",
+        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+        "consumers": "system_progression, system_relations.",
+        "obtention": "Donneur pnj_nox + déclencheur.",
+        "system": "system_relations, system_peche",
+        "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+        "why": "Donne une conséquence durable et relie les systèmes entre eux."
       },
-      "preconditions": [],
+      "description": "Nox refuse de parler ; le Jardinier doit gagner sa confiance.",
+      "discovery": "Parler à pnj_nox ou déclencheur contextuel.",
+      "display_name": "Le silence de Nox",
+      "effects": [
+        {
+          "params": {
+            "quete_id": "quete_le_silence_de_nox",
+            "step": "complete"
+          },
+          "type": "advance_quest"
+        },
+        {
+          "params": {
+            "delta": 15,
+            "pnj_id": "pnj_nox"
+          },
+          "type": "change_relationship"
+        },
+        {
+          "params": {
+            "item_id": "objet_ligne_de_peche",
+            "qty": 1
+          },
+          "type": "add_item"
+        }
+      ],
+      "failure_conditions": [],
+      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
+      "giver_id": "pnj_nox",
+      "id": "quete_le_silence_de_nox",
+      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
+      "location_id": "lieu_poste_de_peche_du_lac_muet",
+      "missable": true,
       "participants": [
         "pnj_nox"
       ],
-      "location_id": "lieu_poste_de_peche_du_lac_muet",
+      "preconditions": [],
+      "quantity_status": "A_VALIDER",
+      "required_animations": [],
+      "required_assets": [],
+      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
+      "status": "PROPOSEE",
       "steps": [
         {
           "id": "step_1",
           "objective": "Nox refuse de parler ; le Jardinier doit gagner sa confiance."
         }
       ],
-      "choices": [],
-      "effects": [
-        {
-          "type": "advance_quest",
-          "params": {
-            "quete_id": "quete_le_silence_de_nox",
-            "step": "complete"
-          }
-        },
-        {
-          "type": "change_relationship",
-          "params": {
-            "pnj_id": "pnj_nox",
-            "delta": 15
-          }
-        },
-        {
-          "type": "add_item",
-          "params": {
-            "item_id": "objet_ligne_de_peche",
-            "qty": 1
-          }
-        }
-      ],
-      "consequences": [
-        "Nox partage un fragment de son passé (narration).",
-        "Accès à la pêche profonde au Lac Muet."
-      ],
-      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
-      "failure_conditions": [],
-      "missable": true,
-      "discovery": "Parler à pnj_nox ou déclencheur contextuel.",
       "systems": [
         "system_relations",
         "system_peche"
       ],
-      "quantity_status": "A_VALIDER",
-      "derivation": {
-        "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-        "system": "system_relations, system_peche",
-        "obtention": "Donneur pnj_nox + déclencheur.",
-        "consumers": "system_progression, system_relations.",
-        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-        "assets": "icônes de quête + marqueur de donneur.",
-        "animations": "geste de dialogue/don.",
-        "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
+      "trigger": {
+        "params": {
+          "lieu_id": "lieu_lac_muet"
+        },
+        "type": "on_enter_location"
       },
-      "required_assets": [],
-      "required_animations": [],
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
+        "structure": "schéma JSON valide"
       }
     },
     {
-      "id": "quete_ce_qui_se_repete",
-      "display_name": "Ce qui se répète",
-      "status": "PROPOSEE",
-      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
-      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-      "description": "Enquêter sur les événements qui se répètent dans le Bois des Retours.",
-      "giver_id": "pnj_alba",
-      "trigger": {
-        "type": "on_secret_discovered",
-        "params": {
-          "secret_id": "secret_clairiere_repetition"
-        }
+      "choices": [],
+      "consequences": [
+        "Révèle un secret du Bois des Retours.",
+        "Débloque un événement mémoriel répété."
+      ],
+      "derivation": {
+        "animations": "geste de dialogue/don.",
+        "assets": "icônes de quête + marqueur de donneur.",
+        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+        "consumers": "system_progression, system_relations.",
+        "obtention": "Donneur pnj_alba + déclencheur.",
+        "system": "system_secrets, system_memoire",
+        "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+        "why": "Donne une conséquence durable et relie les systèmes entre eux."
       },
-      "preconditions": [],
+      "description": "Enquêter sur les événements qui se répètent dans le Bois des Retours.",
+      "discovery": "Parler à pnj_alba ou déclencheur contextuel.",
+      "display_name": "Ce qui se répète",
+      "effects": [
+        {
+          "params": {
+            "quete_id": "quete_ce_qui_se_repete",
+            "step": "complete"
+          },
+          "type": "advance_quest"
+        },
+        {
+          "params": {
+            "fait_id": "fait_valdore",
+            "to": "joueur"
+          },
+          "type": "reveal_fact"
+        },
+        {
+          "params": {
+            "item_id": "objet_fragment_de_souvenir",
+            "qty": 1
+          },
+          "type": "add_item"
+        },
+        {
+          "params": {
+            "secret_id": "secret_clairiere_repetition"
+          },
+          "type": "discover_secret"
+        }
+      ],
+      "failure_conditions": [],
+      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
+      "giver_id": "pnj_alba",
+      "id": "quete_ce_qui_se_repete",
+      "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
+      "location_id": "lieu_bois_des_retours",
+      "missable": true,
       "participants": [
         "pnj_alba"
       ],
-      "location_id": "lieu_bois_des_retours",
+      "preconditions": [],
+      "quantity_status": "A_VALIDER",
+      "required_animations": [],
+      "required_assets": [],
+      "source": "INPUT/canon_initial.md#Personnages + brief#Boucles",
+      "status": "PROPOSEE",
       "steps": [
         {
           "id": "step_1",
           "objective": "Enquêter sur les événements qui se répètent dans le Bois des Retours."
         }
       ],
-      "choices": [],
-      "effects": [
-        {
-          "type": "advance_quest",
-          "params": {
-            "quete_id": "quete_ce_qui_se_repete",
-            "step": "complete"
-          }
-        },
-        {
-          "type": "reveal_fact",
-          "params": {
-            "fait_id": "fait_valdore",
-            "to": "joueur"
-          }
-        },
-        {
-          "type": "add_item",
-          "params": {
-            "item_id": "objet_fragment_de_souvenir",
-            "qty": 1
-          }
-        },
-        {
-          "type": "discover_secret",
-          "params": {
-            "secret_id": "secret_clairiere_repetition"
-          }
-        }
-      ],
-      "consequences": [
-        "Révèle un secret du Bois des Retours.",
-        "Débloque un événement mémoriel répété."
-      ],
-      "fallback": "Si le donneur est indisponible, la quête est reportée au prochain jour (aucun blocage définitif).",
-      "failure_conditions": [],
-      "missable": true,
-      "discovery": "Parler à pnj_alba ou déclencheur contextuel.",
       "systems": [
         "system_secrets",
         "system_memoire"
       ],
-      "quantity_status": "A_VALIDER",
-      "derivation": {
-        "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-        "system": "system_secrets, system_memoire",
-        "obtention": "Donneur pnj_alba + déclencheur.",
-        "consumers": "system_progression, system_relations.",
-        "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-        "assets": "icônes de quête + marqueur de donneur.",
-        "animations": "geste de dialogue/don.",
-        "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
+      "trigger": {
+        "params": {
+          "secret_id": "secret_clairiere_repetition"
+        },
+        "type": "on_secret_discovered"
       },
-      "required_assets": [],
-      "required_animations": [],
       "validation": {
-        "structure": "schéma JSON valide",
+        "no_orphan": "au moins une relation d'usage",
         "references": "toutes les références résolues",
-        "no_orphan": "au moins une relation d'usage"
+        "structure": "schéma JSON valide"
       }
     }
-  ]
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

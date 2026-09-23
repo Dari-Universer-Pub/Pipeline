@@ -1,162 +1,162 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "manifest_placement",
   "generated_deterministic": true,
+  "kind": "manifest_placement",
   "payload": [
     {
-      "id": "placement_cultures",
-      "display_name": "Placement culture",
-      "status": "DEDUITE",
-      "places": "culture",
+      "accessibility": "zone cultivable débloquée",
       "allowed_terrain": [
         "sol_meuble"
       ],
+      "clustering": "parcelle_contigue",
+      "density": "haute",
+      "discovery_conditions": "aucune",
+      "display_name": "Placement culture",
       "forbidden_terrain": [
         "eau",
         "pierre",
         "plancher",
         "pont"
       ],
-      "density": "haute",
-      "min_distance": 1,
-      "clustering": "parcelle_contigue",
-      "season": "toutes (selon culture)",
-      "weather": "pluie accélère",
-      "accessibility": "zone cultivable débloquée",
-      "discovery_conditions": "aucune",
-      "poi_relation": "près du Champ de la Vallée Claire",
-      "source": "dérivé des systèmes + contraintes de map",
+      "id": "placement_cultures",
       "justification": "Les cultures exigent un sol meuble labouré (agriculture).",
+      "min_distance": 1,
+      "places": "culture",
+      "poi_relation": "près du Champ de la Vallée Claire",
+      "season": "toutes (selon culture)",
+      "source": "dérivé des systèmes + contraintes de map",
+      "status": "DEDUITE",
       "validation": {
-        "terrain_respecte": true,
+        "accessible": true,
         "densite_max": true,
         "distance_min": true,
-        "accessible": true
-      }
+        "terrain_respecte": true
+      },
+      "weather": "pluie accélère"
     },
     {
-      "id": "placement_machines",
-      "display_name": "Placement machine",
-      "status": "DEDUITE",
-      "places": "machine",
+      "accessibility": "refuge/atelier",
       "allowed_terrain": [
         "plancher",
         "bois"
       ],
+      "clustering": "isolé",
+      "density": "faible",
+      "discovery_conditions": "aucune",
+      "display_name": "Placement machine",
       "forbidden_terrain": [
         "eau",
         "sol_meuble",
         "herbe"
       ],
-      "density": "faible",
-      "min_distance": 2,
-      "clustering": "isolé",
-      "season": "toutes",
-      "weather": "indépendant",
-      "accessibility": "refuge/atelier",
-      "discovery_conditions": "aucune",
-      "poi_relation": "dans l'Atelier ou la Cuisine",
-      "source": "dérivé des systèmes + contraintes de map",
+      "id": "placement_machines",
       "justification": "Les machines sont placées dans les bâtiments (artisanat/cuisine).",
+      "min_distance": 2,
+      "places": "machine",
+      "poi_relation": "dans l'Atelier ou la Cuisine",
+      "season": "toutes",
+      "source": "dérivé des systèmes + contraintes de map",
+      "status": "DEDUITE",
       "validation": {
-        "terrain_respecte": true,
+        "accessible": true,
         "densite_max": true,
         "distance_min": true,
-        "accessible": true
-      }
+        "terrain_respecte": true
+      },
+      "weather": "indépendant"
     },
     {
-      "id": "placement_ressources",
-      "display_name": "Placement ressource",
-      "status": "PROPOSEE",
-      "places": "ressource",
+      "accessibility": "carte explorable",
       "allowed_terrain": [
         "terre",
         "herbe",
         "pierre"
       ],
+      "clustering": "amas_naturel",
+      "density": "moyenne",
+      "discovery_conditions": "peut nécessiter un outil",
+      "display_name": "Placement ressource",
       "forbidden_terrain": [
         "plancher",
         "pont"
       ],
-      "density": "moyenne",
-      "min_distance": 3,
-      "clustering": "amas_naturel",
-      "season": "toutes",
-      "weather": "indépendant",
-      "accessibility": "carte explorable",
-      "discovery_conditions": "peut nécessiter un outil",
-      "poi_relation": "hors des sentiers principaux",
-      "source": "dérivé des systèmes + contraintes de map",
+      "id": "placement_ressources",
       "justification": "Ressources naturelles réparties dans les zones d'exploration.",
+      "min_distance": 3,
+      "places": "ressource",
+      "poi_relation": "hors des sentiers principaux",
+      "season": "toutes",
+      "source": "dérivé des systèmes + contraintes de map",
+      "status": "PROPOSEE",
       "validation": {
-        "terrain_respecte": true,
+        "accessible": true,
         "densite_max": true,
         "distance_min": true,
-        "accessible": true
-      }
+        "terrain_respecte": true
+      },
+      "weather": "indépendant"
     },
     {
-      "id": "placement_secrets",
-      "display_name": "Placement secret",
-      "status": "DEDUITE",
-      "places": "secret",
+      "accessibility": "accessible seulement après découverte",
       "allowed_terrain": [
         "feuillage",
         "herbe",
         "terre"
       ],
+      "clustering": "caché",
+      "density": "très_faible",
+      "discovery_conditions": "événement/condition de découverte",
+      "display_name": "Placement secret",
       "forbidden_terrain": [
         "plancher",
         "pont"
       ],
-      "density": "très_faible",
-      "min_distance": 8,
-      "clustering": "caché",
-      "season": "saison_des_brumes",
-      "weather": "brouillard favorise",
-      "accessibility": "accessible seulement après découverte",
-      "discovery_conditions": "événement/condition de découverte",
-      "poi_relation": "lié à la Clairière qui se répète",
-      "source": "dérivé des systèmes + contraintes de map",
+      "id": "placement_secrets",
       "justification": "Les secrets du Bois sont rares et conditionnels (système secrets).",
+      "min_distance": 8,
+      "places": "secret",
+      "poi_relation": "lié à la Clairière qui se répète",
+      "season": "saison_des_brumes",
+      "source": "dérivé des systèmes + contraintes de map",
+      "status": "DEDUITE",
       "validation": {
-        "terrain_respecte": true,
+        "accessible": true,
         "densite_max": true,
         "distance_min": true,
-        "accessible": true
-      }
+        "terrain_respecte": true
+      },
+      "weather": "brouillard favorise"
     },
     {
-      "id": "placement_creatures",
-      "display_name": "Placement creature",
-      "status": "DEDUITE",
-      "places": "creature",
+      "accessibility": "habitat naturel",
       "allowed_terrain": [
         "eau",
         "herbe",
         "feuillage"
       ],
+      "clustering": "selon_habitat",
+      "density": "faible",
+      "discovery_conditions": "aucune",
+      "display_name": "Placement creature",
       "forbidden_terrain": [
         "plancher"
       ],
-      "density": "faible",
-      "min_distance": 4,
-      "clustering": "selon_habitat",
-      "season": "toutes",
-      "weather": "indépendant",
-      "accessibility": "habitat naturel",
-      "discovery_conditions": "aucune",
-      "poi_relation": "dans la zone d'habitat",
-      "source": "dérivé des systèmes + contraintes de map",
+      "id": "placement_creatures",
       "justification": "Chaque créature n'apparaît que dans son habitat (pêche/Bois).",
+      "min_distance": 4,
+      "places": "creature",
+      "poi_relation": "dans la zone d'habitat",
+      "season": "toutes",
+      "source": "dérivé des systèmes + contraintes de map",
+      "status": "DEDUITE",
       "validation": {
-        "terrain_respecte": true,
+        "accessible": true,
         "densite_max": true,
         "distance_min": true,
-        "accessible": true
-      }
+        "terrain_respecte": true
+      },
+      "weather": "indépendant"
     }
-  ]
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

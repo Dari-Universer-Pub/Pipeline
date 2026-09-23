@@ -1,40 +1,29 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/objet.schema.json",
-  "title": "Objet",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'objet' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^objet_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'objet_')."
+    "animation_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
-    "display_name": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+    "asset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
+    "base_value": {
+      "description": "Valeur économique de base.",
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "category": {
-      "type": "string",
       "enum": [
         "outil",
         "graine",
@@ -46,67 +35,77 @@
         "cle",
         "decoratif",
         "quotidien"
-      ]
+      ],
+      "type": "string"
+    },
+    "decorative_only": {
+      "type": "boolean"
+    },
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
     },
     "function": {
-      "type": "string",
-      "description": "Fonction de l'objet."
+      "description": "Fonction de l'objet.",
+      "type": "string"
     },
     "gameplay_verb": {
-      "type": "string",
-      "description": "Verbe de gameplay associé."
+      "description": "Verbe de gameplay associé.",
+      "type": "string"
     },
-    "obtention": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Moyens d'obtention ( IDs recette/lieu/événement)."
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'objet_').",
+      "pattern": "^objet_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
     },
     "loop_stage": {
+      "description": "Étape de la boucle (1-5).",
       "type": [
         "integer",
         "null"
-      ],
-      "description": "Étape de la boucle (1-5)."
+      ]
     },
-    "users": {
-      "type": "array",
+    "obtention": {
+      "description": "Moyens d'obtention ( IDs recette/lieu/événement).",
       "items": {
         "type": "string"
       },
-      "description": "Entités qui consomment/utilisent cet objet."
+      "type": "array"
     },
-    "transforms_into": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
     },
     "stackable": {
       "type": "boolean"
     },
-    "base_value": {
-      "type": [
-        "number",
-        "null"
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
       ],
-      "description": "Valeur économique de base."
+      "type": "string"
     },
-    "asset_id": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "animation_ids": {
-      "type": "array",
+    "transforms_into": {
       "items": {
         "type": "string"
-      }
+      },
+      "type": "array"
     },
-    "decorative_only": {
-      "type": "boolean"
+    "users": {
+      "description": "Entités qui consomment/utilisent cet objet.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     }
   },
   "required": [
@@ -117,6 +116,7 @@
     "function",
     "gameplay_verb"
   ],
-  "additionalProperties": true,
+  "title": "Objet",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

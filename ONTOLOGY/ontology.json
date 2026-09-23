@@ -1,1002 +1,333 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "ontology",
   "generated_deterministic": true,
+  "kind": "ontology",
   "payload": {
+    "condition_types": {
+      "and": {
+        "desc": "Conjonction.",
+        "params": [
+          "conditions"
+        ]
+      },
+      "crop_stage": {
+        "desc": "Stade de croissance.",
+        "params": [
+          "crop_id",
+          "op",
+          "stage"
+        ]
+      },
+      "fact_known": {
+        "desc": "Fait connu du joueur/PNJ.",
+        "params": [
+          "fait_id"
+        ]
+      },
+      "flag": {
+        "desc": "État d'un drapeau monde.",
+        "params": [
+          "flag_id",
+          "expected"
+        ]
+      },
+      "item_count": {
+        "desc": "Quantité d'un objet en inventaire.",
+        "params": [
+          "item_id",
+          "op",
+          "qty"
+        ]
+      },
+      "location": {
+        "desc": "Joueur présent dans un lieu.",
+        "params": [
+          "lieu_id"
+        ]
+      },
+      "not": {
+        "desc": "Négation.",
+        "params": [
+          "condition"
+        ]
+      },
+      "or": {
+        "desc": "Disjonction.",
+        "params": [
+          "conditions"
+        ]
+      },
+      "quest_state": {
+        "desc": "État d'une quête.",
+        "params": [
+          "quete_id",
+          "state"
+        ]
+      },
+      "relationship": {
+        "desc": "Niveau de relation.",
+        "params": [
+          "pnj_id",
+          "op",
+          "value"
+        ]
+      },
+      "season": {
+        "desc": "Saison courante.",
+        "params": [
+          "season_id"
+        ]
+      },
+      "secret_discovered": {
+        "desc": "Secret découvert.",
+        "params": [
+          "secret_id"
+        ]
+      },
+      "time_of_day": {
+        "desc": "Heure de la journée.",
+        "params": [
+          "op",
+          "hour"
+        ]
+      },
+      "weather": {
+        "desc": "Météo courante.",
+        "params": [
+          "weather_id"
+        ]
+      }
+    },
+    "effect_types": {
+      "add_item": {
+        "desc": "Ajoute un objet.",
+        "params": [
+          "item_id",
+          "qty"
+        ],
+        "reversible": true
+      },
+      "advance_quest": {
+        "desc": "Fait avancer une quête.",
+        "params": [
+          "quete_id",
+          "step"
+        ],
+        "reversible": true
+      },
+      "change_relationship": {
+        "desc": "Modifie une relation.",
+        "params": [
+          "pnj_id",
+          "delta"
+        ],
+        "reversible": true
+      },
+      "discover_secret": {
+        "desc": "Marque un secret découvert.",
+        "params": [
+          "secret_id"
+        ],
+        "reversible": false
+      },
+      "modify_economy": {
+        "desc": "Modifie la monnaie du joueur.",
+        "params": [
+          "amount"
+        ],
+        "reversible": true
+      },
+      "remove_item": {
+        "desc": "Retire un objet.",
+        "params": [
+          "item_id",
+          "qty"
+        ],
+        "reversible": true
+      },
+      "reveal_fact": {
+        "desc": "Révèle un fait (mémoire PNJ).",
+        "params": [
+          "fait_id",
+          "to"
+        ],
+        "reversible": false
+      },
+      "set_flag": {
+        "desc": "Positionne un drapeau.",
+        "params": [
+          "flag_id",
+          "value"
+        ],
+        "reversible": true
+      },
+      "spawn_entity": {
+        "desc": "Fait apparaître une entité.",
+        "params": [
+          "entity_id",
+          "lieu_id"
+        ],
+        "reversible": true
+      },
+      "transform_item": {
+        "desc": "Transforme un objet.",
+        "params": [
+          "from_id",
+          "to_id",
+          "qty"
+        ],
+        "reversible": true
+      },
+      "trigger_event": {
+        "desc": "Déclenche un événement.",
+        "params": [
+          "evenement_id"
+        ],
+        "reversible": false
+      },
+      "unlock_location": {
+        "desc": "Débloque un lieu.",
+        "params": [
+          "lieu_id"
+        ],
+        "reversible": false
+      }
+    },
     "entity_types": {
-      "monde": {
-        "prefix": "monde",
-        "label": "Monde",
+      "animation": {
         "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^monde_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'monde_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
+          "direction": {
             "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
+              "down",
+              "up",
+              "left",
+              "right",
+              null
             ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status"
-        ]
-      },
-      "lieu": {
-        "prefix": "lieu",
-        "label": "Lieu / zone",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^lieu_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'lieu_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "kind": {
-            "type": "string",
-            "enum": [
-              "carte",
-              "region",
-              "zone",
-              "interet",
-              "batiment",
-              "secret"
-            ]
-          },
-          "map_id": {
             "type": [
               "string",
               "null"
-            ],
-            "description": "Carte propriétaire si zone/POI."
-          },
-          "function": {
-            "type": "string",
-            "description": "Fonction gameplay du lieu."
-          },
-          "terrain": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "walkable": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "function"
-        ]
-      },
-      "pnj": {
-        "prefix": "pnj",
-        "label": "PNJ / agent",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^pnj_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'pnj_')."
+            ]
           },
           "display_name": {
-            "type": "string",
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
             "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "function": {
             "type": "string"
           },
-          "goals": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "needs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "beliefs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "knowledge": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Faits connus (limite ce que le dialogue peut révéler)."
-          },
-          "forbidden_knowledge": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Faits que le PNJ ignore/taise."
-          },
-          "emotions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "routines": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "frequented_places": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "voice": {
-            "type": "string",
-            "description": "Signature de voix (validation narrative)."
-          },
-          "home": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "function"
-        ]
-      },
-      "creature": {
-        "prefix": "creature",
-        "label": "Créature / animal",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^creature_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'creature_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "kind": {
-            "type": "string",
-            "enum": [
-              "animal",
-              "creature",
-              "boss"
-            ]
-          },
-          "behavior": {
+          "entity_id": {
             "type": "string"
           },
-          "habitat": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "yields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Ressources produites ( IDs objet/ressource)."
-          },
-          "hostile": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "kind"
-        ]
-      },
-      "objet": {
-        "prefix": "objet",
-        "label": "Objet",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^objet_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'objet_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "category": {
-            "type": "string",
-            "enum": [
-              "outil",
-              "graine",
-              "ressource",
-              "produit",
-              "fragment",
-              "consommable",
-              "artisanat",
-              "cle",
-              "decoratif",
-              "quotidien"
-            ]
-          },
-          "function": {
-            "type": "string",
-            "description": "Fonction de l'objet."
-          },
-          "gameplay_verb": {
-            "type": "string",
-            "description": "Verbe de gameplay associé."
-          },
-          "obtention": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Moyens d'obtention ( IDs recette/lieu/événement)."
-          },
-          "loop_stage": {
-            "type": [
-              "integer",
-              "null"
-            ],
-            "description": "Étape de la boucle (1-5)."
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Entités qui consomment/utilisent cet objet."
-          },
-          "transforms_into": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "stackable": {
-            "type": "boolean"
-          },
-          "base_value": {
-            "type": [
-              "number",
-              "null"
-            ],
-            "description": "Valeur économique de base."
-          },
-          "asset_id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "animation_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "decorative_only": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "category",
-          "function",
-          "gameplay_verb"
-        ]
-      },
-      "ressource": {
-        "prefix": "ressource",
-        "label": "Ressource",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^ressource_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'ressource_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "category": {
-            "type": "string"
-          },
-          "producers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "consumers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "seasonal": {
-            "type": "boolean"
-          },
-          "base_value": {
-            "type": [
-              "number",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "category"
-        ]
-      },
-      "culture": {
-        "prefix": "culture",
-        "label": "Culture / plante",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^culture_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'culture_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "seed_id": {
-            "type": "string",
-            "description": "ID graine requise."
-          },
-          "yield_id": {
-            "type": "string",
-            "description": "ID produit récolté."
-          },
-          "seasons": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "growth_days": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "stages": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "États de croissance (pour animations/assets)."
-          },
-          "water_needed": {
-            "type": "boolean"
-          },
-          "memory_plant": {
-            "type": "boolean",
-            "description": "True si fait remonter un fragment (canon)."
-          },
-          "regrows": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "seed_id",
-          "yield_id",
-          "growth_days"
-        ]
-      },
-      "machine": {
-        "prefix": "machine",
-        "label": "Machine / station",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^machine_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'machine_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "function": {
-            "type": "string"
-          },
-          "built_by": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "description": "PNJ/artisan (canon: Marin)."
-          },
-          "inputs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "outputs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "recipe_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "placement_id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "animation_ids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "function"
-        ]
-      },
-      "recette": {
-        "prefix": "recette",
-        "label": "Recette / transformation",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^recette_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'recette_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "station_id": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "description": "Machine requise."
-          },
-          "inputs": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            },
-            "description": "Ingrédients {item_id, qty}."
-          },
-          "outputs": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            },
-            "description": "Résultats {item_id, qty}."
-          },
-          "duration": {
-            "type": [
-              "number",
-              "null"
-            ]
-          },
-          "unlocked_by": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "inputs",
-          "outputs"
-        ]
-      },
-      "quete": {
-        "prefix": "quete",
-        "label": "Quête",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^quete_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'quete_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "giver_id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "trigger": {
-            "type": "object"
-          },
-          "preconditions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "participants": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "location_id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "steps": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "choices": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "effects": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "consequences": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "fallback": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "failure_conditions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "missable": {
-            "type": "boolean"
-          },
-          "discovery": {
-            "type": [
-              "string",
-              "null"
-            ]
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "trigger",
-          "effects"
-        ]
-      },
-      "evenement": {
-        "prefix": "evenement",
-        "label": "Événement",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^evenement_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'evenement_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "trigger": {
-            "type": "object"
-          },
-          "preconditions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "participants": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "location_id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "timing": {
-            "type": "object"
-          },
-          "effects": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "missable": {
-            "type": "boolean"
-          },
-          "repeatable": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "display_name",
-          "status",
-          "trigger",
-          "effects"
-        ]
-      },
-      "dialogue": {
-        "prefix": "dialogue",
-        "label": "Dialogue contextuel",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^dialogue_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'dialogue_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "speaker_id": {
-            "type": "string"
-          },
-          "conditions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "lines": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "reveals": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Faits révélés (doivent être dans knowledge du PNJ)."
-          },
-          "priority": {
+          "fps": {
+            "minimum": 1,
+            "type": "number"
+          },
+          "frames": {
+            "minimum": 1,
             "type": "integer"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'anim_').",
+            "pattern": "^anim_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "impact_event": {
+            "description": "Frame d'impact (synchronisation gameplay).",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "logic_effect": {
+            "description": "Effet logique déclenché ( ID effet).",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "loop": {
+            "type": "boolean"
+          },
+          "required_assets": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "state_or_action": {
+            "description": "État/action déclencheur.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "transitions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
           }
         },
+        "label": "Animation",
+        "prefix": "anim",
         "required": [
           "id",
-          "speaker_id",
-          "conditions",
-          "lines"
+          "entity_id",
+          "state_or_action",
+          "frames",
+          "fps",
+          "loop"
         ]
       },
       "asset": {
-        "prefix": "asset",
-        "label": "Asset visuel",
         "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^asset_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'asset_')."
-          },
           "display_name": {
-            "type": "string",
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
             "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
+            "type": "string"
           },
           "entity_id": {
-            "type": "string",
-            "description": "Entité rattachée (jamais isolé)."
+            "description": "Entité rattachée (jamais isolé).",
+            "type": "string"
           },
           "family": {
-            "type": "string",
-            "description": "Famille visuelle cohérente."
+            "description": "Famille visuelle cohérente.",
+            "type": "string"
+          },
+          "fingerprint": {
+            "description": "Empreinte unique (dédoublonnage).",
+            "type": "string"
           },
           "function": {
             "type": "string"
           },
+          "height": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'asset_').",
+            "pattern": "^asset_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
           "kind": {
-            "type": "string",
             "enum": [
               "sprite",
               "tileset",
@@ -1007,48 +338,57 @@
               "particule",
               "ui",
               "icone"
-            ]
+            ],
+            "type": "string"
           },
-          "width": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "height": {
-            "type": "integer",
-            "minimum": 1
+          "palette": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
           },
           "resolution": {
+            "type": "string"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
             "type": "string"
           },
           "style": {
             "type": "string"
           },
-          "palette": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "variants": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "usage_rules": {
-            "type": "array",
             "items": {
               "type": "string"
-            }
-          },
-          "fingerprint": {
-            "type": "string",
-            "description": "Empreinte unique (dédoublonnage)."
+            },
+            "type": "array"
           },
           "validation": {
             "type": "object"
+          },
+          "variants": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "width": {
+            "minimum": 1,
+            "type": "integer"
           }
         },
+        "label": "Asset visuel",
+        "prefix": "asset",
         "required": [
           "id",
           "display_name",
@@ -1060,255 +400,593 @@
           "height"
         ]
       },
-      "animation": {
-        "prefix": "anim",
-        "label": "Animation",
+      "creature": {
         "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^anim_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'anim_')."
-          },
-          "display_name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "entity_id": {
+          "behavior": {
             "type": "string"
           },
-          "state_or_action": {
-            "type": "string",
-            "description": "État/action déclencheur."
-          },
-          "direction": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "enum": [
-              "down",
-              "up",
-              "left",
-              "right",
-              null
-            ]
-          },
-          "frames": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "fps": {
-            "type": "number",
-            "minimum": 1
-          },
-          "loop": {
-            "type": "boolean"
-          },
-          "impact_event": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "description": "Frame d'impact (synchronisation gameplay)."
-          },
-          "logic_effect": {
-            "type": [
-              "string",
-              "null"
-            ],
-            "description": "Effet logique déclenché ( ID effet)."
-          },
-          "transitions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "required_assets": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "id",
-          "entity_id",
-          "state_or_action",
-          "frames",
-          "fps",
-          "loop"
-        ]
-      },
-      "map": {
-        "prefix": "map",
-        "label": "Carte",
-        "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^map_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'map_')."
-          },
           "display_name": {
-            "type": "string",
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
             "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
+            "type": "string"
           },
-          "status": {
-            "type": "string",
-            "enum": [
-              "CANONIQUE",
-              "DEDUITE",
-              "PROPOSEE",
-              "A_VALIDER"
-            ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "size": {
-            "type": "object",
-            "description": "{w,h} en tuiles."
-          },
-          "regions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "zones": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "paths": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "entrances": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "exits": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "collisions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "height_levels": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          },
-          "terrains": {
-            "type": "array",
+          "habitat": {
             "items": {
               "type": "string"
             },
-            "description": "Noms de terrains présents (tilesets dérivés)."
+            "type": "array"
           },
-          "transitions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "hostile": {
+            "type": "boolean"
           },
-          "points_of_interest": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'creature_').",
+            "pattern": "^creature_[a-z0-9_]+$",
+            "type": "string"
           },
-          "buildings": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
           },
-          "secret_zones": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "kind": {
+            "enum": [
+              "animal",
+              "creature",
+              "boss"
+            ],
+            "type": "string"
           },
-          "resources": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
           },
-          "placement_rules": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
           },
-          "navigation_rules": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "spawn_rules": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "seasonal_conditions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "linked_maps": {
-            "type": "array",
+          "yields": {
+            "description": "Ressources produites ( IDs objet/ressource).",
             "items": {
               "type": "string"
-            }
-          },
-          "seed": {
-            "type": "integer",
-            "description": "Graine procédurale (reproductibilité)."
+            },
+            "type": "array"
           }
         },
+        "label": "Créature / animal",
+        "prefix": "creature",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "kind"
+        ]
+      },
+      "culture": {
+        "fields": {
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "growth_days": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'culture_').",
+            "pattern": "^culture_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "memory_plant": {
+            "description": "True si fait remonter un fragment (canon).",
+            "type": "boolean"
+          },
+          "regrows": {
+            "type": "boolean"
+          },
+          "seasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "seed_id": {
+            "description": "ID graine requise.",
+            "type": "string"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "stages": {
+            "description": "États de croissance (pour animations/assets).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "water_needed": {
+            "type": "boolean"
+          },
+          "yield_id": {
+            "description": "ID produit récolté.",
+            "type": "string"
+          }
+        },
+        "label": "Culture / plante",
+        "prefix": "culture",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "seed_id",
+          "yield_id",
+          "growth_days"
+        ]
+      },
+      "dialogue": {
+        "fields": {
+          "conditions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'dialogue_').",
+            "pattern": "^dialogue_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "lines": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "reveals": {
+            "description": "Faits révélés (doivent être dans knowledge du PNJ).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "speaker_id": {
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          }
+        },
+        "label": "Dialogue contextuel",
+        "prefix": "dialogue",
+        "required": [
+          "id",
+          "speaker_id",
+          "conditions",
+          "lines"
+        ]
+      },
+      "evenement": {
+        "fields": {
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "effects": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'evenement_').",
+            "pattern": "^evenement_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "location_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "missable": {
+            "type": "boolean"
+          },
+          "participants": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "repeatable": {
+            "type": "boolean"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "timing": {
+            "type": "object"
+          },
+          "trigger": {
+            "type": "object"
+          }
+        },
+        "label": "Événement",
+        "prefix": "evenement",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "trigger",
+          "effects"
+        ]
+      },
+      "lieu": {
+        "fields": {
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "function": {
+            "description": "Fonction gameplay du lieu.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'lieu_').",
+            "pattern": "^lieu_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "carte",
+              "region",
+              "zone",
+              "interet",
+              "batiment",
+              "secret"
+            ],
+            "type": "string"
+          },
+          "map_id": {
+            "description": "Carte propriétaire si zone/POI.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "terrain": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "walkable": {
+            "type": "boolean"
+          }
+        },
+        "label": "Lieu / zone",
+        "prefix": "lieu",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "function"
+        ]
+      },
+      "machine": {
+        "fields": {
+          "animation_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "built_by": {
+            "description": "PNJ/artisan (canon: Marin).",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "function": {
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'machine_').",
+            "pattern": "^machine_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "inputs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "outputs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "placement_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recipe_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          }
+        },
+        "label": "Machine / station",
+        "prefix": "machine",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "function"
+        ]
+      },
+      "map": {
+        "fields": {
+          "buildings": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "collisions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "entrances": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "exits": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "height_levels": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'map_').",
+            "pattern": "^map_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "linked_maps": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "navigation_rules": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "paths": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "placement_rules": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "points_of_interest": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "regions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "resources": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "seasonal_conditions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "secret_zones": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "seed": {
+            "description": "Graine procédurale (reproductibilité).",
+            "type": "integer"
+          },
+          "size": {
+            "description": "{w,h} en tuiles.",
+            "type": "object"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "spawn_rules": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "terrains": {
+            "description": "Noms de terrains présents (tilesets dérivés).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "transitions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "zones": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "label": "Carte",
+        "prefix": "map",
         "required": [
           "id",
           "display_name",
@@ -1319,615 +997,656 @@
           "navigation_rules"
         ]
       },
-      "system": {
-        "prefix": "system",
-        "label": "Système de gameplay",
+      "monde": {
         "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^system_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'system_')."
-          },
           "display_name": {
-            "type": "string",
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
             "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'monde_').",
+            "pattern": "^monde_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
           },
           "status": {
-            "type": "string",
+            "description": "Statut de l'information.",
             "enum": [
               "CANONIQUE",
               "DEDUITE",
               "PROPOSEE",
               "A_VALIDER"
             ],
-            "description": "Statut de l'information."
-          },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "description": {
             "type": "string"
-          },
-          "depends_on": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "produces": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "consumes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "verbs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         },
+        "label": "Monde",
+        "prefix": "monde",
+        "required": [
+          "id",
+          "display_name",
+          "status"
+        ]
+      },
+      "objet": {
+        "fields": {
+          "animation_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "asset_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "base_value": {
+            "description": "Valeur économique de base.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "category": {
+            "enum": [
+              "outil",
+              "graine",
+              "ressource",
+              "produit",
+              "fragment",
+              "consommable",
+              "artisanat",
+              "cle",
+              "decoratif",
+              "quotidien"
+            ],
+            "type": "string"
+          },
+          "decorative_only": {
+            "type": "boolean"
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "function": {
+            "description": "Fonction de l'objet.",
+            "type": "string"
+          },
+          "gameplay_verb": {
+            "description": "Verbe de gameplay associé.",
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'objet_').",
+            "pattern": "^objet_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "loop_stage": {
+            "description": "Étape de la boucle (1-5).",
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "obtention": {
+            "description": "Moyens d'obtention ( IDs recette/lieu/événement).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "stackable": {
+            "type": "boolean"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "transforms_into": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "users": {
+            "description": "Entités qui consomment/utilisent cet objet.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "label": "Objet",
+        "prefix": "objet",
         "required": [
           "id",
           "display_name",
           "status",
-          "description"
+          "category",
+          "function",
+          "gameplay_verb"
         ]
       },
-      "saison": {
-        "prefix": "saison",
-        "label": "Saison",
+      "pnj": {
         "fields": {
-          "id": {
-            "type": "string",
-            "pattern": "^saison_[a-z0-9_]+$",
-            "description": "Identifiant interne stable (préfixe 'saison_')."
+          "beliefs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
           },
           "display_name": {
-            "type": "string",
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
             "minLength": 1,
-            "description": "Nom affiché (peut contenir accents/langue du jeu)."
+            "type": "string"
+          },
+          "emotions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "forbidden_knowledge": {
+            "description": "Faits que le PNJ ignore/taise.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "frequented_places": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "function": {
+            "type": "string"
+          },
+          "goals": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "home": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'pnj_').",
+            "pattern": "^pnj_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "knowledge": {
+            "description": "Faits connus (limite ce que le dialogue peut révéler).",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "needs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "routines": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
           },
           "status": {
-            "type": "string",
+            "description": "Statut de l'information.",
             "enum": [
               "CANONIQUE",
               "DEDUITE",
               "PROPOSEE",
               "A_VALIDER"
             ],
-            "description": "Statut de l'information."
+            "type": "string"
           },
-          "source": {
-            "type": "string",
-            "description": "Fichier/section d'origine."
-          },
-          "justification": {
-            "type": "string",
-            "description": "Pourquoi cet élément existe."
-          },
-          "order": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "length_days": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "weather_pool": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "growable": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "voice": {
+            "description": "Signature de voix (validation narrative).",
+            "type": "string"
           }
         },
+        "label": "PNJ / agent",
+        "prefix": "pnj",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "function"
+        ]
+      },
+      "quete": {
+        "fields": {
+          "choices": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "consequences": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "discovery": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "effects": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "failure_conditions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "fallback": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "giver_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'quete_').",
+            "pattern": "^quete_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "location_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "missable": {
+            "type": "boolean"
+          },
+          "participants": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "steps": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "trigger": {
+            "type": "object"
+          }
+        },
+        "label": "Quête",
+        "prefix": "quete",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "trigger",
+          "effects"
+        ]
+      },
+      "recette": {
+        "fields": {
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "duration": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'recette_').",
+            "pattern": "^recette_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "inputs": {
+            "description": "Ingrédients {item_id, qty}.",
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "outputs": {
+            "description": "Résultats {item_id, qty}.",
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "station_id": {
+            "description": "Machine requise.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "unlocked_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "label": "Recette / transformation",
+        "prefix": "recette",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "inputs",
+          "outputs"
+        ]
+      },
+      "ressource": {
+        "fields": {
+          "base_value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "consumers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'ressource_').",
+            "pattern": "^ressource_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "producers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "seasonal": {
+            "type": "boolean"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          }
+        },
+        "label": "Ressource",
+        "prefix": "ressource",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "category"
+        ]
+      },
+      "saison": {
+        "fields": {
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "growable": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'saison_').",
+            "pattern": "^saison_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "length_days": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "order": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "weather_pool": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "label": "Saison",
+        "prefix": "saison",
         "required": [
           "id",
           "display_name",
           "status",
           "order"
         ]
-      }
-    },
-    "relation_types": {
-      "contient": {
-        "source": [
-          "lieu",
-          "map"
-        ],
-        "target": [
-          "lieu",
-          "zone",
-          "objet",
-          "pnj",
-          "creature"
-        ],
-        "cardinality": "1-n",
-        "meaning": "Contenement spatial.",
-        "implies_usage": false
       },
-      "produit": {
-        "source": [
-          "machine",
-          "culture",
-          "creature",
-          "lieu"
-        ],
-        "target": [
-          "objet",
-          "ressource"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Production d'un objet/ressource.",
-        "implies_usage": true
-      },
-      "consomme": {
-        "source": [
-          "recette",
-          "machine",
-          "quete"
-        ],
-        "target": [
-          "objet",
-          "ressource"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Consommation d'un objet/ressource.",
-        "implies_usage": true
-      },
-      "transforme": {
-        "source": [
-          "recette"
-        ],
-        "target": [
-          "objet",
-          "ressource"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Entrée transformée en sortie.",
-        "implies_usage": true
-      },
-      "requiert": {
-        "source": [
-          "quete",
-          "recette",
-          "culture",
-          "evenement"
-        ],
-        "target": [
-          "objet",
-          "condition",
-          "lieu",
-          "pnj"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Prérequis.",
-        "implies_usage": true
-      },
-      "declenche": {
-        "source": [
-          "evenement",
-          "quete",
-          "effet"
-        ],
-        "target": [
-          "effet",
-          "quete",
-          "evenement"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Déclenchement causal.",
-        "implies_usage": true
-      },
-      "habite": {
-        "source": [
-          "pnj",
-          "creature"
-        ],
-        "target": [
-          "lieu"
-        ],
-        "cardinality": "n-1",
-        "meaning": "Résidence.",
-        "implies_usage": true
-      },
-      "frequente": {
-        "source": [
-          "pnj"
-        ],
-        "target": [
-          "lieu"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Lieu de routine.",
-        "implies_usage": true
-      },
-      "donne": {
-        "source": [
-          "pnj"
-        ],
-        "target": [
-          "quete"
-        ],
-        "cardinality": "1-n",
-        "meaning": "Donneur de quête.",
-        "implies_usage": true
-      },
-      "affecte": {
-        "source": [
-          "effet"
-        ],
-        "target": [
-          "objet",
-          "pnj",
-          "lieu",
-          "quete",
-          "system"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Effet appliqué à une entité.",
-        "implies_usage": true
-      },
-      "adjacent_a": {
-        "source": [
-          "terrain"
-        ],
-        "target": [
-          "terrain"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Adjacence de terrain (transitions).",
-        "implies_usage": false
-      },
-      "utilise": {
-        "source": [
-          "system"
-        ],
-        "target": [
-          "objet",
-          "machine",
-          "pnj",
-          "lieu",
-          "culture"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Le système utilise l'entité.",
-        "implies_usage": true
-      },
-      "obtenu_par": {
-        "source": [
-          "objet",
-          "ressource"
-        ],
-        "target": [
-          "recette",
-          "lieu",
-          "evenement",
-          "culture"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Moyen d'obtention.",
-        "implies_usage": true
-      },
-      "evolue_vers": {
-        "source": [
-          "culture"
-        ],
-        "target": [
-          "culture"
-        ],
-        "cardinality": "1-n",
-        "meaning": "Transition d'état de croissance.",
-        "implies_usage": false
-      },
-      "releve_de": {
-        "source": [
-          "objet",
-          "culture",
-          "machine",
-          "recette",
-          "pnj",
-          "quete"
-        ],
-        "target": [
-          "system"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Rattachement à un système de gameplay.",
-        "implies_usage": true
-      },
-      "connecte_a": {
-        "source": [
-          "map",
-          "lieu"
-        ],
-        "target": [
-          "map",
-          "lieu"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Connexion de navigation entre cartes.",
-        "implies_usage": true
-      },
-      "decrit": {
-        "source": [
-          "fait"
-        ],
-        "target": [
-          "monde",
-          "joueur",
-          "lieu",
-          "objet",
-          "pnj",
-          "system",
-          "culture"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Un fait canonique décrit une entité.",
-        "implies_usage": false
-      },
-      "pousse_dans": {
-        "source": [
-          "culture"
-        ],
-        "target": [
-          "saison"
-        ],
-        "cardinality": "n-n",
-        "meaning": "Saison de croissance d'une culture.",
-        "implies_usage": true
-      }
-    },
-    "world_state_schema": {
-      "time": {
-        "day": "int>=1",
-        "season": "saison_id",
-        "weather": "weather_id",
-        "hour": "0-23",
-        "minute": "0-59"
-      },
-      "player": {
-        "location": "lieu_id",
-        "inventory": "{item_id: qty}",
-        "relationships": "{pnj_id: 0-100}",
-        "flags": "[flag_id]",
-        "unlocked_locations": "[lieu_id]",
-        "known_facts": "[fait_id]"
-      },
-      "world": {
-        "discovered_secrets": "[secret_id]",
-        "active_quests": "[quete_id]",
-        "completed_quests": "[quete_id]",
-        "global_flags": "[flag_id]",
-        "crops_state": "{crop_instance: stage}",
-        "machines_state": "{machine_id: state}"
-      }
-    },
-    "condition_types": {
-      "flag": {
-        "params": [
-          "flag_id",
-          "expected"
-        ],
-        "desc": "État d'un drapeau monde."
-      },
-      "item_count": {
-        "params": [
-          "item_id",
-          "op",
-          "qty"
-        ],
-        "desc": "Quantité d'un objet en inventaire."
-      },
-      "relationship": {
-        "params": [
-          "pnj_id",
-          "op",
-          "value"
-        ],
-        "desc": "Niveau de relation."
-      },
-      "season": {
-        "params": [
-          "season_id"
-        ],
-        "desc": "Saison courante."
-      },
-      "weather": {
-        "params": [
-          "weather_id"
-        ],
-        "desc": "Météo courante."
-      },
-      "time_of_day": {
-        "params": [
-          "op",
-          "hour"
-        ],
-        "desc": "Heure de la journée."
-      },
-      "location": {
-        "params": [
-          "lieu_id"
-        ],
-        "desc": "Joueur présent dans un lieu."
-      },
-      "quest_state": {
-        "params": [
-          "quete_id",
-          "state"
-        ],
-        "desc": "État d'une quête."
-      },
-      "fact_known": {
-        "params": [
-          "fait_id"
-        ],
-        "desc": "Fait connu du joueur/PNJ."
-      },
-      "secret_discovered": {
-        "params": [
-          "secret_id"
-        ],
-        "desc": "Secret découvert."
-      },
-      "crop_stage": {
-        "params": [
-          "crop_id",
-          "op",
-          "stage"
-        ],
-        "desc": "Stade de croissance."
-      },
-      "and": {
-        "params": [
-          "conditions"
-        ],
-        "desc": "Conjonction."
-      },
-      "or": {
-        "params": [
-          "conditions"
-        ],
-        "desc": "Disjonction."
-      },
-      "not": {
-        "params": [
-          "condition"
-        ],
-        "desc": "Négation."
-      }
-    },
-    "effect_types": {
-      "add_item": {
-        "params": [
-          "item_id",
-          "qty"
-        ],
-        "desc": "Ajoute un objet.",
-        "reversible": true
-      },
-      "remove_item": {
-        "params": [
-          "item_id",
-          "qty"
-        ],
-        "desc": "Retire un objet.",
-        "reversible": true
-      },
-      "set_flag": {
-        "params": [
-          "flag_id",
-          "value"
-        ],
-        "desc": "Positionne un drapeau.",
-        "reversible": true
-      },
-      "change_relationship": {
-        "params": [
-          "pnj_id",
-          "delta"
-        ],
-        "desc": "Modifie une relation.",
-        "reversible": true
-      },
-      "unlock_location": {
-        "params": [
-          "lieu_id"
-        ],
-        "desc": "Débloque un lieu.",
-        "reversible": false
-      },
-      "trigger_event": {
-        "params": [
-          "evenement_id"
-        ],
-        "desc": "Déclenche un événement.",
-        "reversible": false
-      },
-      "advance_quest": {
-        "params": [
-          "quete_id",
-          "step"
-        ],
-        "desc": "Fait avancer une quête.",
-        "reversible": true
-      },
-      "reveal_fact": {
-        "params": [
-          "fait_id",
-          "to"
-        ],
-        "desc": "Révèle un fait (mémoire PNJ).",
-        "reversible": false
-      },
-      "discover_secret": {
-        "params": [
-          "secret_id"
-        ],
-        "desc": "Marque un secret découvert.",
-        "reversible": false
-      },
-      "spawn_entity": {
-        "params": [
-          "entity_id",
-          "lieu_id"
-        ],
-        "desc": "Fait apparaître une entité.",
-        "reversible": true
-      },
-      "transform_item": {
-        "params": [
-          "from_id",
-          "to_id",
-          "qty"
-        ],
-        "desc": "Transforme un objet.",
-        "reversible": true
-      },
-      "modify_economy": {
-        "params": [
-          "amount"
-        ],
-        "desc": "Modifie la monnaie du joueur.",
-        "reversible": true
+      "system": {
+        "fields": {
+          "consumes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "depends_on": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "description": {
+            "type": "string"
+          },
+          "display_name": {
+            "description": "Nom affiché (peut contenir accents/langue du jeu).",
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "description": "Identifiant interne stable (préfixe 'system_').",
+            "pattern": "^system_[a-z0-9_]+$",
+            "type": "string"
+          },
+          "justification": {
+            "description": "Pourquoi cet élément existe.",
+            "type": "string"
+          },
+          "produces": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source": {
+            "description": "Fichier/section d'origine.",
+            "type": "string"
+          },
+          "status": {
+            "description": "Statut de l'information.",
+            "enum": [
+              "CANONIQUE",
+              "DEDUITE",
+              "PROPOSEE",
+              "A_VALIDER"
+            ],
+            "type": "string"
+          },
+          "verbs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "label": "Système de gameplay",
+        "prefix": "system",
+        "required": [
+          "id",
+          "display_name",
+          "status",
+          "description"
+        ]
       }
     },
     "event_trigger_types": {
-      "on_enter_location": {
+      "on_crop_harvest": {
         "params": [
-          "lieu_id"
+          "culture_id"
         ]
       },
       "on_day_start": {
         "params": []
       },
-      "on_season_change": {
+      "on_enter_location": {
         "params": [
-          "season_id"
-        ]
-      },
-      "on_weather": {
-        "params": [
-          "weather_id"
+          "lieu_id"
         ]
       },
       "on_item_acquired": {
@@ -1946,9 +1665,14 @@
           "value"
         ]
       },
-      "on_crop_harvest": {
+      "on_season_change": {
         "params": [
-          "culture_id"
+          "season_id"
+        ]
+      },
+      "on_secret_discovered": {
+        "params": [
+          "secret_id"
         ]
       },
       "on_time": {
@@ -1957,14 +1681,268 @@
           "minute"
         ]
       },
-      "on_secret_discovered": {
+      "on_weather": {
         "params": [
-          "secret_id"
+          "weather_id"
         ]
       },
       "random_daily": {
         "params": [
           "probability"
+        ]
+      }
+    },
+    "naming_policy": {
+      "display_name": "accents et langue du jeu autorisés.",
+      "internal_id": "minuscules, sans accents, sans espaces, [a-z0-9_], préfixe de catégorie.",
+      "world_tone": "rural mystérieux ; éviter fantasy générique, cosmique, tech moderne."
+    },
+    "relation_types": {
+      "adjacent_a": {
+        "cardinality": "n-n",
+        "implies_usage": false,
+        "meaning": "Adjacence de terrain (transitions).",
+        "source": [
+          "terrain"
+        ],
+        "target": [
+          "terrain"
+        ]
+      },
+      "affecte": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Effet appliqué à une entité.",
+        "source": [
+          "effet"
+        ],
+        "target": [
+          "objet",
+          "pnj",
+          "lieu",
+          "quete",
+          "system"
+        ]
+      },
+      "connecte_a": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Connexion de navigation entre cartes.",
+        "source": [
+          "map",
+          "lieu"
+        ],
+        "target": [
+          "map",
+          "lieu"
+        ]
+      },
+      "consomme": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Consommation d'un objet/ressource.",
+        "source": [
+          "recette",
+          "machine",
+          "quete"
+        ],
+        "target": [
+          "objet",
+          "ressource"
+        ]
+      },
+      "contient": {
+        "cardinality": "1-n",
+        "implies_usage": false,
+        "meaning": "Contenement spatial.",
+        "source": [
+          "lieu",
+          "map"
+        ],
+        "target": [
+          "lieu",
+          "zone",
+          "objet",
+          "pnj",
+          "creature"
+        ]
+      },
+      "declenche": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Déclenchement causal.",
+        "source": [
+          "evenement",
+          "quete",
+          "effet"
+        ],
+        "target": [
+          "effet",
+          "quete",
+          "evenement"
+        ]
+      },
+      "decrit": {
+        "cardinality": "n-n",
+        "implies_usage": false,
+        "meaning": "Un fait canonique décrit une entité.",
+        "source": [
+          "fait"
+        ],
+        "target": [
+          "monde",
+          "joueur",
+          "lieu",
+          "objet",
+          "pnj",
+          "system",
+          "culture"
+        ]
+      },
+      "donne": {
+        "cardinality": "1-n",
+        "implies_usage": true,
+        "meaning": "Donneur de quête.",
+        "source": [
+          "pnj"
+        ],
+        "target": [
+          "quete"
+        ]
+      },
+      "evolue_vers": {
+        "cardinality": "1-n",
+        "implies_usage": false,
+        "meaning": "Transition d'état de croissance.",
+        "source": [
+          "culture"
+        ],
+        "target": [
+          "culture"
+        ]
+      },
+      "frequente": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Lieu de routine.",
+        "source": [
+          "pnj"
+        ],
+        "target": [
+          "lieu"
+        ]
+      },
+      "habite": {
+        "cardinality": "n-1",
+        "implies_usage": true,
+        "meaning": "Résidence.",
+        "source": [
+          "pnj",
+          "creature"
+        ],
+        "target": [
+          "lieu"
+        ]
+      },
+      "obtenu_par": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Moyen d'obtention.",
+        "source": [
+          "objet",
+          "ressource"
+        ],
+        "target": [
+          "recette",
+          "lieu",
+          "evenement",
+          "culture"
+        ]
+      },
+      "pousse_dans": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Saison de croissance d'une culture.",
+        "source": [
+          "culture"
+        ],
+        "target": [
+          "saison"
+        ]
+      },
+      "produit": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Production d'un objet/ressource.",
+        "source": [
+          "machine",
+          "culture",
+          "creature",
+          "lieu"
+        ],
+        "target": [
+          "objet",
+          "ressource"
+        ]
+      },
+      "releve_de": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Rattachement à un système de gameplay.",
+        "source": [
+          "objet",
+          "culture",
+          "machine",
+          "recette",
+          "pnj",
+          "quete"
+        ],
+        "target": [
+          "system"
+        ]
+      },
+      "requiert": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Prérequis.",
+        "source": [
+          "quete",
+          "recette",
+          "culture",
+          "evenement"
+        ],
+        "target": [
+          "objet",
+          "condition",
+          "lieu",
+          "pnj"
+        ]
+      },
+      "transforme": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Entrée transformée en sortie.",
+        "source": [
+          "recette"
+        ],
+        "target": [
+          "objet",
+          "ressource"
+        ]
+      },
+      "utilise": {
+        "cardinality": "n-n",
+        "implies_usage": true,
+        "meaning": "Le système utilise l'entité.",
+        "source": [
+          "system"
+        ],
+        "target": [
+          "objet",
+          "machine",
+          "pnj",
+          "lieu",
+          "culture"
         ]
       }
     },
@@ -1977,10 +1955,32 @@
       "brouillard",
       "neige"
     ],
-    "naming_policy": {
-      "internal_id": "minuscules, sans accents, sans espaces, [a-z0-9_], préfixe de catégorie.",
-      "display_name": "accents et langue du jeu autorisés.",
-      "world_tone": "rural mystérieux ; éviter fantasy générique, cosmique, tech moderne."
+    "world_state_schema": {
+      "player": {
+        "flags": "[flag_id]",
+        "inventory": "{item_id: qty}",
+        "known_facts": "[fait_id]",
+        "location": "lieu_id",
+        "relationships": "{pnj_id: 0-100}",
+        "unlocked_locations": "[lieu_id]"
+      },
+      "time": {
+        "day": "int>=1",
+        "hour": "0-23",
+        "minute": "0-59",
+        "season": "saison_id",
+        "weather": "weather_id"
+      },
+      "world": {
+        "active_quests": "[quete_id]",
+        "completed_quests": "[quete_id]",
+        "crops_state": "{crop_instance: stage}",
+        "discovered_secrets": "[secret_id]",
+        "global_flags": "[flag_id]",
+        "machines_state": "{machine_id: state}"
+      }
     }
-  }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

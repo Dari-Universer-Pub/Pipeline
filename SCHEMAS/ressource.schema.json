@@ -1,61 +1,60 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/ressource.schema.json",
-  "title": "Ressource",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'ressource' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^ressource_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'ressource_')."
+    "base_value": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "consumers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'ressource_').",
+      "pattern": "^ressource_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "producers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "seasonal": {
+      "type": "boolean"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "category": {
       "type": "string"
-    },
-    "producers": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "consumers": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "seasonal": {
-      "type": "boolean"
-    },
-    "base_value": {
-      "type": [
-        "number",
-        "null"
-      ]
     }
   },
   "required": [
@@ -64,6 +63,7 @@
     "status",
     "category"
   ],
-  "additionalProperties": true,
+  "title": "Ressource",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

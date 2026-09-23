@@ -1,17 +1,7 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "constraints_extracted",
   "generated_deterministic": true,
+  "kind": "constraints_extracted",
   "payload": {
-    "source": "INPUT/constraints.md",
-    "categorie_technique": [
-      "Moteur cible : Godot 4",
-      "Jeu 2D vue du dessus",
-      "Tuiles logiques : 16 × 16 pixels",
-      "Rendu pixel art avec mise à l’échelle entière",
-      "Données exportables en JSON ou ressources Godot"
-    ],
     "categorie_architecture": [
       "Le canon est une source de vérité",
       "Les entités sont reliées dans un graphe",
@@ -32,9 +22,19 @@
       "Aucune quête impossible à atteindre",
       "Toute sortie doit être validée avant import"
     ],
+    "categorie_technique": [
+      "Moteur cible : Godot 4",
+      "Jeu 2D vue du dessus",
+      "Tuiles logiques : 16 × 16 pixels",
+      "Rendu pixel art avec mise à l’échelle entière",
+      "Données exportables en JSON ou ressources Godot"
+    ],
+    "source": "INPUT/constraints.md",
     "tile_size": {
-      "w": 16,
-      "h": 16
+      "h": 16,
+      "w": 16
     }
-  }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

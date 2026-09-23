@@ -1,94 +1,93 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/animation.schema.json",
-  "title": "Animation",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'animation' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^anim_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'anim_')."
-    },
-    "display_name": {
-      "type": "string",
-      "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "entity_id": {
-      "type": "string"
-    },
-    "state_or_action": {
-      "type": "string",
-      "description": "État/action déclencheur."
-    },
     "direction": {
-      "type": [
-        "string",
-        "null"
-      ],
       "enum": [
         "down",
         "up",
         "left",
         "right",
         null
+      ],
+      "type": [
+        "string",
+        "null"
       ]
     },
-    "frames": {
-      "type": "integer",
-      "minimum": 1
+    "display_name": {
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
+      "minLength": 1,
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
     },
     "fps": {
-      "type": "number",
-      "minimum": 1
+      "minimum": 1,
+      "type": "number"
+    },
+    "frames": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'anim_').",
+      "pattern": "^anim_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "impact_event": {
+      "description": "Frame d'impact (synchronisation gameplay).",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "logic_effect": {
+      "description": "Effet logique déclenché ( ID effet).",
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "loop": {
       "type": "boolean"
     },
-    "impact_event": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "description": "Frame d'impact (synchronisation gameplay)."
+    "required_assets": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
-    "logic_effect": {
-      "type": [
-        "string",
-        "null"
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "state_or_action": {
+      "description": "État/action déclencheur.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
       ],
-      "description": "Effet logique déclenché ( ID effet)."
+      "type": "string"
     },
     "transitions": {
-      "type": "array",
       "items": {
         "type": "string"
-      }
-    },
-    "required_assets": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      },
+      "type": "array"
     }
   },
   "required": [
@@ -99,6 +98,7 @@
     "fps",
     "loop"
   ],
-  "additionalProperties": true,
+  "title": "Animation",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

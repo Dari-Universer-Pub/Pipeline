@@ -122,7 +122,7 @@ def load_state() -> dict[str, Any]:
     catalogs = {}
     for name in ("objects", "resources", "crops", "machines", "recipes", "quests",
                  "npcs", "creatures", "locations", "seasons", "events", "secrets",
-                 "maps"):
+                 "maps", "dialogues"):
         catalogs[name] = unwrap(read_json(DIRS["catalogs"] / f"{name}.json", []))
     manifests = {}
     for name in ("objects", "resources", "crops", "machines", "recipes", "quests",

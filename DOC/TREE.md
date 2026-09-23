@@ -64,6 +64,9 @@ Pipeline/
 │   │   ├── events.json             #   4 événements
 │   │   ├── secrets.json            #   2 secrets
 │   │   ├── maps.json               #   4 cartes (1 par lieu canonique)
+│   │   ├── dialogues.json          #   dialogues importés+validés (vide par défaut ;
+│   │   │                           #     vide → le compilateur replie sur les
+│   │   │                           #     salutations essentielles dérivées des PNJ)
 │   │   └── quantity_plan.json      #   plan des quantités + justifications + statuts
 │   ├── functional_catalog/
 │   │   └── functional_catalog.json # vue unifiée de toutes les entités fonctionnelles
@@ -139,7 +142,7 @@ Pipeline/
 │       ├── graph.py · manifest.py · prompt.py · importer.py · validator.py
 │       ├── simulator.py · report.py · compiler.py
 │       └── ...
-├── tests/                          # suite de tests (103 tests)
+├── tests/                          # suite de tests (120 tests)
 │   ├── helpers.py
 │   ├── test_connectivity.py
 │   ├── test_production.py
@@ -148,6 +151,7 @@ Pipeline/
 │   ├── test_reproducibility.py
 │   ├── test_naming_canon.py
 │   ├── test_no_llm_runtime.py
+│   ├── test_dialogues.py           # cycle de vie des dialogues (repli/import/volume/rejet)
 │   ├── test_end_to_end.py
 │   └── fixtures/                   # exemples valides/invalides pour tester l'import
 │       ├── valid/
@@ -171,7 +175,7 @@ Pipeline/
 | ONTOLOGY | 1 |
 | SCHEMAS | 21 |
 | GAME/systems | 1 |
-| GAME/catalogs | 14 |
+| GAME/catalogs | 15 |
 | GAME/functional_catalog | 1 |
 | GAME/graph | 2 |
 | GAME/manifests | 15 |
@@ -180,6 +184,6 @@ Pipeline/
 | REPORTS | 12 |
 | ENGINE_OUT | 4 (+ autoload) |
 | tools | 6 (+ 13 dans lib/) |
-| tests | 9 (+ fixtures) |
+| tests | 10 (+ fixtures) |
 
 Total projet : ~160 fichiers (hors `.git`, `__pycache__`, `RESULTS/incoming`).

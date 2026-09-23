@@ -1,11 +1,12 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/effect.schema.json",
-  "title": "Effet",
-  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "properties": {
+    "params": {
+      "type": "object"
+    },
     "type": {
-      "type": "string",
       "enum": [
         "add_item",
         "advance_quest",
@@ -19,15 +20,14 @@
         "transform_item",
         "trigger_event",
         "unlock_location"
-      ]
-    },
-    "params": {
-      "type": "object"
+      ],
+      "type": "string"
     }
   },
   "required": [
     "type"
   ],
-  "additionalProperties": true,
+  "title": "Effet",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

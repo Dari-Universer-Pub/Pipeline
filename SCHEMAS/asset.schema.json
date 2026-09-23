@@ -1,51 +1,43 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/asset.schema.json",
-  "title": "Asset visuel",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'asset' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^asset_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'asset_')."
-    },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
+      "type": "string"
     },
     "entity_id": {
-      "type": "string",
-      "description": "Entité rattachée (jamais isolé)."
+      "description": "Entité rattachée (jamais isolé).",
+      "type": "string"
     },
     "family": {
-      "type": "string",
-      "description": "Famille visuelle cohérente."
+      "description": "Famille visuelle cohérente.",
+      "type": "string"
+    },
+    "fingerprint": {
+      "description": "Empreinte unique (dédoublonnage).",
+      "type": "string"
     },
     "function": {
       "type": "string"
     },
+    "height": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'asset_').",
+      "pattern": "^asset_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
     "kind": {
-      "type": "string",
       "enum": [
         "sprite",
         "tileset",
@@ -56,46 +48,53 @@
         "particule",
         "ui",
         "icone"
-      ]
+      ],
+      "type": "string"
     },
-    "width": {
-      "type": "integer",
-      "minimum": 1
-    },
-    "height": {
-      "type": "integer",
-      "minimum": 1
+    "palette": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
     },
     "resolution": {
+      "type": "string"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
       "type": "string"
     },
     "style": {
       "type": "string"
     },
-    "palette": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "variants": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "usage_rules": {
-      "type": "array",
       "items": {
         "type": "string"
-      }
-    },
-    "fingerprint": {
-      "type": "string",
-      "description": "Empreinte unique (dédoublonnage)."
+      },
+      "type": "array"
     },
     "validation": {
       "type": "object"
+    },
+    "variants": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "width": {
+      "minimum": 1,
+      "type": "integer"
     }
   },
   "required": [
@@ -108,6 +107,7 @@
     "width",
     "height"
   ],
-  "additionalProperties": true,
+  "title": "Asset visuel",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

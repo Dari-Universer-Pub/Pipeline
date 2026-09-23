@@ -1,52 +1,28 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/evenement.schema.json",
-  "title": "Événement",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'evenement' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^evenement_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'evenement_')."
-    },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
     },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "trigger": {
-      "type": "object"
-    },
-    "preconditions": {
-      "type": "array",
+    "effects": {
       "items": {
         "type": "object"
-      }
+      },
+      "type": "array"
     },
-    "participants": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'evenement_').",
+      "pattern": "^evenement_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
     },
     "location_id": {
       "type": [
@@ -54,20 +30,43 @@
         "null"
       ]
     },
-    "timing": {
-      "type": "object"
-    },
-    "effects": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
-    },
     "missable": {
       "type": "boolean"
     },
+    "participants": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "preconditions": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
     "repeatable": {
       "type": "boolean"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "timing": {
+      "type": "object"
+    },
+    "trigger": {
+      "type": "object"
     }
   },
   "required": [
@@ -77,6 +76,7 @@
     "trigger",
     "effects"
   ],
-  "additionalProperties": true,
+  "title": "Événement",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

@@ -1,11 +1,7 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "prompt_index",
   "generated_deterministic": true,
+  "kind": "prompt_index",
   "payload": {
-    "total": 10,
-    "ok": 9,
     "blocked": 1,
     "names": [
       "blocked_demo",
@@ -18,6 +14,10 @@
       "by_id_recette_soupe_de_navet",
       "by_seq_joueur_marche",
       "by_seq_machine_actif"
-    ]
-  }
+    ],
+    "ok": 9,
+    "total": 10
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

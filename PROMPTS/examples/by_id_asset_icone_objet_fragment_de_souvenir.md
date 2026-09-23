@@ -42,17 +42,15 @@ demandé, à partir du contexte injecté.
 
 ```json
 {
-  "id": "asset_icone_objet_fragment_de_souvenir",
   "display_name": "Icône Fragment de souvenir",
-  "status": "CANONIQUE",
   "entity_id": "objet_fragment_de_souvenir",
   "family": "famille_objets",
-  "kind": "icone",
+  "fingerprint": "a376d0a9b1dfaca9",
   "function": "famille_objets",
-  "width": 16,
   "height": 16,
-  "resolution": "16px/tuile, échelle entière x2..x4",
-  "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
+  "id": "asset_icone_objet_fragment_de_souvenir",
+  "justification": "Icône d'inventaire pour Fragment de souvenir.",
+  "kind": "icone",
   "palette": [
     "#2e2a24",
     "#6b5d4f",
@@ -63,22 +61,24 @@ demandé, à partir du contexte injecté.
     "#5b7d8c",
     "#e8dcc0"
   ],
-  "variants": [
-    "defaut"
-  ],
+  "resolution": "16px/tuile, échelle entière x2..x4",
+  "source": "dérivé de l'objet (constraints#Architecture)",
+  "status": "CANONIQUE",
+  "style": "pixel art 16×16, contours souples, mise à l'échelle entière, ambiance contemplative et chaleureuse",
   "usage_rules": [
     "inventaire",
     "sol si droppable"
   ],
-  "fingerprint": "a376d0a9b1dfaca9",
-  "source": "dérivé de l'objet (constraints#Architecture)",
-  "justification": "Icône d'inventaire pour Fragment de souvenir.",
   "validation": {
     "dimensions": "16×16",
-    "transparency": true,
     "palette": "PALETTE",
+    "transparency": true,
     "unique_fingerprint": true
-  }
+  },
+  "variants": [
+    "defaut"
+  ],
+  "width": 16
 }
 ```
 

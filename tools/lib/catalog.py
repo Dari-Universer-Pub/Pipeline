@@ -23,7 +23,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from .common import DIRS, Status, make_id, write_json, versioned_envelope, derive_seed
+from .common import (DIRS, Status, make_id, write_json, read_json, unwrap,
+                     versioned_envelope, derive_seed)
 from . import systems as systems_mod
 
 SRC_CANON = "INPUT/canon_initial.md"
@@ -1153,6 +1154,16 @@ def run_stage(canon_artifacts: dict, systems: list[dict], write: bool = True) ->
     catalogs = build_all(canon_artifacts, systems)
     functional = build_functional_catalog(catalogs, systems)
 
+    # Dialogues : contenu produit par l'IA de construction (NON dérivé ici).
+    # Point d'intégration : on charge le catalogue validé existant
+    # (GAME/catalogs/dialogues.json), vide par défaut. Tant qu'il est vide, la
+    # compilation retombe sur les salutations essentielles dérivées des PNJ.
+    # Lorsqu'il est alimenté (dialogues importés + validés), le compilateur les
+    # compile tous et le repli disparaît. Le fichier est préservé d'un run à
+    # l'autre (lu puis réécrit à l'identique).
+    existing_dialogues = unwrap(read_json(DIRS["catalogs"] / "dialogues.json", []))
+    catalogs["dialogues"] = existing_dialogues if isinstance(existing_dialogues, list) else []
+
     if write:
         # Catalogues individuels.
         mapping = {
@@ -1160,7 +1171,7 @@ def run_stage(canon_artifacts: dict, systems: list[dict], write: bool = True) ->
             "resources": "resources", "machines": "machines", "recipes": "recipes",
             "objects": "objects", "npcs": "npcs", "creatures": "creatures",
             "quests": "quests", "events": "events", "secrets": "secrets",
-            "maps": "maps",
+            "maps": "maps", "dialogues": "dialogues",
         }
         for key, fname in mapping.items():
             write_json(DIRS["catalogs"] / f"{fname}.json",

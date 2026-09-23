@@ -33,7 +33,7 @@ python3 tools/pipeline.py
 # 2. Vérifier la validation (0 erreur attendue)
 python3 tools/pipeline.py --check
 
-# 3. Lancer la suite de tests (103 tests)
+# 3. Lancer la suite de tests (120 tests)
 python3 tools/run_tests.py
 
 # 4. (Optionnel) régénérer la spécification du bootstrapper
@@ -180,7 +180,7 @@ Pipeline/
 │   ├── regenerate.py          ← régénération ciblée
 │   ├── prompt_gen.py          ← générateur de prompts (CLI)
 │   └── bootstrap_pipeline.py  ← script du bootstrapper d'origine
-└── tests/                     ← 103 tests (connectivité, production, simulation, ...)
+└── tests/                     ← 120 tests (connectivité, production, simulation, dialogues, ...)
 ```
 
 ---

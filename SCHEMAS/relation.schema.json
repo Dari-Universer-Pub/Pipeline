@@ -1,14 +1,31 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/relation.schema.json",
-  "title": "Relation",
-  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "properties": {
     "id": {
       "type": "string"
     },
+    "metadata": {
+      "type": "object"
+    },
+    "source": {
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
     "type": {
-      "type": "string",
       "enum": [
         "adjacent_a",
         "affecte",
@@ -28,29 +45,11 @@
         "requiert",
         "transforme",
         "utilise"
-      ]
-    },
-    "source": {
-      "type": "string"
-    },
-    "target": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
       ],
-      "description": "Statut de l'information."
+      "type": "string"
     },
     "weight": {
       "type": "number"
-    },
-    "metadata": {
-      "type": "object"
     }
   },
   "required": [
@@ -58,6 +57,7 @@
     "source",
     "target"
   ],
-  "additionalProperties": true,
+  "title": "Relation",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

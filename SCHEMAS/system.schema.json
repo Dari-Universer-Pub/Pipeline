@@ -1,64 +1,63 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/system.schema.json",
-  "title": "Système de gameplay",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'system' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^system_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'system_')."
+    "consumes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "depends_on": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "description": {
+      "type": "string"
     },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'system_').",
+      "pattern": "^system_[a-z0-9_]+$",
+      "type": "string"
+    },
+    "justification": {
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
+    },
+    "produces": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
     },
     "status": {
-      "type": "string",
+      "description": "Statut de l'information.",
       "enum": [
         "CANONIQUE",
         "DEDUITE",
         "PROPOSEE",
         "A_VALIDER"
       ],
-      "description": "Statut de l'information."
-    },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
-    },
-    "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
-    },
-    "description": {
       "type": "string"
     },
-    "depends_on": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "produces": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "consumes": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "verbs": {
-      "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "type": "array"
     }
   },
   "required": [
@@ -67,6 +66,7 @@
     "status",
     "description"
   ],
-  "additionalProperties": true,
+  "title": "Système de gameplay",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }

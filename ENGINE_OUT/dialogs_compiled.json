@@ -1,29 +1,17 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "dialogs_compiled",
   "generated_deterministic": true,
+  "kind": "dialogs_compiled",
   "payload": [
     {
-      "id": "dialogue_pnj_alba_salutation",
-      "speaker_id": "pnj_alba",
-      "voice": "douce, pédagogue, phrases courtes, métaphores végétales",
-      "priority": 0,
       "conditions": [
         {
-          "type": "location",
           "params": {
             "lieu_id": "lieu_maison_racine"
-          }
+          },
+          "type": "location"
         }
       ],
-      "lines": [
-        {
-          "text": "Bonjour, Jardinier. (soigneuse_des_plantes)",
-          "reveals": [],
-          "choices": []
-        }
-      ],
+      "id": "dialogue_pnj_alba_salutation",
       "knowledge_boundary": {
         "allowed": [
           "fait_monde_valdore",
@@ -36,28 +24,28 @@
           "secret_clairiere_repetition",
           "secret_passe_nox"
         ]
-      }
-    },
-    {
-      "id": "dialogue_pnj_marin_salutation",
-      "speaker_id": "pnj_marin",
-      "voice": "directe, technique, peu de mots, jargon d'atelier",
-      "priority": 0,
-      "conditions": [
-        {
-          "type": "location",
-          "params": {
-            "lieu_id": "lieu_atelier_de_la_maison_racine"
-          }
-        }
-      ],
+      },
       "lines": [
         {
-          "text": "Bonjour, Jardinier. (artisan_machines)",
+          "choices": [],
           "reveals": [],
-          "choices": []
+          "text": "Bonjour, Jardinier. (soigneuse_des_plantes)"
         }
       ],
+      "priority": 0,
+      "speaker_id": "pnj_alba",
+      "voice": "douce, pédagogue, phrases courtes, métaphores végétales"
+    },
+    {
+      "conditions": [
+        {
+          "params": {
+            "lieu_id": "lieu_atelier_de_la_maison_racine"
+          },
+          "type": "location"
+        }
+      ],
+      "id": "dialogue_pnj_marin_salutation",
       "knowledge_boundary": {
         "allowed": [
           "fait_monde_valdore",
@@ -69,28 +57,28 @@
         "forbidden": [
           "secret_passe_nox"
         ]
-      }
-    },
-    {
-      "id": "dialogue_pnj_nox_salutation",
-      "speaker_id": "pnj_nox",
-      "voice": "laconique, silences, non-dits, phrases inachevées",
-      "priority": 0,
-      "conditions": [
-        {
-          "type": "location",
-          "params": {
-            "lieu_id": "lieu_poste_de_peche_du_lac_muet"
-          }
-        }
-      ],
+      },
       "lines": [
         {
-          "text": "Bonjour, Jardinier. (pecheur)",
+          "choices": [],
           "reveals": [],
-          "choices": []
+          "text": "Bonjour, Jardinier. (artisan_machines)"
         }
       ],
+      "priority": 0,
+      "speaker_id": "pnj_marin",
+      "voice": "directe, technique, peu de mots, jargon d'atelier"
+    },
+    {
+      "conditions": [
+        {
+          "params": {
+            "lieu_id": "lieu_poste_de_peche_du_lac_muet"
+          },
+          "type": "location"
+        }
+      ],
+      "id": "dialogue_pnj_nox_salutation",
       "knowledge_boundary": {
         "allowed": [
           "lieu_lac_muet",
@@ -101,7 +89,19 @@
           "secret_passe_nox",
           "secret_clairiere_repetition"
         ]
-      }
+      },
+      "lines": [
+        {
+          "choices": [],
+          "reveals": [],
+          "text": "Bonjour, Jardinier. (pecheur)"
+        }
+      ],
+      "priority": 0,
+      "speaker_id": "pnj_nox",
+      "voice": "laconique, silences, non-dits, phrases inachevées"
     }
-  ]
+  ],
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

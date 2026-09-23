@@ -32,10 +32,10 @@ Ces décisions ne sont JAMAIS converties en canon. La pipeline propose des valeu
 
 | Type | Proposé | Justification |
 | --- | --- | --- |
-| Quantité de saison | 4 | Nombre de saisons = décision ouverte ; défaut technique 4 (1 par cycle). |
 | Quantité de culture | 6 | Nombre exact de cultures = décision ouverte ; proposé = 1 plante mémorielle (canon) + couverture des 4 saisons + besoins cuisine/artisanat/relations. |
-| Quantité de recette | 8 | Recettes exactes = élément ouvert du canon ; proposé = couverture des chaînes cuisine/artisanat/mémoire (1 recette par station minimum). |
+| Quantité de map | 4 | 1 carte par lieu canonique (4). Nombre de biomes = décision ouverte. |
 | Quantité de pnj | 3 | 3 PNJ canoniques ; nombre exact = décision ouverte. Rôles merchant couverts par Marin/Nox (DEDUIT), donc pas de PNJ inventé requis. |
 | Quantité de quete | 4 | Nombre exact de quêtes = décision ouverte ; proposé = 1 quête par PNJ canonique + 1 quête de secret (Bois des Retours). |
-| Quantité de map | 4 | 1 carte par lieu canonique (4). Nombre de biomes = décision ouverte. |
+| Quantité de recette | 8 | Recettes exactes = élément ouvert du canon ; proposé = couverture des chaînes cuisine/artisanat/mémoire (1 recette par station minimum). |
+| Quantité de saison | 4 | Nombre de saisons = décision ouverte ; défaut technique 4 (1 par cycle). |
 | Quantité de secret | 2 | Secrets du Bois des Retours = élément ouvert du canon ; existence DEDUITE (Bois qui se répète, passé de Nox), contenu exact À_VALIDER. Chaque secret a un chemin de découverte. |

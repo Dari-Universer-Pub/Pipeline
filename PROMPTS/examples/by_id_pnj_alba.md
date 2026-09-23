@@ -42,24 +42,31 @@ demandé, à partir du contexte injecté.
 
 ```json
 {
-  "id": "pnj_alba",
-  "display_name": "Alba",
-  "status": "CANONIQUE",
-  "source": "INPUT/canon_initial.md#Personnages connus",
-  "justification": "Personnage explicitement défini dans le canon initial.",
+  "beliefs": [
+    "les souvenirs doivent être soignés, pas effacés"
+  ],
   "description": "soigneuse des plantes et première guide du joueur",
+  "display_name": "Alba",
+  "emotions": [
+    "chaleureuse",
+    "inquiete"
+  ],
+  "forbidden_knowledge": [
+    "secret_clairiere_repetition",
+    "secret_passe_nox"
+  ],
+  "frequented_places": [
+    "lieu_maison_racine",
+    "lieu_champ_de_la_vallee_claire"
+  ],
   "function": "soigneuse_des_plantes",
   "goals": [
     "soigner les plantes",
     "guider le Jardinier"
   ],
-  "needs": [
-    "plantes médicinales",
-    "souci"
-  ],
-  "beliefs": [
-    "les souvenirs doivent être soignés, pas effacés"
-  ],
+  "home": "lieu_maison_racine",
+  "id": "pnj_alba",
+  "justification": "Personnage explicitement défini dans le canon initial.",
   "knowledge": [
     "fait_monde_valdore",
     "fait_joueur_jardinier",
@@ -67,25 +74,18 @@ demandé, à partir du contexte injecté.
     "lieu_vallee_claire",
     "culture_souci_de_la_vallee"
   ],
-  "forbidden_knowledge": [
-    "secret_clairiere_repetition",
-    "secret_passe_nox"
+  "needs": [
+    "plantes médicinales",
+    "souci"
   ],
-  "emotions": [
-    "chaleureuse",
-    "inquiete"
-  ],
-  "routines": [],
-  "frequented_places": [
-    "lieu_maison_racine",
-    "lieu_champ_de_la_vallee_claire"
-  ],
-  "voice": "douce, pédagogue, phrases courtes, métaphores végétales",
-  "home": "lieu_maison_racine",
   "roles": [
     "guide",
     "soins"
-  ]
+  ],
+  "routines": [],
+  "source": "INPUT/canon_initial.md#Personnages connus",
+  "status": "CANONIQUE",
+  "voice": "douce, pédagogue, phrases courtes, métaphores végétales"
 }
 ```
 

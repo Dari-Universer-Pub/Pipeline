@@ -1,1470 +1,1470 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "functional_catalog",
   "generated_deterministic": true,
+  "kind": "functional_catalog",
   "payload": {
-    "count": 80,
     "by_type": {
-      "quete": 4,
-      "saison": 4,
-      "evenement": 4,
       "creature": 2,
-      "objet": 25,
-      "ressource": 3,
-      "lieu": 11,
-      "recette": 8,
-      "secret": 2,
-      "map": 4,
-      "machine": 4,
       "culture": 6,
-      "pnj": 3
+      "evenement": 4,
+      "lieu": 11,
+      "machine": 4,
+      "map": 4,
+      "objet": 25,
+      "pnj": 3,
+      "quete": 4,
+      "recette": 8,
+      "ressource": 3,
+      "saison": 4,
+      "secret": 2
     },
+    "count": 80,
     "entries": [
       {
+        "derivation": {
+          "animations": "Transitions de saison (fondu) + météo animée.",
+          "assets": "1 tileset de sol par saison (famille terrains).",
+          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+          "consumers": "agriculture, météo, événements, exploration.",
+          "obtention": "N/A (cadre temporel).",
+          "system": "system_temps, system_meteo",
+          "tests": "test_saisons, test_temporel, test_reproductibilite.",
+          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+        },
+        "display_name": "Saison des Premières Pousses",
         "entity_type": "saison",
         "id": "saison_des_premieres_pousses",
-        "display_name": "Saison des Premières Pousses",
+        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources.",
-          "system": "system_temps, system_meteo",
-          "obtention": "N/A (cadre temporel).",
-          "consumers": "agriculture, météo, événements, exploration.",
-          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
-          "assets": "1 tileset de sol par saison (famille terrains).",
-          "animations": "Transitions de saison (fondu) + météo animée.",
-          "tests": "test_saisons, test_temporel, test_reproductibilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "Transitions de saison (fondu) + météo animée.",
+          "assets": "1 tileset de sol par saison (famille terrains).",
+          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+          "consumers": "agriculture, météo, événements, exploration.",
+          "obtention": "N/A (cadre temporel).",
+          "system": "system_temps, system_meteo",
+          "tests": "test_saisons, test_temporel, test_reproductibilite.",
+          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+        },
+        "display_name": "Saison des Épis",
         "entity_type": "saison",
         "id": "saison_des_epis",
-        "display_name": "Saison des Épis",
+        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources.",
-          "system": "system_temps, system_meteo",
-          "obtention": "N/A (cadre temporel).",
-          "consumers": "agriculture, météo, événements, exploration.",
-          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
-          "assets": "1 tileset de sol par saison (famille terrains).",
-          "animations": "Transitions de saison (fondu) + météo animée.",
-          "tests": "test_saisons, test_temporel, test_reproductibilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "Transitions de saison (fondu) + météo animée.",
+          "assets": "1 tileset de sol par saison (famille terrains).",
+          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+          "consumers": "agriculture, météo, événements, exploration.",
+          "obtention": "N/A (cadre temporel).",
+          "system": "system_temps, system_meteo",
+          "tests": "test_saisons, test_temporel, test_reproductibilite.",
+          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+        },
+        "display_name": "Saison des Brumes",
         "entity_type": "saison",
         "id": "saison_des_brumes",
-        "display_name": "Saison des Brumes",
+        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources.",
-          "system": "system_temps, system_meteo",
-          "obtention": "N/A (cadre temporel).",
-          "consumers": "agriculture, météo, événements, exploration.",
-          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
-          "assets": "1 tileset de sol par saison (famille terrains).",
-          "animations": "Transitions de saison (fondu) + météo animée.",
-          "tests": "test_saisons, test_temporel, test_reproductibilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "Transitions de saison (fondu) + météo animée.",
+          "assets": "1 tileset de sol par saison (famille terrains).",
+          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
+          "consumers": "agriculture, météo, événements, exploration.",
+          "obtention": "N/A (cadre temporel).",
+          "system": "system_temps, system_meteo",
+          "tests": "test_saisons, test_temporel, test_reproductibilite.",
+          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources."
+        },
+        "display_name": "Saison du Repos",
         "entity_type": "saison",
         "id": "saison_du_repos",
-        "display_name": "Saison du Repos",
+        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Le système 'saisons' est requis par le brief ; le NOMBRE exact est une décision ouverte (À_VALIDER). Défaut technique modulaire = 4, noms PROPOSÉS selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Le cycle saisonnier pilote la croissance, la météo, les événements et la disponibilité des ressources.",
-          "system": "system_temps, system_meteo",
-          "obtention": "N/A (cadre temporel).",
-          "consumers": "agriculture, météo, événements, exploration.",
-          "consequences": "Détermine quelles cultures poussent et quels événements se déclenchent.",
-          "assets": "1 tileset de sol par saison (famille terrains).",
-          "animations": "Transitions de saison (fondu) + météo animée.",
-          "tests": "test_saisons, test_temporel, test_reproductibilite."
-        }
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "La Maison-Racine",
         "entity_type": "lieu",
         "id": "lieu_maison_racine",
-        "display_name": "La Maison-Racine",
+        "justification": "Lieu explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Lieu explicitement défini dans le canon initial.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "La Vallée Claire",
         "entity_type": "lieu",
         "id": "lieu_vallee_claire",
-        "display_name": "La Vallée Claire",
+        "justification": "Lieu explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Lieu explicitement défini dans le canon initial.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Le Bois des Retours",
         "entity_type": "lieu",
         "id": "lieu_bois_des_retours",
-        "display_name": "Le Bois des Retours",
+        "justification": "Lieu explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Lieu explicitement défini dans le canon initial.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Le Lac Muet",
         "entity_type": "lieu",
         "id": "lieu_lac_muet",
-        "display_name": "Le Lac Muet",
+        "justification": "Lieu explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Lieu explicitement défini dans le canon initial.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Champ de la Vallée Claire",
         "entity_type": "lieu",
         "id": "lieu_champ_de_la_vallee_claire",
-        "display_name": "Champ de la Vallée Claire",
+        "justification": "Terres cultivables déduites de 'zone de départ et terres cultivables' (canon).",
         "status": "DEDUITE",
         "system": "system_agriculture",
-        "systems": [],
-        "justification": "Terres cultivables déduites de 'zone de départ et terres cultivables' (canon).",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Puits de Mémoire",
         "entity_type": "lieu",
         "id": "lieu_puits_de_memoire",
-        "display_name": "Puits de Mémoire",
+        "justification": "Puits ancien de la prémisse : 'jardin construit autour d'un ancien puits de mémoire'.",
         "status": "DEDUITE",
         "system": "system_memoire",
-        "systems": [],
-        "justification": "Puits ancien de la prémisse : 'jardin construit autour d'un ancien puits de mémoire'.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Atelier de la Maison-Racine",
         "entity_type": "lieu",
         "id": "lieu_atelier_de_la_maison_racine",
-        "display_name": "Atelier de la Maison-Racine",
+        "justification": "Atelier principal (canon) ; Marin y fabrique les machines agricoles.",
         "status": "DEDUITE",
         "system": "system_artisanat",
-        "systems": [],
-        "justification": "Atelier principal (canon) ; Marin y fabrique les machines agricoles.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Cuisine de la Maison-Racine",
         "entity_type": "lieu",
         "id": "lieu_cuisine_de_la_maison_racine",
-        "display_name": "Cuisine de la Maison-Racine",
+        "justification": "Cuisine du refuge (canon) ; système 'cuisine'.",
         "status": "DEDUITE",
         "system": "system_cuisine",
-        "systems": [],
-        "justification": "Cuisine du refuge (canon) ; système 'cuisine'.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Clairière qui se répète",
         "entity_type": "lieu",
         "id": "lieu_clairiere_qui_se_repete",
-        "display_name": "Clairière qui se répète",
+        "justification": "Zone secrète déduite de 'forêt où certains événements se répètent' (canon) ; système 'secrets'.",
         "status": "DEDUITE",
         "system": "system_secrets",
-        "systems": [],
-        "justification": "Zone secrète déduite de 'forêt où certains événements se répètent' (canon) ; système 'secrets'.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Sentier des Retours",
         "entity_type": "lieu",
         "id": "lieu_sentier_des_retours",
-        "display_name": "Sentier des Retours",
+        "justification": "Sentier d'exploration ; système 'exploration'.",
         "status": "DEDUITE",
         "system": "system_exploration",
-        "systems": [],
-        "justification": "Sentier d'exploration ; système 'exploration'.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": null,
+        "display_name": "Poste de pêche du Lac Muet",
         "entity_type": "lieu",
         "id": "lieu_poste_de_peche_du_lac_muet",
-        "display_name": "Poste de pêche du Lac Muet",
+        "justification": "Poste de pêche déduit de 'zone d'exploration et de pêche' (canon) ; Nox y pêche.",
         "status": "DEDUITE",
         "system": "system_peche",
-        "systems": [],
-        "justification": "Poste de pêche déduit de 'zone d'exploration et de pêche' (canon) ; Nox y pêche.",
-        "derivation": null
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> Écho Cristallin -> fragment de souvenir.",
+          "consumers": "system_memoire ; recettes associées.",
+          "obtention": "Planter objet_graine_d_echo puis arroser 6 jour(s).",
+          "system": "system_agriculture, system_memoire",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Fait remonter un fragment du passé (cœur de la prémisse)."
+        },
+        "display_name": "Floraison d'Écho",
         "entity_type": "culture",
         "id": "culture_floraison_d_echo",
-        "display_name": "Floraison d'Écho",
+        "justification": "Plante mémorielle déduite du canon : 'les graines d'écho peuvent faire pousser des plantes mémorielles'.",
         "status": "DEDUITE",
         "system": "system_memoire",
-        "systems": [],
-        "justification": "Plante mémorielle déduite du canon : 'les graines d'écho peuvent faire pousser des plantes mémorielles'.",
-        "derivation": {
-          "why": "Fait remonter un fragment du passé (cœur de la prémisse).",
-          "system": "system_agriculture, system_memoire",
-          "obtention": "Planter objet_graine_d_echo puis arroser 6 jour(s).",
-          "consumers": "system_memoire ; recettes associées.",
-          "consequences": "Récolte -> Écho Cristallin -> fragment de souvenir.",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+          "consumers": "system_cuisine ; recettes associées.",
+          "obtention": "Planter objet_graine_de_navet_de_la_vallee puis arroser 4 jour(s).",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Alimente la boucle de production pour system_cuisine."
+        },
+        "display_name": "Navet de la Vallée",
         "entity_type": "culture",
         "id": "culture_navet_de_la_vallee",
-        "display_name": "Navet de la Vallée",
+        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": "system_cuisine",
-        "systems": [],
-        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Alimente la boucle de production pour system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Planter objet_graine_de_navet_de_la_vallee puis arroser 4 jour(s).",
-          "consumers": "system_cuisine ; recettes associées.",
-          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+          "consumers": "system_cuisine ; recettes associées.",
+          "obtention": "Planter objet_graine_de_ble_des_epis puis arroser 5 jour(s).",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Alimente la boucle de production pour system_cuisine."
+        },
+        "display_name": "Blé des Épis",
         "entity_type": "culture",
         "id": "culture_ble_des_epis",
-        "display_name": "Blé des Épis",
+        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": "system_cuisine",
-        "systems": [],
-        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Alimente la boucle de production pour system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Planter objet_graine_de_ble_des_epis puis arroser 5 jour(s).",
-          "consumers": "system_cuisine ; recettes associées.",
-          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+          "consumers": "system_cuisine ; recettes associées.",
+          "obtention": "Planter objet_graine_de_courge_des_brumes puis arroser 6 jour(s).",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Alimente la boucle de production pour system_cuisine."
+        },
+        "display_name": "Courge des Brumes",
         "entity_type": "culture",
         "id": "culture_courge_des_brumes",
-        "display_name": "Courge des Brumes",
+        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": "system_cuisine",
-        "systems": [],
-        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Alimente la boucle de production pour system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Planter objet_graine_de_courge_des_brumes puis arroser 6 jour(s).",
-          "consumers": "system_cuisine ; recettes associées.",
-          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+          "consumers": "system_artisanat ; recettes associées.",
+          "obtention": "Planter objet_graine_de_lin_du_repos puis arroser 5 jour(s).",
+          "system": "system_agriculture, system_artisanat",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Alimente la boucle de production pour system_artisanat."
+        },
+        "display_name": "Lin du Repos",
         "entity_type": "culture",
         "id": "culture_lin_du_repos",
-        "display_name": "Lin du Repos",
+        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": "system_artisanat",
-        "systems": [],
-        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Alimente la boucle de production pour system_artisanat.",
-          "system": "system_agriculture, system_artisanat",
-          "obtention": "Planter objet_graine_de_lin_du_repos puis arroser 5 jour(s).",
-          "consumers": "system_artisanat ; recettes associées.",
-          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de croissance par stade + geste récolte.",
+          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
+          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
+          "consumers": "system_relations ; recettes associées.",
+          "obtention": "Planter objet_graine_de_souci_de_la_vallee puis arroser 3 jour(s).",
+          "system": "system_agriculture, system_relations",
+          "tests": "test_chaine_production, test_culture, test_temporel.",
+          "why": "Alimente la boucle de production pour system_relations."
+        },
+        "display_name": "Souci de la Vallée",
         "entity_type": "culture",
         "id": "culture_souci_de_la_vallee",
-        "display_name": "Souci de la Vallée",
+        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
         "status": "PROPOSEE",
         "system": "system_relations",
-        "systems": [],
-        "justification": "Culture proposée pour couvrir une saison et un système (cuisine/artisanat/relations). Nom PROPOSÉ selon les règles de nommage du canon.",
-        "derivation": {
-          "why": "Alimente la boucle de production pour system_relations.",
-          "system": "system_agriculture, system_relations",
-          "obtention": "Planter objet_graine_de_souci_de_la_vallee puis arroser 3 jour(s).",
-          "consumers": "system_relations ; recettes associées.",
-          "consequences": "Récolte -> produit transformé (cuisine/artisanat).",
-          "assets": "1 sprite par stade de croissance (4) + icône graine/produit.",
-          "animations": "animation de croissance par stade + geste récolte.",
-          "tests": "test_chaine_production, test_culture, test_temporel."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'extraire' + effet de récolte.",
+          "assets": "1 icône + sprite de gisement sur la carte.",
+          "consequences": "Transformé en objets/machines améliorées.",
+          "consumers": "Recettes d'artisanat via artisanat.",
+          "obtention": "Forage/exploration (exploration).",
+          "system": "system_artisanat, system_exploration",
+          "tests": "test_chaine_production, test_ressource, test_economique.",
+          "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+        },
+        "display_name": "Bois",
         "entity_type": "ressource",
         "id": "ressource_bois",
-        "display_name": "Bois",
+        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
-        "derivation": {
-          "why": "Matériau de base des chaînes d'artisanat (artisanat).",
-          "system": "system_artisanat, system_exploration",
-          "obtention": "Forage/exploration (exploration).",
-          "consumers": "Recettes d'artisanat via artisanat.",
-          "consequences": "Transformé en objets/machines améliorées.",
-          "assets": "1 icône + sprite de gisement sur la carte.",
-          "animations": "geste 'extraire' + effet de récolte.",
-          "tests": "test_chaine_production, test_ressource, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'extraire' + effet de récolte.",
+          "assets": "1 icône + sprite de gisement sur la carte.",
+          "consequences": "Transformé en objets/machines améliorées.",
+          "consumers": "Recettes d'artisanat via artisanat.",
+          "obtention": "Forage/exploration (exploration).",
+          "system": "system_artisanat, system_exploration",
+          "tests": "test_chaine_production, test_ressource, test_economique.",
+          "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+        },
+        "display_name": "Pierre",
         "entity_type": "ressource",
         "id": "ressource_pierre",
-        "display_name": "Pierre",
+        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
-        "derivation": {
-          "why": "Matériau de base des chaînes d'artisanat (artisanat).",
-          "system": "system_artisanat, system_exploration",
-          "obtention": "Forage/exploration (exploration).",
-          "consumers": "Recettes d'artisanat via artisanat.",
-          "consequences": "Transformé en objets/machines améliorées.",
-          "assets": "1 icône + sprite de gisement sur la carte.",
-          "animations": "geste 'extraire' + effet de récolte.",
-          "tests": "test_chaine_production, test_ressource, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'extraire' + effet de récolte.",
+          "assets": "1 icône + sprite de gisement sur la carte.",
+          "consequences": "Transformé en objets/machines améliorées.",
+          "consumers": "Recettes d'artisanat via artisanat.",
+          "obtention": "Forage/exploration (exploration).",
+          "system": "system_artisanat, system_exploration",
+          "tests": "test_chaine_production, test_ressource, test_economique.",
+          "why": "Matériau de base des chaînes d'artisanat (artisanat)."
+        },
+        "display_name": "Argile",
         "entity_type": "ressource",
         "id": "ressource_argile",
-        "display_name": "Argile",
+        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Matériau requis par l'artisanat ; obtenu par exploration.",
-        "derivation": {
-          "why": "Matériau de base des chaînes d'artisanat (artisanat).",
-          "system": "system_artisanat, system_exploration",
-          "obtention": "Forage/exploration (exploration).",
-          "consumers": "Recettes d'artisanat via artisanat.",
-          "consequences": "Transformé en objets/machines améliorées.",
-          "assets": "1 icône + sprite de gisement sur la carte.",
-          "animations": "geste 'extraire' + effet de récolte.",
-          "tests": "test_chaine_production, test_ressource, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation 'actif' bouclée + événement d'impact.",
+          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+          "consequences": "Convertit entrées -> sorties (chaîne de production).",
+          "consumers": "Recettes de transformation.",
+          "obtention": "Fabriquée par pnj_marin",
+          "system": "system_artisanat",
+          "tests": "test_chaine_production, test_machine, test_placement.",
+          "why": "Station de transformation pour system_artisanat."
+        },
+        "display_name": "Établi de Marin",
         "entity_type": "machine",
         "id": "machine_etabli_de_marin",
-        "display_name": "Établi de Marin",
+        "justification": "Station d'artisanat ; Marin (canon) fabrique les machines agricoles.",
         "status": "DEDUITE",
         "system": "system_artisanat",
-        "systems": [],
-        "justification": "Station d'artisanat ; Marin (canon) fabrique les machines agricoles.",
-        "derivation": {
-          "why": "Station de transformation pour system_artisanat.",
-          "system": "system_artisanat",
-          "obtention": "Fabriquée par pnj_marin",
-          "consumers": "Recettes de transformation.",
-          "consequences": "Convertit entrées -> sorties (chaîne de production).",
-          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
-          "animations": "animation 'actif' bouclée + événement d'impact.",
-          "tests": "test_chaine_production, test_machine, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation 'actif' bouclée + événement d'impact.",
+          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+          "consequences": "Convertit entrées -> sorties (chaîne de production).",
+          "consumers": "Recettes de transformation.",
+          "obtention": "Présente dans le refuge/lieu canonique.",
+          "system": "system_cuisine",
+          "tests": "test_chaine_production, test_machine, test_placement.",
+          "why": "Station de transformation pour system_cuisine."
+        },
+        "display_name": "Foyer de la Maison-Racine",
         "entity_type": "machine",
         "id": "machine_foyer_de_la_maison_racine",
-        "display_name": "Foyer de la Maison-Racine",
+        "justification": "Foyer de cuisine du refuge (canon Maison-Racine) ; bâti d'argile et de pierre ; système cuisine.",
         "status": "DEDUITE",
         "system": "system_cuisine",
-        "systems": [],
-        "justification": "Foyer de cuisine du refuge (canon Maison-Racine) ; bâti d'argile et de pierre ; système cuisine.",
-        "derivation": {
-          "why": "Station de transformation pour system_cuisine.",
-          "system": "system_cuisine",
-          "obtention": "Présente dans le refuge/lieu canonique.",
-          "consumers": "Recettes de transformation.",
-          "consequences": "Convertit entrées -> sorties (chaîne de production).",
-          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
-          "animations": "animation 'actif' bouclée + événement d'impact.",
-          "tests": "test_chaine_production, test_machine, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation 'actif' bouclée + événement d'impact.",
+          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+          "consequences": "Convertit entrées -> sorties (chaîne de production).",
+          "consumers": "Recettes de transformation.",
+          "obtention": "Fabriquée par pnj_marin",
+          "system": "system_artisanat",
+          "tests": "test_chaine_production, test_machine, test_placement.",
+          "why": "Station de transformation pour system_artisanat."
+        },
+        "display_name": "Métier à tisser",
         "entity_type": "machine",
         "id": "machine_metier_a_tisser",
-        "display_name": "Métier à tisser",
+        "justification": "Transforme la fibre de lin en fil puis en toile ; système artisanat.",
         "status": "DEDUITE",
         "system": "system_artisanat",
-        "systems": [],
-        "justification": "Transforme la fibre de lin en fil puis en toile ; système artisanat.",
-        "derivation": {
-          "why": "Station de transformation pour system_artisanat.",
-          "system": "system_artisanat",
-          "obtention": "Fabriquée par pnj_marin",
-          "consumers": "Recettes de transformation.",
-          "consequences": "Convertit entrées -> sorties (chaîne de production).",
-          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
-          "animations": "animation 'actif' bouclée + événement d'impact.",
-          "tests": "test_chaine_production, test_machine, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation 'actif' bouclée + événement d'impact.",
+          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
+          "consequences": "Convertit entrées -> sorties (chaîne de production).",
+          "consumers": "Recettes de transformation.",
+          "obtention": "Présente dans le refuge/lieu canonique.",
+          "system": "system_memoire",
+          "tests": "test_chaine_production, test_machine, test_placement.",
+          "why": "Station de transformation pour system_memoire."
+        },
+        "display_name": "Puits de Mémoire",
         "entity_type": "machine",
         "id": "machine_puits_de_memoire",
-        "display_name": "Puits de Mémoire",
+        "justification": "Station mémorielle de la prémisse ; transforme les échos en fragments et révèle des souvenirs. Système mémoire.",
         "status": "DEDUITE",
         "system": "system_memoire",
-        "systems": [],
-        "justification": "Station mémorielle de la prémisse ; transforme les échos en fragments et révèle des souvenirs. Système mémoire.",
-        "derivation": {
-          "why": "Station de transformation pour system_memoire.",
-          "system": "system_memoire",
-          "obtention": "Présente dans le refuge/lieu canonique.",
-          "consumers": "Recettes de transformation.",
-          "consequences": "Convertit entrées -> sorties (chaîne de production).",
-          "assets": "1 sprite de machine (état inactif/actif) dans sa famille.",
-          "animations": "animation 'actif' bouclée + événement d'impact.",
-          "tests": "test_chaine_production, test_machine, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+          "system": "system_cuisine",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne cuisine."
+        },
+        "display_name": "Soupe de navet",
         "entity_type": "recette",
         "id": "recette_soupe_de_navet",
-        "display_name": "Soupe de navet",
+        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne cuisine.",
-          "system": "system_cuisine",
-          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+          "system": "system_cuisine",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne cuisine."
+        },
+        "display_name": "Pain de blé",
         "entity_type": "recette",
         "id": "recette_pain_de_ble",
-        "display_name": "Pain de blé",
+        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne cuisine.",
-          "system": "system_cuisine",
-          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+          "system": "system_cuisine",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne cuisine."
+        },
+        "display_name": "Courge rôtie",
         "entity_type": "recette",
         "id": "recette_courge_rotie",
-        "display_name": "Courge rôtie",
+        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne cuisine.",
-          "system": "system_cuisine",
-          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
+          "system": "system_cuisine",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne cuisine."
+        },
+        "display_name": "Tisane de souci",
         "entity_type": "recette",
         "id": "recette_tisane_de_souci",
-        "display_name": "Tisane de souci",
+        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de cuisine reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne cuisine.",
-          "system": "system_cuisine",
-          "obtention": "Utiliser machine_foyer_de_la_maison_racine avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_etabli_de_marin avec les ingrédients requis.",
+          "system": "system_artisanat",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne artisanat."
+        },
+        "display_name": "Planche",
         "entity_type": "recette",
         "id": "recette_planche",
-        "display_name": "Planche",
+        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne artisanat.",
-          "system": "system_artisanat",
-          "obtention": "Utiliser machine_etabli_de_marin avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
+          "system": "system_artisanat",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne artisanat."
+        },
+        "display_name": "Fil de lin",
         "entity_type": "recette",
         "id": "recette_fil_de_lin",
-        "display_name": "Fil de lin",
+        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne artisanat.",
-          "system": "system_artisanat",
-          "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
+          "system": "system_artisanat",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne artisanat."
+        },
+        "display_name": "Toile",
         "entity_type": "recette",
         "id": "recette_toile",
-        "display_name": "Toile",
+        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de artisanat reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne artisanat.",
-          "system": "system_artisanat",
-          "obtention": "Utiliser machine_metier_a_tisser avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de la station + geste d'interaction.",
+          "assets": "icônes des entrées/sorties + sprite station active.",
+          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
+          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
+          "obtention": "Utiliser machine_puits_de_memoire avec les ingrédients requis.",
+          "system": "system_memoire",
+          "tests": "test_recette_complete, test_chaine_production, test_economique.",
+          "why": "Étape de transformation de la chaîne memoire."
+        },
+        "display_name": "Fragment ravivé",
         "entity_type": "recette",
         "id": "recette_fragment_ravive",
-        "display_name": "Fragment ravivé",
+        "justification": "Recette de memoire reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Recette de memoire reliant une station à ses entrées/sorties. Les recettes exactes sont un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Étape de transformation de la chaîne memoire.",
-          "system": "system_memoire",
-          "obtention": "Utiliser machine_puits_de_memoire avec les ingrédients requis.",
-          "consumers": "Joueur, PNJ (dons), quêtes, économie.",
-          "consequences": "Produit un objet de valeur supérieure / fait avancer une quête.",
-          "assets": "icônes des entrées/sorties + sprite station active.",
-          "animations": "animation de la station + geste d'interaction.",
-          "tests": "test_recette_complete, test_chaine_production, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage propre à l'outil.",
+          "assets": "1 icône + sprite monde si applicable.",
+          "consequences": "Ancre la boucle principale / la narration.",
+          "consumers": "Systèmes canoniques associés.",
+          "obtention": "Défini par le canon.",
+          "system": "system_memoire, system_agriculture",
+          "tests": "test_canon, test_objet_utile.",
+          "why": "Objet canonique non négociable."
+        },
+        "display_name": "Graine d’Écho",
         "entity_type": "objet",
         "id": "objet_graine_d_echo",
-        "display_name": "Graine d’Écho",
+        "justification": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Graine mémorielle canonique ; fait pousser la Floraison d'Écho.",
-        "derivation": {
-          "why": "Objet canonique non négociable.",
-          "system": "system_memoire, system_agriculture",
-          "obtention": "Défini par le canon.",
-          "consumers": "Systèmes canoniques associés.",
-          "consequences": "Ancre la boucle principale / la narration.",
-          "assets": "1 icône + sprite monde si applicable.",
-          "animations": "geste d'usage propre à l'outil.",
-          "tests": "test_canon, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage propre à l'outil.",
+          "assets": "1 icône + sprite monde si applicable.",
+          "consequences": "Ancre la boucle principale / la narration.",
+          "consumers": "Systèmes canoniques associés.",
+          "obtention": "Défini par le canon.",
+          "system": "system_agriculture",
+          "tests": "test_canon, test_objet_utile.",
+          "why": "Objet canonique non négociable."
+        },
+        "display_name": "Houe de départ",
         "entity_type": "objet",
         "id": "objet_houe_de_depart",
-        "display_name": "Houe de départ",
+        "justification": "Outil de départ canonique ; prépare le sol.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Outil de départ canonique ; prépare le sol.",
-        "derivation": {
-          "why": "Objet canonique non négociable.",
-          "system": "system_agriculture",
-          "obtention": "Défini par le canon.",
-          "consumers": "Systèmes canoniques associés.",
-          "consequences": "Ancre la boucle principale / la narration.",
-          "assets": "1 icône + sprite monde si applicable.",
-          "animations": "geste d'usage propre à l'outil.",
-          "tests": "test_canon, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage propre à l'outil.",
+          "assets": "1 icône + sprite monde si applicable.",
+          "consequences": "Ancre la boucle principale / la narration.",
+          "consumers": "Systèmes canoniques associés.",
+          "obtention": "Défini par le canon.",
+          "system": "system_agriculture",
+          "tests": "test_canon, test_objet_utile.",
+          "why": "Objet canonique non négociable."
+        },
+        "display_name": "Arrosoir de cuivre",
         "entity_type": "objet",
         "id": "objet_arrosoir_de_cuivre",
-        "display_name": "Arrosoir de cuivre",
+        "justification": "Arrosoir canonique ; arrose les cultures.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Arrosoir canonique ; arrose les cultures.",
-        "derivation": {
-          "why": "Objet canonique non négociable.",
-          "system": "system_agriculture",
-          "obtention": "Défini par le canon.",
-          "consumers": "Systèmes canoniques associés.",
-          "consequences": "Ancre la boucle principale / la narration.",
-          "assets": "1 icône + sprite monde si applicable.",
-          "animations": "geste d'usage propre à l'outil.",
-          "tests": "test_canon, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage propre à l'outil.",
+          "assets": "1 icône + sprite monde si applicable.",
+          "consequences": "Ancre la boucle principale / la narration.",
+          "consumers": "Systèmes canoniques associés.",
+          "obtention": "Défini par le canon.",
+          "system": "system_memoire, system_relations",
+          "tests": "test_canon, test_objet_utile.",
+          "why": "Objet canonique non négociable."
+        },
+        "display_name": "Fragment de souvenir",
         "entity_type": "objet",
         "id": "objet_fragment_de_souvenir",
-        "display_name": "Fragment de souvenir",
+        "justification": "Fragment de souvenir canonique ; unité narrative du système mémoire.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Fragment de souvenir canonique ; unité narrative du système mémoire.",
-        "derivation": {
-          "why": "Objet canonique non négociable.",
-          "system": "system_memoire, system_relations",
-          "obtention": "Défini par le canon.",
-          "consumers": "Systèmes canoniques associés.",
-          "consequences": "Ancre la boucle principale / la narration.",
-          "assets": "1 icône + sprite monde si applicable.",
-          "animations": "geste d'usage propre à l'outil.",
-          "tests": "test_canon, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage propre à l'outil.",
+          "assets": "1 icône + sprite monde si applicable.",
+          "consequences": "Ancre la boucle principale / la narration.",
+          "consumers": "Systèmes canoniques associés.",
+          "obtention": "Défini par le canon.",
+          "system": "system_progression",
+          "tests": "test_canon, test_objet_utile.",
+          "why": "Objet canonique non négociable."
+        },
+        "display_name": "Carnet du Jardinier",
         "entity_type": "objet",
         "id": "objet_carnet_du_jardinier",
-        "display_name": "Carnet du Jardinier",
+        "justification": "Carnet canonique ; journal de progression et des souvenirs.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Carnet canonique ; journal de progression et des souvenirs.",
-        "derivation": {
-          "why": "Objet canonique non négociable.",
-          "system": "system_progression",
-          "obtention": "Défini par le canon.",
-          "consumers": "Systèmes canoniques associés.",
-          "consequences": "Ancre la boucle principale / la narration.",
-          "assets": "1 icône + sprite monde si applicable.",
-          "animations": "geste d'usage propre à l'outil.",
-          "tests": "test_canon, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'pêcher' 4 directions.",
+          "assets": "1 icône + sprite de canne.",
+          "consequences": "Produit du poisson (ressource).",
+          "consumers": "system_peche.",
+          "obtention": "Don/achat auprès de Nox ou artisanat.",
+          "system": "system_peche",
+          "tests": "test_chaine_production, test_objet_utile, test_peche.",
+          "why": "Permet la pêche au Lac Muet (système peche)."
+        },
+        "display_name": "Ligne de pêche",
         "entity_type": "objet",
         "id": "objet_ligne_de_peche",
-        "display_name": "Ligne de pêche",
+        "justification": "Outil requis par le système pêche (Lac Muet canonique).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Outil requis par le système pêche (Lac Muet canonique).",
-        "derivation": {
-          "why": "Permet la pêche au Lac Muet (système peche).",
-          "system": "system_peche",
-          "obtention": "Don/achat auprès de Nox ou artisanat.",
-          "consumers": "system_peche.",
-          "consequences": "Produit du poisson (ressource).",
-          "assets": "1 icône + sprite de canne.",
-          "animations": "geste 'pêcher' 4 directions.",
-          "tests": "test_chaine_production, test_objet_utile, test_peche."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente le système mémoire/narration.",
+          "consumers": "system_memoire ; recettes de transformation.",
+          "obtention": "Récolte de culture_floraison_d_echo à maturité.",
+          "system": "system_agriculture, system_memoire",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Fragment du passé remonté par la culture (prémisse)."
+        },
+        "display_name": "Écho Cristallin",
         "entity_type": "objet",
         "id": "objet_echo_cristallin",
-        "display_name": "Écho Cristallin",
+        "justification": "Produit de la plante mémorielle culture_floraison_d_echo.",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la plante mémorielle culture_floraison_d_echo.",
-        "derivation": {
-          "why": "Fragment du passé remonté par la culture (prémisse).",
-          "system": "system_agriculture, system_memoire",
-          "obtention": "Récolte de culture_floraison_d_echo à maturité.",
-          "consumers": "system_memoire ; recettes de transformation.",
-          "consequences": "Alimente le système mémoire/narration.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'planter'.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Plantée -> croissance -> récolte.",
+          "consumers": "culture culture_navet_de_la_vallee (plantée).",
+          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+          "system": "system_agriculture, system_exploration",
+          "tests": "test_chaine_production, test_objet_utile.",
+          "why": "Permet de démarrer la culture culture_navet_de_la_vallee."
+        },
+        "display_name": "Graine de Navet de la Vallée",
         "entity_type": "objet",
         "id": "objet_graine_de_navet_de_la_vallee",
-        "display_name": "Graine de Navet de la Vallée",
+        "justification": "Graine nécessaire pour planter culture_navet_de_la_vallee (système agriculture).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Graine nécessaire pour planter culture_navet_de_la_vallee (système agriculture).",
-        "derivation": {
-          "why": "Permet de démarrer la culture culture_navet_de_la_vallee.",
-          "system": "system_agriculture, system_exploration",
-          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
-          "consumers": "culture culture_navet_de_la_vallee (plantée).",
-          "consequences": "Plantée -> croissance -> récolte.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste 'planter'.",
-          "tests": "test_chaine_production, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente cuisine/artisanat/économie.",
+          "consumers": "system_cuisine ; recettes de transformation.",
+          "obtention": "Récolte de culture_navet_de_la_vallee à maturité.",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Récolte consommée/transformée par system_cuisine."
+        },
+        "display_name": "Navet",
         "entity_type": "objet",
         "id": "objet_navet",
-        "display_name": "Navet",
+        "justification": "Produit récolté de culture_navet_de_la_vallee.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit récolté de culture_navet_de_la_vallee.",
-        "derivation": {
-          "why": "Récolte consommée/transformée par system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Récolte de culture_navet_de_la_vallee à maturité.",
-          "consumers": "system_cuisine ; recettes de transformation.",
-          "consequences": "Alimente cuisine/artisanat/économie.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'planter'.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Plantée -> croissance -> récolte.",
+          "consumers": "culture culture_ble_des_epis (plantée).",
+          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+          "system": "system_agriculture, system_exploration",
+          "tests": "test_chaine_production, test_objet_utile.",
+          "why": "Permet de démarrer la culture culture_ble_des_epis."
+        },
+        "display_name": "Graine de Blé des Épis",
         "entity_type": "objet",
         "id": "objet_graine_de_ble_des_epis",
-        "display_name": "Graine de Blé des Épis",
+        "justification": "Graine nécessaire pour planter culture_ble_des_epis (système agriculture).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Graine nécessaire pour planter culture_ble_des_epis (système agriculture).",
-        "derivation": {
-          "why": "Permet de démarrer la culture culture_ble_des_epis.",
-          "system": "system_agriculture, system_exploration",
-          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
-          "consumers": "culture culture_ble_des_epis (plantée).",
-          "consequences": "Plantée -> croissance -> récolte.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste 'planter'.",
-          "tests": "test_chaine_production, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente cuisine/artisanat/économie.",
+          "consumers": "system_cuisine ; recettes de transformation.",
+          "obtention": "Récolte de culture_ble_des_epis à maturité.",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Récolte consommée/transformée par system_cuisine."
+        },
+        "display_name": "Grain de blé",
         "entity_type": "objet",
         "id": "objet_grain_de_ble",
-        "display_name": "Grain de blé",
+        "justification": "Produit récolté de culture_ble_des_epis.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit récolté de culture_ble_des_epis.",
-        "derivation": {
-          "why": "Récolte consommée/transformée par system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Récolte de culture_ble_des_epis à maturité.",
-          "consumers": "system_cuisine ; recettes de transformation.",
-          "consequences": "Alimente cuisine/artisanat/économie.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'planter'.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Plantée -> croissance -> récolte.",
+          "consumers": "culture culture_courge_des_brumes (plantée).",
+          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+          "system": "system_agriculture, system_exploration",
+          "tests": "test_chaine_production, test_objet_utile.",
+          "why": "Permet de démarrer la culture culture_courge_des_brumes."
+        },
+        "display_name": "Graine de Courge des Brumes",
         "entity_type": "objet",
         "id": "objet_graine_de_courge_des_brumes",
-        "display_name": "Graine de Courge des Brumes",
+        "justification": "Graine nécessaire pour planter culture_courge_des_brumes (système agriculture).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Graine nécessaire pour planter culture_courge_des_brumes (système agriculture).",
-        "derivation": {
-          "why": "Permet de démarrer la culture culture_courge_des_brumes.",
-          "system": "system_agriculture, system_exploration",
-          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
-          "consumers": "culture culture_courge_des_brumes (plantée).",
-          "consequences": "Plantée -> croissance -> récolte.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste 'planter'.",
-          "tests": "test_chaine_production, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente cuisine/artisanat/économie.",
+          "consumers": "system_cuisine ; recettes de transformation.",
+          "obtention": "Récolte de culture_courge_des_brumes à maturité.",
+          "system": "system_agriculture, system_cuisine",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Récolte consommée/transformée par system_cuisine."
+        },
+        "display_name": "Courge",
         "entity_type": "objet",
         "id": "objet_courge",
-        "display_name": "Courge",
+        "justification": "Produit récolté de culture_courge_des_brumes.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit récolté de culture_courge_des_brumes.",
-        "derivation": {
-          "why": "Récolte consommée/transformée par system_cuisine.",
-          "system": "system_agriculture, system_cuisine",
-          "obtention": "Récolte de culture_courge_des_brumes à maturité.",
-          "consumers": "system_cuisine ; recettes de transformation.",
-          "consequences": "Alimente cuisine/artisanat/économie.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'planter'.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Plantée -> croissance -> récolte.",
+          "consumers": "culture culture_lin_du_repos (plantée).",
+          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+          "system": "system_agriculture, system_exploration",
+          "tests": "test_chaine_production, test_objet_utile.",
+          "why": "Permet de démarrer la culture culture_lin_du_repos."
+        },
+        "display_name": "Graine de Lin du Repos",
         "entity_type": "objet",
         "id": "objet_graine_de_lin_du_repos",
-        "display_name": "Graine de Lin du Repos",
+        "justification": "Graine nécessaire pour planter culture_lin_du_repos (système agriculture).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Graine nécessaire pour planter culture_lin_du_repos (système agriculture).",
-        "derivation": {
-          "why": "Permet de démarrer la culture culture_lin_du_repos.",
-          "system": "system_agriculture, system_exploration",
-          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
-          "consumers": "culture culture_lin_du_repos (plantée).",
-          "consequences": "Plantée -> croissance -> récolte.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste 'planter'.",
-          "tests": "test_chaine_production, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente cuisine/artisanat/économie.",
+          "consumers": "system_artisanat ; recettes de transformation.",
+          "obtention": "Récolte de culture_lin_du_repos à maturité.",
+          "system": "system_agriculture, system_artisanat",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Récolte consommée/transformée par system_artisanat."
+        },
+        "display_name": "Fibre de lin",
         "entity_type": "objet",
         "id": "objet_fibre_de_lin",
-        "display_name": "Fibre de lin",
+        "justification": "Produit récolté de culture_lin_du_repos.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit récolté de culture_lin_du_repos.",
-        "derivation": {
-          "why": "Récolte consommée/transformée par system_artisanat.",
-          "system": "system_agriculture, system_artisanat",
-          "obtention": "Récolte de culture_lin_du_repos à maturité.",
-          "consumers": "system_artisanat ; recettes de transformation.",
-          "consequences": "Alimente cuisine/artisanat/économie.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'planter'.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Plantée -> croissance -> récolte.",
+          "consumers": "culture culture_souci_de_la_vallee (plantée).",
+          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
+          "system": "system_agriculture, system_exploration",
+          "tests": "test_chaine_production, test_objet_utile.",
+          "why": "Permet de démarrer la culture culture_souci_de_la_vallee."
+        },
+        "display_name": "Graine de Souci de la Vallée",
         "entity_type": "objet",
         "id": "objet_graine_de_souci_de_la_vallee",
-        "display_name": "Graine de Souci de la Vallée",
+        "justification": "Graine nécessaire pour planter culture_souci_de_la_vallee (système agriculture).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Graine nécessaire pour planter culture_souci_de_la_vallee (système agriculture).",
-        "derivation": {
-          "why": "Permet de démarrer la culture culture_souci_de_la_vallee.",
-          "system": "system_agriculture, system_exploration",
-          "obtention": "Forage/exploration ; reproduction par récolte (si regrows).",
-          "consumers": "culture culture_souci_de_la_vallee (plantée).",
-          "consequences": "Plantée -> croissance -> récolte.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste 'planter'.",
-          "tests": "test_chaine_production, test_objet_utile."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste 'récolter' + effet de ramassage.",
+          "assets": "1 icône d'inventaire + sprite de récolte.",
+          "consequences": "Alimente cuisine/artisanat/économie.",
+          "consumers": "system_relations ; recettes de transformation.",
+          "obtention": "Récolte de culture_souci_de_la_vallee à maturité.",
+          "system": "system_agriculture, system_relations",
+          "tests": "test_chaine_production, test_objet_utile, test_economique.",
+          "why": "Récolte consommée/transformée par system_relations."
+        },
+        "display_name": "Fleur de souci",
         "entity_type": "objet",
         "id": "objet_fleur_de_souci",
-        "display_name": "Fleur de souci",
+        "justification": "Produit récolté de culture_souci_de_la_vallee.",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit récolté de culture_souci_de_la_vallee.",
-        "derivation": {
-          "why": "Récolte consommée/transformée par system_relations.",
-          "system": "system_agriculture, system_relations",
-          "obtention": "Récolte de culture_souci_de_la_vallee à maturité.",
-          "consumers": "system_relations ; recettes de transformation.",
-          "consequences": "Alimente cuisine/artisanat/économie.",
-          "assets": "1 icône d'inventaire + sprite de récolte.",
-          "animations": "geste 'récolter' + effet de ramassage.",
-          "tests": "test_chaine_production, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Soupe de navet'.",
+          "system": "system_cuisine, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation cuisine."
+        },
+        "display_name": "Soupe de navet",
         "entity_type": "objet",
         "id": "objet_soupe_de_navet",
-        "display_name": "Soupe de navet",
+        "justification": "Produit de la recette 'Soupe de navet' (cuisine).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Soupe de navet' (cuisine).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation cuisine.",
-          "system": "system_cuisine, system_economie",
-          "obtention": "Recette 'Soupe de navet'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Pain de blé'.",
+          "system": "system_cuisine, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation cuisine."
+        },
+        "display_name": "Pain de ble",
         "entity_type": "objet",
         "id": "objet_pain_de_ble",
-        "display_name": "Pain de ble",
+        "justification": "Produit de la recette 'Pain de blé' (cuisine).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Pain de blé' (cuisine).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation cuisine.",
-          "system": "system_cuisine, system_economie",
-          "obtention": "Recette 'Pain de blé'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Courge rôtie'.",
+          "system": "system_cuisine, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation cuisine."
+        },
+        "display_name": "Courge rotie",
         "entity_type": "objet",
         "id": "objet_courge_rotie",
-        "display_name": "Courge rotie",
+        "justification": "Produit de la recette 'Courge rôtie' (cuisine).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Courge rôtie' (cuisine).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation cuisine.",
-          "system": "system_cuisine, system_economie",
-          "obtention": "Recette 'Courge rôtie'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Tisane de souci'.",
+          "system": "system_cuisine, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation cuisine."
+        },
+        "display_name": "Tisane de souci",
         "entity_type": "objet",
         "id": "objet_tisane_de_souci",
-        "display_name": "Tisane de souci",
+        "justification": "Produit de la recette 'Tisane de souci' (cuisine).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Tisane de souci' (cuisine).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation cuisine.",
-          "system": "system_cuisine, system_economie",
-          "obtention": "Recette 'Tisane de souci'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Planche'.",
+          "system": "system_artisanat, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation artisanat."
+        },
+        "display_name": "Planche",
         "entity_type": "objet",
         "id": "objet_planche",
-        "display_name": "Planche",
+        "justification": "Produit de la recette 'Planche' (artisanat).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Planche' (artisanat).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation artisanat.",
-          "system": "system_artisanat, system_economie",
-          "obtention": "Recette 'Planche'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Fil de lin'.",
+          "system": "system_artisanat, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation artisanat."
+        },
+        "display_name": "Fil de lin",
         "entity_type": "objet",
         "id": "objet_fil_de_lin",
-        "display_name": "Fil de lin",
+        "justification": "Produit de la recette 'Fil de lin' (artisanat).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Fil de lin' (artisanat).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation artisanat.",
-          "system": "system_artisanat, system_economie",
-          "obtention": "Recette 'Fil de lin'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste d'usage/offrande.",
+          "assets": "1 icône d'inventaire.",
+          "consequences": "Valeur économique supérieure ; effets sur relations.",
+          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
+          "obtention": "Recette 'Toile'.",
+          "system": "system_artisanat, system_economie",
+          "tests": "test_recette_complete, test_objet_utile, test_economique.",
+          "why": "Sortie de la chaîne de transformation artisanat."
+        },
+        "display_name": "Toile",
         "entity_type": "objet",
         "id": "objet_toile",
-        "display_name": "Toile",
+        "justification": "Produit de la recette 'Toile' (artisanat).",
         "status": "PROPOSEE",
         "system": null,
-        "systems": [],
-        "justification": "Produit de la recette 'Toile' (artisanat).",
-        "derivation": {
-          "why": "Sortie de la chaîne de transformation artisanat.",
-          "system": "system_artisanat, system_economie",
-          "obtention": "Recette 'Toile'.",
-          "consumers": "Joueur (usage), PNJ (dons), économie (vente).",
-          "consequences": "Valeur économique supérieure ; effets sur relations.",
-          "assets": "1 icône d'inventaire.",
-          "animations": "geste d'usage/offrande.",
-          "tests": "test_recette_complete, test_objet_utile, test_economique."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste de collecte.",
+          "assets": "1 icône.",
+          "consequences": "Alimente économie/recettes.",
+          "consumers": "cuisine/économie.",
+          "obtention": "Récolte sur creature_poisson_du_lac.",
+          "system": "system_peche",
+          "tests": "test_chaine_production, test_ressource.",
+          "why": "Ressource produite par creature_poisson_du_lac."
+        },
+        "display_name": "Poisson du lac",
         "entity_type": "objet",
         "id": "objet_poisson_du_lac",
-        "display_name": "Poisson du lac",
+        "justification": "Produit par creature_poisson_du_lac.",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Produit par creature_poisson_du_lac.",
-        "derivation": {
-          "why": "Ressource produite par creature_poisson_du_lac.",
-          "system": "system_peche",
-          "obtention": "Récolte sur creature_poisson_du_lac.",
-          "consumers": "cuisine/économie.",
-          "consequences": "Alimente économie/recettes.",
-          "assets": "1 icône.",
-          "animations": "geste de collecte.",
-          "tests": "test_chaine_production, test_ressource."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "idle + marche 4 directions + geste d'interaction.",
+          "assets": "1 sprite de personnage (famille) + portrait.",
+          "consequences": "Modifie relations, débloque lieux/quêtes.",
+          "consumers": "Dialogues, quêtes, dons, économie.",
+          "obtention": "Présent dans le monde (canon).",
+          "system": "system_relations, system_economie",
+          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations.",
+          "why": "Personnage canonique ; porte un rôle social/économique."
+        },
+        "display_name": "Alba",
         "entity_type": "pnj",
         "id": "pnj_alba",
-        "display_name": "Alba",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Personnage explicitement défini dans le canon initial.",
-        "derivation": {
-          "why": "Personnage canonique ; porte un rôle social/économique.",
-          "system": "system_relations, system_economie",
-          "obtention": "Présent dans le monde (canon).",
-          "consumers": "Dialogues, quêtes, dons, économie.",
-          "consequences": "Modifie relations, débloque lieux/quêtes.",
-          "assets": "1 sprite de personnage (famille) + portrait.",
-          "animations": "idle + marche 4 directions + geste d'interaction.",
-          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "idle + marche 4 directions + geste d'interaction.",
+          "assets": "1 sprite de personnage (famille) + portrait.",
+          "consequences": "Modifie relations, débloque lieux/quêtes.",
+          "consumers": "Dialogues, quêtes, dons, économie.",
+          "obtention": "Présent dans le monde (canon).",
+          "system": "system_relations, system_economie",
+          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations.",
+          "why": "Personnage canonique ; porte un rôle social/économique."
+        },
+        "display_name": "Marin",
         "entity_type": "pnj",
         "id": "pnj_marin",
-        "display_name": "Marin",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Personnage explicitement défini dans le canon initial.",
-        "derivation": {
-          "why": "Personnage canonique ; porte un rôle social/économique.",
-          "system": "system_relations, system_economie",
-          "obtention": "Présent dans le monde (canon).",
-          "consumers": "Dialogues, quêtes, dons, économie.",
-          "consequences": "Modifie relations, débloque lieux/quêtes.",
-          "assets": "1 sprite de personnage (famille) + portrait.",
-          "animations": "idle + marche 4 directions + geste d'interaction.",
-          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "idle + marche 4 directions + geste d'interaction.",
+          "assets": "1 sprite de personnage (famille) + portrait.",
+          "consequences": "Modifie relations, débloque lieux/quêtes.",
+          "consumers": "Dialogues, quêtes, dons, économie.",
+          "obtention": "Présent dans le monde (canon).",
+          "system": "system_relations, system_economie",
+          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations.",
+          "why": "Personnage canonique ; porte un rôle social/économique."
+        },
+        "display_name": "Nox",
         "entity_type": "pnj",
         "id": "pnj_nox",
-        "display_name": "Nox",
+        "justification": "Personnage explicitement défini dans le canon initial.",
         "status": "CANONIQUE",
         "system": null,
-        "systems": [],
-        "justification": "Personnage explicitement défini dans le canon initial.",
-        "derivation": {
-          "why": "Personnage canonique ; porte un rôle social/économique.",
-          "system": "system_relations, system_economie",
-          "obtention": "Présent dans le monde (canon).",
-          "consumers": "Dialogues, quêtes, dons, économie.",
-          "consequences": "Modifie relations, débloque lieux/quêtes.",
-          "assets": "1 sprite de personnage (famille) + portrait.",
-          "animations": "idle + marche 4 directions + geste d'interaction.",
-          "tests": "test_pnj_routine, test_dialogue, test_narratif, test_relations."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "idle/nage + réaction.",
+          "assets": "1 sprite (famille créatures) + variantes.",
+          "consequences": "Produit une ressource/fragment ; événement narratif.",
+          "consumers": "system_peche, system_secrets, économie.",
+          "obtention": "Pêche/observation dans son habitat.",
+          "system": "system_peche",
+          "tests": "test_creature, test_chaine_production, test_placement.",
+          "why": "Faune liée à system_peche et à un lieu canonique."
+        },
+        "display_name": "Poisson du Lac",
         "entity_type": "creature",
         "id": "creature_poisson_du_lac",
-        "display_name": "Poisson du Lac",
+        "justification": "Poisson pêché au Lac Muet (système peche).",
         "status": "PROPOSEE",
         "system": "system_peche",
-        "systems": [],
-        "justification": "Poisson pêché au Lac Muet (système peche).",
-        "derivation": {
-          "why": "Faune liée à system_peche et à un lieu canonique.",
-          "system": "system_peche",
-          "obtention": "Pêche/observation dans son habitat.",
-          "consumers": "system_peche, system_secrets, économie.",
-          "consequences": "Produit une ressource/fragment ; événement narratif.",
-          "assets": "1 sprite (famille créatures) + variantes.",
-          "animations": "idle/nage + réaction.",
-          "tests": "test_creature, test_chaine_production, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "idle/nage + réaction.",
+          "assets": "1 sprite (famille créatures) + variantes.",
+          "consequences": "Produit une ressource/fragment ; événement narratif.",
+          "consumers": "system_peche, system_secrets, économie.",
+          "obtention": "Pêche/observation dans son habitat.",
+          "system": "system_secrets",
+          "tests": "test_creature, test_chaine_production, test_placement.",
+          "why": "Faune liée à system_secrets et à un lieu canonique."
+        },
+        "display_name": "Écho du Bois",
         "entity_type": "creature",
         "id": "creature_echo_du_bois",
-        "display_name": "Écho du Bois",
+        "justification": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
         "status": "PROPOSEE",
         "system": "system_secrets",
-        "systems": [],
-        "justification": "Manifestation qui répète des événements dans le Bois des Retours (canon).",
-        "derivation": {
-          "why": "Faune liée à system_secrets et à un lieu canonique.",
-          "system": "system_secrets",
-          "obtention": "Pêche/observation dans son habitat.",
-          "consumers": "system_peche, system_secrets, économie.",
-          "consequences": "Produit une ressource/fragment ; événement narratif.",
-          "assets": "1 sprite (famille créatures) + variantes.",
-          "animations": "idle/nage + réaction.",
-          "tests": "test_creature, test_chaine_production, test_placement."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "geste de dialogue/don.",
+          "assets": "icônes de quête + marqueur de donneur.",
+          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+          "consumers": "system_progression, system_relations.",
+          "obtention": "Donneur pnj_alba + déclencheur.",
+          "system": "system_memoire, system_progression",
+          "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+          "why": "Donne une conséquence durable et relie les systèmes entre eux."
+        },
+        "display_name": "Le premier écho",
         "entity_type": "quete",
         "id": "quete_le_premier_echo",
-        "display_name": "Le premier écho",
+        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_memoire",
           "system_progression"
-        ],
-        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-        "derivation": {
-          "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-          "system": "system_memoire, system_progression",
-          "obtention": "Donneur pnj_alba + déclencheur.",
-          "consumers": "system_progression, system_relations.",
-          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-          "assets": "icônes de quête + marqueur de donneur.",
-          "animations": "geste de dialogue/don.",
-          "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "geste de dialogue/don.",
+          "assets": "icônes de quête + marqueur de donneur.",
+          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+          "consumers": "system_progression, system_relations.",
+          "obtention": "Donneur pnj_marin + déclencheur.",
+          "system": "system_artisanat, system_economie",
+          "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+          "why": "Donne une conséquence durable et relie les systèmes entre eux."
+        },
+        "display_name": "L'outil de Marin",
         "entity_type": "quete",
         "id": "quete_l_outil_de_marin",
-        "display_name": "L'outil de Marin",
+        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_artisanat",
           "system_economie"
-        ],
-        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-        "derivation": {
-          "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-          "system": "system_artisanat, system_economie",
-          "obtention": "Donneur pnj_marin + déclencheur.",
-          "consumers": "system_progression, system_relations.",
-          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-          "assets": "icônes de quête + marqueur de donneur.",
-          "animations": "geste de dialogue/don.",
-          "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "geste de dialogue/don.",
+          "assets": "icônes de quête + marqueur de donneur.",
+          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+          "consumers": "system_progression, system_relations.",
+          "obtention": "Donneur pnj_nox + déclencheur.",
+          "system": "system_relations, system_peche",
+          "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+          "why": "Donne une conséquence durable et relie les systèmes entre eux."
+        },
+        "display_name": "Le silence de Nox",
         "entity_type": "quete",
         "id": "quete_le_silence_de_nox",
-        "display_name": "Le silence de Nox",
+        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_relations",
           "system_peche"
-        ],
-        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-        "derivation": {
-          "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-          "system": "system_relations, system_peche",
-          "obtention": "Donneur pnj_nox + déclencheur.",
-          "consumers": "system_progression, system_relations.",
-          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-          "assets": "icônes de quête + marqueur de donneur.",
-          "animations": "geste de dialogue/don.",
-          "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "geste de dialogue/don.",
+          "assets": "icônes de quête + marqueur de donneur.",
+          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
+          "consumers": "system_progression, system_relations.",
+          "obtention": "Donneur pnj_alba + déclencheur.",
+          "system": "system_secrets, system_memoire",
+          "tests": "test_quete_atteignable, test_quete_consequence, test_progression.",
+          "why": "Donne une conséquence durable et relie les systèmes entre eux."
+        },
+        "display_name": "Ce qui se répète",
         "entity_type": "quete",
         "id": "quete_ce_qui_se_repete",
-        "display_name": "Ce qui se répète",
+        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_secrets",
           "system_memoire"
-        ],
-        "justification": "Quête reliant un donneur canonique à un système ; le nombre exact de quêtes est À_VALIDER.",
-        "derivation": {
-          "why": "Donne une conséquence durable et relie les systèmes entre eux.",
-          "system": "system_secrets, system_memoire",
-          "obtention": "Donneur pnj_alba + déclencheur.",
-          "consumers": "system_progression, system_relations.",
-          "consequences": "Débloque lieux/recettes/faits ; modifie relations.",
-          "assets": "icônes de quête + marqueur de donneur.",
-          "animations": "geste de dialogue/don.",
-          "tests": "test_quete_atteignable, test_quete_consequence, test_progression."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "animation contextuelle de l'événement.",
+          "assets": "effet visuel/particules de l'événement.",
+          "consequences": "Applique des effets (narration/économie/cultures).",
+          "consumers": "system_evenements, system_progression.",
+          "obtention": "Déclencheur on_season_change à lieu_bois_des_retours.",
+          "system": "system_secrets, system_evenements",
+          "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+        },
+        "display_name": "Retour du Bois",
         "entity_type": "evenement",
         "id": "evenement_retour_du_bois",
-        "display_name": "Retour du Bois",
+        "justification": "Un événement se répète dans le Bois des Retours (canon).",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_secrets",
           "system_evenements"
-        ],
-        "justification": "Un événement se répète dans le Bois des Retours (canon).",
-        "derivation": {
-          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
-          "system": "system_secrets, system_evenements",
-          "obtention": "Déclencheur on_season_change à lieu_bois_des_retours.",
-          "consumers": "system_evenements, system_progression.",
-          "consequences": "Applique des effets (narration/économie/cultures).",
-          "assets": "effet visuel/particules de l'événement.",
-          "animations": "animation contextuelle de l'événement.",
-          "tests": "test_evenement_atteignable, test_evenement, test_temporel."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "animation contextuelle de l'événement.",
+          "assets": "effet visuel/particules de l'événement.",
+          "consequences": "Applique des effets (narration/économie/cultures).",
+          "consumers": "system_evenements, system_progression.",
+          "obtention": "Déclencheur on_weather à lieu_champ_de_la_vallee_claire.",
+          "system": "system_meteo, system_agriculture",
+          "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+        },
+        "display_name": "Pluie sur la Vallée",
         "entity_type": "evenement",
         "id": "evenement_pluie_sur_la_vallee",
-        "display_name": "Pluie sur la Vallée",
+        "justification": "La pluie arrose naturellement les cultures.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_meteo",
           "system_agriculture"
-        ],
-        "justification": "La pluie arrose naturellement les cultures.",
-        "derivation": {
-          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
-          "system": "system_meteo, system_agriculture",
-          "obtention": "Déclencheur on_weather à lieu_champ_de_la_vallee_claire.",
-          "consumers": "system_evenements, system_progression.",
-          "consequences": "Applique des effets (narration/économie/cultures).",
-          "assets": "effet visuel/particules de l'événement.",
-          "animations": "animation contextuelle de l'événement.",
-          "tests": "test_evenement_atteignable, test_evenement, test_temporel."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "animation contextuelle de l'événement.",
+          "assets": "effet visuel/particules de l'événement.",
+          "consequences": "Applique des effets (narration/économie/cultures).",
+          "consumers": "system_evenements, system_progression.",
+          "obtention": "Déclencheur on_item_acquired à lieu_puits_de_memoire.",
+          "system": "system_memoire",
+          "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+        },
+        "display_name": "Le Puits chante",
         "entity_type": "evenement",
         "id": "evenement_le_puits_chante",
-        "display_name": "Le Puits chante",
+        "justification": "Le Puits de Mémoire réagit à un Écho Cristallin.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_memoire"
-        ],
-        "justification": "Le Puits de Mémoire réagit à un Écho Cristallin.",
-        "derivation": {
-          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
-          "system": "system_memoire",
-          "obtention": "Déclencheur on_item_acquired à lieu_puits_de_memoire.",
-          "consumers": "system_evenements, system_progression.",
-          "consequences": "Applique des effets (narration/économie/cultures).",
-          "assets": "effet visuel/particules de l'événement.",
-          "animations": "animation contextuelle de l'événement.",
-          "tests": "test_evenement_atteignable, test_evenement, test_temporel."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "animation contextuelle de l'événement.",
+          "assets": "effet visuel/particules de l'événement.",
+          "consequences": "Applique des effets (narration/économie/cultures).",
+          "consumers": "system_evenements, system_progression.",
+          "obtention": "Déclencheur on_day_start à lieu_champ_de_la_vallee_claire.",
+          "system": "system_economie, system_relations",
+          "tests": "test_evenement_atteignable, test_evenement, test_temporel.",
+          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes."
+        },
+        "display_name": "Marché de la Vallée",
         "entity_type": "evenement",
         "id": "evenement_marche_de_la_vallee",
-        "display_name": "Marché de la Vallée",
+        "justification": "Les habitants échangent leurs productions.",
         "status": "PROPOSEE",
         "system": null,
         "systems": [
           "system_economie",
           "system_relations"
-        ],
-        "justification": "Les habitants échangent leurs productions.",
-        "derivation": {
-          "why": "Événement contextuel reliant temps/lieu/météo aux systèmes.",
-          "system": "system_economie, system_relations",
-          "obtention": "Déclencheur on_day_start à lieu_champ_de_la_vallee_claire.",
-          "consumers": "system_evenements, system_progression.",
-          "consequences": "Applique des effets (narration/économie/cultures).",
-          "assets": "effet visuel/particules de l'événement.",
-          "animations": "animation contextuelle de l'événement.",
-          "tests": "test_evenement_atteignable, test_evenement, test_temporel."
-        }
+        ]
       },
       {
+        "derivation": {
+          "animations": "animation de découverte/révélation.",
+          "assets": "indice visuel discret sur la carte (famille secrets).",
+          "consequences": "Révèle un fait ; débloque narration/quête.",
+          "consumers": "system_secrets, system_progression, dialogues.",
+          "obtention": "Découverte via quête/événement (chemin explicite).",
+          "system": "system_secrets, system_memoire",
+          "tests": "test_secret_decouvrable, test_evenement_atteignable, test_narratif.",
+          "why": "Secret rattaché à un lieu canonique ; donne une conséquence narrative durable et un objectif d'exploration."
+        },
+        "display_name": "Ce qui se répète dans le Bois",
         "entity_type": "secret",
         "id": "secret_clairiere_repetition",
-        "display_name": "Ce qui se répète dans le Bois",
+        "justification": "DEDUITE de 'forêt où certains événements se répètent' (canon) ; le contenu exact des secrets du Bois est un élément ouvert du canon (À_VALIDER).",
         "status": "DEDUITE",
         "system": "system_secrets, system_memoire",
-        "systems": [],
-        "justification": "DEDUITE de 'forêt où certains événements se répètent' (canon) ; le contenu exact des secrets du Bois est un élément ouvert du canon (À_VALIDER).",
-        "derivation": {
-          "why": "Secret rattaché à un lieu canonique ; donne une conséquence narrative durable et un objectif d'exploration.",
-          "system": "system_secrets, system_memoire",
-          "obtention": "Découverte via quête/événement (chemin explicite).",
-          "consumers": "system_secrets, system_progression, dialogues.",
-          "consequences": "Révèle un fait ; débloque narration/quête.",
-          "assets": "indice visuel discret sur la carte (famille secrets).",
-          "animations": "animation de découverte/révélation.",
-          "tests": "test_secret_decouvrable, test_evenement_atteignable, test_narratif."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animation de découverte/révélation.",
+          "assets": "indice visuel discret sur la carte (famille secrets).",
+          "consequences": "Révèle un fait ; débloque narration/quête.",
+          "consumers": "system_secrets, system_progression, dialogues.",
+          "obtention": "Découverte via quête/événement (chemin explicite).",
+          "system": "system_relations, system_memoire",
+          "tests": "test_secret_decouvrable, test_evenement_atteignable, test_narratif.",
+          "why": "Secret rattaché à un lieu canonique ; donne une conséquence narrative durable et un objectif d'exploration."
+        },
+        "display_name": "Le passé tu de Nox",
         "entity_type": "secret",
         "id": "secret_passe_nox",
-        "display_name": "Le passé tu de Nox",
+        "justification": "DEDUITE de 'Nox : pêcheur qui refuse de parler de son passé' (canon).",
         "status": "DEDUITE",
         "system": "system_relations, system_memoire",
-        "systems": [],
-        "justification": "DEDUITE de 'Nox : pêcheur qui refuse de parler de son passé' (canon).",
-        "derivation": {
-          "why": "Secret rattaché à un lieu canonique ; donne une conséquence narrative durable et un objectif d'exploration.",
-          "system": "system_relations, system_memoire",
-          "obtention": "Découverte via quête/événement (chemin explicite).",
-          "consumers": "system_secrets, system_progression, dialogues.",
-          "consequences": "Révèle un fait ; débloque narration/quête.",
-          "assets": "indice visuel discret sur la carte (famille secrets).",
-          "animations": "animation de découverte/révélation.",
-          "tests": "test_secret_decouvrable, test_evenement_atteignable, test_narratif."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animations météo/saisonnières de la carte.",
+          "assets": "1 tileset par famille de terrain + transitions.",
+          "consequences": "Permet le déplacement, le placement et les transitions.",
+          "consumers": "navigation, placement, spawn, exploration.",
+          "obtention": "Déduite du lieu canonique.",
+          "system": "system_exploration, system_navigation",
+          "tests": "test_map, test_navigation, test_placement, test_atteignabilite.",
+          "why": "Chaque lieu canonique a besoin d'une carte navigable."
+        },
+        "display_name": "Maison-Racine",
         "entity_type": "map",
         "id": "map_maison_racine",
-        "display_name": "Maison-Racine",
+        "justification": "Carte du lieu canonique 'Maison-Racine' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Carte du lieu canonique 'Maison-Racine' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
-        "derivation": {
-          "why": "Chaque lieu canonique a besoin d'une carte navigable.",
-          "system": "system_exploration, system_navigation",
-          "obtention": "Déduite du lieu canonique.",
-          "consumers": "navigation, placement, spawn, exploration.",
-          "consequences": "Permet le déplacement, le placement et les transitions.",
-          "assets": "1 tileset par famille de terrain + transitions.",
-          "animations": "animations météo/saisonnières de la carte.",
-          "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animations météo/saisonnières de la carte.",
+          "assets": "1 tileset par famille de terrain + transitions.",
+          "consequences": "Permet le déplacement, le placement et les transitions.",
+          "consumers": "navigation, placement, spawn, exploration.",
+          "obtention": "Déduite du lieu canonique.",
+          "system": "system_exploration, system_navigation",
+          "tests": "test_map, test_navigation, test_placement, test_atteignabilite.",
+          "why": "Chaque lieu canonique a besoin d'une carte navigable."
+        },
+        "display_name": "Vallée Claire",
         "entity_type": "map",
         "id": "map_vallee_claire",
-        "display_name": "Vallée Claire",
+        "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Carte du lieu canonique 'Vallée Claire' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
-        "derivation": {
-          "why": "Chaque lieu canonique a besoin d'une carte navigable.",
-          "system": "system_exploration, system_navigation",
-          "obtention": "Déduite du lieu canonique.",
-          "consumers": "navigation, placement, spawn, exploration.",
-          "consequences": "Permet le déplacement, le placement et les transitions.",
-          "assets": "1 tileset par famille de terrain + transitions.",
-          "animations": "animations météo/saisonnières de la carte.",
-          "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animations météo/saisonnières de la carte.",
+          "assets": "1 tileset par famille de terrain + transitions.",
+          "consequences": "Permet le déplacement, le placement et les transitions.",
+          "consumers": "navigation, placement, spawn, exploration.",
+          "obtention": "Déduite du lieu canonique.",
+          "system": "system_exploration, system_navigation",
+          "tests": "test_map, test_navigation, test_placement, test_atteignabilite.",
+          "why": "Chaque lieu canonique a besoin d'une carte navigable."
+        },
+        "display_name": "Bois des Retours",
         "entity_type": "map",
         "id": "map_bois_des_retours",
-        "display_name": "Bois des Retours",
+        "justification": "Carte du lieu canonique 'Bois des Retours' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Carte du lieu canonique 'Bois des Retours' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
-        "derivation": {
-          "why": "Chaque lieu canonique a besoin d'une carte navigable.",
-          "system": "system_exploration, system_navigation",
-          "obtention": "Déduite du lieu canonique.",
-          "consumers": "navigation, placement, spawn, exploration.",
-          "consequences": "Permet le déplacement, le placement et les transitions.",
-          "assets": "1 tileset par famille de terrain + transitions.",
-          "animations": "animations météo/saisonnières de la carte.",
-          "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
-        }
+        "systems": []
       },
       {
+        "derivation": {
+          "animations": "animations météo/saisonnières de la carte.",
+          "assets": "1 tileset par famille de terrain + transitions.",
+          "consequences": "Permet le déplacement, le placement et les transitions.",
+          "consumers": "navigation, placement, spawn, exploration.",
+          "obtention": "Déduite du lieu canonique.",
+          "system": "system_exploration, system_navigation",
+          "tests": "test_map, test_navigation, test_placement, test_atteignabilite.",
+          "why": "Chaque lieu canonique a besoin d'une carte navigable."
+        },
+        "display_name": "Lac Muet",
         "entity_type": "map",
         "id": "map_lac_muet",
-        "display_name": "Lac Muet",
+        "justification": "Carte du lieu canonique 'Lac Muet' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
         "status": "DEDUITE",
         "system": null,
-        "systems": [],
-        "justification": "Carte du lieu canonique 'Lac Muet' ; le nombre de biomes est une décision ouverte (À_VALIDER).",
-        "derivation": {
-          "why": "Chaque lieu canonique a besoin d'une carte navigable.",
-          "system": "system_exploration, system_navigation",
-          "obtention": "Déduite du lieu canonique.",
-          "consumers": "navigation, placement, spawn, exploration.",
-          "consequences": "Permet le déplacement, le placement et les transitions.",
-          "assets": "1 tileset par famille de terrain + transitions.",
-          "animations": "animations météo/saisonnières de la carte.",
-          "tests": "test_map, test_navigation, test_placement, test_atteignabilite."
-        }
+        "systems": []
       }
     ]
-  }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

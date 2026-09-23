@@ -1,70 +1,72 @@
 {
-  "pipeline_version": "5.0.0",
-  "schema_version": "5.0.0",
-  "kind": "pipeline_run",
   "generated_deterministic": true,
+  "kind": "pipeline_run",
   "payload": {
+    "finished": "2026-09-23T07:46:17+00:00",
     "pipeline_version": "5.0.0",
-    "started": "2026-09-23T07:26:02+00:00",
     "stages": {
       "canon": {
+        "contradictions": 5,
         "locations": 4,
         "npcs": 3,
         "objects": 5,
-        "contradictions": 5,
         "open_decisions": 10
+      },
+      "catalog": {
+        "creatures": 2,
+        "crops": 6,
+        "events": 4,
+        "functional_entries": 80,
+        "locations": 11,
+        "machines": 4,
+        "maps": 4,
+        "npcs": 3,
+        "objects": 25,
+        "quests": 4,
+        "recipes": 8,
+        "resources": 3,
+        "seasons": 4,
+        "secrets": 2
+      },
+      "compile": {
+        "animations": 107,
+        "assets": 102,
+        "dialogs": 3,
+        "fingerprint": "9ede4f8a65b7a70b",
+        "llm_required_at_runtime": false,
+        "relations": 280,
+        "runtime_entities": 80
+      },
+      "graph": {
+        "dangling": 0,
+        "edges": 280,
+        "nodes": 103,
+        "orphans": 0,
+        "reachable": 103
+      },
+      "manifest": {
+        "animations": 107,
+        "assets": 102,
+        "creatures": 2,
+        "crops": 6,
+        "effects": 10,
+        "machines": 4,
+        "maps": 4,
+        "navigation": 1,
+        "npcs": 3,
+        "objects": 25,
+        "placement": 5,
+        "quests": 4,
+        "recipes": 8,
+        "resources": 3,
+        "transitions": 14
       },
       "ontology": {
         "entity_types": 17,
         "relation_types": 18,
         "schemas": 21
       },
-      "systems": {
-        "count": 15
-      },
-      "catalog": {
-        "seasons": 4,
-        "locations": 11,
-        "crops": 6,
-        "resources": 3,
-        "machines": 4,
-        "recipes": 8,
-        "objects": 25,
-        "npcs": 3,
-        "creatures": 2,
-        "quests": 4,
-        "events": 4,
-        "secrets": 2,
-        "maps": 4,
-        "functional_entries": 80
-      },
-      "graph": {
-        "nodes": 103,
-        "edges": 280,
-        "reachable": 103,
-        "orphans": 0,
-        "dangling": 0
-      },
-      "manifest": {
-        "objects": 25,
-        "resources": 3,
-        "crops": 6,
-        "machines": 4,
-        "recipes": 8,
-        "quests": 4,
-        "npcs": 3,
-        "creatures": 2,
-        "maps": 4,
-        "placement": 5,
-        "navigation": 1,
-        "assets": 102,
-        "animations": 107,
-        "transitions": 14,
-        "effects": 10
-      },
       "prompt": {
-        "total": 10,
-        "ok": 9,
         "blocked": 1,
         "names": [
           "blocked_demo",
@@ -77,12 +79,9 @@
           "by_id_recette_soupe_de_navet",
           "by_seq_joueur_marche",
           "by_seq_machine_actif"
-        ]
-      },
-      "validate": {
-        "passed": true,
-        "errors": 0,
-        "warnings": 0
+        ],
+        "ok": 9,
+        "total": 10
       },
       "report": {
         "average_maturity": 71.4,
@@ -90,20 +89,21 @@
         "open_decisions": 21
       },
       "simulate": {
-        "profiles": 8,
-        "production_chains_ok": "8/8"
+        "production_chains_ok": "8/8",
+        "profiles": 8
       },
-      "compile": {
-        "runtime_entities": 80,
-        "relations": 280,
-        "dialogs": 3,
-        "assets": 102,
-        "animations": 107,
-        "llm_required_at_runtime": false,
-        "fingerprint": "9ede4f8a65b7a70b"
+      "systems": {
+        "count": 15
+      },
+      "validate": {
+        "errors": 0,
+        "passed": true,
+        "warnings": 0
       }
     },
-    "finished": "2026-09-23T07:26:02+00:00",
+    "started": "2026-09-23T07:46:17+00:00",
     "validation_passed": true
-  }
+  },
+  "pipeline_version": "5.0.0",
+  "schema_version": "5.0.0"
 }

@@ -1,40 +1,28 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://pipeline.local/schemas/lieu.schema.json",
-  "title": "Lieu / zone",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
   "description": "Schéma d'entité 'lieu' dérivé de l'ontologie V5.",
-  "type": "object",
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^lieu_[a-z0-9_]+$",
-      "description": "Identifiant interne stable (préfixe 'lieu_')."
-    },
     "display_name": {
-      "type": "string",
+      "description": "Nom affiché (peut contenir accents/langue du jeu).",
       "minLength": 1,
-      "description": "Nom affiché (peut contenir accents/langue du jeu)."
+      "type": "string"
     },
-    "status": {
-      "type": "string",
-      "enum": [
-        "CANONIQUE",
-        "DEDUITE",
-        "PROPOSEE",
-        "A_VALIDER"
-      ],
-      "description": "Statut de l'information."
+    "function": {
+      "description": "Fonction gameplay du lieu.",
+      "type": "string"
     },
-    "source": {
-      "type": "string",
-      "description": "Fichier/section d'origine."
+    "id": {
+      "description": "Identifiant interne stable (préfixe 'lieu_').",
+      "pattern": "^lieu_[a-z0-9_]+$",
+      "type": "string"
     },
     "justification": {
-      "type": "string",
-      "description": "Pourquoi cet élément existe."
+      "description": "Pourquoi cet élément existe.",
+      "type": "string"
     },
     "kind": {
-      "type": "string",
       "enum": [
         "carte",
         "region",
@@ -42,24 +30,35 @@
         "interet",
         "batiment",
         "secret"
-      ]
+      ],
+      "type": "string"
     },
     "map_id": {
+      "description": "Carte propriétaire si zone/POI.",
       "type": [
         "string",
         "null"
-      ],
-      "description": "Carte propriétaire si zone/POI."
+      ]
     },
-    "function": {
-      "type": "string",
-      "description": "Fonction gameplay du lieu."
+    "source": {
+      "description": "Fichier/section d'origine.",
+      "type": "string"
+    },
+    "status": {
+      "description": "Statut de l'information.",
+      "enum": [
+        "CANONIQUE",
+        "DEDUITE",
+        "PROPOSEE",
+        "A_VALIDER"
+      ],
+      "type": "string"
     },
     "terrain": {
-      "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "type": "array"
     },
     "walkable": {
       "type": "boolean"
@@ -71,6 +70,7 @@
     "status",
     "function"
   ],
-  "additionalProperties": true,
+  "title": "Lieu / zone",
+  "type": "object",
   "x_schema_version": "5.0.0"
 }
